@@ -1,0 +1,172 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// A*寻路 单例
+/// </summary>
+public class AStarMgr
+{
+    //地图宽高
+    private int mapW;
+    private int mapH;
+
+
+    public static AStarMgr instance;
+    private AStarNode[,] nodes;
+    //开启列表
+    private List<AStarNode> openList;
+    //关闭列表
+    private List<AStarNode> closeList;
+    public static AStarMgr Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new AStarMgr();
+            }
+            return instance;
+        }
+    }
+
+    /// <summary>d
+    /// 初始化地图
+    /// </summary>
+    /// <param name="w">宽</param>
+    /// <param name="h">高</param>
+    public void InitMapInfo(int w, int h)
+    {
+        this.mapW = w;
+        this.mapH = h;
+        nodes = new AStarNode[w, h];
+        //根据宽高，创建格子
+        for (int i = 0; i < w; ++i)
+        {
+            for (int j = 0; j < h; ++j)
+            {
+                bool canwalk = GameObject.Find("alleath/eathrow (" + i + ")/eath (" + j + ")").GetComponent<eath>().canWalk;
+                AStarNode node = new AStarNode(i, j, canwalk == false ? E_Node_Type.Stop : E_Node_Type.Walk);
+                nodes[i, j] = node;
+            }
+        }
+    }
+
+    /// <summary>
+    /// 寻路方法
+    /// </summary>
+    /// <param name="starPos">起点</param>
+    /// <param name="endPass">终点</param>
+    /// <returns></returns>
+    public List<AStarNode> FindPath(Vector2 starPos, Vector3 endPass)
+    {
+        //传入单元格数据（高，宽）保证在地图里
+        if (starPos.x < 0 || starPos.x >= mapW || starPos.y < 0 || starPos.y >= mapH || endPass.x < 0 || endPass.x >= mapW || endPass.y < 0 || endPass.y >= mapH)
+        {
+            Debug.Log("开始或结束点在范围外");
+            return null;
+        }
+
+
+        //判断是否是障碍物
+        AStarNode start = nodes[(int)starPos.x, (int)starPos.y];
+        AStarNode end = nodes[(int)endPass.x, (int)endPass.y];
+        if (start.type == E_Node_Type.Stop || end.type == E_Node_Type.Stop)
+        {
+            Debug.Log("开始或结束点为障碍物");
+            return null;
+        }
+
+
+        //清空列表和数据
+        closeList.Clear();
+        openList.Clear();
+        start.father = null;
+        start.g = 0;
+        start.f = 0;
+        start.h = 0;
+
+        //把开始点放入关闭列表
+        closeList.Add(start);
+
+        //上方x,y+1
+        //下x,y-1
+        //左x-1,y
+        //右x+1,y
+        while (true)
+        {
+        FindNearlyNodeToOpenlist(start.x, start.y + 1, 1, start, end);
+        FindNearlyNodeToOpenlist(start.x, start.y - 1, 1, start, end);
+        FindNearlyNodeToOpenlist(start.x + 1, start.y , 1, start, end);
+        FindNearlyNodeToOpenlist(start.x - 1, start.y, 1, start, end);
+
+        //死路判断
+        if(openList.Count == 0)
+            {
+                Debug.Log("死路");
+                return null;
+            }
+        //通过g排序
+        openList.Sort(SortOpenList);
+        //放入关闭列表作为新起点，并移除开始列表
+        closeList.Add(openList[0]);
+        start = openList[0];
+        openList.RemoveAt(0);
+
+
+        //判断是否结束
+        if (start == end)
+        {
+                List<AStarNode> path = new List<AStarNode>();
+                path.Add(end);
+                while(end.father != null)
+                    {
+                        path.Add(end.father);
+                        end = end.father;
+                    }
+                path.Reverse();
+                return path;
+        }
+
+        }
+        
+
+        
+
+        
+    }
+
+
+    private int SortOpenList(AStarNode a,AStarNode b)
+    {
+        //判断数组大小
+        if (a.f > b.f)
+        {
+            return 1;
+        }else
+        {
+            return -1;
+        }
+    }
+/// <summary>
+/// 周围点是否在列表中，并放入开始列表
+/// </summary>
+/// <param name="x">横坐标</param>
+/// <param name="y">纵坐标</param>
+/// <param name="g">单位距离</param>
+/// <param name="father">父亲节点</param>
+/// <param name="end">终点</param>
+    private void FindNearlyNodeToOpenlist(int x, int y,float g,AStarNode father,AStarNode end)
+    {
+        AStarNode node = nodes[x, y];
+        if (node == null || node.type == E_Node_Type.Stop||closeList.Contains(node)||openList.Contains(node))
+        {
+            return;
+        }
+
+        //计算f=g+h
+        node.father = father;
+        node.g = father.g + g;
+        node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
+        node.f = node.g + node.h;
+    }
+}
