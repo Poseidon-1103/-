@@ -14,9 +14,9 @@ public class AStarMgr
     public static AStarMgr instance;
     private AStarNode[,] nodes;
     //开启列表
-    private List<AStarNode> openList;
+    private List<AStarNode> openList= new();
     //关闭列表
-    private List<AStarNode> closeList;
+    private List<AStarNode> closeList= new();
     public static AStarMgr Instance
     {
         get
