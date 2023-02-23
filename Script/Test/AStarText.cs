@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class AStarText : MonoBehaviour
 {
-    //µÚÒ»¸öÁ¢·½Ìå
+    //ç¬¬ä¸€ä¸ªç«‹æ–¹ä½“
     public int beginX;
     public int beginY;
-    //¸ñ×ÓÆ«ÒÆ
+    //æ ¼å­åç§»
     public int offsetX;
     public int offsetY;
 
-    //µØÍ¼µÄ¿í¸ß
+    //åœ°å›¾çš„å®½é«˜
     public int mapW;
     public int mapH;
 
-    //¿ªÊ¼µã
+    //å¼€å§‹ç‚¹
     private Vector2 beginPos = Vector2.right * -1;
-    //×ÖµäÈİÆ÷
+    //å­—å…¸å®¹å™¨
     private Dictionary<string, GameObject> cubes = new Dictionary<string, GameObject>();
     private List<AStarNode> list;
-    //²âÊÔ²ÄÖÊ
+    //æµ‹è¯•æè´¨
     public Material red;
     public Material yellow;
     public Material green;
@@ -35,15 +35,15 @@ public class AStarText : MonoBehaviour
         {
             for (int j = 0; j < mapH; j++)
             {
-                //´´½¨Á¢·½Ìå
+                //åˆ›å»ºç«‹æ–¹ä½“
                 GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 obj.transform.position = new Vector3(beginX + i * offsetX, beginY + j * offsetY, 0);
-                //ĞŞ¸ÄÃû×Ö
+                //ä¿®æ”¹åå­—
                 obj.name = i + "_" + j;
-                //´æ´¢Á¢·½Ìåµ½×Öµä
+                //å­˜å‚¨ç«‹æ–¹ä½“åˆ°å­—å…¸
                 cubes.Add(obj.name, obj);
 
-                //»ñµÃ¸ñ×ÓÀàĞÍ ÅĞ¶ÏÕÏ°­
+                //è·å¾—æ ¼å­ç±»å‹ åˆ¤æ–­éšœç¢
                 AStarNode node = AStarMgr.GetInstance().nodes[i, j];
                 if (node.type == E_Node_type.Stop)
                 {
@@ -56,18 +56,18 @@ public class AStarText : MonoBehaviour
 
     void Update()
     {
-        //Êó±ê×ó»÷
+        //é¼ æ ‡å·¦å‡»
         if (Input.GetMouseButtonDown(0))
         {
-            //½øĞĞÉäÏß¼ì²â
+            //è¿›è¡Œå°„çº¿æ£€æµ‹
             RaycastHit info;
-            //µÃµ½ÆÁÄ»Êó±ê·¢ÉäÉäÏß
+            //å¾—åˆ°å±å¹•é¼ æ ‡å‘å°„å°„çº¿
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            //ÉäÏß¼ì²â
+            //å°„çº¿æ£€æµ‹
             if (Physics.Raycast(ray, out info, 1000))
             {
-                //µÃµ½µã»÷Á¢·½Ìå
+                //å¾—åˆ°ç‚¹å‡»ç«‹æ–¹ä½“
 
 
                 if (beginPos == Vector2.right * -1)
@@ -82,25 +82,25 @@ public class AStarText : MonoBehaviour
                     }
 
                     string[] strs = info.collider.gameObject.name.Split('_');
-                    //µÃµ½ÆğµãĞĞÁĞ
+                    //å¾—åˆ°èµ·ç‚¹è¡Œåˆ—
                     beginPos = new Vector2(int.Parse(strs[0]), int.Parse(strs[1]));
-                    //¸ÄÆğµãÑÕÉ«
+                    //æ”¹èµ·ç‚¹é¢œè‰²
                     info.collider.gameObject.GetComponent<MeshRenderer>().material = yellow;
                 }
 
-                //ÓĞÆğµã µãÖÕµã
+                //æœ‰èµ·ç‚¹ ç‚¹ç»ˆç‚¹
                 else
                 {
-                    //µÃµ½ÖÕµã
+                    //å¾—åˆ°ç»ˆç‚¹
                     string[] strs = info.collider.gameObject.name.Split('_');
                     Vector2 endPos = new Vector2(int.Parse(strs[0]), int.Parse(strs[1]));
 
-                    //Ñ°Â·
+                    //å¯»è·¯
                     list = AStarMgr.GetInstance().FindPath(beginPos, endPos);
 
-                    //±ÜÃâËÀÂ·Ê±»ÆÉ«²»±ä
+                    //é¿å…æ­»è·¯æ—¶é»„è‰²ä¸å˜
                     cubes[(int)beginPos.x + "_" + (int)beginPos.y].GetComponent<MeshRenderer>().material = normal;
-                    //²»Îª¿Õ ÕÒµ½
+                    //ä¸ä¸ºç©º æ‰¾åˆ°
                     if (list != null)
                     {
                         for (int i = 0; i < list.Count; ++i)
@@ -110,7 +110,7 @@ public class AStarText : MonoBehaviour
 
                     }
                     
-                    //Çå³ı¿ªÊ¼µã
+                    //æ¸…é™¤å¼€å§‹ç‚¹
                     beginPos = Vector2.right * -1;
 
                 }
