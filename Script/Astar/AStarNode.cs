@@ -5,34 +5,34 @@ using UnityEngine;
 
 public enum E_Node_type
 { 
-    //¿ÉÒÔ×ß
+    //å¯ä»¥èµ°
     Walk,
-    //²»¿ÉÒÔ×ß
+    //ä¸å¯ä»¥èµ°
     Stop,
 }
 
 
-//AĞÇ¸ñ×ÓÀà
+//Aæ˜Ÿæ ¼å­ç±»
 public class AStarNode
 {
-    //¸ñ×Ó¶ÔÏó×ø±ê
+    //æ ¼å­å¯¹è±¡åæ ‡
     public int x;
     public int y;
 
 
-    //Ñ°Â·ÏûºÄ
+    //å¯»è·¯æ¶ˆè€—
     public float f;
-    //¾àÀëÆğµã¾àÀë
+    //è·ç¦»èµ·ç‚¹è·ç¦»
     public float g;
-    //ÖÕµãµÄ¾àÀë
+    //ç»ˆç‚¹çš„è·ç¦»
     public float h;
-    //¸¸¶ÔÏó
+    //çˆ¶å¯¹è±¡
     public AStarNode father;
 
-    //¸ñ×ÓÀàĞÍ
+    //æ ¼å­ç±»å‹
     public E_Node_type type;
 
-    //¹¹Ôìº¯Êı Êä³ö¸ñ×Ó×ø±êºÍÀàĞÍ
+    //æ„é€ å‡½æ•° è¾“å‡ºæ ¼å­åæ ‡å’Œç±»å‹
     public AStarNode(int x, int y, E_Node_type type )
     {
         this.x = x;
