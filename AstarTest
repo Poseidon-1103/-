@@ -1,0 +1,42 @@
+public class testAStar : MonoBehaviour
+{
+    public int beginX = 0;
+    public int beginY = 0;
+    public int x2 = 0;
+    public int y2 = 0;
+    //地图大小
+    public int mapW = 8;
+    public int mapH = 8;
+    //存放地图
+    private AStarNode[,] mapNods;
+    //初始射线起点
+    private Vector2 beginPos = Vector2.right * -1;
+    public SpriteRenderer sp;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        mapNods = new AStarNode[mapW, mapH];
+        AStarMgr.Instance.InitMapInfo(mapW, mapH);
+        for (int i = 0; i < mapH; ++i)
+        {
+            for (int j = 0; j < mapW; ++j)
+            {
+
+                
+                //把坐标和障碍物信息写入node然后传入（未写入）
+                mapNods[i, j] = node;
+
+            }
+        }
+    }
+
+    void Update()
+    {
+       //使用GetMouse方法，获取所点击的格子（未写入）
+       //将获取的起点，终点输入该函数
+       List<AStarNode> list = AStarMgr.Instance.FindPath(beginPos, endPos);
+       
+    }
+}
