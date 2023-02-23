@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class AStarMgr : BaseManager<AStarMgr>
 {
-    //µØÍ¼µÄ¿í¸ß
+    //åœ°å›¾çš„å®½é«˜
     private int mapW;
     private int mapH;
 
-    //µØÍ¼Ïà¹Ø¸ñ×Ó¶ÔÏóÈİÆ÷
+    //åœ°å›¾ç›¸å…³æ ¼å­å¯¹è±¡å®¹å™¨
     public  AStarNode[,] nodes;
-    //¿ªÆôÁĞ±í
+    //å¼€å¯åˆ—è¡¨
     private List<AStarNode> openList=new List<AStarNode>();
-    //¹Ø±ÕÁĞ±í
+    //å…³é—­åˆ—è¡¨
     private List<AStarNode> closeList=new List<AStarNode>();
 
 
-    //Ñ°Â··½·¨ Ìá¹©Íâ²¿Ê¹ÓÃ
-    //³õÊ¼»¯µØÍ¼
+    //å¯»è·¯æ–¹æ³• æä¾›å¤–éƒ¨ä½¿ç”¨
+    //åˆå§‹åŒ–åœ°å›¾
     public void InitmapInfo(int w, int h)
     {
-        //¸ù¾İ¿í¸ß ´´½¨¸ñ×Ó
+        //æ ¹æ®å®½é«˜ åˆ›å»ºæ ¼å­
 
-        //¼ÇÂ¼¿í¸ß
+        //è®°å½•å®½é«˜
         this.mapW = w;
         this.mapH = h;
-        //ÉêÃ÷ÈİÆ÷¿ÉÒÔ×°¸ñ×ÓÊı
+        //ç”³æ˜å®¹å™¨å¯ä»¥è£…æ ¼å­æ•°
         nodes = new AStarNode[w, h];
-        //ÉêÃ÷¸ñ×Ó²¢×°Èë
+        //ç”³æ˜æ ¼å­å¹¶è£…å…¥
         for (int i = 0; i < w; ++i)
         {
             for (int j = 0; j < h; ++j) 
@@ -41,32 +41,32 @@ public class AStarMgr : BaseManager<AStarMgr>
 
     public List<AStarNode> FindPath(Vector2 starPos, Vector3 endPos)
     {
-        //ÅĞ¶Ï´«ÈëÊÇ·ñºÏ·¨
-        //1.ÊÇ·ñÔÚ·¶Î§ÄÚ
+        //åˆ¤æ–­ä¼ å…¥æ˜¯å¦åˆæ³•
+        //1.æ˜¯å¦åœ¨èŒƒå›´å†…
         if (starPos.x < 0 || starPos.x >= mapW ||
             starPos.y < 0 || starPos.y >= mapH ||
             endPos.x < 0 || endPos.x >= mapW ||
             endPos.y < 0 || endPos.y >= mapH)
         {
-            Debug.Log("¿ªÊ¼»ò½áÊøÔÚµØÍ¼·¶Î§Íâ");
+            Debug.Log("å¼€å§‹æˆ–ç»“æŸåœ¨åœ°å›¾èŒƒå›´å¤–");
             return null;
         }
-        //2.ÊÇ·ñ×èµ²
-        //»ñµÃÆğµãÖÕµã¸ñ×Ó
+        //2.æ˜¯å¦é˜»æŒ¡
+        //è·å¾—èµ·ç‚¹ç»ˆç‚¹æ ¼å­
         AStarNode start = nodes[(int)starPos.x, (int)starPos.y];
         AStarNode end = nodes[(int)endPos.x, (int)endPos.y];
         if (start.type==E_Node_type.Stop ||
             end.type == E_Node_type.Stop)
         {
-            Debug.Log("¿ªÊ¼»ò½áÊø±»×èµ²");
+            Debug.Log("å¼€å§‹æˆ–ç»“æŸè¢«é˜»æŒ¡");
             return null;
         }
 
-        //Çå¿Õ¿ªÆôºÍ¹Ø±ÕÁĞ±í
+        //æ¸…ç©ºå¼€å¯å’Œå…³é—­åˆ—è¡¨
         closeList.Clear();
         openList.Clear();
 
-        //Æğµã·ÅÈë¹Ø±ÕÁĞ±í
+        //èµ·ç‚¹æ”¾å…¥å…³é—­åˆ—è¡¨
         start.father = null;
         start.f = 0;
         start.g = 0;
@@ -75,37 +75,37 @@ public class AStarMgr : BaseManager<AStarMgr>
 
         while (true)
         {
-            //Ñ°ÕÒÖÜÎ§µã
-            //ÉÏ x y-1
+            //å¯»æ‰¾å‘¨å›´ç‚¹
+            //ä¸Š x y-1
             FindNearlyNodeToOpenList(start.x, start.y - 1, 1, start, end);
-            //×ó x-1 y 
+            //å·¦ x-1 y 
             FindNearlyNodeToOpenList(start.x - 1, start.y, 1, start, end);
-            //ÓÒ x+1 y
+            //å³ x+1 y
             FindNearlyNodeToOpenList(start.x + 1, start.y, 1, start, end);
-            //ÏÂ x y+1
+            //ä¸‹ x y+1
             FindNearlyNodeToOpenList(start.x, start.y + 1, 1, start, end);
 
-            //ËÀÂ·ÅĞ¶Ï ¿ªÆôÁĞ±íÎª¿Õ
+            //æ­»è·¯åˆ¤æ–­ å¼€å¯åˆ—è¡¨ä¸ºç©º
             if (openList.Count == 0)
             {
-                Debug.Log("ËÀÂ·");
+                Debug.Log("æ­»è·¯");
                 return null;
                   
             }
-            //Ñ¡¿ªÆôÁĞ±íÖĞÑ°Â·ÏûºÄ×îĞ¡µÄµã
+            //é€‰å¼€å¯åˆ—è¡¨ä¸­å¯»è·¯æ¶ˆè€—æœ€å°çš„ç‚¹
             openList.Sort(SortOpenList);
 
-            //·ÅÈë¹Ø±ÕÁĞ±í É¾³ı¿ªÆôÁĞ±í
+            //æ”¾å…¥å…³é—­åˆ—è¡¨ åˆ é™¤å¼€å¯åˆ—è¡¨
             closeList.Add(openList[0]);
-            //Ñ°ÕÒµÄµã ³ÉÎªĞÂµãÆğµã ½øĞĞÏÂÒ»´ÎÑ°Â·
+            //å¯»æ‰¾çš„ç‚¹ æˆä¸ºæ–°ç‚¹èµ·ç‚¹ è¿›è¡Œä¸‹ä¸€æ¬¡å¯»è·¯
             start = openList[0];
             openList.RemoveAt(0);
 
-            //Èç¹û´ËµãÒÑ¾­ÎªÖÕµã µÃµ½×îÖÕ½á¹û·µ»Ø
-            //Èç¹û²»ÊÇÖÕµã ¼ÌĞøÑ°Â·
+            //å¦‚æœæ­¤ç‚¹å·²ç»ä¸ºç»ˆç‚¹ å¾—åˆ°æœ€ç»ˆç»“æœè¿”å›
+            //å¦‚æœä¸æ˜¯ç»ˆç‚¹ ç»§ç»­å¯»è·¯
             if (start == end)
             {
-                //ÊÇÖÕµã
+                //æ˜¯ç»ˆç‚¹
                 List<AStarNode> path = new List<AStarNode>();
                 path.Add(end);
                 while (end.father != null)
@@ -113,7 +113,7 @@ public class AStarMgr : BaseManager<AStarMgr>
                     path.Add(end.father);
                     end = end.father;
                 }
-                //ÁĞ±í·´×ªAPI
+                //åˆ—è¡¨åè½¬API
                 path.Reverse();
 
                 return path;
@@ -124,7 +124,7 @@ public class AStarMgr : BaseManager<AStarMgr>
     }
 
 
-    //ÅÅĞòº¯Êı
+    //æ’åºå‡½æ•°
     private int SortOpenList(AStarNode a, AStarNode b)
     {
         if (a.f > b.f)
@@ -135,29 +135,29 @@ public class AStarMgr : BaseManager<AStarMgr>
 
     private void FindNearlyNodeToOpenList(int x, int y,float g,AStarNode father,AStarNode end) 
     {
-        //±ß½çÅĞ¶Ï
+        //è¾¹ç•Œåˆ¤æ–­
         if (x < 0 || x >= mapW ||
             y < 0 || y >= mapH)
             return;
-        //È¡µã
+        //å–ç‚¹
         AStarNode node = nodes[x, y];
-        //·ÅÈë¿ªÆôÁĞ±í
+        //æ”¾å…¥å¼€å¯åˆ—è¡¨
         if (node == null || 
             node.type ==E_Node_type.Stop || 
             closeList .Contains(node) || 
             openList .Contains(node))
             return;
 
-        //¼ÆËãfÖµ
+        //è®¡ç®—få€¼
         //f=g+h
-        //¼ÇÂ¼¸¸¶ÔÏó
+        //è®°å½•çˆ¶å¯¹è±¡
         node.father = father;
-        //¼ÆËãg,ÀëÆğµã¾àÀë=¸¸¶ÔÏóÀëÆğµã¾àÀë+×Ó¶ÔÏóÀë¸¸¶ÔÏó¾àÀë
+        //è®¡ç®—g,ç¦»èµ·ç‚¹è·ç¦»=çˆ¶å¯¹è±¡ç¦»èµ·ç‚¹è·ç¦»+å­å¯¹è±¡ç¦»çˆ¶å¯¹è±¡è·ç¦»
         node.g = father.g + g;
         node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
         node.f = node.g + node.h;
 
-        //ºÏ·¨£¬´æµ½¿ªÆôÁĞ±í
+        //åˆæ³•ï¼Œå­˜åˆ°å¼€å¯åˆ—è¡¨
         openList.Add(node);
     }
 }
