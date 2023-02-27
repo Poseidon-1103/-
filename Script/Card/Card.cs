@@ -15,6 +15,11 @@ public class Card : MonoBehaviour
     public int cardPlace;
     public string cardDescription;
 
+    public Card()
+    { 
+    
+    
+    }
     public Card(int Id,string CardName,int CardCD,int Sequnce,int CardPlace,string CardDescription)
     {
         id = Id;
