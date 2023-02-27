@@ -10,8 +10,6 @@ public class CardDataBase : MonoBehaviour
     {
         cardList.Add(new Card(0, "None", 0, 0,1,"None"));
         
-
-
     }
 
 }

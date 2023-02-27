@@ -41,18 +41,17 @@ public class ThisCard : MonoBehaviour
     
     void Update()
     {
-        id = thisCard[0].id;
-        cardName = thisCard[0].cardName;
-        cardCd = thisCard[0].cardCd;
-        sequence = thisCard[0].sequence;
-        cardPlace = thisCard[0].cardPlace;
-        cardDescription = thisCard[0].cardDescription;
+        id = thisCard[0].Id;
+        cardName = thisCard[0].CardName;
+        cardCd = thisCard[0].CardCd;
+        sequence = thisCard[0].Sequence;
+        cardPlace = thisCard[0].CardPlace;
+        cardDescription = thisCard[0].CardDescription;
 
         nameText.text = "" + cardName;
         cardCdText.text = "" + cardCd;
         sequenceText.text = "" + sequence;
         cardDescriptionText.text = "" + cardDescriptionText;
-
 
     }
 }
