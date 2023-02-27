@@ -8,8 +8,9 @@ public class CardDataBase : MonoBehaviour
 
     void Awake()
     {
-        cardList.Add(new Card(0, "None", 0, 0,1));
+        cardList.Add(new Card(0, "None", 0, 0,1,"None"));
         
+
 
     }
 
