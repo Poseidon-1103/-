@@ -35,7 +35,7 @@ public class CardDataLoad : MonoBehaviour
                 cardList.Add(Card);
 
                 //测试读取
-                //Debug.Log("读取:"+Card.cardName+Card.cardDescription);
+                Debug.Log("读取:"+Card.CardName+Card.CardDescription);
             }
         }
     

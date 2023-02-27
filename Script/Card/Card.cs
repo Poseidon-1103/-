@@ -8,12 +8,19 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
 
-    public int id;
-    public string cardName;
-    public int cardCd;
-    public int sequence;
-    public int cardPlace;
-    public string cardDescription;
+    private int id;
+    private string cardName;
+    private int cardCd;
+    private int sequence;
+    private int cardPlace;
+    private string cardDescription;
+
+    public int Id { get => id; set => id = value; }
+    public string CardName { get => cardName; set => cardName = value; }
+    public int CardCd { get => cardCd; set => cardCd = value; }
+    public int Sequence { get => sequence; set => sequence = value; }
+    public int CardPlace { get => cardPlace; set => cardPlace = value; }
+    public string CardDescription { get => cardDescription; set => cardDescription = value; }
 
     public Card()
     { 
