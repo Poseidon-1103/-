@@ -12,7 +12,7 @@ public class CardDataLoad : MonoBehaviour
         LoadCardData();
     }
 
-    public void LoadCardData()
+    public List<Card> LoadCardData()
     {
         string[] dataRow = cardData.text.Split('\n');
         foreach (var row in dataRow)
@@ -39,5 +39,26 @@ public class CardDataLoad : MonoBehaviour
             }
         }
     
+    }
+
+    public void sortCard()
+    {
+        List<Card> sortCardList =LoadCardData();
+
+        sortCardList.Sort(CompareCD);
+
+        Debug.Log("读取:" + sortCardList[0].CardName);
+        Debug.Log("读取:" + sortCardList[1].CardName);
+        Debug.Log("读取:" + sortCardList[2].CardName);
+    }
+
+    private int CompareCD(Card p1, Card p2)
+    {
+        if (p1.Sequence >= p2.Sequence)
+        { 
+            return p1.CardName.CompareTo(p2.CardName);
+        }
+        return p2.CardName.CompareTo(p1.CardName);
+        throw new System.NotImplementedException();
     }
 }
