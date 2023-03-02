@@ -8,18 +8,32 @@ public class CardTools : BaseManager<CardTools>
     public static Card card;
     public static List<Card> cardList = new List<Card>();
 
-
-    void Awake()
+    //卡牌赋值，未实现
+    public void Awake()
     {
         cardList.Add(new Card(0, "None", 0, 0, 1, "None","None",1));
     }
 
+    //按时序排序
+    public int CompareCD(Card p1, Card p2)
+    {
+        if (p1.Sequence >= p2.Sequence)
+        {
+            return p1.CardName.CompareTo(p2.CardName);
+        }
+        return p2.CardName.CompareTo(p1.CardName);
+        throw new System.NotImplementedException();
+    }
+
+    //导入文件存入List<Card> cardList
     public List<Card> LoadCardData()
     {
+        //从资源文件夹里调用
         cardData = Resources.Load("CardData") as TextAsset;
         string[] dataRow = cardData.text.Split('\n');
         foreach (var row in dataRow)
         {
+            //还有数据
             string[] rowArray = row.Split(',');
             if (rowArray[0] == "#")
             {
