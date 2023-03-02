@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class testAStar : MonoBehaviour
 {
-    //ÆğÊ¼Î»ÖÃ
+    //èµ·å§‹ä½ç½®
     public float beginX;
     public float beginY;
-    //µØÍ¼µÄ¿í¸ß
+    //åœ°å›¾çš„å®½é«˜
     public int mapW;
     public int mapH;
 
-    //¸ñ×ÓÆ«ÒÆ
+    //æ ¼å­åç§»
     public int offsetX;
     public int offsetY;
 
-    //¿ªÊ¼µã
+    //å¼€å§‹ç‚¹
     private Vector2 beginPos = Vector2.right * -1;
     public SpriteRenderer sp;
 
-    //×ÖµäÈİÆ÷
+    //å­—å…¸å®¹å™¨
     private Dictionary<string, GameObject> cubes = new Dictionary<string, GameObject>();
     private List<AStarNode> list;
 
-    //ÉãÏñ»ú
+    //æ‘„åƒæœº
     [SerializeField] private Camera maincamera;
+
+   //é‡æ–°ç¡®ç«‹æ ¼å­
+    int Xcoord;
+    int Ycoord;
 
     public GameObject Yelcube;
     void Start()
@@ -37,12 +41,12 @@ public class testAStar : MonoBehaviour
             {
                 GameObject obj = GameObject.Instantiate(Yelcube);
                 obj.transform.position = new Vector2(beginX + i * offsetX, beginY + j * offsetY);
-                //ĞŞ¸ÄÃû×Ö
+                //ï¿½Ş¸ï¿½ï¿½ï¿½ï¿½ï¿½
                 obj.name = i + "_" + j;
 
                 cubes.Add(obj.name, obj);
 
-                //»ñµÃ¸ñ×ÓÀàĞÍ ÅĞ¶ÏÕÏ°­
+                //ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ğ¶ï¿½ï¿½Ï°ï¿½
                 AStarNode node = AStarMgr.GetInstance().nodes[i, j];
                 if (node.type == E_Node_type.Stop)
                 {
@@ -69,46 +73,56 @@ public class testAStar : MonoBehaviour
                     for (int i = 0; i < list.Count; ++i)
                     {
 
-                        sp = GameObject.Find("" + list[i].x + "_" + list[i].y + "").GetComponent<SpriteRenderer>();
-                        sp.color = new Color32(255, 255, 255, 255);
+                         Xcoord = list[i].x ;
+                        Ycoord = list[i].y ;
+                        SPcolor(Xcoord, Ycoord, 255, 255, 255);
                     }
 
                 }
 
-                //µÃµ½ÆğµãĞĞÁĞ
-                beginPos = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
-                //¸ÄÆğµãÑÕÉ«
-                sp = GameObject.Find("" + mouseWorldPosition.x + "_" + mouseWorldPosition.y + "").GetComponent<SpriteRenderer>();
-                sp.color = new Color32(255, 0, 0, 255);
+                Xcoord = (int)mouseWorldPosition.x - (int)beginX;
+                Ycoord = (int)mouseWorldPosition.y - (int)beginY;
+                //å¾—åˆ°èµ·ç‚¹è¡Œåˆ—
+                beginPos = new Vector2(Xcoord, Ycoord);
+                //æ”¹èµ·ç‚¹é¢œè‰²
+                SPcolor(Xcoord, Ycoord, 255, 0, 0);
             }
-            //ÓĞÆğµã µãÖÕµã
+            //æœ‰èµ·ç‚¹ æ‰¾ç»ˆç‚¹
             else
             {
-                //µÃµ½ÖÕµã
-                Vector2 endPos = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
+                Xcoord = (int)mouseWorldPosition.x - (int)beginX;
+                Ycoord = (int)mouseWorldPosition.y - (int)beginY;
+                //å¾—åˆ°ç»ˆç‚¹
+                Vector2 endPos = new Vector2(Xcoord, Ycoord);
 
-                //Ñ°Â·
+                //å¯»è·¯
                 list = AStarMgr.GetInstance().FindPath(beginPos, endPos);
 
-                //±ÜÃâËÀÂ·Ê±»ÆÉ«²»±ä
-                sp = GameObject.Find("" + (int)beginPos.x + "_" + (int)beginPos.y + "").GetComponent<SpriteRenderer>();
-                sp.color = new Color32(255, 255, 255, 255);
-                //²»Îª¿Õ ÕÒµ½
+                //é¿å…æ­»è·¯æ—¶é»„è‰²ä¸å˜
+                SPcolor((int)beginPos.x, (int)beginPos.y, 255, 255, 255);
+                //ä¸ä¸ºç©º æ‰¾åˆ°
                 if (list != null)
                 {
                     for (int i = 0; i < list.Count; ++i)
                     {
-                        sp = GameObject.Find("" + list[i].x + "_" + list[i].y + "").GetComponent<SpriteRenderer>();
-                        sp.color = new Color32(0, 255, 255, 255);
+                        Xcoord = list[i].x ;
+                        Ycoord = list[i].y;
+                        SPcolor(Xcoord, Ycoord, 0, 255, 255);
                     }
 
                 }
 
-                //Çå³ı¿ªÊ¼µã
+                //æ¸…é™¤å¼€å§‹ç‚¹
                 beginPos = Vector2.right * -1;
 
             }
         }
+    }
+
+    public void SPcolor(int Xcoord, int Ycoord,byte colorR, byte colorG, byte colorB)
+    {
+        sp = GameObject.Find("" + Xcoord + "_" + Ycoord + "").GetComponent<SpriteRenderer>();
+        sp.color = new Color32( colorR, colorG, colorB, 255);
     }
     
 }
