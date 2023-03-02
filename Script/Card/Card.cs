@@ -12,44 +12,28 @@ public class Card
     private int cardCd;
     private int sequence;
     private int cardPlace;
-    private string cardDescription;
+    private string cardEffect;
+    private string cardEffType;
+    private int cardEffNum;
 
     public int Id { get => id; set => id = value; }
     public string CardName { get => cardName; set => cardName = value; }
     public int CardCd { get => cardCd; set => cardCd = value; }
     public int Sequence { get => sequence; set => sequence = value; }
     public int CardPlace { get => cardPlace; set => cardPlace = value; }
-    public string CardDescription { get => cardDescription; set => cardDescription = value; }
+    public string CardEffect { get => cardEffect; set => cardEffect = value; }
+    public string CardEffType { get => cardEffType; set => cardEffType = value; }
+    public int CardEffNum { get => cardEffNum; set => cardEffNum = value; }
 
-<<<<<<< HEAD
-=======
-    private int id;
-    private string cardName;
-    private int cardCd;
-    private int sequence;
-    private int cardPlace;
-    private string cardDescription;
-
-    public int Id { get => id; set => id = value; }
-    public string CardName { get => cardName; set => cardName = value; }
-    public int CardCd { get => cardCd; set => cardCd = value; }
-    public int Sequence { get => sequence; set => sequence = value; }
-    public int CardPlace { get => cardPlace; set => cardPlace = value; }
-    public string CardDescription { get => cardDescription; set => cardDescription = value; }
-
-    public Card()
-    { 
-    
-    
-    }
->>>>>>> main
-    public Card(int Id,string CardName,int CardCD,int Sequnce,int CardPlace,string CardDescription)
+    public Card(int Id, string CardName, int CardCD, int Sequnce, int CardPlace, string CardEffect, string CardEffType, int CardEffNum)
     {
         id = Id;
         cardName = CardName;
         cardCd = CardCD;
         sequence = Sequnce;
         cardPlace = CardPlace;
-        cardDescription = CardDescription;
+        cardEffect = CardEffect;
+        cardEffType = CardEffType;
+        cardEffNum = CardEffNum;
     }
 }

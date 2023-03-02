@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CardDataBase : MonoBehaviour
 {
-    public static List<Card> cardList = new List<Card>();
+  /*  public static List<Card> cardList = new List<Card>();*/
 
-    void Awake()
+    /*void Awake()
     {
-        cardList.Add(new Card(0, "None", 0, 0,1,"None"));
-        
-    }
+        cardList.Add(new Card(0, "None", 0, 0, 1, "None"));
+    }*/
+
 
 }

@@ -34,8 +34,7 @@ public class ThisCard : MonoBehaviour
 
     void Start()
     {
-        thisCard[0] = CardDataBase.cardList[thisId];
-
+        /*thisCard[0] = CardTools.GetInstance().cardList[thisId];*/
     }
 
     
@@ -46,12 +45,13 @@ public class ThisCard : MonoBehaviour
         cardCd = thisCard[0].CardCd;
         sequence = thisCard[0].Sequence;
         cardPlace = thisCard[0].CardPlace;
-        cardDescription = thisCard[0].CardDescription;
+        cardDescription = thisCard[0].CardEffect;
 
         nameText.text = "" + cardName;
         cardCdText.text = "" + cardCd;
         sequenceText.text = "" + sequence;
         cardDescriptionText.text = "" + cardDescriptionText;
-
     }
+
+    
 }
