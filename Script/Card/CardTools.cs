@@ -8,10 +8,21 @@ public class CardTools : BaseManager<CardTools>
     public static Card card;
     public static List<Card> cardList = new List<Card>();
 
-    //卡牌赋值，未实现
-    public void Awake()
+   //获得一个角色的卡
+    public List<Card> GetPLcard(int PL, List<Card> cardList1)
     {
-        cardList.Add(new Card(0, "None", 0, 0, 1, "None","None",1));
+        //读取id头2位确定身份
+        List<Card> cardList2 = new List<Card>();
+        Debug.Log("读取:" + cardList1.Count);
+        for (int i = 0; i<cardList1.Count; i++)
+        {
+            int x = cardList1[i].Id / 10000;
+            if (PL == x)
+            {
+                cardList2.Add(cardList1[i]);
+            }
+        }
+        return cardList2;
     }
 
     //按时序排序
