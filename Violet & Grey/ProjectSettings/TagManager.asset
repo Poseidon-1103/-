@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Obstacle
+  - 
   - 
   - 
   - 
@@ -40,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1479501777
-    locked: 0
-  - name: Foreground
-    uniqueID: 1232958947
     locked: 0

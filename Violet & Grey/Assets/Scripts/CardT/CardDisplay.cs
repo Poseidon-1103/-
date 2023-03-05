@@ -38,7 +38,7 @@ public class CardDisplay : MonoBehaviour
         {
             if (cardList[i].CardPlace==0)
             {
-                if (NameTextUP.text == null)
+                if (NameTextUP.text =="123")
                 {
                     NameTextUP.text = cardList[i].CardName;
                     CardCDTextUP.text = cardList[i].CardCd.ToString();
@@ -47,7 +47,7 @@ public class CardDisplay : MonoBehaviour
             }
             else
             {
-                if (NameTextDown.text == null)
+                if (NameTextDown.text == "123")
                 {
                     NameTextDown.text = cardList[i].CardName;
                     CardCDTextDown.text = cardList[i].CardCd.ToString();
