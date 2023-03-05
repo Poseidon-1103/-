@@ -31,14 +31,15 @@ public class CardDisplay : MonoBehaviour
 
     public void ShowCard()
     {
+        //判断上区下区并显示到对应位置
         NameTextUP.text = cardList[0].CardName;
         CardCDTextUP.text = cardList[0].CardCd.ToString();
-        CardDescriptionTextUP.text = cardList[0].CardEffect + cardList[0].CardEffNum + cardList[0].CardEffType + "\n";
+        CardDescriptionTextUP.text = cardList[0].CardEffect + cardList[0].CardEffNum + cardList[0].CardEffType ;
         for (int i = 1 ; i < cardList.Count ; i++)
         {
             if (cardList[i].CardName== cardList[0].CardName)
             {
-                CardDescriptionTextUP.text += cardList[i].CardEffect+ cardList[i].CardEffNum+ cardList[i].CardEffType + "\n";
+                CardDescriptionTextUP.text += "\n"+cardList[i].CardEffect+ cardList[i].CardEffNum+ cardList[i].CardEffType;
             }
             else
             {
