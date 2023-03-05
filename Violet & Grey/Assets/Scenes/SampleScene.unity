@@ -180,7 +180,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1479501777
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a579ea5d55c6f864ea6a869cc0cbf106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -876,7 +876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bd8c944e113a44196e6cc6caf6ad1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 634748848429340228, guid: cb2ebbd85c84dae418c0f6e4ffed2324, type: 3}
+  cardPrefab: {fileID: 634748848429340228, guid: d86180c97067a664c9669cd8c356e6f6,
+    type: 3}
   cardPool: {fileID: 151793490}
 --- !u!1 &1441228551
 GameObject:
@@ -902,7 +903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441228551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12a7052db6c011c41b2f145752495b55, type: 3}
   m_Name: 
