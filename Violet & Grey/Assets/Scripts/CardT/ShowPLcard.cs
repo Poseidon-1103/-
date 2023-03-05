@@ -24,7 +24,7 @@ public class ShowPLcard : MonoBehaviour
     {
         //读取角色11的卡 
         List<Card> cardList = CardTools.GetInstance().GetPLcard(11, CardTools.GetInstance().LoadCardData());
-        //将每张卡分开
+        //将每张卡的数据分开
         for (int i = 0; i < cardList[cardList.Count - 1].Id % 10000 / 100; i++)
         {
             List<Card> cardList2 = CardTools.GetInstance().GetNOnumcard(i+1, cardList);

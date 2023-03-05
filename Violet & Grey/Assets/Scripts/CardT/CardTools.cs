@@ -13,7 +13,7 @@ public class CardTools : BaseManager<CardTools>
     //获得一张卡的所有数据
     public List<Card> GetNOnumcard(int NOcard, List<Card> cardList1)
     {
-        //读取id头2位确定身份
+        //读取id中间2位确定单卡
         List<Card> cardList2 = new List<Card>();
         for (int i = 0; i < cardList1.Count; i++)
         {
