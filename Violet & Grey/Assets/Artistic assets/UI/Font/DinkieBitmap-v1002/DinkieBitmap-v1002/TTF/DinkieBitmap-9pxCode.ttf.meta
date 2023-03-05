@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: daf8191eda29ebc45a562c9819270c1d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - DinkieBitmap
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a0efc813a26a0f6488e5af5d44241cf8, type: 3}
+  - {fileID: 12800000, guid: 02f021f2a025aba4b8d389c7e5ed1505, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
