@@ -33,10 +33,18 @@ public class CardDisplay : MonoBehaviour
     {
         NameTextUP.text = cardList[0].CardName;
         CardCDTextUP.text = cardList[0].CardCd.ToString();
-        CardDescriptionTextUP.text = cardList[0].CardEffect;
-        NameTextDown.text = cardList[1].CardName;
-        CardCDTextDown.text= cardList[1].CardCd.ToString();
-        CardDescriptionTextDown.text = cardList[1].CardEffect;
+        CardDescriptionTextUP.text = cardList[0].CardEffect + cardList[0].CardEffNum + cardList[0].CardEffType + "\n";
+        for (int i = 1 ; i < cardList.Count ; i++)
+        {
+            if (cardList[i].CardName== cardList[0].CardName)
+            {
+                CardDescriptionTextUP.text += cardList[i].CardEffect+ cardList[i].CardEffNum+ cardList[i].CardEffType + "\n";
+            }
+            else
+            {
+                CardDescriptionTextDown.text +=  cardList[i].CardEffect + cardList[i].CardEffNum + cardList[i].CardEffType + "\n";
+            }
+        }
         Sequence.text = cardList[0].Sequence.ToString();
     }
 }

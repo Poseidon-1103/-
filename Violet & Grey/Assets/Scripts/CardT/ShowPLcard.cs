@@ -19,19 +19,16 @@ public class ShowPLcard : MonoBehaviour
 
     }
 
-    //在cardpool里面生成card 
+    //鍦╟ardpool閲岄潰鐢熸垚card 
     public void OnClickOpen()
     {
-        //读取角色11的卡 
+        //璇诲彇瑙掕壊11鐨勫崱 
         List<Card> cardList = CardTools.GetInstance().GetPLcard(11, CardTools.GetInstance().LoadCardData());
-
-        for (int i = 0; i < cardList.Count; i += 2)
+        //灏嗘瘡寮犲崱鍒嗗紑
+        for (int i = 0; i < cardList[cardList.Count - 1].Id % 10000 / 100; i++)
         {
-            List<Card> cardList2 = new List<Card>();
-            cardList2.Add(cardList[i]);
-            cardList2.Add(cardList[i + 1]);
+            List<Card> cardList2 = CardTools.GetInstance().GetNOnumcard(i+1, cardList);
             GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-
             newCard.GetComponent<CardDisplay>().cardList = cardList2;
         }
 

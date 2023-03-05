@@ -8,12 +8,28 @@ public class CardTools : BaseManager<CardTools>
     public static Card card;
     public static List<Card> cardList = new List<Card>();
 
+
+
+    //获得一张卡的所有数据
+    public List<Card> GetNOnumcard(int NOcard, List<Card> cardList1)
+    {
+        //读取id头2位确定身份
+        List<Card> cardList2 = new List<Card>();
+        for (int i = 0; i < cardList1.Count; i++)
+        {
+            int x = cardList1[i].Id %10000/ 100;
+            if (NOcard == x)
+            {
+                cardList2.Add(cardList1[i]);
+            }
+        }
+        return cardList2;
+    }
     //获得一个角色的卡
     public List<Card> GetPLcard(int PL, List<Card> cardList1)
     {
         //读取id头2位确定身份
         List<Card> cardList2 = new List<Card>();
-        Debug.Log("读取:" + cardList1.Count);
         for (int i = 0; i<cardList1.Count; i++)
         {
             int x = cardList1[i].Id / 10000;

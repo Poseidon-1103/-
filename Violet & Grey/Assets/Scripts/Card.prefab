@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
@@ -1158,6 +1158,7 @@ MonoBehaviour:
   CardCDTextDown: {fileID: 634748847216225064}
   CardDescriptionTextDown: {fileID: 634748847401678983}
   Sequence: {fileID: 634748847560482250}
+  cardList: []
 --- !u!1 &634748848501433519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
@@ -1476,7 +1477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
   m_sharedMaterial: {fileID: 3005147247366807921, guid: b414a38ef4d5b1045bc3f125fc92d8e2, type: 2}
