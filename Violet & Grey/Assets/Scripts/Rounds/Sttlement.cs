@@ -18,7 +18,8 @@ public class Seetlement : MonoBehaviour
     }
 
     //点击按钮 开始结算回合
-    //获取当前回合所有敌人和玩家角色选择的牌 放到一个list里 
+    //获取当前回合所有敌人和玩家角色选择的牌 放到一个list里
+    
 
 
 }
