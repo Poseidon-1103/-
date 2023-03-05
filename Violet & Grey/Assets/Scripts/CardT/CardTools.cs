@@ -11,14 +11,14 @@ public class CardTools : BaseManager<CardTools>
 
 
     //获得一张卡的所有数据
-    public List<Card> GetNOnumcard(int NOcard, List<Card> cardList1)
+    public List<Card> GetNOnumcard(int CardNo, List<Card> cardList1)
     {
         //读取id中间2位确定单卡
         List<Card> cardList2 = new List<Card>();
         for (int i = 0; i < cardList1.Count; i++)
         {
             int x = cardList1[i].Id %10000/ 100;
-            if (NOcard == x)
+            if (CardNo == x)
             {
                 cardList2.Add(cardList1[i]);
             }
@@ -26,7 +26,7 @@ public class CardTools : BaseManager<CardTools>
         return cardList2;
     }
     //获得一个角色的卡
-    public List<Card> GetPLcard(int PL, List<Card> cardList1)
+    public List<Card> GetPlayerCard(int PL, List<Card> cardList1)
     {
         //读取id头2位确定身份
         List<Card> cardList2 = new List<Card>();
@@ -46,9 +46,9 @@ public class CardTools : BaseManager<CardTools>
     {
         if (p1.Sequence >= p2.Sequence)
         {
-            return p1.CardName.CompareTo(p2.CardName);
+            return 1;
         }
-        return p2.CardName.CompareTo(p1.CardName);
+        return -1;
         throw new System.NotImplementedException();
     }
 

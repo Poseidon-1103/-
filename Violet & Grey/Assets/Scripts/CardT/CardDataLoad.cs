@@ -23,6 +23,9 @@ public class CardDataLoad : MonoBehaviour
         Debug.Log("读取:" + sortCardList[2].CardName);
         Debug.Log("读取:" + sortCardList[3].CardName);
         Debug.Log("读取:" + sortCardList[4].CardName);
+        Debug.Log("读取:" + sortCardList[5].CardName);
+        Debug.Log("读取:" + sortCardList[6].CardName);
+        Debug.Log("读取:" + sortCardList[7].CardName);
     }
 
     

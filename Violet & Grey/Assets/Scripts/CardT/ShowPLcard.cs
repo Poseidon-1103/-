@@ -23,7 +23,7 @@ public class ShowPLcard : MonoBehaviour
     public void OnClickOpen()
     {
         //读取角色11的卡 
-        List<Card> cardList = CardTools.GetInstance().GetPLcard(11, CardTools.GetInstance().LoadCardData());
+        List<Card> cardList = CardTools.GetInstance().GetPlayerCard(11, CardTools.GetInstance().LoadCardData());
         //将每张卡的数据分开
         for (int i = 0; i < cardList[cardList.Count - 1].Id % 10000 / 100; i++)
         {
@@ -31,9 +31,6 @@ public class ShowPLcard : MonoBehaviour
             GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
             newCard.GetComponent<CardDisplay>().cardList = cardList2;
         }
-
-
-
     }
 }
 
