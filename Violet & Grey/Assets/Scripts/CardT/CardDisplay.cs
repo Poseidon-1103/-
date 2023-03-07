@@ -28,7 +28,10 @@ public class CardDisplay : MonoBehaviour
     {
         
     }
-
+    public void DestoryMe()
+    {
+        Destroy(gameObject);
+    }
     public void ShowCard()
     {
         //判断上区下区并显示到对应位置
