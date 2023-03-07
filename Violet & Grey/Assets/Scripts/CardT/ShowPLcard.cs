@@ -23,9 +23,9 @@ public class ShowPLcard : MonoBehaviour
     public void OnClickOpen()
     {
         //先删除卡池里的所有卡
-        if (GameObject.Find("cardPool").GetComponentsInChildren<Transform>(true).Length > 1)
+        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
         {
-            GameObject.Find("cardPool").BroadcastMessage("DestoryMe");
+            cardPool.BroadcastMessage("DestoryMe");
         }
         //读取角色11的卡 
         List<Card> cardList = CardTools.GetInstance().GetPlayerCard(11, CardTools.GetInstance().LoadCardData());
