@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 测试地图类
+/// </summary>
 public class testAStar : MonoBehaviour
 {
     //起始位置

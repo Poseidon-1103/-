@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
+/// <summary>
+/// 挂载到预制卡牌上显示信息
+/// </summary>
 public class CardDisplay : MonoBehaviour
 {
-    //挂载到卡牌上
-    
     public TextMeshProUGUI NameTextUP;
     public TextMeshProUGUI CardCDTextUP;
     public TextMeshProUGUI CardDescriptionTextUP;
@@ -24,10 +26,7 @@ public class CardDisplay : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void DestoryMe()
     {
         Destroy(gameObject);
@@ -43,6 +42,7 @@ public class CardDisplay : MonoBehaviour
             {
                 if (NameTextUP.text =="123")
                 {
+                    NameTextUP.name = cardList[i].Id.ToString();
                     NameTextUP.text = cardList[i].CardName;
                     CardCDTextUP.text = cardList[i].CardCd.ToString();
                 }
@@ -52,6 +52,7 @@ public class CardDisplay : MonoBehaviour
             {
                 if (NameTextDown.text == "123")
                 {
+                    NameTextDown.name = cardList[i].Id.ToString();
                     NameTextDown.text = cardList[i].CardName;
                     CardCDTextDown.text = cardList[i].CardCd.ToString();
                 }

@@ -2,22 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 点击事件，后续为点击角色生成卡牌
+/// </summary>
 public class ShowPLcard : MonoBehaviour
 {
     public GameObject cardPrefab;
     public GameObject cardPool;
     public static Card card;
-
-    // Start is called before the first frame update 
-    void Start()
-    {
-    }
-
-    // Update is called once per frame 
-    void Update()
-    {
-
-    }
 
     //在cardpool里面生成card 
     public void OnClickOpen()
@@ -35,6 +27,7 @@ public class ShowPLcard : MonoBehaviour
             List<Card> cardList2 = CardTools.GetInstance().GetNOnumcard(i+1, cardList);
             GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
             newCard.GetComponent<CardDisplay>().cardList = cardList2;
+            newCard.name = (cardList2[0].Id).ToString();
         }
     }
 }
