@@ -14,7 +14,6 @@ public class ActionDisplay : MonoBehaviour
 
     public Card card;
     public List<Card> cardList;
-
     void Start()
     {
         ShowCard();
@@ -30,6 +29,7 @@ public class ActionDisplay : MonoBehaviour
         //打印
         for (int i = 0; i < cardList.Count; i++)
         {
+          
             CardDescriptionText.text += cardList[i].CardEffect + cardList[i].CardEffNum + cardList[i].CardEffType + "\n";
         }
         NameTextUP.text = cardList[0].CardName;

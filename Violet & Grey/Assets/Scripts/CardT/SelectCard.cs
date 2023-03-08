@@ -21,27 +21,7 @@ public class SelectCard : MonoBehaviour
         ActionList = gameObject.transform.parent.gameObject.transform.GetComponent<CardDisplay>().cardList;
         //查看是上区还是下区
         List<Card> cardList2 = CardTools.GetInstance().Getactive(SEQ, ActionList);
-        Debug.Log("读取:" + cardList2[0].Id.ToString());
         ActionsList = GameObject.Find("ActionsList");
-        //先删除同角色的行动卡
-        Debug.Log(cardList2[^1].Id.ToString());
-        if (ActionsList.GetComponentsInChildren<Transform>(true).Length > 1)
-        {
-
-            foreach (Transform t in ActionsList.GetComponentsInChildren<Transform>(true))
-            {
-                Debug.Log("读取:" + t.name);
-                if (t.name == cardList2[cardList2.Count - 1].Id.ToString())
-                {
-                    Debug.Log(cardList2[cardList2.Count - 1].Id.ToString());
-                    t.transform.GetComponent<ActionDisplay>().DestoryMe();
-                }
-            }
-        }
-        //生成
-        GameObject newCard = GameObject.Instantiate(Action, ActionsList.transform);
-        newCard.name = cardList2[^1].Id.ToString();
-        newCard.GetComponent<ActionDisplay>().cardList = cardList2;
-
+        ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2);
     }
 }

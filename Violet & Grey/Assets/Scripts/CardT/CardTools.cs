@@ -70,6 +70,16 @@ public class CardTools : BaseManager<CardTools>
         throw new System.NotImplementedException();
     }
 
+    //将行动按时序排序
+    public int CompareCD2(List<Card> p1, List<Card> p2)
+    {
+        if (p1[0].Sequence >= p2[0].Sequence)
+        {
+            return 1;
+        }
+        return -1;
+        throw new System.NotImplementedException();
+    }
     //导入文件存入List<Card> cardList
     public List<Card> LoadCardData()
     {
