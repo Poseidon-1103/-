@@ -18,10 +18,12 @@ public class SelectCard : MonoBehaviour
     public void OnClickOpen()
     {
         //获取卡牌的列表
-        ActionList = gameObject.transform.parent.gameObject.transform.GetComponent<CardDisplay>().cardList;
+        ActionsList = GameObject.Find("ActionsList");
+
+        ActionList = gameObject.transform.parent.GetComponent<CardDisplay>().cardList;
         //查看是上区还是下区
         List<Card> cardList2 = CardTools.GetInstance().Getactive(SEQ, ActionList);
-        ActionsList = GameObject.Find("ActionsList");
+
         ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2);
     }
 }
