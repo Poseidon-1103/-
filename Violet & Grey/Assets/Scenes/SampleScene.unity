@@ -437,6 +437,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354652799}
     m_Modifications:
+    - target: {fileID: 4698855256824049053, guid: 869b805b8a065164d92a3585f43f03c2,
+        type: 3}
+      propertyPath: Actions
+      value: 
+      objectReference: {fileID: 634748848429340228, guid: 4370046751da4f542b4c89f49ddf9ed8,
+        type: 3}
+    - target: {fileID: 4698855256824049053, guid: 869b805b8a065164d92a3585f43f03c2,
+        type: 3}
+      propertyPath: ActionsList
+      value: 
+      objectReference: {fileID: 1278348948}
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1016,9 +1027,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bd8c944e113a44196e6cc6caf6ad1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 634748848429340228, guid: d86180c97067a664c9669cd8c356e6f6,
+  cardPrefab: {fileID: 634748848429340228, guid: 94b8c3716bc2d31449e53cd339c67ecb,
     type: 3}
   cardPool: {fileID: 151793490}
+--- !u!1 &1278348948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173111165021579201, guid: 869b805b8a065164d92a3585f43f03c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 244939885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1441228551
 GameObject:
   m_ObjectHideFlags: 0
