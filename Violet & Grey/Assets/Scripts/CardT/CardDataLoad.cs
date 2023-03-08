@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 测试读取卡牌
+/// </summary>
 public class CardDataLoad : MonoBehaviour
 {
     public List<Card> cardList = new List<Card>();

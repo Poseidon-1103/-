@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// 关于card类的各种调用
+/// </summary>
 public class CardTools : BaseManager<CardTools>
 {
     public static TextAsset cardData ;
@@ -10,6 +14,20 @@ public class CardTools : BaseManager<CardTools>
 
 
 
+    //获得一张牌的半区数据
+    public List<Card> Getactive(int CardCardPlace, List<Card> cardList1)
+    {
+        //读取id中间2位确定单卡
+        List<Card> cardList2 = new List<Card>();
+        for (int i = 0; i < cardList1.Count; i++)
+        {
+            if (CardCardPlace == cardList1[i].CardPlace)
+            {
+                cardList2.Add(cardList1[i]);
+            }
+        }
+        return cardList2;
+    }
     //获得一张卡的所有数据
     public List<Card> GetNOnumcard(int CardNo, List<Card> cardList1)
     {
@@ -52,6 +70,16 @@ public class CardTools : BaseManager<CardTools>
         throw new System.NotImplementedException();
     }
 
+    //将行动按时序排序
+    public int CompareCD2(List<Card> p1, List<Card> p2)
+    {
+        if (p1[0].Sequence >= p2[0].Sequence)
+        {
+            return 1;
+        }
+        return -1;
+        throw new System.NotImplementedException();
+    }
     //导入文件存入List<Card> cardList
     public List<Card> LoadCardData()
     {
