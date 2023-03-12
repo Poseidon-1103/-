@@ -312,7 +312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ActionsList
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1581869923}
+=======
+      objectReference: {fileID: 1278348948}
+>>>>>>> dev1.0
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -995,6 +999,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1128244263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128244259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bd8c944e113a44196e6cc6caf6ad1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 634748848429340228, guid: 94b8c3716bc2d31449e53cd339c67ecb,
+    type: 3}
+  cardPool: {fileID: 151793490}
+--- !u!1 &1278348948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173111165021579201, guid: 869b805b8a065164d92a3585f43f03c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 244939885}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> dev1.0
 --- !u!1 &1441228551
 GameObject:
   m_ObjectHideFlags: 0
