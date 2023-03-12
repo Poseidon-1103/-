@@ -17,7 +17,7 @@ public class CardDataLoad : MonoBehaviour
     public void SortCard()
     {
         //获得表
-        List<Card> sortCardList = CardTools.GetInstance().LoadCardData();
+        List<Card> sortCardList = CardTools.GetInstance().LoadCardData("CardData");
         //排序
         sortCardList.Sort(CardTools.GetInstance().CompareCD);
 

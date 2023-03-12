@@ -17,23 +17,23 @@ public class Seetlement : MonoBehaviour
         
     }
 
-    //�����ť ��ʼ����غ�
-    //��ȡ��ǰ�غ����е��˺���ҽ�ɫѡ����� �ŵ�һ���б���
-    //���б��еĿ��ư�ʱ������
+    //点击按钮 开始结算回合
+    //获取当前回合所有敌人和玩家角色选择的牌 放到一个列表里
+    //将列表中的卡牌按时序排序
     public void SortSeetlementCard()
     {
-        //��ñ�
-        seetlementList = CardTools.GetInstance().LoadCardData();
-        //����
+        //获得表
+        seetlementList = CardTools.GetInstance().LoadCardData("CardData");
+        //排序
         seetlementList.Sort(CardTools.GetInstance().CompareCD);
 
     }
-    //���������б�����ÿ�����Ƶ���һ��ʹ�÷���
-    //ʹ�÷��� ���ݿ��Ƶ�Ч��ִ����Ӧ���߼�
+    //遍历结算列表，对每个卡牌调用一个使用方法
+    //使用方法 根据卡牌的效果执行相应的逻辑
     public void UseCard()
     {
-        //������Ƶ�Ч�����ƶ���������ƶ�Ч������ֵ�ڵ�ͼ����ʾʹ�����ſ��ƵĽ�ɫ�ܵ����λ��
-        //����������Ҫȥ��λ�ã�����ڷ�Χ���򽫽�ɫ�ƶ�����λ�ã��ڷ�Χ���򲻶�
+        //如果卡牌的效果是移动，则根据移动效果的数值在地图上显示使用这张卡牌的角色能到达的位置
+        //玩家用鼠标点击要去的位置，如果在范围内则将角色移动到该位置，在范围外则不动
 
     }
     
