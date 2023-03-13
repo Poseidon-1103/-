@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bd8c944e113a44196e6cc6caf6ad1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 634748848429340228, guid: 94b8c3716bc2d31449e53cd339c67ecb,
+  cardPrefab: {fileID: 634748848429340228, guid: a2f4c7ad40b39bd468378935cb264192,
     type: 3}
   cardPool: {fileID: 0}
   playerID: 22

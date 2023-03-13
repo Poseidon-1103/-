@@ -484,9 +484,9 @@ MonoBehaviour:
   NameTextUP: {fileID: 634748848575862505}
   CardCDTextUP: {fileID: 634748846975155026}
   CardDescriptionTextUP: {fileID: 634748848579217620}
-  NameTextDown: {fileID: 0}
+  NameTextDown: {fileID: 2542213840400561105}
   CardCDTextDown: {fileID: 7345195818427824838}
-  CardDescriptionTextDown: {fileID: 0}
+  CardDescriptionTextDown: {fileID: 2495793747887439427}
   Sequence: {fileID: 634748847560482250}
   cardList: []
 --- !u!1 &634748848501433519
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u53CD\u8DF3\u65A9"
+  m_text: 123
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a21ea5a8c56bdc543888dbae20735f42, type: 2}
   m_sharedMaterial: {fileID: -2711287825816633238, guid: a21ea5a8c56bdc543888dbae20735f42,
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u653B\u51FB4 \n\u63A8\u8FDC3 \n\u79FB\u52A84 "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a21ea5a8c56bdc543888dbae20735f42, type: 2}
   m_sharedMaterial: {fileID: -2711287825816633238, guid: a21ea5a8c56bdc543888dbae20735f42,
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5149\u8FF7\u5F69"
+  m_text: 123
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a21ea5a8c56bdc543888dbae20735f42, type: 2}
   m_sharedMaterial: {fileID: -2711287825816633238, guid: a21ea5a8c56bdc543888dbae20735f42,
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u79FB\u52A84 \n\u6F5C\u884C \n\u83B7\u5F97\u7834\u9632"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a21ea5a8c56bdc543888dbae20735f42, type: 2}
   m_sharedMaterial: {fileID: -2711287825816633238, guid: a21ea5a8c56bdc543888dbae20735f42,
