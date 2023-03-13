@@ -10,7 +10,7 @@ public class CardTools : BaseManager<CardTools>
 {
     public static TextAsset cardData ;
     public static Card card;
-    public static List<Card> cardList = new List<Card>();
+    public static List<Card> cardList = new();
 
 
 
@@ -18,7 +18,7 @@ public class CardTools : BaseManager<CardTools>
     public List<Card> Getactive(int CardCardPlace, List<Card> cardList1)
     {
         //读取id中间2位确定单卡
-        List<Card> cardList2 = new List<Card>();
+        List<Card> cardList2 = new();
         for (int i = 0; i < cardList1.Count; i++)
         {
             if (CardCardPlace == cardList1[i].CardPlace)
@@ -32,7 +32,7 @@ public class CardTools : BaseManager<CardTools>
     public List<Card> GetNOnumcard(int CardNo, List<Card> cardList1)
     {
         //读取id中间2位确定单卡
-        List<Card> cardList2 = new List<Card>();
+        List<Card> cardList2 = new();
         for (int i = 0; i < cardList1.Count; i++)
         {
             int x = cardList1[i].Id %10000/ 100;
@@ -47,7 +47,7 @@ public class CardTools : BaseManager<CardTools>
     public List<Card> GetPlayerCard(int PL, List<Card> cardList1)
     {
         //读取id头2位确定身份
-        List<Card> cardList2 = new List<Card>();
+        List<Card> cardList2 = new();
         for (int i = 0; i<cardList1.Count; i++)
         {
             int x = cardList1[i].Id / 10000;
@@ -81,11 +81,11 @@ public class CardTools : BaseManager<CardTools>
         throw new System.NotImplementedException();
     }
     //导入文件存入List<Card> cardList
-    public List<Card> LoadCardData()
+    public List<Card> LoadCardData(string ResourcesDate)
     {
         cardList.Clear();
         //从资源文件夹里调用
-        cardData = Resources.Load("CardData") as TextAsset;
+        cardData = Resources.Load(ResourcesDate) as TextAsset;
         string[] dataRow = cardData.text.Split('\n');
         foreach (var row in dataRow)
         {
@@ -106,7 +106,7 @@ public class CardTools : BaseManager<CardTools>
                 string cardEffect = rowArray[6];
                 int cardEffNum = int.Parse(rowArray[7]);
                 string cardEffType = rowArray[8];
-                Card Card = new Card(Id, CardName, CardCD, Sequnce, CardPlace, cardEffect, cardEffType, cardEffNum);
+                Card Card = new(Id, CardName, CardCD, Sequnce, CardPlace, cardEffect, cardEffType, cardEffNum);
                 cardList.Add(Card);
             }
         }
@@ -116,7 +116,7 @@ public class CardTools : BaseManager<CardTools>
 
     public List<Card> CreatCard()
     {
-        List<Card> cardlistPLY = new List<Card>();
+        List<Card> cardlistPLY = new();
         return cardlistPLY;    
     }
 }

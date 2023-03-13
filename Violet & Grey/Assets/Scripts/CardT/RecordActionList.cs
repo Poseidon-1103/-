@@ -13,14 +13,16 @@ public class RecordActionList : MonoBehaviour
     {
         int k = 0;
         //传进来的数据记录
-        for (int i=0; i < recordList.Count; i++)
+        for (int j = 0; j < recordList.Count; j++)
         {
-            if (action[0].Id % 10000 / 100 == recordList[i][0].Id % 10000 / 100)
+            if (action[0].Id / 10000 == recordList[j][0].Id / 10000)
             {
-                recordList[i] = action;
-                k = 1;
+                
+                    recordList[j] = action;
+                    k = 1;
             }
         }
+        
         if (k == 0)
         {
             recordList.Add(action);
