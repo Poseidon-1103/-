@@ -11,7 +11,7 @@ public class PLtools : BaseManager<PLtools> {
     public static TextAsset PlData;
 
     //改变血条
-    public void ChangeHealth(int DamageNum, Player player1, float hpWidth)
+    public void ChangeHealth(int DamageNum, Player player1)
     {
         player1.PlHP -= DamageNum;
         

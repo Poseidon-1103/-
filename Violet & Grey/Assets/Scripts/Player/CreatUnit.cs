@@ -12,7 +12,7 @@ public class CreatUnit : MonoBehaviour
     public float Y;
     //在表中第几行
     public int row;
-    public static Player player;
+    public  Player player;
 
     void Start()
     {
@@ -22,6 +22,7 @@ public class CreatUnit : MonoBehaviour
     {
         player = PLtools.GetInstance().LoadPlData("Player", row);
         GameObject obj = (GameObject)Instantiate(Resources.Load("Unit/" + player.Plid), gameObject.transform);
+        obj.transform.GetComponent<ShowPLcard>().player= player;
         obj.name = player.Plname;
         obj.transform.position = new Vector2(X, Y);
     }

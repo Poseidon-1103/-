@@ -10,7 +10,7 @@ public class ShowPLcard : MonoBehaviour
     public GameObject cardPrefab;
     public GameObject cardPool;
     public static Card card;
-    public int playerID;
+    public Player player;
     public string ResourcesDate;
 
     //绑定角色点击
@@ -23,7 +23,7 @@ public class ShowPLcard : MonoBehaviour
             cardPool.BroadcastMessage("DestoryMe");
         }
         //读取角色11的卡 
-        List<Card> cardList = CardTools.GetInstance().GetPlayerCard(playerID, CardTools.GetInstance().LoadCardData(ResourcesDate));
+        List<Card> cardList = CardTools.GetInstance().GetPlayerCard(player.Plid%100, CardTools.GetInstance().LoadCardData(ResourcesDate));
         //将每张卡的数据分开
         for (int i = 0; i < cardList[cardList.Count - 1].Id % 10000 / 100; i++)
         {
