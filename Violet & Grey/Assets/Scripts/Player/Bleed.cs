@@ -3,27 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /// <summary>
-/// 血条伤害结算,未实现
+/// 血条伤害结算测试
 /// </summary>
 public class Bleed : MonoBehaviour
 {
-    public Image healthBar;
-    public GameObject damagePre;
     public GameObject PL;
-    const int maxHP = 10;
-    int hp = maxHP;
-    float hpWidth;
-     void Start()
+    public void OnMouseDown()
     {
-        hpWidth = healthBar.rectTransform.rect.width;
-        
+        PL = GameObject.Find("辑录");
+        PL.transform.GetComponent<ShowPLcard>().player.PlHP-=2;
+        PL.transform.GetComponent<ShowPLcard>().player.Type = 1;
     }
-
-    
-    public void SetHealth()
-    {
-        PLtools.GetInstance().ChangeHealth(1, PL.transform.GetComponent<CreatUnit>().player);
-        hpWidth = PL.transform.GetComponent<CreatUnit>().player.PlHP / PL.transform.GetComponent<CreatUnit>().player.PlHPmax;
-        healthBar.transform.GetComponent<Image>().fillAmount = hpWidth;
-    }
+   
 }

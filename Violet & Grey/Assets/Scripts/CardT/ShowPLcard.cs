@@ -1,18 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 /// <summary>
-/// 点击事件，后续为点击角色生成卡牌
+/// 升级！角色处理
 /// </summary>
 public class ShowPLcard : MonoBehaviour
 {
     public GameObject cardPrefab;
     public GameObject cardPool;
+    public Image healthBar;
     public static Card card;
     public Player player;
     public string ResourcesDate;
+    float hpWidth=1.0f;
 
+    void Start()
+    {
+
+    }
+
+    //更新角色
+    void Update()
+    {
+        if (player.Type == 1)
+        {
+            //刷新血量
+            hpWidth=(float)player.PlHP / (float)player.PlHPmax;
+            if (hpWidth>=1.0f)
+            {
+                hpWidth = 1.0f;
+            }
+            healthBar.transform.GetComponent<Image>().fillAmount = hpWidth;
+            //上buff
+            //PLtools.GetInstance()
+            //死亡判断
+            PLtools.GetInstance().IfDead(player, gameObject);
+            player.Type = 0;
+        }
+    }
     //绑定角色点击
     public void OnMouseDown()
     {

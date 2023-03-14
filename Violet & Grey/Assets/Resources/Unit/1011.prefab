@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7835225682871115903}
   - component: {fileID: 7389552697333093023}
   m_Layer: 6
-  m_Name: Image
+  m_Name: blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -331,5 +331,5 @@ MonoBehaviour:
   cardPrefab: {fileID: 634748848429340228, guid: a2f4c7ad40b39bd468378935cb264192,
     type: 3}
   cardPool: {fileID: 0}
-  playerID: 11
+  healthBar: {fileID: 7389552697333093023}
   ResourcesDate: CardData
