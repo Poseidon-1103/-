@@ -17,7 +17,6 @@ public class RecordActionList : MonoBehaviour
         {
             if (action[0].Id / 10000 == recordList[j][0].Id / 10000)
             {
-                
                     recordList[j] = action;
                     k = 1;
             }

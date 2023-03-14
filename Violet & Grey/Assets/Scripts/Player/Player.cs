@@ -18,7 +18,8 @@ public class Player
     private int plHPmax;
     //角色状态
     private string plbuff;
-
+    //状态改变时的检测,默认为0
+    public int Type =0;
     public string Pltype { get => pltype; set => pltype = value; }
     public string Plname { get => plname; set => plname = value; }
     public int Plid { get => plid; set => plid = value; }
