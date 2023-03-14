@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Settlement : MonoBehaviour
 {
-    RecordActionList settlementList = new RecordActionList();
+    // RecordActionList settlementList = new RecordActionList();
     public  Card card;
     public GameObject ActionsList;
 

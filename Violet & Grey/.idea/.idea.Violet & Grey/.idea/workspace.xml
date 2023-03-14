@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/UI/Font/DinkieBitmap-v1002/DinkieBitmap-v1002/TTF/DinkieBitmap-9px SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/UI/Font/DinkieBitmap-v1002/DinkieBitmap-v1002/TTF/DinkieBitmap-9px SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/Settlement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/Settlement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +90,9 @@
       <workItem from="1678460530610" duration="148000" />
       <workItem from="1678602334393" duration="26000" />
       <workItem from="1678682040736" duration="1194000" />
-      <workItem from="1678714364611" duration="610000" />
+      <workItem from="1678714364611" duration="697000" />
+      <workItem from="1678760005517" duration="906000" />
+      <workItem from="1678761631604" duration="3195000" />
     </task>
     <servers />
   </component>
