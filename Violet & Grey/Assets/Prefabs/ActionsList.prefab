@@ -74,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b973532d1f58fd64686a623706fa913f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionsList: {fileID: 0}
-  recordList2: []
+  Actions: {fileID: 634748848429340228, guid: 4370046751da4f542b4c89f49ddf9ed8, type: 3}
+  ActionsList: {fileID: 9173111165021579201}
