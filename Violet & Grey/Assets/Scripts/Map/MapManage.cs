@@ -19,6 +19,8 @@ public class MapManage : BaseManager<MapManage>
     private List<AStarNode> openList=new List<AStarNode>();
     //关闭列表
     private List<AStarNode> closeList=new List<AStarNode>();
+    //可移动列表
+    private List<Vector3Int> actionList=new List<Vector3Int>(); 
     //地图边界
     public BoundsInt tilemapBounds;
     
@@ -169,6 +171,7 @@ public class MapManage : BaseManager<MapManage>
                     {
                         startI = i;
                         startJ = j;
+                        break;
                     }
                 }
             }
@@ -229,5 +232,47 @@ public class MapManage : BaseManager<MapManage>
 
         //合法，存到开启列表
         openList.Add(node);
+    }
+    //根据行动数值显示移动范围
+    public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue, Tilemap rangeMap)
+    {
+        // List<Vector3Int> actionList=new List<Vector3Int>();
+        int startI = 0, startJ = 0;
+        //清空之前的显示范围
+        // rangeMap.ClearAllTiles();
+        //查找行动距离内可行走的格子
+        //获取角色位置在格子数组中的位置
+        for (int i = 0; i < nodes.GetLength(0); i++)
+        {
+            for (int j = 0; j < nodes.GetLength(1); j++)
+            {
+                // Debug.Log(i+","+j+";"+nodes[i,j].x+","+nodes[i,j].y);
+                if (nodes[i, j].x == startPos.x && nodes[i, j].y == startPos.y)
+                {
+                    startI = i;
+                    startJ = j;
+                    break;
+                }
+            }
+        }
+        // 清空可移动区域列表
+        actionList.Clear();
+        // 根据行动力和当前位置遍历周围的格子索引，并加入列表中（这里只考虑上下左右四个方向）
+        for (int x = -actionValue; x <= actionValue; x++)
+        {
+             
+            for (int y = -actionValue; y <= actionValue; y++)
+            {
+                
+                //判断行动力是否足够并且该格子是否为障碍物
+                if (Mathf.Abs(x) + Mathf.Abs(y) <= actionValue && nodes[startI+x,startJ+y].type == E_Node_type.Walk)
+                {
+                    Vector3Int cellPos = startPos + new Vector3Int(x, y, 0);
+                    actionList.Add(cellPos);
+                }
+            }
+        }
+
+        return actionList;
     }
 }

@@ -220,9 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5d0b0367fda43478214164b431cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 2081827719}
+  map: {fileID: 1109357817}
+  rangeMap: {fileID: 1649114150}
   grid: {fileID: 1087360776}
-  tileBase: {fileID: 0}
+  tileBase: {fileID: 11400000, guid: 8fa384a5b50f4e54eabb29a640467ccd, type: 2}
   player: {fileID: 1065629928}
 --- !u!1 &1068704581
 GameObject:
@@ -384,7 +385,7 @@ Transform:
   m_GameObject: {fileID: 1109357814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1087360777}
