@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +20,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023吉比特大赛/胧夜客/Violet &amp; Grey/Assets/Scripts/Map/MapText.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023吉比特大赛/胧夜客/Violet &amp; Grey/Assets/Scripts/Map/MapText.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023吉比特大赛/胧夜客/Violet &amp; Grey/Assets/Scripts/Map/MapText.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Threading/BackgroundWorker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Reflection/Codebase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MpJgQHg0fFYZrurSOSfwHdjE1i" />
   <component name="ProjectViewState">
@@ -37,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -101,6 +109,8 @@
       <workItem from="1678858115691" duration="15592000" />
       <workItem from="1679119394197" duration="29268000" />
       <workItem from="1679203647404" duration="15016000" />
+      <workItem from="1679318731876" duration="2231000" />
+      <workItem from="1679321043743" duration="1120000" />
     </task>
     <servers />
   </component>
@@ -109,6 +119,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
