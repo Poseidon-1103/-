@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1065629928}
   - component: {fileID: 1065629927}
-  - component: {fileID: 1065629929}
   m_Layer: 0
   m_Name: Template_Character
   m_TagString: Untagged
@@ -208,23 +207,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1065629929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065629926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5d0b0367fda43478214164b431cef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 1109357817}
-  rangeMap: {fileID: 1649114150}
-  grid: {fileID: 1087360776}
-  tileBase: {fileID: 11400000, guid: 8fa384a5b50f4e54eabb29a640467ccd, type: 2}
-  player: {fileID: 1065629928}
 --- !u!1 &1068704581
 GameObject:
   m_ObjectHideFlags: 0
