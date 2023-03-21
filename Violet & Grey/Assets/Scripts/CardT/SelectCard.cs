@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 /// <summary>
 /// 选取卡牌到行动列表中
 /// </summary>
@@ -15,20 +16,23 @@ public class SelectCard : MonoBehaviour
     public int SEQ;
     
     public List<Card> ActionList;
-    // Start is called before the first frame update
-
     private void Update()
     {
     }
-    public void OnClickOpen()
+    public void GetCard()
     {
         //获取卡牌的列表
         ActionsList = GameObject.Find("ActionsList");
 
         ActionList = gameObject.transform.parent.GetComponent<CardDisplay>().cardList;
-        //查看是上区还是下区
-        List<Card> cardList2 = CardTools.GetInstance().Getactive(SEQ, ActionList);
+        if (ActionList[0].Cd>0)
+        {
+            gameObject.GetComponent<Button>().interactable = false;
+        }else if(ActionList[0].Cd == 0){
+            //查看是上区还是下区
+            List<Card> cardList2 = CardTools.GetInstance().Getactive(SEQ, ActionList);
+            ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2);
+        }
 
-        ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2);
     }
 }
