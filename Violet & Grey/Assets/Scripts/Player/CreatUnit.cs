@@ -23,7 +23,7 @@ public class CreatUnit : MonoBehaviour
         player = PLtools.GetInstance().LoadPlData("Player", row);
         GameObject obj = (GameObject)Instantiate(Resources.Load("Unit/" + player.Plid), gameObject.transform);
         obj.transform.GetComponent<ShowPLcard>().player= player;
-        obj.name = player.Plname;
+        obj.name = player.Plid.ToString();
         obj.transform.position = new Vector2(X, Y);
     }
 }

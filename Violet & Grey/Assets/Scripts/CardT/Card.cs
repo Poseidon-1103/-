@@ -25,17 +25,10 @@ public class Card
     private string cardEffType;
     //数值
     private int cardEffNum;
-
-    public int Id { get => id; set => id = value; }
-    public string CardName { get => cardName; set => cardName = value; }
-    public int CardCd { get => cardCd; set => cardCd = value; }
-    public int Sequence { get => sequence; set => sequence = value; }
-    public int CardPlace { get => cardPlace; set => cardPlace = value; }
-    public string CardEffect { get => cardEffect; set => cardEffect = value; }
-    public string CardEffType { get => cardEffType; set => cardEffType = value; }
-    public int CardEffNum { get => cardEffNum; set => cardEffNum = value; }
-
-    public Card(int Id, string CardName, int CardCD, int Sequnce, int CardPlace, string CardEffect, string CardEffType, int CardEffNum)
+    //冷却计数
+    private int cd;
+    
+    public Card(int Id, string CardName, int CardCD, int Sequnce, int CardPlace, string CardEffect, string CardEffType, int CardEffNum, int Cd)
     {
         id = Id;
         cardName = CardName;
@@ -45,5 +38,16 @@ public class Card
         cardEffect = CardEffect;
         cardEffType = CardEffType;
         cardEffNum = CardEffNum;
+        cd = Cd;
     }
+
+    public int Id { get => id; set => id = value; }
+    public string CardName { get => cardName; set => cardName = value; }
+    public int CardCd { get => cardCd; set => cardCd = value; }
+    public int Sequence { get => sequence; set => sequence = value; }
+    public int CardPlace { get => cardPlace; set => cardPlace = value; }
+    public string CardEffect { get => cardEffect; set => cardEffect = value; }
+    public string CardEffType { get => cardEffType; set => cardEffType = value; }
+    public int CardEffNum { get => cardEffNum; set => cardEffNum = value; }
+    public int Cd { get => cd; set => cd = value; }
 }
