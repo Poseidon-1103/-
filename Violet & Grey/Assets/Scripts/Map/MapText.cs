@@ -64,7 +64,7 @@ public class MapText : MonoBehaviour
                 rangeMap.ClearAllTiles();
                 foreach (var a in moveList)
                 {
-                    Debug.Log(a);
+                    // Debug.Log(a);
                     rangeMap.SetTile(a,tileBase);
                 }
             }
