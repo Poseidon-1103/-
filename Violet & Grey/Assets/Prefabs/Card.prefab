@@ -468,7 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abac449f35db61047a90fb7350f939bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionsList: {fileID: 0}
+  ActionsList: {fileID: 9173111165021579201, guid: 869b805b8a065164d92a3585f43f03c2,
+    type: 3}
   NameTextUP: {fileID: 634748848575862505}
   Action: {fileID: 634748848429340228, guid: 4370046751da4f542b4c89f49ddf9ed8, type: 3}
   SEQ: 0

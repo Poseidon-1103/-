@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapText/text.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +109,7 @@
       <workItem from="1679318731876" duration="2231000" />
       <workItem from="1679321043743" duration="1120000" />
       <workItem from="1679322473673" duration="710000" />
+      <workItem from="1679390172363" duration="1318000" />
     </task>
     <servers />
   </component>
