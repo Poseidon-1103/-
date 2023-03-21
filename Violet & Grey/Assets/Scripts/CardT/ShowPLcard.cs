@@ -28,6 +28,7 @@ public class ShowPLcard : MonoBehaviour
 
     public void TurnUpdate()
     {
+        //cd-1
         for (int i = 0; i < cards.Count; i++)
         {
             if (cards[i][0].Cd > 0)
@@ -35,6 +36,7 @@ public class ShowPLcard : MonoBehaviour
                 cards[i][0].Cd= cards[i][0].Cd-1;
             }
         }
+        //删除卡池
         cardPool = GameObject.Find("cardPool");
         if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
         {

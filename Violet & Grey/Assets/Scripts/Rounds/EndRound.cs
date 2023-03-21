@@ -20,13 +20,17 @@ public class EndRound : MonoBehaviour
 
     public void OnMouseDown()
     {
+        //获取行动池的行动
         recordList =ActionsList.GetComponent<RecordActionList>().recordList;
+        //卡池更新（包括冷却-1,后续还有状态更新）
         Canvas.BroadcastMessage("TurnUpdate");
+        //给卡添加冷却
         for (int i = 0; i < recordList.Count; i++)
         {
             int id = recordList[i][0].Id;
-            GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][0].Cd = GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][0].CardCd;
+            GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][0].Cd = GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][id % 100-1].CardCd;
         }
+        //行动池更新
         Canvas.BroadcastMessage("TurnUpdate2");
     }
 }
