@@ -20,8 +20,9 @@ public class SelectCard : MonoBehaviour
     private void Update()
     {
     }
-    public void OnClickOpen()
+    public void GetCard()
     {
+        Debug.Log("666");
         //获取卡牌的列表
         ActionsList = GameObject.Find("ActionsList");
 

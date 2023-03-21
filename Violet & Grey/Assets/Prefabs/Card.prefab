@@ -520,7 +520,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6086645042336776826}
         m_TargetAssemblyTypeName: SelectCard, Assembly-CSharp
-        m_MethodName: OnClickOpen
+        m_MethodName: GetCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2015,7 +2015,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6124567570476445645}
         m_TargetAssemblyTypeName: SelectCard, Assembly-CSharp
-        m_MethodName: OnClickOpen
+        m_MethodName: GetCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
