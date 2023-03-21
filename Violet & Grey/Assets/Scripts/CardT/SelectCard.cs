@@ -13,8 +13,13 @@ public class SelectCard : MonoBehaviour
     public Card card;
     //下区为1，上区为0
     public int SEQ;
+    
     public List<Card> ActionList;
     // Start is called before the first frame update
+
+    private void Update()
+    {
+    }
     public void OnClickOpen()
     {
         //获取卡牌的列表

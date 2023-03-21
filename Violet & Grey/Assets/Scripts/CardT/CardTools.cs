@@ -106,7 +106,7 @@ public class CardTools : BaseManager<CardTools>
                 string cardEffect = rowArray[6];
                 int cardEffNum = int.Parse(rowArray[7]);
                 string cardEffType = rowArray[8];
-                Card Card = new(Id, CardName, CardCD, Sequnce, CardPlace, cardEffect, cardEffType, cardEffNum);
+                Card Card = new(Id, CardName, CardCD, Sequnce, CardPlace, cardEffect, cardEffType, cardEffNum,0);
                 cardList.Add(Card);
             }
         }

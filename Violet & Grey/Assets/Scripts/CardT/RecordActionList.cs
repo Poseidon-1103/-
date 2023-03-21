@@ -9,6 +9,15 @@ public class RecordActionList : MonoBehaviour
     public Card card;
     public List<List<Card>> recordList=new();
     // Start is called before the first frame update
+
+    public void TurnUpdate2()
+    {
+        recordList.Clear();
+        if (ActionsList.GetComponentsInChildren<Transform>(true).Length > 1)
+        {
+            ActionsList.BroadcastMessage("DestoryMe");
+        }
+    }
     public void Record(List<Card> action)
     {
         int k = 0;

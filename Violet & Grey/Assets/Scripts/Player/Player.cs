@@ -20,6 +20,7 @@ public class Player
     private string plbuff;
     //状态改变时的检测,默认为0
     public int Type =0;
+    //角色buff
     public string Pltype { get => pltype; set => pltype = value; }
     public string Plname { get => plname; set => plname = value; }
     public int Plid { get => plid; set => plid = value; }
