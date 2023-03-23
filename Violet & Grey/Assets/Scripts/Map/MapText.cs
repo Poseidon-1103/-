@@ -18,6 +18,8 @@ public class MapText : MonoBehaviour
     private List<AStarNode> pathlist;
     //移动范围列表
     private List<Vector3Int> moveList;
+    //角色行动力
+    public int actionValue;
 
     // Start is called before the first frame update
     void Start()
@@ -57,16 +59,17 @@ public class MapText : MonoBehaviour
             //     }
             //     
             // }
-            moveList = MapManage.GetInstance().MoveRange(playerCellPosition, 5, rangeMap);//得到可移动的范围
-            if (moveList!=null)
+        }
+        //移动范围显示
+        moveList = MapManage.GetInstance().MoveRange(playerCellPosition, actionValue, rangeMap);//得到可移动的范围地列表
+        if (moveList!=null)
+        {
+            //清除之前的
+            rangeMap.ClearAllTiles();
+            foreach (var a in moveList)
             {
-                //清除之前的
-                rangeMap.ClearAllTiles();
-                foreach (var a in moveList)
-                {
-                    // Debug.Log(a);
-                    rangeMap.SetTile(a,tileBase);
-                }
+                // Debug.Log(a);
+                rangeMap.SetTile(a,tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }

@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +28,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginContainer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/Text1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Threading/BackgroundWorker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Documentation/XmlDocumentation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Reflection/Codebase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,7 +116,10 @@
       <workItem from="1679318731876" duration="2231000" />
       <workItem from="1679321043743" duration="1120000" />
       <workItem from="1679322473673" duration="710000" />
-      <workItem from="1679390172363" duration="3125000" />
+      <workItem from="1679390172363" duration="4314000" />
+      <workItem from="1679408371358" duration="821000" />
+      <workItem from="1679488309738" duration="2319000" />
+      <workItem from="1679538327242" duration="16314000" />
     </task>
     <servers />
   </component>
