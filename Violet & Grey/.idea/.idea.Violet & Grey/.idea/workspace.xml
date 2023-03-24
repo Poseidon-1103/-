@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +113,8 @@
       <workItem from="1679390172363" duration="4314000" />
       <workItem from="1679408371358" duration="821000" />
       <workItem from="1679488309738" duration="2319000" />
-      <workItem from="1679538327242" duration="16314000" />
+      <workItem from="1679538327242" duration="17626000" />
+      <workItem from="1679664203499" duration="664000" />
     </task>
     <servers />
   </component>
