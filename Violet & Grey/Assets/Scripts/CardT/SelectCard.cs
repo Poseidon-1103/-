@@ -21,7 +21,6 @@ public class SelectCard : MonoBehaviour
     }
     public void GetCard()
     {
-        Debug.Log("666");
         //获取卡牌的列表
         ActionsList = GameObject.Find("ActionsList");
 
