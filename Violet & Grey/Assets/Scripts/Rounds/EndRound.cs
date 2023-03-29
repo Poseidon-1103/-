@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndRound : MonoBehaviour
 {
     public GameObject Canvas;
     public GameObject ActionsList;
     public List<List<Card>> recordList = new();
+    public TextMeshProUGUI turnnumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +40,6 @@ public class EndRound : MonoBehaviour
         Canvas.BroadcastMessage("TurnUpdate2");
         //敌人卡牌更新
         Canvas.BroadcastMessage("TurnUpdate3");
+        turnnumber.text = (int.Parse(turnnumber.text) + 1).ToString();
     }
 }
