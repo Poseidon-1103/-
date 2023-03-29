@@ -23,7 +23,6 @@ public class SelectCard : MonoBehaviour
     {
         //获取卡牌的列表
         ActionsList = GameObject.Find("ActionsList");
-
         ActionList = gameObject.transform.parent.GetComponent<CardDisplay>().cardList;
         if (ActionList[0].Cd>0)
         {

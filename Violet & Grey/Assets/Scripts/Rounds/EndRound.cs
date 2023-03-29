@@ -27,10 +27,16 @@ public class EndRound : MonoBehaviour
         //给卡添加冷却
         for (int i = 0; i < recordList.Count; i++)
         {
-            int id = recordList[i][0].Id;
-            GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][0].Cd = GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][id % 100-1].CardCd;
+            
+            if (recordList[i][0].Id / 100000==1)
+            {
+                int id = recordList[i][0].Id;
+                GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][0].Cd = GameObject.Find("10" + id / 10000).GetComponent<ShowPLcard>().cards[(id % 10000 / 100) - 1][id % 100 - 1].CardCd;
+            }
         }
         //行动池更新
         Canvas.BroadcastMessage("TurnUpdate2");
+        //敌人卡牌更新
+        Canvas.BroadcastMessage("TurnUpdate3");
     }
 }
