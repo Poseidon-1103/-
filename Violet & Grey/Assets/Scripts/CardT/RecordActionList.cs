@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecordActionList : MonoBehaviour
 {
@@ -46,6 +47,12 @@ public class RecordActionList : MonoBehaviour
         for (int i = 0; i < recordList.Count; i++)
         {
             GameObject newCard = GameObject.Instantiate(Actions, ActionsList.transform);
+            if (i==0)
+            {
+                newCard.transform.Find("AddColor").GetComponent<Image>().color = new Color((225/255f), 176 / 255f, 35 / 255f, 87 / 255f);
+                newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
+
+            }
             newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
             newCard.name = (recordList[i][0].Id).ToString();
         }

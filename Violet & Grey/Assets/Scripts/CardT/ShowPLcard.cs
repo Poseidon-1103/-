@@ -87,7 +87,13 @@ public class ShowPLcard : MonoBehaviour
                 newCard.GetComponent<CardDisplay>().cardList = cards[i];
                 newCard.name = "冷却中";
             }
-            else if(cards[i][0].Cd < 0)
+            else if(cards[i][0].Cd == -1)
+            {
+                GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                newCard.name = "损坏";
+            }
+            else if (cards[i][0].Cd == -2)
             {
                 GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
                 newCard.GetComponent<CardDisplay>().cardList = cards[i];
