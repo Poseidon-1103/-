@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/666.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/666.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,8 @@
       <workItem from="1679408371358" duration="821000" />
       <workItem from="1679488309738" duration="2319000" />
       <workItem from="1679538327242" duration="17626000" />
-      <workItem from="1679664203499" duration="664000" />
+      <workItem from="1679664203499" duration="1131000" />
+      <workItem from="1680101092686" duration="1264000" />
     </task>
     <servers />
   </component>
