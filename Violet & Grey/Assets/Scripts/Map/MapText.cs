@@ -24,7 +24,7 @@ public class MapText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MapManage.GetInstance().InitMapInfo(map);
+        MapManager.GetInstance().InitMapInfo(map);
         // AStarNode[,] nodes = MapManage.GetInstance().nodes;
         // 获取角色的世界坐标
          Vector3 playerPosition = player.position;
@@ -50,7 +50,7 @@ public class MapText : MonoBehaviour
             Vector3Int endCellPos = grid.WorldToCell(endWorldPosition);//将鼠标坐标转换成格子坐标，也就是终点坐标
             Debug.Log("角色的世界坐标为："+playerPosition+",角色的格子坐标为："+playerCellPosition);
             Debug.Log("鼠标点击的屏幕坐标为："+mousePosition+"鼠标点击的世界坐标为：" + endWorldPosition + "鼠标点击的格子坐标为：" + endCellPos);
-            pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos);//得到路径
+            pathlist = MapManager.GetInstance().FindPath(playerCellPosition, endCellPos);//得到路径
             // if (pathlist!=null)
             // {
             //     foreach (var a in pathlist)
@@ -61,7 +61,7 @@ public class MapText : MonoBehaviour
             // }
         }
         //移动范围显示
-        moveList = MapManage.GetInstance().MoveRange(playerCellPosition, actionValue, rangeMap);//得到可移动的范围地列表
+        moveList = MapManager.GetInstance().MoveRange(playerCellPosition, actionValue, rangeMap);//得到可移动的范围地列表
         if (moveList!=null)
         {
             //清除之前的
