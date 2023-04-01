@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/Canvas.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Canvas.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/Display Stage/Display Stage Test Panel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/Display Stage/Display Stage Test Panel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/EventSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/EventSystem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/EventSystem.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/EventSystem.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mono/MonoMgr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -128,6 +118,7 @@
       <workItem from="1679664203499" duration="1131000" />
       <workItem from="1680101092686" duration="1264000" />
       <workItem from="1680229488360" duration="23967000" />
+      <workItem from="1680317669496" duration="23323000" />
     </task>
     <servers />
   </component>
