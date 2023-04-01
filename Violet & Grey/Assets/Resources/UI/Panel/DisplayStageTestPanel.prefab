@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8648355369613274710}
   - component: {fileID: 900346213237664115}
   m_Layer: 5
-  m_Name: Display Stage Test Panel
+  m_Name: DisplayStageTestPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

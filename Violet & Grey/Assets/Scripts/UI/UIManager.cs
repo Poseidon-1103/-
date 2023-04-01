@@ -30,7 +30,7 @@ public class UIManager : BaseManager<UIManager>
     public UIManager()
     {
         //创建Canvas
-        GameObject obj = ResMgr.GetInstance().Load<GameObject>("UI Prefab/Canvas");
+        GameObject obj = ResMgr.GetInstance().Load<GameObject>("UI/Canvas");
         Transform canvas = obj.transform;
         //让canvas在过场景的时候不被移除
         GameObject.DontDestroyOnLoad(obj);
@@ -42,13 +42,13 @@ public class UIManager : BaseManager<UIManager>
         system = canvas.Find("Bot");
         
         //创建事件系统 让其在过场景的时候不被移除
-        obj = ResMgr.GetInstance().Load<GameObject>("UI Prefab/EventSystem");
+        obj = ResMgr.GetInstance().Load<GameObject>("UI/EventSystem");
         GameObject.DontDestroyOnLoad(obj);
     }
     
     public void ShowPanel(string panelName, E_UI_Layer layer)
     {
-        ResMgr.GetInstance().LoadAsync<GameObject>("UI Prefab/Panel" + panelName, (obj) =>
+        ResMgr.GetInstance().LoadAsync<GameObject>("UI/Panel/" + panelName, (obj) =>
         {
             //把得到的面板作为Canvas的子对象
             // 并且要设置它的相对位置

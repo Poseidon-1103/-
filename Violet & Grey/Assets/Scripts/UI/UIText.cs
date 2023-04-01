@@ -7,7 +7,7 @@ public class UIText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UIManager.GetInstance().ShowPanel("LoginPanel",E_UI_Layer.Mid);
+        UIManager.GetInstance().ShowPanel("DisplayStageTestPanel",E_UI_Layer.Mid);
     }
 
     // Update is called once per frame
