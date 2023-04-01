@@ -15,12 +15,16 @@ public class BasePanel : MonoBehaviour
     //通过里氏转换的原则 来存储所有的控件
     private Dictionary<string, List<UIBehaviour>> controlDic = new Dictionary<string, List<UIBehaviour>>();
     // Start is called before the first frame update
-    void Awake()
+    protected virtual void Awake()
     {
-        FindChildComponent<Button>();
-        FindChildComponent<Image>();
-        FindChildComponent<Text>();
-        Debug.Log(controlDic.Count);
+        FindChildrenControl<Button>();
+        FindChildrenControl<Image>();
+        FindChildrenControl<Text>();
+        FindChildrenControl<Toggle>();
+        FindChildrenControl<Slider>();
+        FindChildrenControl<ScrollRect>();
+        FindChildrenControl<InputField>();
+        // Debug.Log(controlDic.Count);
     }
 
     /// <summary>
@@ -38,27 +42,51 @@ public class BasePanel : MonoBehaviour
     {
         
     }
+
+    protected virtual void OnClick(string btnName)
+    {
+        
+    }
+    protected virtual void OnValueChanged(string toggleName, bool value)
+    {
+        
+    }
     
     /// <summary>
     /// 找到子对象的对应控件
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    private void FindChildComponent<T>() where T:UIBehaviour
+    private void FindChildrenControl<T>() where T:UIBehaviour
     {
-        T[] components = this.GetComponentsInChildren<T>();
-        string objName;
-        for (int i = 0; i < components.Length; i++)
+        T[] controls = this.GetComponentsInChildren<T>();
+        
+        for (int i = 0; i < controls.Length; i++)
         {
-            objName = components[i].gameObject.name;
+            string objName = controls[i].gameObject.name;
             if (controlDic.ContainsKey(objName))
             {
-                controlDic[objName].Add(components[i]);
+                controlDic[objName].Add(controls[i]);
             }
             else
             {
-                controlDic.Add(objName,new List<UIBehaviour>(){components[i]});
+                controlDic.Add(objName,new List<UIBehaviour>(){controls[i]});
             }
-
+            //如果是按钮事件
+            if (controls[i] is Button)
+            {
+                (controls[i] as Button).onClick.AddListener(() =>
+                {
+                    OnClick(objName);
+                });
+            }
+            //如果是单选框或多选框
+            else if (controls[i] is Toggle)
+            {
+                (controls[i] as Toggle).onValueChanged.AddListener((value) =>
+                {
+                    OnValueChanged(objName,value);
+                });
+            }
         }
     }
 
