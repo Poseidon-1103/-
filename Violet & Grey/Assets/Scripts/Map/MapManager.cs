@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapManage : BaseManager<MapManage>
+public class MapManager : BaseManager<MapManager>
 {
     //瓦片地图信息 可以通过它得到瓦片格子
     // private Tilemap map;
@@ -23,32 +23,37 @@ public class MapManage : BaseManager<MapManage>
     private List<Vector3Int> actionList=new List<Vector3Int>(); 
     //地图边界
     public BoundsInt tilemapBounds;
-    
-    //     //清空瓦片地图
-    //     //map.ClearAllTiles();
-    //     //获取指定坐标的格子
-    //     TileBase tmp = map.GetTile(new Vector3Int(-5, -13, 0));
-    //     print(tmp);
-    //     print(map.cellBounds);
-    //     InitMapInfo();
-    //     
-    //     //设置删除瓦片
-    //     // map.SetTile(new Vector3Int(0,2,0),tileBase);
-    //     // map.SetTile(new Vector3Int(-8, -10, 0), null);
-    //     // map.SetTiles();
-    //
-    //     //替换瓦片
-    //     // map.SwapTile(tmp,tileBase);
-    //
-    //     //*世界坐标转格子坐标
-    //
-    //     //屏幕坐标转世界坐标
-    //     //世界坐标转格子坐标
-    //     //传入的参数是世界坐标
-    //     // grid.WorldToCell(); 
 
+    #region 用法示例
+    //清空瓦片地图
+    //map.ClearAllTiles();
+    //获取指定坐标的格子
+    // TileBase tmp = map.GetTile(new Vector3Int(-5, -13, 0));
+    // print(tmp);
+    // print(map.cellBounds);
+    // InitMapInfo();
+    
+    //设置删除瓦片
+    // map.SetTile(new Vector3Int(0,2,0),tileBase);
+    // map.SetTile(new Vector3Int(-8, -10, 0), null);
+    // map.SetTiles();
+    
+    //替换瓦片
+    // map.SwapTile(tmp,tileBase);
+    
+    //*世界坐标转格子坐标
+    
+    //屏幕坐标转世界坐标
+    //世界坐标转格子坐标
+    //传入的参数是世界坐标
+    // grid.WorldToCell();
+    #endregion
+    
     //寻路方法 提供外部使用
-    //初始化地图
+    /// <summary>
+    /// 初始化地图
+    /// </summary>
+    /// <param name="map"></param>
     public void InitMapInfo(Tilemap map)
     {
         
@@ -79,7 +84,13 @@ public class MapManage : BaseManager<MapManage>
         }
         // Debug.Log(nodes[0,0].x);
     }
-    // 找到路径
+
+    /// <summary>
+    /// 找到路径，返回路径列表
+    /// </summary>
+    /// <param name="startPos"></param>
+    /// <param name="endPos"></param>
+    /// <returns></returns>
     public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos)
     {
         Debug.Log($"{tilemapBounds.xMin},{tilemapBounds.xMax},{tilemapBounds.yMin},{tilemapBounds.yMax}");
@@ -198,6 +209,7 @@ public class MapManage : BaseManager<MapManage>
         }
     
     }
+    
     private int SortOpenList(AStarNode a, AStarNode b)
     {
         if (a.f >= b.f)
@@ -205,6 +217,7 @@ public class MapManage : BaseManager<MapManage>
         else
             return -1;
     }
+    
     private void FindNearlyNodeToOpenList(int x, int y, int startI, int startJ, float g,AStarNode father,AStarNode end) 
     {
         // BoundsInt tilemapBounds = map.cellBounds;
@@ -233,7 +246,14 @@ public class MapManage : BaseManager<MapManage>
         //合法，存到开启列表
         openList.Add(node);
     }
-    //计算可移动范围
+  
+    /// <summary>
+    /// 得到可移动范围，返回列表
+    /// </summary>
+    /// <param name="startPos"></param>
+    /// <param name="actionValue"></param>
+    /// <param name="rangeMap"></param>
+    /// <returns></returns>
     public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue, Tilemap rangeMap)
     {
         //检测角色位置是否超出地图边界或是否为障碍
