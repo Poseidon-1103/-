@@ -53,9 +53,9 @@ public class BasePanel : MonoBehaviour
     }
     
     /// <summary>
-    /// 找到子对象的对应控件
+    /// 找到子对象的对应控件 比如Button Image之类的
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Button Image这类UIBehaviour</typeparam>
     private void FindChildrenControl<T>() where T:UIBehaviour
     {
         T[] controls = this.GetComponentsInChildren<T>();
@@ -74,6 +74,7 @@ public class BasePanel : MonoBehaviour
             //如果是按钮事件
             if (controls[i] is Button)
             {
+                //设置按钮点击事件，具体逻辑在对应的界面脚本重写
                 (controls[i] as Button).onClick.AddListener(() =>
                 {
                     OnClick(objName);
@@ -82,18 +83,20 @@ public class BasePanel : MonoBehaviour
             //如果是单选框或多选框
             else if (controls[i] is Toggle)
             {
+                //设置选取事件，具体逻辑在对应的界面脚本重写
                 (controls[i] as Toggle).onValueChanged.AddListener((value) =>
                 {
                     OnValueChanged(objName,value);
                 });
             }
+            //如果是其他类型的控件，按需求添加
         }
     }
 
     /// <summary>
     /// 得到对应名字的对象的对应类型的控件脚本
     /// </summary>
-    /// <param name="objName"></param>
+    /// <param name="objName">对象名字</param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     protected T GetControl<T>(string objName) where T:UIBehaviour

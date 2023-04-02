@@ -41,7 +41,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD:Violet & Grey/Assets/Resources/UI/Panel/Start/Loading/LoadingPanel.prefab
   m_AnchoredPosition: {x: 360, y: -469}
+=======
+  m_AnchoredPosition: {x: -26, y: -275}
+>>>>>>> dev1.0:Violet & Grey/Assets/Resources/UI/Panel/Loading/LoadingPanel.prefab
   m_SizeDelta: {x: -885.9, y: -1014.6351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &283201378300670848
