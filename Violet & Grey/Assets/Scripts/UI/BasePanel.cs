@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 /// <summary>
-/// Ãæ°å»ùÀà
-/// Í¨¹ı´úÂë¿ìËÙÕÒµ½ËùÓĞµÄ×Ó¿Ø¼ş
-/// Ê¹ÔÚ×ÓÀàÖĞ´¦ÀíÂß¼­¸ü¼Ó·½±ã
-/// ½ÚÔ¼ÕÒ¿Ø¼şµÄ¹¤×÷Á¿
+/// é¢æ¿åŸºç±»
+/// é€šè¿‡ä»£ç å¿«é€Ÿæ‰¾åˆ°æ‰€æœ‰çš„å­æ§ä»¶
+/// ä½¿åœ¨å­ç±»ä¸­å¤„ç†é€»è¾‘æ›´åŠ æ–¹ä¾¿
+/// èŠ‚çº¦æ‰¾æ§ä»¶çš„å·¥ä½œé‡
 /// </summary>
 public class BasePanel : MonoBehaviour
 {
-    //Í¨¹ıÀïÊÏ×ª»»µÄÔ­Ôò À´´æ´¢ËùÓĞµÄ¿Ø¼ş
+    //é€šè¿‡é‡Œæ°è½¬æ¢çš„åŸåˆ™ æ¥å­˜å‚¨æ‰€æœ‰çš„æ§ä»¶
     private Dictionary<string, List<UIBehaviour>> controlDic = new Dictionary<string, List<UIBehaviour>>();
     // Start is called before the first frame update
     protected virtual void Awake()
@@ -28,7 +28,7 @@ public class BasePanel : MonoBehaviour
     }
 
     /// <summary>
-    /// ÏÔÊ¾×Ô¼º
+    /// æ˜¾ç¤ºè‡ªå·±
     /// </summary>
     public virtual void ShowMe()
     {
@@ -36,7 +36,7 @@ public class BasePanel : MonoBehaviour
     }
 
     /// <summary>
-    /// Òş²Ø×Ô¼º
+    /// éšè—è‡ªå·±
     /// </summary>
     public virtual void HideMe()
     {
@@ -53,9 +53,9 @@ public class BasePanel : MonoBehaviour
     }
     
     /// <summary>
-    /// ÕÒµ½×Ó¶ÔÏóµÄ¶ÔÓ¦¿Ø¼ş ±ÈÈçButton ImageÖ®ÀàµÄ
+    /// æ‰¾åˆ°å­å¯¹è±¡çš„å¯¹åº”æ§ä»¶ æ¯”å¦‚Button Imageä¹‹ç±»çš„
     /// </summary>
-    /// <typeparam name="T">Button ImageÕâÀàUIBehaviour</typeparam>
+    /// <typeparam name="T">Button Imageè¿™ç±»UIBehaviour</typeparam>
     private void FindChildrenControl<T>() where T:UIBehaviour
     {
         T[] controls = this.GetComponentsInChildren<T>();
@@ -71,32 +71,32 @@ public class BasePanel : MonoBehaviour
             {
                 controlDic.Add(objName,new List<UIBehaviour>(){controls[i]});
             }
-            //Èç¹ûÊÇ°´Å¥ÊÂ¼ş
+            //å¦‚æœæ˜¯æŒ‰é’®äº‹ä»¶
             if (controls[i] is Button)
             {
-                //ÉèÖÃ°´Å¥µã»÷ÊÂ¼ş£¬¾ßÌåÂß¼­ÔÚ¶ÔÓ¦µÄ½çÃæ½Å±¾ÖØĞ´
+                //è®¾ç½®æŒ‰é’®ç‚¹å‡»äº‹ä»¶ï¼Œå…·ä½“é€»è¾‘åœ¨å¯¹åº”çš„ç•Œé¢è„šæœ¬é‡å†™
                 (controls[i] as Button).onClick.AddListener(() =>
                 {
                     OnClick(objName);
                 });
             }
-            //Èç¹ûÊÇµ¥Ñ¡¿ò»ò¶àÑ¡¿ò
+            //å¦‚æœæ˜¯å•é€‰æ¡†æˆ–å¤šé€‰æ¡†
             else if (controls[i] is Toggle)
             {
-                //ÉèÖÃÑ¡È¡ÊÂ¼ş£¬¾ßÌåÂß¼­ÔÚ¶ÔÓ¦µÄ½çÃæ½Å±¾ÖØĞ´
+                //è®¾ç½®é€‰å–äº‹ä»¶ï¼Œå…·ä½“é€»è¾‘åœ¨å¯¹åº”çš„ç•Œé¢è„šæœ¬é‡å†™
                 (controls[i] as Toggle).onValueChanged.AddListener((value) =>
                 {
                     OnValueChanged(objName,value);
                 });
             }
-            //Èç¹ûÊÇÆäËûÀàĞÍµÄ¿Ø¼ş£¬°´ĞèÇóÌí¼Ó
+            //å¦‚æœæ˜¯å…¶ä»–ç±»å‹çš„æ§ä»¶ï¼ŒæŒ‰éœ€æ±‚æ·»åŠ 
         }
     }
 
     /// <summary>
-    /// µÃµ½¶ÔÓ¦Ãû×ÖµÄ¶ÔÏóµÄ¶ÔÓ¦ÀàĞÍµÄ¿Ø¼ş½Å±¾
+    /// å¾—åˆ°å¯¹åº”åå­—çš„å¯¹è±¡çš„å¯¹åº”ç±»å‹çš„æ§ä»¶è„šæœ¬
     /// </summary>
-    /// <param name="objName">¶ÔÏóÃû×Ö</param>
+    /// <param name="objName">å¯¹è±¡åå­—</param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     protected T GetControl<T>(string objName) where T:UIBehaviour

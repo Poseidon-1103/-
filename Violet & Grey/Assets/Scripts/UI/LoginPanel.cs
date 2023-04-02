@@ -8,9 +8,9 @@ public class LoginPanel : BasePanel
     
     protected override void Awake()
     {
-        //Ò»¶¨²»ÄÜÉÙ ÒòÎªĞèÒªÖ´ĞĞ¸¸ÀàµÄawakeÀ´³õÊ¼»¯Ò»Ğ©ĞÅÏ¢ ±ÈÈçÕÒ¿Ø¼ş ¼ÓÊÂ¼ş¼àÌı
+        //ä¸€å®šä¸èƒ½å°‘ å› ä¸ºéœ€è¦æ‰§è¡Œçˆ¶ç±»çš„awakeæ¥åˆå§‹åŒ–ä¸€äº›ä¿¡æ¯ æ¯”å¦‚æ‰¾æ§ä»¶ åŠ äº‹ä»¶ç›‘å¬
         base.Awake();
-        //ÔÚÏÂÃæ´¦Àí×Ô¼ºµÄÒ»Ğ©³õÊ¼»¯Âß¼­
+        //åœ¨ä¸‹é¢å¤„ç†è‡ªå·±çš„ä¸€äº›åˆå§‹åŒ–é€»è¾‘
     }
     
     // Start is called before the first frame update
@@ -32,8 +32,8 @@ public class LoginPanel : BasePanel
     public override void ShowMe()
     {
         base.ShowMe();
-        //ÏÔÊ¾Ãæ°åÊ±ÏëÒªÖ´ĞĞµÄÂß¼­ Õâ¸öº¯Êı ÔÚUI¹ÜÀíÆ÷ÖĞ »á×Ô¶¯°ïÎÒÃÇµ÷ÓÃ
-        //Ö»ÒªÖØĞ´ÁËËü  ¾Í»áÖ´ĞĞÀïÃæµÄÂß¼­
+        //æ˜¾ç¤ºé¢æ¿æ—¶æƒ³è¦æ‰§è¡Œçš„é€»è¾‘ è¿™ä¸ªå‡½æ•° åœ¨UIç®¡ç†å™¨ä¸­ ä¼šè‡ªåŠ¨å¸®æˆ‘ä»¬è°ƒç”¨
+        //åªè¦é‡å†™äº†å®ƒ  å°±ä¼šæ‰§è¡Œé‡Œé¢çš„é€»è¾‘
     }
 
     public override void HideMe()
@@ -46,13 +46,13 @@ public class LoginPanel : BasePanel
         switch (btnName)
         {
             case "btnStart":
-                Debug.Log("btnStart±»µã»÷");
+                Debug.Log("btnStartè¢«ç‚¹å‡»");
                 break;
             case "btnQuit":
-                Debug.Log("btnQuit±»×²»÷ÁË");
+                Debug.Log("btnQuitè¢«æ’å‡»äº†");
                 break;
             case "btnContinue":
-                Debug.Log("¼ÌĞøÓÎÏ·");
+                Debug.Log("ç»§ç»­æ¸¸æˆ");
                 break;
         }
     }
@@ -64,11 +64,11 @@ public class LoginPanel : BasePanel
             case "toggle1":
                 if (value)
                 {
-                    Debug.Log("toggle1±»Ñ¡ÖĞÁË");
+                    Debug.Log("toggle1è¢«é€‰ä¸­äº†");
                 }
                 else
                 {
-                    Debug.Log("toggle1Ã»±»Ñ¡ÖĞ");
+                    Debug.Log("toggle1æ²¡è¢«é€‰ä¸­");
                 }
                 break;
         }
@@ -76,7 +76,7 @@ public class LoginPanel : BasePanel
 
     public void Init()
     {
-        Debug.Log("³õÊ¼»¯Êı¾İ");
+        Debug.Log("åˆå§‹åŒ–æ•°æ®");
     }
     
     

@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// ×ÊÔ´¼ÓÔØÄ£¿é
-/// 1.Òì²½¼ÓÔØ
-/// 2.Î¯ÍĞºÍ lambda±í´ïÊ½
-/// 3.Ğ­³Ì
-/// 4.·ºĞÍ
+/// èµ„æºåŠ è½½æ¨¡å—
+/// 1.å¼‚æ­¥åŠ è½½
+/// 2.å§”æ‰˜å’Œ lambdaè¡¨è¾¾å¼
+/// 3.åç¨‹
+/// 4.æ³›å‹
 /// </summary>
 public class ResMgr : BaseManager<ResMgr>
 {
-    //Í¬²½¼ÓÔØ×ÊÔ´
+    //åŒæ­¥åŠ è½½èµ„æº
     public T Load<T>(string name) where T:Object
     {
         T res = Resources.Load<T>(name);
-        //Èç¹û¶ÔÏóÊÇÒ»¸öGameObjectÀàĞÍµÄ °ÑËüÊµÀı»¯ºó ÔÙ·µ»Ø³öÈ¥ Íâ²¿Ö±½ÓÊ¹ÓÃ¼´¿É
+        //å¦‚æœå¯¹è±¡æ˜¯ä¸€ä¸ªGameObjectç±»å‹çš„ æŠŠå®ƒå®ä¾‹åŒ–å å†è¿”å›å‡ºå» å¤–éƒ¨ç›´æ¥ä½¿ç”¨å³å¯
         if (res is GameObject)
         {
             return GameObject.Instantiate(res);
@@ -26,10 +26,10 @@ public class ResMgr : BaseManager<ResMgr>
             return res;
         }
     }
-    //Òì²½¼ÓÔØ×ÊÔ´
+    //å¼‚æ­¥åŠ è½½èµ„æº
     public void LoadAsync<T>(string name, UnityAction<T> callback) where T:Object
     {
-        //¿ªÆôÒì²½¼ÓÔØµÄĞ­³Ì
+        //å¼€å¯å¼‚æ­¥åŠ è½½çš„åç¨‹
         MonoMgr.GetInstance().StartCoroutine(ReallyLoadAsync(name, callback));
     }
 
