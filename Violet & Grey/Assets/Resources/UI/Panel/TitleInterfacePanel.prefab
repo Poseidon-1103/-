@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8467412803875902028}
   - component: {fileID: 4124406172892732244}
+  - component: {fileID: 9098012008796938901}
   m_Layer: 5
   m_Name: TitleInterfacePanel
   m_TagString: Untagged
@@ -52,6 +53,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058733953376189439}
   m_CullTransparentMesh: 1
+--- !u!114 &9098012008796938901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058733953376189439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927f01ee5292a9e43804ff4b78187573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &678738253335993739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,7 +192,7 @@ PrefabInstance:
     - target: {fileID: 1187289846995976993, guid: 0369080f906923045ad4f697378018b1,
         type: 3}
       propertyPath: m_Name
-      value: Set
+      value: btnSet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0369080f906923045ad4f697378018b1, type: 3}
@@ -324,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 211175600076870904, guid: 2a7252c3112c004458fd557fe291bc3c,
         type: 3}
       propertyPath: m_Name
-      value: ProductionTeamList
+      value: btnTeamMember
       objectReference: {fileID: 0}
     - target: {fileID: 211175600076870905, guid: 2a7252c3112c004458fd557fe291bc3c,
         type: 3}
@@ -593,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 373800277282814667, guid: 2b6acd91e47961542b6f3380dfe57886,
         type: 3}
       propertyPath: m_Name
-      value: Exit
+      value: btnQuit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6acd91e47961542b6f3380dfe57886, type: 3}
@@ -718,7 +731,7 @@ PrefabInstance:
     - target: {fileID: 3848464584532011323, guid: 364a75a20b8d63740a89ec1d50eaf8a7,
         type: 3}
       propertyPath: m_Name
-      value: Archives
+      value: btnArchives
       objectReference: {fileID: 0}
     - target: {fileID: 3848464585401709719, guid: 364a75a20b8d63740a89ec1d50eaf8a7,
         type: 3}
@@ -992,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 5279716063866662607, guid: 0b87890f53bf28242999bb10a0c3a333,
         type: 3}
       propertyPath: m_Name
-      value: Start
+      value: btnStart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b87890f53bf28242999bb10a0c3a333, type: 3}

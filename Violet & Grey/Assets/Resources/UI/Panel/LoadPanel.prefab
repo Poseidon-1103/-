@@ -316,7 +316,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7777757557548460653, guid: ff5574da4dca2764fb3f1207e6c1f725, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff5574da4dca2764fb3f1207e6c1f725, type: 3}
 --- !u!224 &8067718815655300197 stripped
 RectTransform:
@@ -324,6 +325,46 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 290041060881049097}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8067718815655300202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7777757557548460643, guid: ff5574da4dca2764fb3f1207e6c1f725,
+    type: 3}
+  m_PrefabInstance: {fileID: 290041060881049097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &467381379262245333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067718815655300202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a0efc813a26a0f6488e5af5d44241cf8, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Loading...
 --- !u!1001 &1857318630601241963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,13 +501,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: dcb3db871bf26d14390da4c7a3e03791,
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 3453706814152000785, guid: 78bb10b9702d90f428fe422912298b1b,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 1540471563686488618, guid: dcb3db871bf26d14390da4c7a3e03791,
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 3453706814152000786, guid: 78bb10b9702d90f428fe422912298b1b,
         type: 3}

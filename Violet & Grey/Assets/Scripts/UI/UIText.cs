@@ -7,10 +7,10 @@ public class UIText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UIManager.GetInstance().ShowPanel<LoginPanel>("LoginPanel",E_UI_Layer.Mid,ShowPanelOver);
+        UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel",E_UI_Layer.Mid,ShowPanelOver);
     }
 
-    private void ShowPanelOver(LoginPanel panel)
+    private void ShowPanelOver(TitleInterfacePanel panel)
     {
         panel.Init();
         // Invoke("DelayHide",3);
@@ -18,7 +18,7 @@ public class UIText : MonoBehaviour
 
     private void DelayHide()
     {
-        UIManager.GetInstance().HidePanel("LoginPanel");
+        UIManager.GetInstance().HidePanel("TitleInterfacePanel");
     }
 
     // Update is called once per frame
