@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8554756283065973569}
   - component: {fileID: 8554756283065973571}
   - component: {fileID: 8554756283065973570}
-  - component: {fileID: 1126525357}
+  - component: {fileID: -724139784754295287}
   m_Layer: 0
-  m_Name: 1012
+  m_Name: 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8554756283065973630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!114 &1126525357
+--- !u!114 &-724139784754295287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,11 +147,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8554756283065973630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bd8c944e113a44196e6cc6caf6ad1d, type: 3}
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 634748848429340228, guid: 85a6ea6f629b7224ba59035163279263,
-    type: 3}
-  cardPool: {fileID: 0}
-  healthBar: {fileID: 0}
-  ResourcesDate: CardData
+  ActionsList: {fileID: 0}
+  ID: 22
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 0
+  EndTurn: 100
+  Probability: 1400000032000000

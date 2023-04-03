@@ -42,7 +42,10 @@ public class ShowPLcard : MonoBehaviour
         {
             cardPool.BroadcastMessage("DestoryMe");
         }
+
     }
+
+    
     //更新角色
     void Update()
     {

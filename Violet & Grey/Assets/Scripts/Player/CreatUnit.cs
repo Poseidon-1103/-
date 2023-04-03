@@ -9,12 +9,12 @@ using UnityEngine.Tilemaps;
 public class CreatUnit : MonoBehaviour
 {
     //生成的位置
-    public float X;
-    public float Y;
+    /*public float X;
+    public float Y;*/
     //在表中第几行
     public int row;
     public  Player player;
-
+    public Vector3Int playerCellPosition;
     void Start()
     {
         creatUnit();
@@ -23,12 +23,12 @@ public class CreatUnit : MonoBehaviour
     {
         player = PLtools.GetInstance().LoadPlData("Player", row);
         GameObject obj = (GameObject)Instantiate(Resources.Load("Unit/" + player.Plid), gameObject.transform);
-        if (player.Plid /100==10)
+        obj.transform.position= playerCellPosition;
+        if (player.Plid <=20)
         {
             obj.transform.GetComponent<ShowPLcard>().player = player;
         }
         obj.name = player.Plid.ToString();
-        obj.transform.position = new Vector2(X, Y);
     }
 
 

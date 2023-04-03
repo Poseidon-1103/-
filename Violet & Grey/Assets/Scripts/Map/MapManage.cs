@@ -82,7 +82,7 @@ public class MapManage : BaseManager<MapManage>
     // 找到路径
     public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos)
     {
-        Debug.Log($"{tilemapBounds.xMin},{tilemapBounds.xMax},{tilemapBounds.yMin},{tilemapBounds.yMax}");
+        /*Debug.Log($"{tilemapBounds.xMin},{tilemapBounds.xMax},{tilemapBounds.yMin},{tilemapBounds.yMax}");*/
         //判断传入是否合法
         //1.是否在范围内
         if (startPos.x < tilemapBounds.xMin || startPos.x >= tilemapBounds.xMax ||
@@ -90,7 +90,7 @@ public class MapManage : BaseManager<MapManage>
             endPos.x < tilemapBounds.xMin || endPos.x >= tilemapBounds.xMax ||
             endPos.y < tilemapBounds.yMin || endPos.y >= tilemapBounds.yMax )
         {
-            Debug.Log("开始或结束在地图范围外");
+            /*Debug.Log("开始或结束在地图范围外");*/
             return null;
         }
         //2.是否阻挡
@@ -98,7 +98,7 @@ public class MapManage : BaseManager<MapManage>
         AStarNode start = new AStarNode(0,0,E_Node_type.Walk);
         AStarNode end = new AStarNode(0,0,E_Node_type.Walk);
         int startI=0, startJ=0;
-        Debug.Log($"一维长{nodes.GetLength(0)},二维长{nodes.GetLength(1)}");
+        /*Debug.Log($"一维长{nodes.GetLength(0)},二维长{nodes.GetLength(1)}");*/
         for (int i = 0; i < nodes.GetLength(0); i++)
         {
             for (int j = 0; j < nodes.GetLength(1); j++)
@@ -116,12 +116,12 @@ public class MapManage : BaseManager<MapManage>
                 }
             }
         }
-        Debug.Log($"{start.x},{start.y},{start.type}");
-        Debug.Log($"{end.x},{end.y},{end.type}");
+        /*Debug.Log($"{start.x},{start.y},{start.type}");
+        Debug.Log($"{end.x},{end.y},{end.type}");*/
         if (start.type == E_Node_type.Stop ||
             end.type == E_Node_type.Stop)
         {
-            Debug.Log("开始或结束被阻挡");
+            /*Debug.Log("开始或结束被阻挡");*/
             return null;
         }
     
@@ -151,7 +151,7 @@ public class MapManage : BaseManager<MapManage>
             //死路判断 开启列表为空
             if (openList.Count == 0)
             {
-                Debug.Log("死路");
+                /*Debug.Log("死路");*/
                 return null;
                   
             }
