@@ -47,6 +47,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5375764585066334528}
     m_Modifications:
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Pivot.x
@@ -152,6 +176,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 8047229540910054925, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Name
@@ -172,6 +208,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5375764585066334528}
     m_Modifications:
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Pivot.x
@@ -277,6 +337,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 8047229540910054925, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Name
@@ -297,6 +369,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5375764585066334528}
     m_Modifications:
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Pivot.x
@@ -402,6 +498,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 8047229540910054925, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Name
@@ -422,6 +530,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5375764585066334528}
     m_Modifications:
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 1199142225585357425, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 2656700783346771280, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Pivot.x
@@ -527,6 +659,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 7310263228564292674, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 8047229540910054925, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_Name

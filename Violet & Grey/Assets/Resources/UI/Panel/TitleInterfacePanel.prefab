@@ -59,6 +59,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8467412803875902028}
     m_Modifications:
+    - target: {fileID: 1187289846893086615, guid: 0369080f906923045ad4f697378018b1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 1187289846893086615, guid: 0369080f906923045ad4f697378018b1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 1187289846995976992, guid: 0369080f906923045ad4f697378018b1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -419,6 +431,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 211175600154183923, guid: 2a7252c3112c004458fd557fe291bc3c,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 211175600154183923, guid: 2a7252c3112c004458fd557fe291bc3c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a7252c3112c004458fd557fe291bc3c, type: 3}
 --- !u!224 &1806300840621508613 stripped
@@ -434,6 +458,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8467412803875902028}
     m_Modifications:
+    - target: {fileID: 373800276889767391, guid: 2b6acd91e47961542b6f3380dfe57886,
+        type: 3}
+      propertyPath: m_text
+      value: "\u9000\u51FA\u6E38\u620F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 373800276889767391, guid: 2b6acd91e47961542b6f3380dfe57886,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 373800276889767391, guid: 2b6acd91e47961542b6f3380dfe57886,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373800276889767391, guid: 2b6acd91e47961542b6f3380dfe57886,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 373800276889767391, guid: 2b6acd91e47961542b6f3380dfe57886,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 373800277282814664, guid: 2b6acd91e47961542b6f3380dfe57886,
         type: 3}
       propertyPath: m_Pivot.x
@@ -669,6 +720,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archives
       objectReference: {fileID: 0}
+    - target: {fileID: 3848464585401709719, guid: 364a75a20b8d63740a89ec1d50eaf8a7,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 3848464585401709719, guid: 364a75a20b8d63740a89ec1d50eaf8a7,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364a75a20b8d63740a89ec1d50eaf8a7, type: 3}
 --- !u!224 &1806300840601895393 stripped
@@ -809,6 +872,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8467412803875902028}
     m_Modifications:
+    - target: {fileID: 5279716062266829297, guid: 0b87890f53bf28242999bb10a0c3a333,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 5279716062266829297, guid: 0b87890f53bf28242999bb10a0c3a333,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 5279716063866662606, guid: 0b87890f53bf28242999bb10a0c3a333,
         type: 3}
       propertyPath: m_Pivot.x
