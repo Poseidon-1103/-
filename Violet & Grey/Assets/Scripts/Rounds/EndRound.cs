@@ -29,6 +29,7 @@ public class EndRound : MonoBehaviour
     private List<Vector3Int> PLList = new();
     //移动范围列表
     private int M =0;
+    private List<GameObject> A =new();
     private List<Vector3Int> moveList;
     private Vector3 playerPosition;
     private Vector3Int playerCellPosition;
@@ -151,6 +152,12 @@ public class EndRound : MonoBehaviour
                     Debug.Log(recordList[i][j].CardEffType);*/
                     switch (recordList[i][j].CardEffect)
                     {
+                        case "状态":
+                            for(int Q = 0; Q < A.Count; Q++)
+                            {
+                                A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
+                            }
+                            break;
                         case "攻击":
                             while (recordList[i][0].Id / 10000 < 20)
                             {
@@ -168,6 +175,7 @@ public class EndRound : MonoBehaviour
                                     if (AttackMap.GetTile(PLList[PL]) != null)
                                     {
                                         EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
+                                        A.Add(EnemyUnit[PL]);
                                     }
                                 }
                                 break;
@@ -219,6 +227,7 @@ public class EndRound : MonoBehaviour
                                                 if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null)
                                                 {
                                                     PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
+                                                    A.Add(PLUnit[PL]);
                                                 }
                                             }
                                         }
@@ -250,6 +259,7 @@ public class EndRound : MonoBehaviour
                                     Vector3Int endCellPos = new Vector3Int(pathlist[k].x, pathlist[k].y, 0);
                                     Debug.Log(endCellPos);
                                     obj[PLnum].transform.position = grid.CellToWorld(endCellPos);
+                                    A.Add(obj[PLnum].gameObject);
                                     //等待1s
                                     yield return new WaitForSeconds(1);
                                 }
@@ -300,6 +310,7 @@ public class EndRound : MonoBehaviour
                                     Vector3Int endCellPos = new Vector3Int(pathlist[k + 1].x, pathlist[k + 1].y, 0);
 
                                     obj[PLnum].transform.position = grid.CellToWorld(endCellPos);
+                                    A.Add(obj[PLnum].gameObject);
                                     //等待1s
                                     yield return new WaitForSeconds(1);
                                 }
@@ -309,6 +320,7 @@ public class EndRound : MonoBehaviour
                     }
                 }
             }
+            A.Clear();
         }
     }
 
@@ -406,6 +418,11 @@ public class EndRound : MonoBehaviour
                 AddListV3(AttackType,0 , 0, 0);
                 AddListV3(AttackType, 1, 1, 0);
                 break;
+            case "远程":
+                NewRoad2(playerCellPosition, 3, rangeMap);
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
             default:
                 M = 1;
                 break;
@@ -424,24 +441,24 @@ public class EndRound : MonoBehaviour
         {
             if (Direction.x < 0)
             {
-                AddListV3(AttackType2, AttackType[i].x + 1, AttackType[i].y, 0);
+                AddListV3(AttackType2, AttackType[i].x, AttackType[i].y, 0);
             }
             else if (Direction.x > 0)
             {
-                AddListV3(AttackType2, AttackType[i].x - Direction2.x, AttackType[i].y, 0);
+                AddListV3(AttackType2, AttackType[i].x - Direction2.x-1, AttackType[i].y, 0);
             }
             else if (Direction.y < 0)
             {
-                AddListV3(AttackType2, AttackType[i].y, AttackType[i].x + 1, 0);
+                AddListV3(AttackType2, AttackType[i].y, AttackType[i].x, 0);
             }
             else if (Direction.y > 0)
             {
-                AddListV3(AttackType2, AttackType[i].y, AttackType[i].x - Direction2.x, 0);
+                AddListV3(AttackType2, AttackType[i].y, AttackType[i].x - Direction2.x-1, 0);
             }
 
 
         }
-        
+        Debug.Log(playerCellPosition - endCellPos);
         if (rangeMap.GetTile(endCellPos) != null)
         {
             if (AttackType2 != null)
@@ -450,7 +467,7 @@ public class EndRound : MonoBehaviour
                 AttackMap.ClearAllTiles();
                 foreach (var a in AttackType2)
                 {
-                    AttackMap.SetTile(a + playerCellPosition, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                    AttackMap.SetTile(a + playerCellPosition-(playerCellPosition - endCellPos), tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
                 }
             }
         }
