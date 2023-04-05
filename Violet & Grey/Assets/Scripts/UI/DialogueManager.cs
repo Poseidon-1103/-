@@ -23,6 +23,10 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();
 
+    //保存当前的对话索引值
+    public int dialogueIndex;
+    //读取到的对话文本，按行分割
+    public string[] dialogueRows;
     private void Awake()
     {
         imageDic["佛尔米奥"] = sprites[0];
@@ -73,10 +77,19 @@ public class DialogueManager : MonoBehaviour
 
     public void ReadText(TextAsset textAsset)
     {
-        string[] rows = textAsset.text.Split('\n');
+        dialogueRows = textAsset.text.Split('\n');
         // foreach (var row in rows)
         // {
         //     string[] cell = row.Split(',');
         // }
+    }
+
+    public void ShowDialogueRow()
+    {
+        foreach (var row in dialogueRows)
+        {
+            string[] cell = row.Split(',');
+            
+        }
     }
 }
