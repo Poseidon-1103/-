@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Violet & Grey/Assets/Scenes/New Scene.unity.meta
 guid: 05a905bbbc715f74c8df47a7800e4cf7
+========
+guid: df5038463fa5de042a17340b46b776f0
+folderAsset: yes
+>>>>>>>> 3e61647a49eafc3bb74663941b3abc95677baf93:Violet & Grey/Assets/Data/UI/Font/DinkieBitmap-v1002/DinkieBitmap-v1002.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

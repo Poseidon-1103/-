@@ -24,14 +24,14 @@ public class MapText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*grid = (Grid)GameObject.Find("grid");*/
-        MapManager.GetInstance().InitMapInfo(map);
+        FindMap();
+        MapManage.GetInstance().InitMapInfo(map);
         // AStarNode[,] nodes = MapManage.GetInstance().nodes;
         // 获取角色的世界坐标
          Vector3 playerPosition = player.position;
         // 将世界坐标转换成格子坐标
          Vector3Int playerCellPosition = grid.WorldToCell(playerPosition);
-         Debug.Log("角色的世界坐标为："+playerPosition+",角色的格子坐标为："+playerCellPosition);
+        
     }
 
     // Update is called once per frame
@@ -49,9 +49,9 @@ public class MapText : MonoBehaviour
             Vector3 endWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标
             endWorldPosition.z = 0;// 设置z轴值
             Vector3Int endCellPos = grid.WorldToCell(endWorldPosition);//将鼠标坐标转换成格子坐标，也就是终点坐标
-            Debug.Log("角色的世界坐标为：" + playerPosition + ",角色的格子坐标为：" + playerCellPosition);
-            Debug.Log("鼠标点击的屏幕坐标为：" + mousePosition + "鼠标点击的世界坐标为：" + endWorldPosition + "鼠标点击的格子坐标为：" + endCellPos);
-            pathlist = MapManager.GetInstance().FindPath(playerCellPosition, endCellPos);//得到路径
+            /*Debug.Log("角色的世界坐标为：" + playerPosition + ",角色的格子坐标为：" + playerCellPosition);
+            Debug.Log("鼠标点击的屏幕坐标为：" + mousePosition + "鼠标点击的世界坐标为：" + endWorldPosition + "鼠标点击的格子坐标为：" + endCellPos);*/
+            pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos);//得到路径
             // if (pathlist!=null)
             // {
             //     foreach (var a in pathlist)
@@ -61,18 +61,29 @@ public class MapText : MonoBehaviour
             //     
             // }
         }
-        //移动范围显示
-        moveList = MapManager.GetInstance().MoveRange(playerCellPosition, actionValue, rangeMap);//得到可移动的范围地列表
+       /* NewRoad(playerCellPosition, actionValue, rangeMap);*/
+    }
+
+    public void FindMap()
+    {
+        grid = GameObject.Find("Grid").GetComponent<Grid>();
+        map = GameObject.Find("Move").GetComponent<Tilemap>();
+        rangeMap = GameObject.Find("MoveRange").GetComponent<Tilemap>();
+    }
+
+    public void NewRoad(Vector3Int playerCellPosition,int MoveNum, Tilemap rangeMap)
+    {
+        moveList = MapManage.GetInstance().MoveRange(playerCellPosition, MoveNum);//得到可移动的范围地列表
         if (moveList != null)
         {
             //清除之前的
             rangeMap.ClearAllTiles();
             foreach (var a in moveList)
             {
+                
                 // Debug.Log(a);
                 rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
-
 }
