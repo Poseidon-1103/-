@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2672350658761891232}
   - component: {fileID: 2672350658761891246}
   - component: {fileID: 6021248398611147661}
+  - component: {fileID: 1931785363363628591}
   - component: {fileID: 3401260861287144227}
   m_Layer: 0
   m_Name: 12
@@ -123,6 +124,20 @@ MonoBehaviour:
   cardPool: {fileID: 0}
   healthBar: {fileID: 0}
   ResourcesDate: CardData
+--- !u!114 &1931785363363628591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672350658761891233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d201924839ec1214c9949905e102bcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PL: {fileID: 2672350658761891233}
+  Blood: {fileID: 4486871074406321052}
 --- !u!61 &3401260861287144227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4486871074406321052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 4.98, z: 0}
+  m_LocalPosition: {x: 0.22, y: 4.98, z: -1}
   m_LocalScale: {x: 3, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

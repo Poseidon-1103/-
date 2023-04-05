@@ -22,6 +22,7 @@ public class CreatUnit : MonoBehaviour
     public void creatUnit()
     {
         player = PLtools.GetInstance().LoadPlData("Player", row);
+        
         GameObject obj = (GameObject)Instantiate(Resources.Load("Unit/" + player.Plid), gameObject.transform);
         obj.transform.position= playerCellPosition;
         if (player.Plid <=20)

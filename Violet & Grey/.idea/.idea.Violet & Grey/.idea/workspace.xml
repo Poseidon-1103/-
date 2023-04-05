@@ -3,16 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/text.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-9px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-9px SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectLevelStartNewTestPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectLevelStartNewTestPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/Loading/MeticulousClassification/LoadBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/Loading/MeticulousClassification/LoadBar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/TitleInterfacePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/TitleInterfacePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +33,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -119,7 +128,14 @@
       <workItem from="1679390172363" duration="4314000" />
       <workItem from="1679408371358" duration="821000" />
       <workItem from="1679488309738" duration="2319000" />
-      <workItem from="1679538327242" duration="16314000" />
+      <workItem from="1679538327242" duration="17626000" />
+      <workItem from="1679664203499" duration="1131000" />
+      <workItem from="1680101092686" duration="1264000" />
+      <workItem from="1680229488360" duration="23967000" />
+      <workItem from="1680317669496" duration="23331000" />
+      <workItem from="1680413935838" duration="2522000" />
+      <workItem from="1680419562154" duration="16389000" />
+      <workItem from="1680491499719" duration="6195000" />
     </task>
     <servers />
   </component>

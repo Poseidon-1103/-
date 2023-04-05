@@ -234,8 +234,106 @@ public class MapManage : BaseManager<MapManage>
         openList.Add(node);
     }
     //计算可移动范围
-    public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue, Tilemap rangeMap)
+    public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue, List<Vector3Int> PLList)
     {
+
+        //检测角色位置是否超出地图边界或是否为障碍
+        // List<Vector3Int> actionList=new List<Vector3Int>();
+        int startI = 0, startJ = 0;
+        //查找行动距离内可行走的格子
+        //获取角色位置在格子数组中的位置
+        for (int i = 0; i < nodes.GetLength(0); i++)
+        {
+            for (int j = 0; j < nodes.GetLength(1); j++)
+            {
+                // Debug.Log(i+","+j+";"+nodes[i,j].x+","+nodes[i,j].y);
+                if (nodes[i, j].x == startPos.x && nodes[i, j].y == startPos.y)
+                {
+                    startI = i;
+                    startJ = j;
+                    break;
+                }
+            }
+        }
+        // 清空可移动区域列表
+        actionList.Clear();
+        actionList.Add(startPos);
+        //创建一个队列
+        Queue<(int, int, int)> queue = new Queue<(int, int, int)>();
+        //将初始位置和最大步数作为一个元组加入队列
+        queue.Enqueue((startI, startJ, actionValue));
+        //创建一个集合，用来存储已经访问过的位置
+        HashSet<Vector3Int> visited = new HashSet<Vector3Int>();
+        int PLexist = 0;
+        int PLexist2 = 0;
+        //当队列不为空时，循环执行以下操作
+        while (queue.Count > 0)
+        {
+            //出队一个元素，得到当前位置和剩余步数
+            (int, int, int) current = queue.Dequeue();
+            startI = current.Item1;
+            startJ = current.Item2;
+            actionValue = current.Item3;
+            //检查是否超出地图边界或遇到障碍格，如果是则跳过该元素
+            if (startI < 0 || startI >= nodes.GetLength(0) ||
+                startJ < 0 || startJ >= nodes.GetLength(1) ||
+                nodes[startI,startJ].type == E_Node_type.Stop
+                )
+            {
+                continue;
+            }
+            //判断格子是否有单位
+            for (int i = 0; i < PLList.Count; i++)
+            {
+                if (PLList[i].x== nodes[startI, startJ].x && PLList[i].y == nodes[startI, startJ].y)
+                {
+                   
+                    PLexist2 = 0;
+                    if (PLexist == 1)
+                    {
+                        PLexist2 = 1;
+                        break;
+                    }
+                    PLexist = 1;
+                }
+
+            }
+            if (PLexist2 == 1)
+            {
+                PLexist2 = 0;
+                continue;
+            }
+
+            //检查是否已经在访问集合中，如果是则跳过该元素
+            Vector3Int pos = new Vector3Int(nodes[startI, startJ].x, nodes[startI, startJ].y, 0);
+            if (visited.Contains(pos))
+            {
+                continue;
+            }
+            //将当前位置加入访问集合，并将其加入移动范围
+            visited.Add(pos);
+            actionList.Add(pos);
+            //如果剩余步数大于零，则将当前位置的上下左右四个相邻位置和剩余步数减一作为新的元组加入队列
+            if (actionValue > 0)
+            {
+
+                queue.Enqueue((startI+1,startJ,actionValue-1));//右
+                queue.Enqueue((startI-1,startJ,actionValue-1));//左
+                queue.Enqueue((startI,startJ+1,actionValue-1));//上
+                queue.Enqueue((startI,startJ-1,actionValue-1));//下
+
+            }
+        }
+        return actionList;
+    }
+    public List<Vector3Int> AttackRange(Vector3Int playerCellPosition, List<Vector3Int> AttackType)
+    {
+
+        return AttackType;
+    }
+    public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue)
+    {
+
         //检测角色位置是否超出地图边界或是否为障碍
         // List<Vector3Int> actionList=new List<Vector3Int>();
         int startI = 0, startJ = 0;
@@ -274,7 +372,8 @@ public class MapManage : BaseManager<MapManage>
             //检查是否超出地图边界或遇到障碍格，如果是则跳过该元素
             if (startI < 0 || startI >= nodes.GetLength(0) ||
                 startJ < 0 || startJ >= nodes.GetLength(1) ||
-                nodes[startI,startJ].type == E_Node_type.Stop)
+                nodes[startI, startJ].type == E_Node_type.Stop
+                )
             {
                 continue;
             }
@@ -290,10 +389,10 @@ public class MapManage : BaseManager<MapManage>
             //如果剩余步数大于零，则将当前位置的上下左右四个相邻位置和剩余步数减一作为新的元组加入队列
             if (actionValue > 0)
             {
-                queue.Enqueue((startI+1,startJ,actionValue-1));//右
-                queue.Enqueue((startI-1,startJ,actionValue-1));//左
-                queue.Enqueue((startI,startJ+1,actionValue-1));//上
-                queue.Enqueue((startI,startJ-1,actionValue-1));//下
+                queue.Enqueue((startI + 1, startJ, actionValue - 1));//右
+                queue.Enqueue((startI - 1, startJ, actionValue - 1));//左
+                queue.Enqueue((startI, startJ + 1, actionValue - 1));//上
+                queue.Enqueue((startI, startJ - 1, actionValue - 1));//下
             }
         }
         return actionList;

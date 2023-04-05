@@ -104,8 +104,8 @@ public class CardTools : BaseManager<CardTools>
                 int Sequnce = int.Parse(rowArray[4]);
                 int CardPlace = int.Parse(rowArray[5]);
                 string cardEffect = rowArray[6];
-                int cardEffNum = int.Parse(rowArray[7]);
-                string cardEffType = rowArray[8];
+                string cardEffType = rowArray[7];
+                int cardEffNum = int.Parse(rowArray[8]);
                 Card Card = new(Id, CardName, CardCD, Sequnce, CardPlace, cardEffect, cardEffType, cardEffNum,0);
                 cardList.Add(Card);
             }

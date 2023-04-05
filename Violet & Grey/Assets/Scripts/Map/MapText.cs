@@ -31,7 +31,7 @@ public class MapText : MonoBehaviour
          Vector3 playerPosition = player.position;
         // 将世界坐标转换成格子坐标
          Vector3Int playerCellPosition = grid.WorldToCell(playerPosition);
-         Debug.Log("角色的世界坐标为："+playerPosition+",角色的格子坐标为："+playerCellPosition);
+        
     }
 
     // Update is called once per frame
@@ -73,7 +73,7 @@ public class MapText : MonoBehaviour
 
     public void NewRoad(Vector3Int playerCellPosition,int MoveNum, Tilemap rangeMap)
     {
-        moveList = MapManage.GetInstance().MoveRange(playerCellPosition, MoveNum, rangeMap);//得到可移动的范围地列表
+        moveList = MapManage.GetInstance().MoveRange(playerCellPosition, MoveNum);//得到可移动的范围地列表
         if (moveList != null)
         {
             //清除之前的
