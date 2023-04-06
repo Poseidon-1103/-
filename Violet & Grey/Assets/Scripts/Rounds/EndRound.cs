@@ -191,7 +191,7 @@ public class EndRound : MonoBehaviour
                                     M = 0;
                                     break;
                                 }
-
+                                yield return new WaitForSeconds(1);
                                 //找到最近的pl
                                 GameObject PLGOT = new();
                                 for (int k = 0; k < PLUnit.Count; k++)
@@ -224,6 +224,9 @@ public class EndRound : MonoBehaviour
                                         {
                                             if (PLGOT == PLUnit[PL])
                                             {
+                                                Debug.Log(EnemyUnit.Count);
+                                                Debug.Log("he" + PL);
+                                                Debug.Log("HR"+PLList.Count);
                                                 if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null)
                                                 {
                                                     PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
@@ -293,8 +296,7 @@ public class EndRound : MonoBehaviour
                                     {
                                         continue;
                                     }
-                                    List<AStarNode> pathlist2 = MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos);//得到路径
-                                    
+                                    List<AStarNode> pathlist2 = MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos,PLList);//得到路径
                                     if (pathlist2.Count <= pathlist.Count)
                                         {
                                             EndPoint = playerendCellPos;
@@ -458,7 +460,6 @@ public class EndRound : MonoBehaviour
 
 
         }
-        Debug.Log(playerCellPosition - endCellPos);
         if (rangeMap.GetTile(endCellPos) != null)
         {
             if (AttackType2 != null)

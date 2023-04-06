@@ -198,6 +198,128 @@ public class MapManage : BaseManager<MapManage>
         }
     
     }
+
+    public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos, List<Vector3Int> PLList)
+    {
+        List<Vector3Int> PLList2 = PLList;
+        PLList2.Remove(endPos);
+        PLList2.Remove(startPos);
+        /*Debug.Log($"{tilemapBounds.xMin},{tilemapBounds.xMax},{tilemapBounds.yMin},{tilemapBounds.yMax}");*/
+        //判断传入是否合法
+        //1.是否在范围内
+        if (startPos.x < tilemapBounds.xMin || startPos.x >= tilemapBounds.xMax ||
+            startPos.y < tilemapBounds.yMin || startPos.y >= tilemapBounds.yMax ||
+            endPos.x < tilemapBounds.xMin || endPos.x >= tilemapBounds.xMax ||
+            endPos.y < tilemapBounds.yMin || endPos.y >= tilemapBounds.yMax)
+        {
+            /*Debug.Log("开始或结束在地图范围外");*/
+            return null;
+        }
+        //2.是否阻挡
+        //获得起点终点格子
+        AStarNode start = new AStarNode(0, 0, E_Node_type.Walk);
+        AStarNode end = new AStarNode(0, 0, E_Node_type.Walk);
+        int startI = 0, startJ = 0;
+        /*Debug.Log($"一维长{nodes.GetLength(0)},二维长{nodes.GetLength(1)}");*/
+        for (int i = 0; i < nodes.GetLength(0); i++)
+        {
+            for (int j = 0; j < nodes.GetLength(1); j++)
+            {
+                // Debug.Log(i+","+j+";"+nodes[i,j].x+","+nodes[i,j].y);
+                if (nodes[i, j].x == startPos.x && nodes[i, j].y == startPos.y)
+                {
+                    start = nodes[i, j];
+                    startI = i;
+                    startJ = j;
+                }
+                else if (nodes[i, j].x == endPos.x && nodes[i, j].y == endPos.y)
+                {
+                    end = nodes[i, j];
+                }
+            }
+        }
+        /*Debug.Log($"{start.x},{start.y},{start.type}");
+        Debug.Log($"{end.x},{end.y},{end.type}");*/
+        if (start.type == E_Node_type.Stop ||
+            end.type == E_Node_type.Stop)
+        {
+            /*Debug.Log("开始或结束被阻挡");*/
+            return null;
+        }
+
+        //清空开启和关闭列表
+        closeList.Clear();
+        openList.Clear();
+
+        //起点放入关闭列表
+        start.father = null;
+        start.f = 0;
+        start.g = 0;
+        start.h = 0;
+        closeList.Add(start);
+
+        while (true)
+        {
+            //寻找周围点
+            //上 x y-1
+            FindNearlyNodeToOpenList(start.x, start.y - 1, startI, startJ - 1, 1, start, end, PLList2);
+            //左 x-1 y 
+            FindNearlyNodeToOpenList(start.x - 1, start.y, startI - 1, startJ, 1, start, end, PLList2);
+            //右 x+1 y
+            FindNearlyNodeToOpenList(start.x + 1, start.y, startI + 1, startJ, 1, start, end, PLList2);
+            //下 x y+1
+            FindNearlyNodeToOpenList(start.x, start.y + 1, startI, startJ + 1, 1, start, end, PLList2);
+
+            //死路判断 开启列表为空
+            if (openList.Count == 0)
+            {
+                /*Debug.Log("死路");*/
+                return null;
+
+            }
+            //选开启列表中寻路消耗最小的点
+            openList.Sort(SortOpenList);
+
+            //放入关闭列表 删除开启列表
+            closeList.Add(openList[0]);
+            //寻找的点 成为新点起点 进行下一次寻路
+            start = openList[0];
+            for (int i = 0; i < nodes.GetLength(0); i++)
+            {
+                for (int j = 0; j < nodes.GetLength(1); j++)
+                {
+                    // Debug.Log(i+","+j+";"+nodes[i,j].x+","+nodes[i,j].y);
+                    if (nodes[i, j].x == start.x && nodes[i, j].y == start.y)
+                    {
+                        startI = i;
+                        startJ = j;
+                        break;
+                    }
+                }
+            }
+            openList.RemoveAt(0);
+
+            //如果此点已经为终点 得到最终结果返回
+            //如果不是终点 继续寻路
+            if (start == end)
+            {
+                //是终点
+                List<AStarNode> path = new List<AStarNode>();
+                path.Add(end);
+                while (end.father != null)
+                {
+                    path.Add(end.father);
+                    end = end.father;
+                }
+                //列表反转API
+                path.Reverse();
+
+                return path;
+            }
+
+        }
+
+    }
     private int SortOpenList(AStarNode a, AStarNode b)
     {
         if (a.f >= b.f)
@@ -218,7 +340,45 @@ public class MapManage : BaseManager<MapManage>
         if (node == null || 
             node.type == E_Node_type.Stop || 
             closeList.Contains(node) || 
-            openList.Contains(node))
+            openList.Contains(node) )
+            return;
+        // Debug.Log($"取点({node.x},{node.y},{node.type})");
+        //计算f值
+        //f=g+h
+        //记录父对象
+        node.father = father;
+        //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
+        node.g = father.g + g;
+        node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
+        node.f = node.g + node.h;
+
+        //合法，存到开启列表
+        openList.Add(node);
+    }
+
+    private void FindNearlyNodeToOpenList(int x, int y, int startI, int startJ, float g, AStarNode father, AStarNode end, List<Vector3Int> PLList)
+    {
+        // BoundsInt tilemapBounds = map.cellBounds;
+        //边界判断
+        if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
+            y < tilemapBounds.yMin || y >= tilemapBounds.yMax)
+            return;
+        //取点
+        AStarNode node = nodes[startI, startJ];
+        //放入开启列表
+        for (int i =0;i< PLList.Count; i++)
+        {
+            if (x == PLList[i].x && y == PLList[i].y)
+            {
+                return;
+            }
+        }
+
+        
+        if (node == null ||
+            node.type == E_Node_type.Stop ||
+            closeList.Contains(node) ||
+            openList.Contains(node) )
             return;
         // Debug.Log($"取点({node.x},{node.y},{node.type})");
         //计算f值
