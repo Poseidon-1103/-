@@ -29,8 +29,9 @@ public class DialogueManager : MonoBehaviour
     public string[] dialogueRows;
     private void Awake()
     {
-        imageDic["佛尔米奥"] = sprites[0];
-        imageDic["路人甲"] = sprites[1];
+        imageDic["弗尔米奥"] = sprites[0];
+        imageDic["卡斯"] = sprites[1];
+        ReadText(dialogueDateFile);
     }
 
     //角色名字文本
@@ -38,16 +39,9 @@ public class DialogueManager : MonoBehaviour
     //对话内容文本
     public TMP_Text dialogueText;
     
-    // [SerializeField] private TMP_Text _title;
-    // [SerializeField] private TMP_Text _dialogue;
-    // [SerializeField] private List<Dialogue> _dialogues = new();
- 
-    // private int _nameIndex;
-    // private int _dialogIndex;
- 
     private void Start()
     {
-        
+        // ShowDialogueRow();
     }
  
     private void Update()
@@ -63,32 +57,41 @@ public class DialogueManager : MonoBehaviour
     }
 
     //更新立绘
-    public void UpdateImage(string name, bool inLeft)
+    public void UpdateImage(string name, string position)
     {
-        if (inLeft)
+        if (position == "左")
         {
             characterLeft.sprite = imageDic[name];
+            characterRight.sprite = null;
         }
-        else
+        else if (position == "右")
         {
             characterRight.sprite = imageDic[name];
+            characterLeft.sprite = null;
         }
     }
 
     public void ReadText(TextAsset textAsset)
     {
         dialogueRows = textAsset.text.Split('\n');
-        // foreach (var row in rows)
-        // {
-        //     string[] cell = row.Split(',');
-        // }
     }
 
     public void ShowDialogueRow()
     {
         foreach (var row in dialogueRows)
         {
-            string[] cell = row.Split(',');
+            string[] cells = row.Split(',');
+            if (cells[0] == "#" && int.Parse(cells[1]) == dialogueIndex)
+            {
+                UpdateText(cells[2],cells[4]);
+                UpdateImage(cells[2],cells[3]);
+                dialogueIndex = int.Parse(cells[5]);
+                break;
+            }
+            // else if (cells[0] == "&" && int.Parse(cells[1]) == dialogueIndex)
+            // {
+            //     
+            // }
             
         }
     }

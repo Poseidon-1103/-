@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/__MACOSX/DinkieBitmap-v1002.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/__MACOSX/DinkieBitmap-v1002/TTF.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/__MACOSX/DinkieBitmap-v1002/WOFF2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +25,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/ReflectionHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,7 +129,8 @@
       <workItem from="1680491499719" duration="6195000" />
       <workItem from="1680534567433" duration="602000" />
       <workItem from="1680571494656" duration="17425000" />
-      <workItem from="1680668245202" duration="1505000" />
+      <workItem from="1680668245202" duration="22868000" />
+      <workItem from="1680771339016" duration="680000" />
     </task>
     <servers />
   </component>
