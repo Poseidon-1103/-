@@ -127,8 +127,8 @@ public class MapManager : BaseManager<MapManager>
                 }
             }
         }
-        Debug.Log($"{start.x},{start.y},{start.type}");
-        Debug.Log($"{end.x},{end.y},{end.type}");
+        // Debug.Log($"{start.x},{start.y},{start.type}");
+        // Debug.Log($"{end.x},{end.y},{end.type}");
         if (start.type == E_Node_type.Stop ||
             end.type == E_Node_type.Stop)
         {
