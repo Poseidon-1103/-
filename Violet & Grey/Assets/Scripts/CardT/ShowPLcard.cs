@@ -28,6 +28,7 @@ public class ShowPLcard : MonoBehaviour
 
     public void TurnUpdate()
     {
+        gameObject.GetComponent<BoxCollider2D>().enabled=false;
         //cd-1
         for (int i = 0; i < cards.Count; i++)
         {
@@ -39,7 +40,11 @@ public class ShowPLcard : MonoBehaviour
         
     }
 
-    
+    public void TurnUpdate3()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+    }
     //更新角色
     void Update()
     {
