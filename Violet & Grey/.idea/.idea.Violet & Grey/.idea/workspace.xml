@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectStageTestPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectStageTestPanel.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeStage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeStage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OpenDialogue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OpenDialogue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +142,7 @@
       <workItem from="1680668245202" duration="22868000" />
       <workItem from="1680771339016" duration="1263000" />
       <workItem from="1680832787995" duration="32365000" />
-      <workItem from="1680956222585" duration="4016000" />
+      <workItem from="1680956222585" duration="6932000" />
     </task>
     <servers />
   </component>
