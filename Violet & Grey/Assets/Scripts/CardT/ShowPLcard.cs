@@ -36,12 +36,7 @@ public class ShowPLcard : MonoBehaviour
                 cards[i][0].Cd= cards[i][0].Cd-1;
             }
         }
-        //删除卡池
-        cardPool = GameObject.Find("cardPool");
-        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
-        {
-            cardPool.BroadcastMessage("DestoryMe");
-        }
+        
     }
 
     

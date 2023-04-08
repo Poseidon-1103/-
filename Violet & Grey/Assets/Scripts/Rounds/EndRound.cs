@@ -12,6 +12,7 @@ public class EndRound : MonoBehaviour
     public GameObject Unit;
     public GameObject Unit2;
     public List<List<Card>> recordList = new();
+    public TextMeshProUGUI turnname;
     public TextMeshProUGUI turnnumber;
     public int RoundType;
 
@@ -47,7 +48,6 @@ public class EndRound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void OnMouseDown()
@@ -61,14 +61,15 @@ public class EndRound : MonoBehaviour
                 RoundType = 1;
                 //获取行动池的行动
                 Unit.BroadcastMessage("TurnUpdate3");
+                turnname.text = ("结算选择阶段");
                 turnnumber.text = (int.Parse(turnnumber.text) + 1).ToString();
                 break;
             //选卡阶段回合结束
             case 1:
-                
+                turnname.text = ("结算执行阶段");
                 recordList = ActionsList.GetComponent<RecordActionList>().recordList;
                 //卡池更新（包括冷却-1,后续还有状态更新）
-                Unit.BroadcastMessage("TurnUpdate");
+                Unit2.BroadcastMessage("TurnUpdate");
                 //给卡添加冷却
                 for (int i = 0; i < recordList.Count; i++)
                 {
@@ -152,10 +153,14 @@ public class EndRound : MonoBehaviour
                     switch (recordList[i][j].CardEffect)
                     {
                         case "状态":
-                            for(int Q = 0; Q < A.Count; Q++)
+                            if (recordList[i][j].CardEffType != "护甲")
                             {
-                                A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
+                                for (int Q = 0; Q < A.Count; Q++)
+                                {
+                                    A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
+                                }
                             }
+                           
                             break;
                         case "攻击":
                             while (recordList[i][0].Id / 10000 < 20)
@@ -200,7 +205,6 @@ public class EndRound : MonoBehaviour
                                     M = 0;
                                     break;
                                 }
-                                yield return new WaitForSeconds(1);
                                 //找到最近的pl
                                 GameObject PLGOT = new();
                                 for (int k = 0; k < PLUnit.Count; k++)
@@ -227,7 +231,6 @@ public class EndRound : MonoBehaviour
                                     if (rangeMap.GetTile(moveList[P]))
                                     {
                                         TTK(moveList[P]);
-                                       /* yield return new WaitForSeconds(1);*/
                                         //结算攻击
                                         for (int PL = 0; PL < AllUnit.Count - EnemyUnit.Count; PL++)
                                         {
@@ -235,6 +238,7 @@ public class EndRound : MonoBehaviour
                                             {
                                                 if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null)
                                                 {
+                                                    yield return new WaitForSeconds(1);
                                                     PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
                                                     A.Add(PLUnit[PL]);
                                                 }
@@ -346,9 +350,9 @@ public class EndRound : MonoBehaviour
                     }
                 }
             }
-            Vector3 EndXY = new(0f, 100f, 0f);
-            gameObject.GetComponent<RectTransform>().anchoredPosition3D = gameObject.GetComponent<RectTransform>().anchoredPosition3D - EndXY;
         }
+        Vector3 EndXY = new(0f, 100f, 0f);
+        gameObject.GetComponent<RectTransform>().anchoredPosition3D = gameObject.GetComponent<RectTransform>().anchoredPosition3D - EndXY;
     }
 
    
