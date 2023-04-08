@@ -88,6 +88,10 @@ public class DialogueManager : MonoBehaviour
                 dialogueIndex = int.Parse(cells[5]);
                 break;
             }
+            // else if (dialogueIndex == -1)
+            // {
+            //     UIManager.GetInstance().HidePanel("CharacterSpeakPanel");
+            // }
             // else if (cells[0] == "&" && int.Parse(cells[1]) == dialogueIndex)
             // {
             //     
