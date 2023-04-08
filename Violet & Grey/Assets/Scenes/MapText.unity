@@ -683,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 1288526541430302305, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1288526541430302305, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
@@ -1054,6 +1054,11 @@ PrefabInstance:
       propertyPath: Probability.Array.data[2]
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8363638370303272968, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: row
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
 --- !u!4 &1356251244 stripped
@@ -1383,6 +1388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Probability.Array.data[2]
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363638370303272968, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: row
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
