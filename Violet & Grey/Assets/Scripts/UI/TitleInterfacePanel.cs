@@ -20,7 +20,6 @@ public class TitleInterfacePanel : BasePanel
         switch (btnName)
         {
             case "btnStart":
-                Debug.Log("¿ªÊ¼ÓÎÏ·");
                 UIManager.GetInstance().ShowPanel<SelectToStartPanel>("SelectToStartPanel",E_UI_Layer.Mid);
                 UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
