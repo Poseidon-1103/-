@@ -327,6 +327,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1450068947}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &497446952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1288526543322129668, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 807789704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &651342764
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,9 +626,19 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1288526541430302309, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
+      propertyPath: turnname
+      value: 
+      objectReference: {fileID: 497446952}
+    - target: {fileID: 1288526541430302309, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
+        type: 3}
       propertyPath: AttackMap
       value: 
       objectReference: {fileID: 2068272225}
+    - target: {fileID: 1288526541430302309, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1288526541430302309, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
       propertyPath: turnnumber
@@ -634,16 +656,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288526543322129668, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
+      propertyPath: m_text
+      value: "\u7ED3\u675F\u9009\u62E9\u9636\u6BB5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288526543322129668, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
         type: 2}
     - target: {fileID: 1288526543322129668, guid: 92e6ec9ba87bd6d4582be50530a0e0c6,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
-        type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e6ec9ba87bd6d4582be50530a0e0c6, type: 3}
 --- !u!1 &868263002

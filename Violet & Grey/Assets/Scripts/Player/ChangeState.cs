@@ -58,6 +58,19 @@ public class ChangeState : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 回合开始更新
+    /// </summary>
+    public void TurnStart()
+    {
+        for (int i = 0; i < State.Count; i++)
+        {
+            if (State[i].name == "Poisoned")
+            {
+                ChangeBlood(1);
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
