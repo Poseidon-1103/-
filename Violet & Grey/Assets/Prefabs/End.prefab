@@ -148,8 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 0}
+  cardPool: {fileID: 0}
   ActionsList: {fileID: 0}
+  Unit: {fileID: 0}
+  Unit2: {fileID: 0}
   turnnumber: {fileID: 0}
+  RoundType: 0
+  map: {fileID: 0}
+  rangeMap: {fileID: 0}
+  AttackMap: {fileID: 0}
+  grid: {fileID: 0}
+  tileBase: {fileID: 0}
 --- !u!1 &1288526543322129666
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,8 +227,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u7ED3\u675F\u56DE\u5408"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a21ea5a8c56bdc543888dbae20735f42, type: 2}
-  m_sharedMaterial: {fileID: -2711287825816633238, guid: a21ea5a8c56bdc543888dbae20735f42,
+  m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
+  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

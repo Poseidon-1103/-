@@ -30,15 +30,21 @@ public class CharacterSpeakPanel : BasePanel
         {
             case "btnNext":
                 Debug.Log("btn");
+                if (gameObject.GetComponent<DialogueManager>().dialogueIndex == -1)
+                {
+                    // gameObject.GetComponent<DialogueManager>().dialogueIndex = 0;
+                    UIManager.GetInstance().HidePanel("CharacterSpeakPanel");
+                }
                 gameObject.GetComponent<DialogueManager>().ShowDialogueRow();
                 break;
             case "Jump":
+                // gameObject.GetComponent<DialogueManager>().dialogueIndex = 0;
                 UIManager.GetInstance().HidePanel("CharacterSpeakPanel");
                 break;
         }
     }
     public override void HideMe()
     {
-        gameObject.GetComponent<DialogueManager>().dialogueIndex = 1;
+        // gameObject.GetComponent<DialogueManager>().dialogueIndex = 0;
     }
 }
