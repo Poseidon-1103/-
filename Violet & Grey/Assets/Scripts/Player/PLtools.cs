@@ -21,7 +21,7 @@ public class PLtools : BaseManager<PLtools> {
     {
         if (player1.PlHP <= 0)
         {
-            UnityEngine.Object.Destroy(PL);
+            Object.Destroy(PL);
         }
 
     }

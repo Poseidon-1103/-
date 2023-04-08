@@ -36,35 +36,16 @@ public class ShowPLcard : MonoBehaviour
                 cards[i][0].Cd= cards[i][0].Cd-1;
             }
         }
-        //删除卡池
-        cardPool = GameObject.Find("cardPool");
-        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
-        {
-            cardPool.BroadcastMessage("DestoryMe");
-        }
-
+        
     }
 
     
     //更新角色
     void Update()
     {
-        if (player.Type == 1)
-        {
-            //刷新血量
-            hpWidth=(float)player.PlHP / (float)player.PlHPmax;
-            if (hpWidth>=1.0f)
-            {
-                hpWidth = 1.0f;
-            }
-            healthBar.transform.GetComponent<Image>().fillAmount = hpWidth;
-            //上buff
-            //PLtools.GetInstance()
-            //死亡判断
-            PLtools.GetInstance().IfDead(player, gameObject);
-            player.Type = 0;
-        }
+        
     }
+
     //绑定角色点击
     public void OnMouseDown()
     {

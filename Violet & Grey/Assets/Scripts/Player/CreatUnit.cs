@@ -28,6 +28,7 @@ public class CreatUnit : MonoBehaviour
         if (player.Plid <=20)
         {
             obj.transform.GetComponent<ShowPLcard>().player = player;
+            obj.transform.GetComponent<ChangeState>().player = player;
         }
         obj.name = player.Plid.ToString();
     }
