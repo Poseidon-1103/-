@@ -170,6 +170,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charater State Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 2157150526942374246, guid: 5bef7748649ab604babd29e4f666a372,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157150526942374246, guid: 5bef7748649ab604babd29e4f666a372,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157150526942374246, guid: 5bef7748649ab604babd29e4f666a372,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157150526942374246, guid: 5bef7748649ab604babd29e4f666a372,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
     - target: {fileID: 2157150527453543562, guid: 5bef7748649ab604babd29e4f666a372,
         type: 3}
       propertyPath: m_fontAsset
