@@ -11,6 +11,7 @@ public class EndRound : MonoBehaviour
     public GameObject ActionsList;
     public GameObject Unit;
     public GameObject Unit2;
+    public GameObject EndMove;
     public List<List<Card>> recordList = new();
     public TextMeshProUGUI turnname;
     public TextMeshProUGUI turnnumber;
@@ -30,6 +31,7 @@ public class EndRound : MonoBehaviour
     private List<Vector3Int> PLList = new();
     //移动范围列表
     private int M =0;
+    private int N = 0;
     private List<GameObject> A =new();
     private List<Vector3Int> moveList;
     private Vector3 playerPosition;
@@ -56,11 +58,19 @@ public class EndRound : MonoBehaviour
         {
             //战棋阶段回合结束
             case 0:
+                CleanPL();
+                GetPL();
+                Debug.Log(AllUnit.Count);
+                for (int i = 0; i < AllUnit.Count; i++)
+                {
+                    AllUnit[i].GetComponent<ChangeState>().TurnStart();
+                }
                 /*Unit.BroadcastMessage("TurnUpdate4");*/
-               
+                ActionsList.GetComponent<RecordActionList>().TurnUpdate2();
                 RoundType = 1;
-                //获取行动池的行动
+                
                 Unit.BroadcastMessage("TurnUpdate3");
+                Unit2.BroadcastMessage("TurnUpdate3");
                 turnname.text = ("结算选择阶段");
                 turnnumber.text = (int.Parse(turnnumber.text) + 1).ToString();
                 break;
@@ -70,6 +80,7 @@ public class EndRound : MonoBehaviour
                 recordList = ActionsList.GetComponent<RecordActionList>().recordList;
                 //卡池更新（包括冷却-1,后续还有状态更新）
                 Unit2.BroadcastMessage("TurnUpdate");
+               
                 //给卡添加冷却
                 for (int i = 0; i < recordList.Count; i++)
                 {
@@ -84,10 +95,10 @@ public class EndRound : MonoBehaviour
                 Vector3 EndXY=new(0f,100f,0f);
                 gameObject.GetComponent<RectTransform>().anchoredPosition3D = gameObject.GetComponent<RectTransform>().anchoredPosition3D + EndXY;
                 StartCoroutine(Settlement());
-               
+
                 //行动池更新
-                BroadcastMessage("TurnUpdate2");
                 cardPool.BroadcastMessage("DestoryMe");
+                
                 RoundType = 0;
                 break;
        
@@ -110,24 +121,7 @@ public class EndRound : MonoBehaviour
             obj.Clear();
             PLUnit.Clear();
             AllUnit.Clear();
-            //获取敌人池
-            foreach (Transform child in Unit.transform)
-            {
-                EnemyUnit.Add(child.gameObject);
-                AllUnit.Add(child.gameObject);
-                Vector3 PLV3 = child.position;
-                Vector3Int PLV3INT = grid.WorldToCell(PLV3);
-                PLList.Add(PLV3INT);
-            }
-            //获取队友池
-            foreach (Transform child in Unit2.transform)
-            {
-                PLUnit.Add(child.gameObject);
-                AllUnit.Add(child.gameObject);
-                Vector3 PLV3 = child.position;
-                Vector3Int PLV3INT = grid.WorldToCell(PLV3);
-                PLList.Add(PLV3INT);
-            }
+            GetPL();
             //判断那些单位需要行动
             for (int PLnum = 0; PLnum < AllUnit.Count; PLnum++)
             {
@@ -141,39 +135,71 @@ public class EndRound : MonoBehaviour
                     {
                         pathlist.Add(start);
                     }
-                    playerPosition = obj[^1].transform.position;
-                    playerCellPosition = grid.WorldToCell(playerPosition);
                 }
             }
             //进行行动
             for (int PLnum = 0; PLnum < obj.Count; PLnum++)
             {
+                A.Clear();
                 for (int j = 0; j < recordList[i].Count; j++)
                 {
+                    
+                    playerPosition = obj[PLnum].transform.position;
+                    playerCellPosition = grid.WorldToCell(playerPosition);
+                    if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Stasis"))
+                    {
+                        continue;
+                    }
                     switch (recordList[i][j].CardEffect)
                     {
-                        case "状态":
-                            if (recordList[i][j].CardEffType != "护甲")
+                        case "治疗":
+                            for (int Q = 0; Q < A.Count; Q++)
                             {
-                                for (int Q = 0; Q < A.Count; Q++)
+                                A[Q].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                            }
+                            break;
+                        case "状态":
+                            for (int Q = 0; Q < A.Count; Q++)
+                            {
+                                if (recordList[i][j].CardEffType != "Armor")
                                 {
-                                    A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
+                                    Debug.Log(recordList[i][j].CardEffType);
+                                    if (!A[Q].GetComponent<ChangeState>().ConfirmState(recordList[i][j].CardEffType))
+                                    {
+                                        A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
+                                    }
+                                }
+                                else if (recordList[i][j].CardEffType == "Armor")
+                                {
+                                    A[Q].GetComponent<ChangeState>().ChangeArmor(recordList[i][j].CardEffType, 0, recordList[i][j].CardEffNum);
                                 }
                             }
-                           
+                                
+                            if (recordList[i][j].CardEffNum == 99)
+                            {
+
+                                A.Clear();
+                            }
+                            break;
+                        case "自身":
+                            A.Clear();
+                            playerPosition = obj[PLnum].transform.position;
+                            playerCellPosition = grid.WorldToCell(playerPosition);
+                            A.Add(obj[PLnum].gameObject);
+                            Debug.Log(A[0].name);
                             break;
                         case "攻击":
+                            //Disable不能攻击
+                            if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Disable"))
+                            {
+                                continue;
+                            }
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                //找到当前位置
-                                playerPosition = obj[PLnum].transform.position;
-                                playerCellPosition = grid.WorldToCell(playerPosition);
                                 //读取攻击
                                 TagrtPL(recordList[i][j]);
                                 if (M == 1)
                                 {
-                                    
-
                                     M = 0;
                                     break;
                                 }
@@ -186,16 +212,18 @@ public class EndRound : MonoBehaviour
                                 {
                                     if (AttackMap.GetTile(PLList[PL]) != null)
                                     {
-                                        EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
                                         A.Add(EnemyUnit[PL]);
+                                        if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Invincible"))
+                                        {
+                                            continue;
+                                        }
+                                        EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
                                     }
                                 }
                                 break;
                             }
                             while (recordList[i][0].Id / 10000 > 20)
                             {
-                                playerPosition = obj[PLnum].transform.position;
-                                playerCellPosition = grid.WorldToCell(playerPosition);
                                 //读取攻击
                                 TagrtPL(recordList[i][j]);
                                 if (M==1)
@@ -211,6 +239,10 @@ public class EndRound : MonoBehaviour
                                 {
 
                                     GameObject obj2 = PLUnit[k];
+                                    if (PLUnit[k].gameObject.GetComponent<ChangeState>().ConfirmState("Stealthy"))
+                                    {
+                                        continue;
+                                    }
                                     Vector3 endCellPos = obj2.transform.position;
                                     Vector3Int playerendCellPos = grid.WorldToCell(endCellPos);
                                     if (playerCellPosition == playerendCellPos)
@@ -239,8 +271,19 @@ public class EndRound : MonoBehaviour
                                                 if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null)
                                                 {
                                                     yield return new WaitForSeconds(1);
-                                                    PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
                                                     A.Add(PLUnit[PL]);
+                                                    if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Invincible"))
+                                                    {
+                                                        continue;
+                                                    }
+                                                    if (recordList[i][j].CardEffType.Substring(0, 2) == "穿刺")
+                                                    {
+                                                        PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum, 0);
+                                                    }
+                                                    else
+                                                    {
+                                                        PLUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
+                                                    }
                                                 }
                                             }
                                         }
@@ -256,40 +299,44 @@ public class EndRound : MonoBehaviour
                             rangeMap.ClearAllTiles();
                             continue;
                         case "移动":
+                            
+                            if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Grounded"))
+                            {
+                                continue;
+                            }
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                //找到当前位置
                                 playerPosition = obj[PLnum].transform.position;
                                 playerCellPosition = grid.WorldToCell(playerPosition);
-                                
                                 //重新打印移动范围
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
-                                int O = 0;
+                                //CardEffNum为移动力，pathlist.Count为已移动步数
+                                recordList[i][j].CardEffNum = recordList[i][j].CardEffNum + 1 - pathlist.Count;
+
+                               
                                 //角色移动
                                 for (int k = 0; k < pathlist.Count; k++)
                                 {
                                    
                                     Vector3Int endCellPos = new Vector3Int(pathlist[k].x, pathlist[k].y, 0);
-                                    if (playerCellPosition == endCellPos&&k>0)
-                                    {
-                                        O = 1;
-                                        break;   
-                                    }
                                     
                                     obj[PLnum].transform.position = grid.CellToWorld(endCellPos);
                                     A.Add(obj[PLnum].gameObject);
+                                    playerPosition = obj[PLnum].transform.position;
+                                    playerCellPosition = grid.WorldToCell(playerPosition);
                                     //等待1s
                                     yield return new WaitForSeconds(1);
                                 }
-                                //CardEffNum为移动力，pathlist.Count为已移动步数
-                                recordList[i][j].CardEffNum = recordList[i][j].CardEffNum + 1 - pathlist.Count;
-                                //剩余移动力接着重新循环
-                                if (O==1)
+                                if (N == 1)
                                 {
+                                    Debug.Log("停止");
+                                    N = 0;
                                     break;
                                 }
+                                
+                                //剩余移动力接着重新循环
                                 if (recordList[i][j].CardEffNum > 0)
                                 {
                                     continue;
@@ -298,9 +345,6 @@ public class EndRound : MonoBehaviour
                             }
                             while (recordList[i][0].Id / 10000 > 20)
                             {
-                                //找到当前位置
-                                playerPosition = obj[PLnum].transform.position;
-                                playerCellPosition = grid.WorldToCell(playerPosition);
                                 AStarNode start = new(0, 0, E_Node_type.Walk);
                                 for (int NodeRE = 0; NodeRE < 20; NodeRE++)
                                 {
@@ -351,6 +395,7 @@ public class EndRound : MonoBehaviour
                 }
             }
         }
+        
         Vector3 EndXY = new(0f, 100f, 0f);
         gameObject.GetComponent<RectTransform>().anchoredPosition3D = gameObject.GetComponent<RectTransform>().anchoredPosition3D - EndXY;
     }
@@ -359,7 +404,7 @@ public class EndRound : MonoBehaviour
     //加载地图
     public void NewRoad(Vector3Int playerCellPosition, int MoveNum, Tilemap rangeMap)
     {
-
+        
         moveList = MapManage.GetInstance().MoveRange(playerCellPosition, MoveNum, PLList);//得到可移动的范围地列表
         if (moveList != null)
         {
@@ -389,6 +434,7 @@ public class EndRound : MonoBehaviour
     //角色点击地面
     public bool ClickRoad()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
@@ -397,6 +443,14 @@ public class EndRound : MonoBehaviour
             Vector3Int endCellPos = grid.WorldToCell(endWorldPosition);//将鼠标坐标转换成格子坐标，也就是终点坐标
             if (rangeMap.GetTile(endCellPos) != null)
             {
+                Debug.Log(playerCellPosition+"he"+ endCellPos);
+                
+                if (playerCellPosition== endCellPos)
+                {
+                    Debug.Log("kaishi");
+                    N = 1;
+                    return true;
+                }
                 pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos);
                 NewRoad(playerCellPosition, 1, rangeMap);//得到路径
                 return true;
@@ -425,7 +479,7 @@ public class EndRound : MonoBehaviour
         Debug.Log(card.CardEffType.Substring(0, 2));
         switch (card.CardEffType.Substring(0, 2))
         {
-            case "十字":
+            case "范围":
                 NewRoad2(playerCellPosition, 1, rangeMap);
                 Vector3Int start = new(0, 0, 0);
                 for (int i = 0; i < 3; i++)
@@ -447,6 +501,11 @@ public class EndRound : MonoBehaviour
             case "近战":
                 NewRoad2(playerCellPosition, 1, rangeMap);
                 AddListV3(AttackType,0 , 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
+            case "穿刺":
+                NewRoad2(playerCellPosition, 1, rangeMap);
+                AddListV3(AttackType, 0, 0, 0);
                 AddListV3(AttackType, 1, 1, 0);
                 break;
             case "远程":
@@ -502,6 +561,36 @@ public class EndRound : MonoBehaviour
             }
         }
         return;
+    }
+
+    public void GetPL()
+    {
+        foreach (Transform child in Unit.transform)
+        {
+            EnemyUnit.Add(child.gameObject);
+            AllUnit.Add(child.gameObject);
+            Vector3 PLV3 = child.position;
+            Vector3Int PLV3INT = grid.WorldToCell(PLV3);
+            PLList.Add(PLV3INT);
+        }
+        //获取队友池
+        foreach (Transform child in Unit2.transform)
+        {
+            PLUnit.Add(child.gameObject);
+            AllUnit.Add(child.gameObject);
+            Vector3 PLV3 = child.position;
+            Vector3Int PLV3INT = grid.WorldToCell(PLV3);
+            PLList.Add(PLV3INT);
+        }
+    }
+
+    public void CleanPL()
+    {
+        PLList.Clear();
+        EnemyUnit.Clear();
+        obj.Clear();
+        PLUnit.Clear();
+        AllUnit.Clear();
     }
     public List<Vector3Int> AddListV3(List<Vector3Int> vector3Ints,int i,int j,int k)
     {
