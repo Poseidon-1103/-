@@ -24,6 +24,10 @@ public class ChangeStage : MonoBehaviour
     private void DelayHide()
     {
         UIManager.GetInstance().HidePanel("StagePanel");
-        
+        if (stageMessage == "正在预测敌人行动")
+        {
+            UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel");
+            Destroy(this);
+        }
     }
 }

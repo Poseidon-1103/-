@@ -29,7 +29,7 @@ public class OpenDialogue : MonoBehaviour
     {
         if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition)
         {
-            gameObject.AddComponent<ChangeStage>().stageMessage = "正在预测敌人行动1";
+            gameObject.AddComponent<ChangeStage>().stageMessage = "正在预测敌人行动";
             condition = false;
             Destroy(this);
         }

@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/cardPool.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/cardPool.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeStage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeStage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OpenDialogue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OpenDialogue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MousePoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MousePoint.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +140,8 @@
       <workItem from="1680668245202" duration="22868000" />
       <workItem from="1680771339016" duration="1263000" />
       <workItem from="1680832787995" duration="32365000" />
-      <workItem from="1680956222585" duration="4016000" />
+      <workItem from="1680956222585" duration="8781000" />
+      <workItem from="1680977777312" duration="2723000" />
     </task>
     <servers />
   </component>
