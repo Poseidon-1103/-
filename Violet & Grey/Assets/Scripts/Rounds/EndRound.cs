@@ -58,6 +58,7 @@ public class EndRound : MonoBehaviour
         {
             //战棋阶段回合结束
             case 0:
+                
                 CleanPL();
                 GetPL();
                 Debug.Log(AllUnit.Count);
@@ -66,7 +67,9 @@ public class EndRound : MonoBehaviour
                     AllUnit[i].GetComponent<ChangeState>().TurnStart();
                 }
                 /*Unit.BroadcastMessage("TurnUpdate4");*/
+                //刷新角色
                 ActionsList.GetComponent<RecordActionList>().TurnUpdate2();
+                //展示敌人行动
                 RoundType = 1;
                 
                 Unit.BroadcastMessage("TurnUpdate3");
@@ -76,6 +79,8 @@ public class EndRound : MonoBehaviour
                 break;
             //选卡阶段回合结束
             case 1:
+                UIManager.GetInstance().HidePanel("SelectCardPanel");
+                gameObject.AddComponent<ChangeStage>().stageMessage = "《按计划行事》";
                 turnname.text = ("结算执行阶段");
                 recordList = ActionsList.GetComponent<RecordActionList>().recordList;
                 //卡池更新（包括冷却-1,后续还有状态更新）
@@ -98,8 +103,9 @@ public class EndRound : MonoBehaviour
 
                 //行动池更新
                 cardPool.BroadcastMessage("DestoryMe");
-                
                 RoundType = 0;
+                //切换ui到敌人行动界面
+                gameObject.AddComponent<ChangeStage>().stageMessage = "正在预测敌人行动";
                 break;
        
         }
