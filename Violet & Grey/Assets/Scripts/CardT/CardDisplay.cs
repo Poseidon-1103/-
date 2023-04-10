@@ -59,6 +59,6 @@ public class CardDisplay : MonoBehaviour
                 CardDescriptionTextDown.text +=  cardList[i].CardEffect + cardList[i].CardEffNum + cardList[i].CardEffType + "\n";
             }
         }
-        // Sequence.text = cardList[0].Sequence.ToString();
+        Sequence.text = cardList[0].Sequence.ToString();
     }
 }
