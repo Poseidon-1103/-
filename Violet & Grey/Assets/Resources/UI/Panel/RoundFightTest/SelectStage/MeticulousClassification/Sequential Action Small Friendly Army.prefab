@@ -147,7 +147,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
-  m_sharedMaterial: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_text: "\u62E5\u62B1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
-  m_sharedMaterial: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -435,6 +435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2040921183311998108}
+  - component: {fileID: 1129882277207170955}
   m_Layer: 5
   m_Name: Sequential Action Small Friendly Army
   m_TagString: Untagged
@@ -467,6 +468,22 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: -110}
   m_SizeDelta: {x: 336.8563, y: 90.7521}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1129882277207170955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754817744448311261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0ca8d01902ded4bafb566dde4538ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameTextUP: {fileID: 1754817743302727751}
+  CardDescriptionText: {fileID: 0}
+  Sequence: {fileID: 1754817743100975815}
+  cardList: []
 --- !u!1 &1754817744614251766
 GameObject:
   m_ObjectHideFlags: 0

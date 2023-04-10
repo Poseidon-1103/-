@@ -21,12 +21,13 @@ void Start()
 
         for (int i = 0; i < cardList[^1].Id % 10000 / 100; i++)
         {
-            cards.Add(CardTools.GetInstance().GetNOnumcard(i + 1, cardList)); ;
+            cards.Add(CardTools.GetInstance().GetNOnumcard(i + 1, cardList));
         }
         if (StartTurn == 0)
-        {
-            ActionsList = GameObject.Find("ActionsList");
-            ActionsList.transform.GetComponent<RecordActionList>().Record(cards[RandomNumber()]);
+        { 
+             // 开始时将敌人行动传入行动列表，但不打印（13）
+             ActionsList = GameObject.Find("ActionsList");
+             ActionsList.transform.GetComponent<RecordActionList>().Record(cards[RandomNumber()],"null");
         }
     }
 
@@ -40,11 +41,10 @@ void Start()
         if (EndTurn>=0)
         {
         ActionsList = GameObject.Find("ActionsList");
+        //不打印
         ActionsList.transform.GetComponent<RecordActionList>().Record(cards[RandomNumber()]);
         }
         }
-        
-       
     }
 
     public int RandomNumber()

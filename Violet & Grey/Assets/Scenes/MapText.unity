@@ -1272,7 +1272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &1303490328
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2179,21 +2179,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2230,7 +2215,7 @@ PrefabInstance:
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -669
+      value: -690
       objectReference: {fileID: 0}
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
@@ -2252,11 +2237,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9173111165021579201, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
       propertyPath: m_Name
@@ -2270,20 +2250,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1815863102}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1815863105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815863104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b973532d1f58fd64686a623706fa913f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Actions: {fileID: 634748848429340228, guid: 4370046751da4f542b4c89f49ddf9ed8, type: 3}
-  ActionsList: {fileID: 1815863104}
 --- !u!1 &1893161434
 GameObject:
   m_ObjectHideFlags: 0

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
   m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
@@ -495,7 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3605643615036700455}
-  - component: {fileID: 1013945697342609586}
+  - component: {fileID: 406320015563248686}
   m_Layer: 5
   m_Name: Half Card
   m_TagString: Untagged
@@ -523,9 +523,9 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -550.3923, y: 312.73077}
-  m_SizeDelta: {x: 394.7387, y: 301.8536}
+  m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1013945697342609586
+--- !u!114 &406320015563248686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,7 +534,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8047229540910054925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acceaab3f22a49747b09bf54eb182cf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c0ca8d01902ded4bafb566dde4538ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyPlayer: {fileID: 0}
+  NameTextUP: {fileID: 7310263228564292674}
+  CardDescriptionText: {fileID: 1199142225585357425}
+  Sequence: {fileID: 2656700783346771280}
+  cardList: []

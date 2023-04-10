@@ -67,7 +67,7 @@ public class EndRound : MonoBehaviour
                     AllUnit[i].GetComponent<ChangeState>().TurnStart();
                 }
                 /*Unit.BroadcastMessage("TurnUpdate4");*/
-                //刷新角色
+                //刷新角色（13）
                 ActionsList.GetComponent<RecordActionList>().TurnUpdate2();
                 //展示敌人行动
                 RoundType = 1;
@@ -115,9 +115,11 @@ public class EndRound : MonoBehaviour
 
     IEnumerator Settlement()
     {
+        
+        //结算每个行动
         for (int i = 0; i < recordList.Count ; i++)
         {
-            
+            //右侧创建卡片显示行动信息（13）
             yield return new WaitForSeconds(1);
             
             List<GameObject> m_Child = new List<GameObject>();
@@ -143,13 +145,14 @@ public class EndRound : MonoBehaviour
                     }
                 }
             }
-            //进行行动
+            //进行行动，obj为每个要i行动的对象
             for (int PLnum = 0; PLnum < obj.Count; PLnum++)
             {
+                //开启角色头顶的三角形（13）
                 A.Clear();
+                //结算每个行动的每一行
                 for (int j = 0; j < recordList[i].Count; j++)
                 {
-                    
                     playerPosition = obj[PLnum].transform.position;
                     playerCellPosition = grid.WorldToCell(playerPosition);
                     if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Stasis"))

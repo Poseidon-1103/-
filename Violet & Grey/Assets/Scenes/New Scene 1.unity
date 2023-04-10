@@ -218,12 +218,12 @@ PrefabInstance:
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -62
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
@@ -380,7 +380,7 @@ PrefabInstance:
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
@@ -542,6 +542,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -578,12 +593,12 @@ PrefabInstance:
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 118
+      value: -64
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
@@ -600,20 +615,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85a6ea6f629b7224ba59035163279263, type: 3}
---- !u!114 &1450711533 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3494653267917077966, guid: 0eb1ef9d1a8fb95409baeeb12c05ad77,
-    type: 3}
-  m_PrefabInstance: {fileID: 1614191030}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1547364523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -784,12 +792,12 @@ PrefabInstance:
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -362
+      value: -274
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 634748848429340231, guid: 85a6ea6f629b7224ba59035163279263,
         type: 3}
@@ -1139,7 +1147,7 @@ PrefabInstance:
         type: 3}
       propertyPath: managedReferences[4135840674905587714].Owner
       value: 
-      objectReference: {fileID: 1450711533}
+      objectReference: {fileID: 0}
     - target: {fileID: 3494653267917077966, guid: 0eb1ef9d1a8fb95409baeeb12c05ad77,
         type: 3}
       propertyPath: managedReferences[4135840674905587714].Space

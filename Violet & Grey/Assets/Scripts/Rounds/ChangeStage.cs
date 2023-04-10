@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ChangeStage : MonoBehaviour
 {
+    //阶段切换时的显示信息
     public string stageMessage;
+    //特殊回合倒计时
+    public string spacialNumber;
+    //特殊回合数组
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +25,19 @@ public class ChangeStage : MonoBehaviour
         panel.Init(stageMessage);
         Invoke("DelayHide",2);
     }
+
+    private void ShowEnemyAction(DisPlayStagePanel panel)
+    {
+        
+        panel.Init(spacialNumber);
+    }
     private void DelayHide()
     {
         UIManager.GetInstance().HidePanel("StagePanel");
         if (stageMessage == "正在预测敌人行动")
         {
             //显示敌人行动界面
-            UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel");
+            UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel",E_UI_Layer.Mid,ShowEnemyAction);
             Destroy(this);
         }
         else if (stageMessage == "《按计划行事》")
