@@ -257,6 +257,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Template_Character
       objectReference: {fileID: 0}
+    - target: {fileID: 8554756283065973630, guid: 3a449432369bfb34091fa0191caa41d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8554756283065973631, guid: 3a449432369bfb34091fa0191caa41d2,
         type: 3}
       propertyPath: m_RootOrder
@@ -4365,6 +4370,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level 1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998884076681824696, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998884076681824696, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2466546517039210573, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}

@@ -15,4 +15,13 @@ public class SelectCardPanel : BasePanel
     {
         
     }
+    protected override void OnClick(string btnName)
+    {
+        switch (btnName)
+        {
+            case "CharacterBtn":
+                UIManager.GetInstance().ShowPanel<CharacterCardGroupPanel>("CharacterCardGroupPanel");
+                break;
+        }
+    }
 }

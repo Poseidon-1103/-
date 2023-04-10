@@ -26,7 +26,14 @@ public class ChangeStage : MonoBehaviour
         UIManager.GetInstance().HidePanel("StagePanel");
         if (stageMessage == "正在预测敌人行动")
         {
+            //显示敌人行动界面
             UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel");
+            Destroy(this);
+        }
+        else if (stageMessage == "《按计划行事》")
+        {
+            //显示执行阶段界面
+            UIManager.GetInstance().ShowPanel<ActionStagePanel>("ActionStagePanel");
             Destroy(this);
         }
     }
