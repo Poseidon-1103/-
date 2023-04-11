@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8299008746924028186}
   - component: {fileID: 8299008746924028185}
   m_Layer: 5
-  m_Name: Round Open Background
+  m_Name: RoundMsgPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

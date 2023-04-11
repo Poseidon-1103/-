@@ -7,8 +7,9 @@ public class ChangeStage : MonoBehaviour
     //阶段切换时的显示信息
     public string stageMessage;
     //特殊回合倒计时
-    public string spacialNumber;
+    public int countdown;
     //特殊回合数组
+    public int[] spacialNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class ChangeStage : MonoBehaviour
     private void ShowEnemyAction(DisPlayStagePanel panel)
     {
         
-        panel.Init(spacialNumber);
+        panel.Init(countdown.ToString());
     }
     private void DelayHide()
     {

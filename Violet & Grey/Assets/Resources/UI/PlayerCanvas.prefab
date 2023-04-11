@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7667332126768124481}
   - component: {fileID: 8340064183995555943}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: ArmorList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8350609008618688286}
   - component: {fileID: 1683154940539313656}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: StateList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7601481709547803372}
   - component: {fileID: 6599706816805598943}
   - component: {fileID: 1408158278973834833}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,8 +182,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -1364674653
-  m_SortingOrder: 999
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6599706816805598943
 MonoBehaviour:
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1408158278973834833
 MonoBehaviour:
   m_ObjectHideFlags: 0

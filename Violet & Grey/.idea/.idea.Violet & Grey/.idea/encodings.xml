@@ -4,8 +4,10 @@
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Mono/MonoController.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Res/ResMgr.cs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/BasePanel.cs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/LoginPanel.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/OpenDialogue.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" charset="UTF-8" />
