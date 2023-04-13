@@ -908,7 +908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1288365606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4370,6 +4370,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5185938
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493332630246372535, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493332630246372535, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.02
       objectReference: {fileID: 0}
     - target: {fileID: 3598874412021117962, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
@@ -34504,6 +34514,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tiles.Array.data[311].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770275697052776988, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324837025514328406, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324837025514328406, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498795924388997875, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5640358558165640604, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
@@ -91866,12 +91896,12 @@ PrefabInstance:
     - target: {fileID: 7544534585931955624, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.42
       objectReference: {fileID: 0}
     - target: {fileID: 7544534585931955624, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 7544534585931955624, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
@@ -91937,6 +91967,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5185938
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175194536442967320, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175194536442967320, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.53
       objectReference: {fileID: 0}
     - target: {fileID: 8870307805939094797, guid: 9adfaecc6d52dc8479d426c829cf9b6b,
         type: 3}
