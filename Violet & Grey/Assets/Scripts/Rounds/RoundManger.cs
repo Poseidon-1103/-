@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using TMPro;
 using UnityEngine;
 
@@ -19,21 +21,26 @@ public class RoundManger : MonoBehaviour
     public TMP_Text winingCondision;
     //背景故事文本
     public TMP_Text backStory;
-    //点击次数
-    private int clickNum = 0;
-    
+    public MMF_Player MyPlayer;
+
     // Start is called before the first frame update
+    private void Start()
+    {
+        // ReadText(roundDateFile);
+        // ShowRoundRow();
+        // Invoke("Hide",4);
+    }
+
     void OnEnable()
     {
         ReadText(roundDateFile);
         ShowRoundRow();
-        // Invoke("Hide",4);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // ShowRoundRow();
     }
     public void ReadText(TextAsset textAsset)
     {
@@ -50,6 +57,9 @@ public class RoundManger : MonoBehaviour
     
     public void ShowRoundRow()
     {
+        MyPlayer.Direction = MMFeedbacks.Directions.TopToBottom;
+        MyPlayer.PlayFeedbacks();
+        roundIndex =  GameObject.Find("RoundNum").GetComponent<TMP_Text>();
         foreach (var row in roundMsgRows)
         {
             string[] cells = row.Split(',');
@@ -64,6 +74,8 @@ public class RoundManger : MonoBehaviour
 
     private void Hide()
     {
+        MyPlayer.Direction = MMFeedbacks.Directions.BottomToTop;
+        MyPlayer.PlayFeedbacks();
         GameObject.Find("RoundMsgPanel").SetActive(false);
     }
 

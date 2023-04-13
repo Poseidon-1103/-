@@ -23,14 +23,15 @@ public class SelectCard : MonoBehaviour
     {
         //获取卡牌的列表
         ActionsList = GameObject.Find("ActionsList");
-        ActionList = gameObject.transform.parent.GetComponent<CardDisplay>().cardList;
+        ActionList = gameObject.transform.parent.parent.GetComponent<CardDisplay>().cardList;
+        Debug.Log(ActionList);
         if (ActionList[0].Cd>0)
         {
             gameObject.GetComponent<Button>().interactable = false;
         }else if(ActionList[0].Cd == 0){
             //查看是上区还是下区
             List<Card> cardList2 = CardTools.GetInstance().Getactive(SEQ, ActionList);
-            ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2);
+            ActionsList.transform.GetComponent<RecordActionList>().Record(cardList2,"vertical");
         }
 
     }

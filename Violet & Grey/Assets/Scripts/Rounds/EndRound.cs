@@ -80,7 +80,7 @@ public class EndRound : MonoBehaviour
             //选卡阶段回合结束
             case 1:
                 UIManager.GetInstance().HidePanel("SelectCardPanel");
-                gameObject.AddComponent<ChangeStage>().stageMessage = "《按计划行事》";
+                gameObject.AddComponent<ChangeStage>().stageMessage = "执行双方卡牌效果";
                 turnname.text = ("结算执行阶段");
                 recordList = ActionsList.GetComponent<RecordActionList>().recordList;
                 //卡池更新（包括冷却-1,后续还有状态更新）
@@ -105,7 +105,7 @@ public class EndRound : MonoBehaviour
                 cardPool.BroadcastMessage("DestoryMe");
                 RoundType = 0;
                 //切换ui到敌人行动界面
-                gameObject.AddComponent<ChangeStage>().stageMessage = "正在预测敌人行动";
+                gameObject.AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
                 break;
        
         }
@@ -149,6 +149,7 @@ public class EndRound : MonoBehaviour
             for (int PLnum = 0; PLnum < obj.Count; PLnum++)
             {
                 //开启角色头顶的三角形（13）
+                
                 A.Clear();
                 //结算每个行动的每一行
                 for (int j = 0; j < recordList[i].Count; j++)

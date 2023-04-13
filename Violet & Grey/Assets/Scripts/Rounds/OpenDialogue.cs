@@ -25,11 +25,13 @@ public class OpenDialogue : MonoBehaviour
     }
 
     private bool condition = true;
+    //对话结束后切换到展示敌人行动阶段
     private void ChangeStage()
     {
         if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition)
         {
-            gameObject.AddComponent<ChangeStage>().stageMessage = "正在预测敌人行动1";
+            //找到场景右上角的回合数对象，切换阶段过场
+            GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
             condition = false;
             Destroy(this);
         }

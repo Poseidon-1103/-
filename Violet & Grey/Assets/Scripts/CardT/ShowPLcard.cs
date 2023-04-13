@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
+using MoreMountains.Tools;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 /// <summary>
@@ -55,42 +58,75 @@ public class ShowPLcard : MonoBehaviour
     public void OnMouseDown()
     {
         //得到角色的信息，初始化选择卡牌的面板
-        UIManager.GetInstance().ShowPanel<SelectCardPanel>("SelectCardPanel");
-        cardPool = GameObject.Find("cardPool");
-        //先删除卡池里的所有卡
-        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
+        UIManager.GetInstance().ShowPanel<SelectCardPanel>("SelectCardPanel",E_UI_Layer.Mid, panel =>
         {
-            cardPool.BroadcastMessage("DestoryMe");
-        }
-
-        //将每张卡的数据分开
-        for (int i = 0; i < cards.Count; i++)
-        {
-            if (cards[i][0].Cd==0)
+            //显示左侧时序
+            panel.Init();
+            //更新角色状态栏
+            GameObject characterStatebar = GameObject.Find("CharacterStatebar");
+            // characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = ResMgr.GetInstance().Load<Sprite>(player.Plname);
+            ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+player.Plname+"Head",(img =>
             {
-            GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-            newCard.GetComponent<CardDisplay>().cardList = cards[i];
-            newCard.name = (cards[i][0].Id).ToString();
-            }
-            else if(cards[i][0].Cd > 0)
+                characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = img;
+            }));
+            characterStatebar.transform.Find("CharacterName").GetComponent<TMP_Text>().text = player.Plname;
+            characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = player.PlHP.ToString();
+            characterStatebar.transform.Find("CharacterHPTotal").GetComponent<TMP_Text>().text = player.PlHPmax.ToString();
+            //显示卡牌
+            cardPool = GameObject.Find("cardPool");
+            //先删除卡池里的所有卡
+            if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
             {
-                GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                newCard.name = "冷却中";
+                cardPool.BroadcastMessage("DestoryMe");
             }
-            else if(cards[i][0].Cd == -1)
+            //将每张卡的数据分开
+            for (int i = 0; i < cards.Count; i++)
             {
-                GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                newCard.name = "损坏";
+                if (cards[i][0].Cd==0)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, 0);
+                    // newCard.GetComponent<RectTransform>().
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.name = (cards[i][0].Id).ToString();
+                }
+                else if(cards[i][0].Cd > 0)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.name = "冷却中";
+                }
+                else if(cards[i][0].Cd == -1)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.name = "损坏";
+                }
+                else if (cards[i][0].Cd == -2)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.name = "撕毁";
+                }
             }
-            else if (cards[i][0].Cd == -2)
-            {
-                GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                newCard.name = "撕毁";
-            }
-        }
+        } );
+        // if (GameObject.Find("CharacterStatebar"))
+        // {
+        //     GameObject characterStatebar = GameObject.Find("CharacterStatebar");
+        //     // characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = ResMgr.GetInstance().Load<Sprite>(player.Plname);
+        //     ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+player.Plname+"Head",(img =>
+        //     {
+        //         characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = img;
+        //     }));
+        //     characterStatebar.transform.Find("CharacterName").GetComponent<TMP_Text>().text = player.Plname;
+        //     characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = player.PlHP.ToString();
+        //     characterStatebar.transform.Find("CharacterHPTotal").GetComponent<TMP_Text>().text = player.PlHPmax.ToString();
+        // }
+        
+        
     }
 }
 

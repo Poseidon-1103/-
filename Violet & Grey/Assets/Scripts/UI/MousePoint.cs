@@ -8,16 +8,20 @@ public class MousePoint : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
 {
     public MMF_Player MyPlayer;
 
+    // private int index;
     public void OnPointerEnter(PointerEventData eventData)
     {
         MyPlayer.Direction = MMFeedbacks.Directions.TopToBottom;
         MyPlayer.PlayFeedbacks();
+    //     index = transform.GetSiblingIndex();
+    //     transform.SetAsLastSibling();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         MyPlayer.Direction = MMFeedbacks.Directions.BottomToTop;
         MyPlayer.PlayFeedbacks();
+        // transform.SetSiblingIndex(index);
     }
 
 }

@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class RecordActionList : MonoBehaviour
 {
+    //角色行动条
     public GameObject Actions;
+    //敌人行动条
+    public GameObject EnemyActions;
     public GameObject HalfCard;
     public GameObject ActionsList;
     public Card card;
@@ -22,20 +25,24 @@ public class RecordActionList : MonoBehaviour
     }
     public void Record(List<Card> action, string type = "null")//不传入type参数就默认只传卡牌不打印(13)
     {
-        int k = 0;
-        //传进来的数据记录
-        for (int j = 0; j < recordList.Count; j++)
+        //如果传进来的action为空，跳过传数据（13）
+        if (action != null)
         {
-            if (action[0].Id / 10000 == recordList[j][0].Id / 10000)
+            int k = 0;
+            //传进来的数据记录
+            for (int j = 0; j < recordList.Count; j++)
             {
+                if (action[0].Id / 10000 == recordList[j][0].Id / 10000)
+                {
                     recordList[j] = action;
                     k = 1;
+                }
             }
-        }
         
-        if (k == 0)
-        {
-            recordList.Add(action);
+            if (k == 0)
+            {
+                recordList.Add(action);
+            }
         }
         //排序
         recordList.Sort(CardTools.GetInstance().CompareCD2);
@@ -49,28 +56,80 @@ public class RecordActionList : MonoBehaviour
         switch (type)
         {
             case "vertical":
-                //打印左边的行动列表
+                GameObject allActionList = GameObject.Find("AllActionList");
+                //先删除所有行动
+                if (allActionList.GetComponentsInChildren<Transform>(true).Length > 1)
+                {
+                    allActionList.BroadcastMessage("DestoryMe");
+                }
+                //打印左边的行动列表 
                 for (int i = 0; i < recordList.Count; i++)
                 {
-                    GameObject newCard = GameObject.Instantiate(Actions, ActionsList.transform);
-                    if (i==0)
+                    //区分敌人和角色，用不同的预制体打印
+                    if (recordList[i][0].Id / 10000 > 20)
                     {
-                        newCard.transform.Find("AddColor").GetComponent<Image>().color = new Color((225/255f), 176 / 255f, 35 / 255f, 87 / 255f);
-                        newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
-
+                        GameObject newCard = GameObject.Instantiate(EnemyActions, allActionList.transform);
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
+                        newCard.name = (recordList[i][0].Id).ToString();
                     }
-                    newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
-                    newCard.name = (recordList[i][0].Id).ToString();
+                    else
+                    {
+                        GameObject newCard = GameObject.Instantiate(Actions, allActionList.transform);
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
+                        newCard.name = (recordList[i][0].Id).ToString();
+                    }
+                    // if (i==0)
+                    // {
+                    //     newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
+                    // }
+                   
                 }
                 break;
             //打印顶部的行动列表
             case "horizontal":
+                //打印顶部的行动列表 
+                for (int i = 0; i < recordList.Count; i++)
+                {
+                    GameObject actionListTop = GameObject.Find("ActionListTop");
+                    //先删除所有行动
+                    if (actionListTop.GetComponentsInChildren<Transform>(true).Length > 1)
+                    {
+                        actionListTop.BroadcastMessage("DestoryMe");
+                    }
+                    //区分敌人和角色，用不同的预制体打印
+                    if (recordList[i][0].Id / 10000 > 20)
+                    {
+                        GameObject newCard = GameObject.Instantiate(EnemyActions, actionListTop.transform);
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
+                        newCard.name = (recordList[i][0].Id).ToString();
+                    }
+                    else
+                    {
+                        GameObject newCard = GameObject.Instantiate(Actions, actionListTop.transform);
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
+                        newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
+                        newCard.name = (recordList[i][0].Id).ToString();
+                    }
+                    // if (i==0)
+                    // {
+                    //     newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
+                    // }
+                   
+                }
                 break;
             //只在展示敌人面板打印敌人的行动
             case "enemy":
                 for (int i = 0; i < recordList.Count; i++)
                 {
-                    GameObject EnemyActionGroup = transform.Find("EnemyActionGroup").gameObject;
+                    GameObject EnemyActionGroup = GameObject.Find("EnemyActionGroup");
+                    //先删除所有行动
+                    if (EnemyActionGroup.GetComponentsInChildren<Transform>(true).Length > 1)
+                    {
+                        EnemyActionGroup.BroadcastMessage("DestoryMe");
+                    }
                     GameObject newCard = GameObject.Instantiate(HalfCard, EnemyActionGroup.transform);
                     newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
                     newCard.name = (recordList[i][0].Id).ToString();

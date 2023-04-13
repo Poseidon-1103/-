@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class DisPlayStagePanel : BasePanel
 {
-    public GameObject EnemyActionGroup;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +24,15 @@ public class DisPlayStagePanel : BasePanel
             case "Yes":
                 Debug.Log("Yes");
                 UIManager.GetInstance().HidePanel("DisPlayStagePanel");
+                GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "选牌阶段";
                 break;
         }
     }
-    public void Init(string num)
+    public void Init()
     {
         //不传入行动数据，只打印敌人行动
         Debug.Log("展示面板初始化数据");
         GameObject ActionsList = GameObject.Find("ActionsList");
         ActionsList.transform.GetComponent<RecordActionList>().Record(null,"enemy");
-        GetControl<TMP_Text>("SpecialEventNumber").text = num;
     }
 }

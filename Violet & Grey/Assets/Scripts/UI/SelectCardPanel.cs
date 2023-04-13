@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SelectCardPanel : BasePanel
@@ -23,5 +24,12 @@ public class SelectCardPanel : BasePanel
                 UIManager.GetInstance().ShowPanel<CharacterCardGroupPanel>("CharacterCardGroupPanel");
                 break;
         }
+    }
+    public void Init()
+    {
+        //不传入行动数据，只在左侧打印敌人行动
+        Debug.Log("选卡面板初始化数据");
+        GameObject ActionsList = GameObject.Find("ActionsList");
+        ActionsList.transform.GetComponent<RecordActionList>().Record(null,"vertical");
     }
 }

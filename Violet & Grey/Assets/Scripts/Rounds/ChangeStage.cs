@@ -6,10 +6,7 @@ public class ChangeStage : MonoBehaviour
 {
     //阶段切换时的显示信息
     public string stageMessage;
-    //特殊回合倒计时
-    public int countdown;
-    //特殊回合数组
-    public int[] spacialNumber;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,21 +27,29 @@ public class ChangeStage : MonoBehaviour
     private void ShowEnemyAction(DisPlayStagePanel panel)
     {
         
-        panel.Init(countdown.ToString());
+        panel.Init();
+    }
+
+    private void ShowSelectCard(SelectCardPanel panel)
+    {
+        panel.Init();
     }
     private void DelayHide()
     {
         UIManager.GetInstance().HidePanel("StagePanel");
-        if (stageMessage == "正在预测敌人行动")
+        if (stageMessage == "敌人当前回合行动")
         {
             //显示敌人行动界面
             UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel",E_UI_Layer.Mid,ShowEnemyAction);
             Destroy(this);
         }
-        else if (stageMessage == "《按计划行事》")
+        else if (stageMessage == "执行双方卡牌效果")
         {
-            //显示执行阶段界面
-            UIManager.GetInstance().ShowPanel<ActionStagePanel>("ActionStagePanel");
+            
+            Destroy(this);
+        }
+        else if (stageMessage == "选择当前回合行动")
+        {
             Destroy(this);
         }
     }

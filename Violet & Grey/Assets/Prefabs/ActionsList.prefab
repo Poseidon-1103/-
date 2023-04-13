@@ -28,7 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,9 +58,9 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 300, y: 50}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 1
+  m_CellSize: {x: 320, y: 100}
+  m_Spacing: {x: 50, y: 20}
+  m_Constraint: 0
   m_ConstraintCount: 1
 --- !u!114 &1815863105
 MonoBehaviour:
@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions: {fileID: 1754817744448311261, guid: 3b91ade480b9c3643928ce5176f0ef97, type: 3}
+  EnemyActions: {fileID: 7694708622950463923, guid: 1388538c461724245b3d13e1560fd919,
+    type: 3}
   HalfCard: {fileID: 8047229540910054925, guid: e322c1f5803166b4e819b89512f9fcaa,
     type: 3}
   ActionsList: {fileID: 9173111165021579201}

@@ -24,4 +24,11 @@ public class ActionStagePanel : BasePanel
                 break;
         }
     }
+    public void Init()
+    {
+        //不传入行动数据，只打印敌人行动
+        Debug.Log("展示面板初始化数据");
+        GameObject ActionsList = GameObject.Find("ActionsList");
+        ActionsList.transform.GetComponent<RecordActionList>().Record(null,"horizontal");
+    }
 }

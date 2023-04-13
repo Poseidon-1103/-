@@ -2,24 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feel/FeelDemos/CardsUI/Materials/FeelCardsLightning.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Feel/FeelDemos/CardsUI/Materials/FeelCardsLightning.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feel/FeelDemos/CardsUI/Materials/FeelCardsSquareLightning.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Feel/FeelDemos/CardsUI/Materials/FeelCardsSquareLightning.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActionsList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActionsList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Half Card.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Half Card.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/cardPool.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/cardPool.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Charater State Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Charater State Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round Open Background.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round Open Background.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/NewUIPNG/Formio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/NewUIPNG/Formio.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Charater State Bar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Charater State Bar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Sequential Action Small Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Sequential Action Small Enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Sequential Action Small Friendly Army.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Sequential Action Small Friendly Army.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectStageTestPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectStageTestPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/PlayerCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Dialogue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Dialogue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ActionStagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ActionStagePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MousePoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MousePoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectCardPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectCardPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +56,22 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ShowPLcard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ShowPLcard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/34/c1fe27be/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/ReflectionHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ShowPLcard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -153,7 +178,10 @@
       <workItem from="1680977777312" duration="2723000" />
       <workItem from="1681012719749" duration="12899000" />
       <workItem from="1681094600748" duration="20215000" />
-      <workItem from="1681180762639" duration="14831000" />
+      <workItem from="1681180762639" duration="19920000" />
+      <workItem from="1681238864898" duration="376000" />
+      <workItem from="1681273261089" duration="20979000" />
+      <workItem from="1681364246481" duration="10619000" />
     </task>
     <servers />
   </component>
@@ -162,6 +190,16 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

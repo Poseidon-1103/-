@@ -76,12 +76,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58306a09c52f61745a56e3bdca6bda2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueDateFile: {fileID: 4900000, guid: 0322f883ca20b1a498c93c84363dbe21, type: 3}
+  dialogueDateFile: {fileID: 4900000, guid: 1a883f9a4b7c7d74fb6e3061af9db117, type: 3}
   characterLeft: {fileID: 6031600753006048588}
   characterRight: {fileID: 2427160824414989559}
   sprites:
   - {fileID: 21300000, guid: cd122becc9aed14489f9f341e64149f5, type: 3}
-  - {fileID: 21300000, guid: a060c901d54b20d45bdb8b7050e36c14, type: 3}
+  - {fileID: 21300000, guid: cd122becc9aed14489f9f341e64149f5, type: 3}
   dialogueIndex: 0
   dialogueRows: []
   nameText: {fileID: 1449331278686523156}
