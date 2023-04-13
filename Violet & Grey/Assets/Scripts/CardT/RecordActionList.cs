@@ -89,15 +89,15 @@ public class RecordActionList : MonoBehaviour
                 break;
             //打印顶部的行动列表
             case "horizontal":
+                GameObject actionListTop = GameObject.Find("ActionListTop");
+                //先删除所有行动
+                if (actionListTop.GetComponentsInChildren<Transform>(true).Length > 1)
+                {
+                    actionListTop.BroadcastMessage("DestoryMe");
+                }
                 //打印顶部的行动列表 
                 for (int i = 0; i < recordList.Count; i++)
                 {
-                    GameObject actionListTop = GameObject.Find("ActionListTop");
-                    //先删除所有行动
-                    if (actionListTop.GetComponentsInChildren<Transform>(true).Length > 1)
-                    {
-                        actionListTop.BroadcastMessage("DestoryMe");
-                    }
                     //区分敌人和角色，用不同的预制体打印
                     if (recordList[i][0].Id / 10000 > 20)
                     {
@@ -122,14 +122,14 @@ public class RecordActionList : MonoBehaviour
                 break;
             //只在展示敌人面板打印敌人的行动
             case "enemy":
+                GameObject EnemyActionGroup = GameObject.Find("EnemyActionGroup");
+                //先删除所有行动
+                if (EnemyActionGroup.GetComponentsInChildren<Transform>(true).Length > 1)
+                {
+                    EnemyActionGroup.BroadcastMessage("DestoryMe");
+                }
                 for (int i = 0; i < recordList.Count; i++)
                 {
-                    GameObject EnemyActionGroup = GameObject.Find("EnemyActionGroup");
-                    //先删除所有行动
-                    if (EnemyActionGroup.GetComponentsInChildren<Transform>(true).Length > 1)
-                    {
-                        EnemyActionGroup.BroadcastMessage("DestoryMe");
-                    }
                     GameObject newCard = GameObject.Instantiate(HalfCard, EnemyActionGroup.transform);
                     newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
                     newCard.name = (recordList[i][0].Id).ToString();
