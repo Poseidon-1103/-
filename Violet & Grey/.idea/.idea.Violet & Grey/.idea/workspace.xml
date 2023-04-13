@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="" />
+    <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TurnRound.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TurnRound.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterCardGroupPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterCardGroupPanel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterStoryPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterStoryPanel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/LoadGame.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/LoadGame.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/ReturnToHeaderScreen .prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/ReturnToHeaderScreen .prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/SelectLevelButton.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/SelectLevelButton.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/StartNewGame.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Start/SelectLevel/MeticulousClassification/StartNewGame.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1_1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1_1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene 1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene 1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ui Test Sence.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
