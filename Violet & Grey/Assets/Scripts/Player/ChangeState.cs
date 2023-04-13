@@ -7,6 +7,7 @@ public class ChangeState : MonoBehaviour
 
     public GameObject PL;
     public GameObject Blood;
+    public GameObject BloodCube;
     public GameObject StateList;
     public GameObject ArmorList;
     public int row;
@@ -15,12 +16,38 @@ public class ChangeState : MonoBehaviour
     public List<int> StateRound = new();
     public GameObject Armor;
     public int Armornum;
+   
     // Start is called before the first frame update
     void Start()
     {
+        for (int i =0;i<10;i++)
+        {
+            StateRound.Add(0);
+            State.Add(null);
+        }
         if (player == null)
         {
             player = PLtools.GetInstance().LoadPlData("Player", row);
+        }
+        float BloodCubeNum = 4 / (float)player.PlHPmax;
+        float StartPosition = -1.6f;
+        int k = 0;
+        for (int j=1;j< player.PlHPmax;j++)
+        {
+            GameObject obj = Instantiate(BloodCube, PL.transform);
+            k++;
+            if (k==5)
+            {
+                k = 0;
+                obj.transform.localPosition = new Vector3((StartPosition + BloodCubeNum * j), 5f, -0.3f);
+                obj.transform.localScale = new Vector3(0.2f, 0.4f, 1f);
+            }
+            else
+            {
+                obj.transform.localPosition = new Vector3((StartPosition + BloodCubeNum * j), 4.93f, -0.3f);
+            }
+            
+
         }
     }
 
@@ -28,19 +55,23 @@ public class ChangeState : MonoBehaviour
     {
         for (int i = 0; i < State.Count; i++)
         {
-            if (State[i].name == "Disarmed")
+            if (State[i]!=null)
             {
-                ChangeBlood(num, 0);
-                return;
+                if (State[i].name == "Disarmed")
+                {
+                    ChangeBlood(num, 0);
+                    return;
+                }
+                if (State[i].name == "Corrupted")
+                {
+                    num++;
+                }
+                if (Armor != null)
+                {
+                    num = num - Armornum;
+                }
             }
-            if (State[i].name == "Corrupted")
-            {
-                num++;
-            }
-            if (Armor != null)
-            {
-                num = num - Armornum;
-            }
+            
         }
         player.PlHP = player.PlHP - num;
         player.Type = 1;
@@ -51,9 +82,12 @@ public class ChangeState : MonoBehaviour
     {
         for (int i = 0; i < State.Count; i++)
         {
-            if (State[i].name == "Corrupted")
+            if (State[i] != null)
             {
-                num++;
+                if (State[i].name == "Corrupted")
+                {
+                    num++;
+                }
             }
         }
         player.PlHP = player.PlHP - num;
@@ -62,8 +96,11 @@ public class ChangeState : MonoBehaviour
 
     public void cure(int num)
     {
-        player.PlHP = player.PlHP + num;
-        player.Type = 1;
+        if(player.PlHPmax>= player.PlHP + num)
+        {
+            player.PlHP = player.PlHP + num;
+            player.Type = 1;
+        }
     }
     public void ChangeArmor(string Type, int num,int Armornum2)
     {
@@ -83,9 +120,12 @@ public class ChangeState : MonoBehaviour
     {
         for (int i = 0; i < State.Count; i++)
         {
-            if (State[i].name == Type)
+            if (State[i]!=null)
             {
-                return true;
+                if (State[i].name == Type)
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -97,24 +137,32 @@ public class ChangeState : MonoBehaviour
     /// <param name="num"></param>
     public bool ChangeStateList(string Type, int num)
     {
-        int c=0;
         if (num == 0 && !ConfirmState("Immune"))
         {
             GameObject obj = (GameObject)Instantiate(Resources.Load("State/" + Type), StateList.transform);
-                Debug.Log("gg" + Type);
+                Debug.Log("添加" + Type);
                 obj.name = Type;
-                StateRound.Add(1);
-                State.Add(obj);
+            for(int i=0;i< StateRound.Count; i++)
+            {
+                if (StateRound[i]==0)
+                {
+                    StateRound[i] = 2;
+                    State[i] = obj;
+                    break;
+                }
+            }
         }
         if (num == 1)
         {
             for (int i = 0; i < State.Count; i++)
             {
-                if (State[i].name == Type)
+                if (State[i] != null)
                 {
-                    Debug.Log("删除");
-                    StateRound.Remove(i);
-                    Destroy(State[i]);
+                    if (State[i].name == Type)
+                    {
+                        StateRound[i] = 0;
+                        Destroy(State[i]);
+                    }
                 }
             }
         }
@@ -129,22 +177,23 @@ public class ChangeState : MonoBehaviour
         int b = 0;
         for (int i = 0; i < State.Count; i++)
         {
-            if (State[i].name == "Poisoned" && b == 0)
+            if (State[i]!=null)
             {
-                b = 1;
-                ChangeBlood(1);
-            }
-            if (State[i].name == "Disable" || State[i].name == "Disarmed" || State[i].name == "Grounded" || State[i].name == "Stasis" || State[i].name == "Immune" || State[i].name == "Disarmed")
-            {
-                if (StateRound[i] == 0)
+                if (State[i].name == "Poisoned" && b == 0)
                 {
-                    ChangeStateList(State[i].name, 1);
+                    b = 1;
+                    ChangeBlood(1);
                 }
                 if (StateRound[i] == 1)
                 {
-                    StateRound[i] = 0;
+                    ChangeStateList(State[i].name, 1);
+                }
+                if (StateRound[i] == 2)
+                {
+                    StateRound[i] = 1;
                 }
             }
+           
         }
     }
     // Update is called once per frame
@@ -154,7 +203,9 @@ public class ChangeState : MonoBehaviour
         {
             float a = (float)player.PlHP;
             float b = (float)player.PlHPmax;
-            Blood.transform.localScale = new Vector3((a / b) * 3, 0.5f, 1f);
+            float c = Blood.transform.localScale.x - ((a / b) * 2);
+            Blood.transform.localScale = new Vector3((a / b) * 2, 2.0f, 1f);
+            Blood.transform.localPosition = new Vector3(Blood.transform.localPosition.x- c, 5f, -0.1f);
             //刷新血量
             //上buff
             //PLtools.GetInstance()

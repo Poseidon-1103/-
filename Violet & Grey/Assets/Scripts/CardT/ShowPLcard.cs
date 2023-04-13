@@ -54,8 +54,7 @@ public class ShowPLcard : MonoBehaviour
     //绑定角色点击
     public void OnMouseDown()
     {
-        //得到角色的信息，初始化选择卡牌的面板
-        UIManager.GetInstance().ShowPanel<SelectCardPanel>("SelectCardPanel");
+        
         cardPool = GameObject.Find("cardPool");
         //先删除卡池里的所有卡
         if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)

@@ -47,6 +47,8 @@ public class ThisCard : MonoBehaviour
 
         }
     }
+
+    
     void Update()
     {
        

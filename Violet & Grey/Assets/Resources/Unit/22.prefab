@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2672350658761891247}
   - component: {fileID: 2672350658761891232}
-  - component: {fileID: 2672350658761891246}
   - component: {fileID: 4571891935306273247}
   - component: {fileID: 8363638370303272968}
   - component: {fileID: 3401260861287144227}
+  - component: {fileID: 7529753850995747859}
   m_Layer: 0
   m_Name: 22
   m_TagString: Untagged
@@ -90,24 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2672350658761891246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672350658761891233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5d0b0367fda43478214164b431cef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 0}
-  rangeMap: {fileID: 0}
-  grid: {fileID: 0}
-  tileBase: {fileID: 11400000, guid: 8fa384a5b50f4e54eabb29a640467ccd, type: 2}
-  player: {fileID: 2672350658761891247}
-  actionValue: 4
 --- !u!114 &4571891935306273247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PL: {fileID: 2672350658761891233}
   Blood: {fileID: 4486871074406321052}
+  BloodCube: {fileID: 521517020552738516, guid: de1ec96fbae7d3a438cd0261d646786d,
+    type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
   row: 0
@@ -174,6 +158,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5424783, y: 4.5148435}
   m_EdgeRadius: 0
+--- !u!114 &7529753850995747859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672350658761891233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 0
+  ResourcesDate: 
+  cardList: []
+  StartTurn: 0
+  EndTurn: 100
+  Probability: 1400000032000000
 --- !u!1 &4486871074406321052
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 4486871074406321052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.22, y: 4.98, z: -1}
-  m_LocalScale: {x: 3, y: 0.5, z: 1}
+  m_LocalScale: {x: 2, y: 1.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2672350658761891247}
@@ -247,9 +250,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9b6bdfe58aaab56438bb5a24ff165f20, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
