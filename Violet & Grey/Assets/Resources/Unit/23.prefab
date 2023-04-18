@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2672350658761891247}
   - component: {fileID: 2672350658761891232}
-  - component: {fileID: 2672350658761891246}
   - component: {fileID: 4571891935306273247}
   - component: {fileID: 8363638370303272968}
   - component: {fileID: 3401260861287144227}
@@ -90,24 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2672350658761891246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672350658761891233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5d0b0367fda43478214164b431cef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 0}
-  rangeMap: {fileID: 0}
-  grid: {fileID: 0}
-  tileBase: {fileID: 11400000, guid: 8fa384a5b50f4e54eabb29a640467ccd, type: 2}
-  player: {fileID: 2672350658761891247}
-  actionValue: 4
 --- !u!114 &4571891935306273247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PL: {fileID: 2672350658761891233}
   Blood: {fileID: 4486871074406321052}
+  BloodCube: {fileID: 0}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
   row: 0

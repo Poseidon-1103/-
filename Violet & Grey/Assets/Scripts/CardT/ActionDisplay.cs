@@ -26,10 +26,86 @@ public class ActionDisplay : MonoBehaviour
 
     public void ShowCard()
     {
+        CardDescriptionText.text = null;
         //打印
         for (int i = 0; i < cardList.Count; i++)
         {
-            CardDescriptionText.text += cardList[i].CardEffect + cardList[i].CardEffNum + cardList[i].CardEffType + "\n";
+            if (NameTextUP.text =="123")
+                {
+                    NameTextUP.name = cardList[i].Id.ToString();
+                    NameTextUP.text = cardList[i].CardName;
+                    // CardCDText.text = cardList[i].CardCd.ToString();
+                }
+                if (cardList[i].CardEffect == "攻击" || cardList[i].CardEffect == "移动")
+                {
+                    if (cardList[i].CardEffType.Substring(0, 2) == "远程")
+                    {
+                        CardDescriptionText.text += cardList[i].CardEffType + "伤害" + cardList[i].CardEffNum + "\n";
+                    }
+                    else
+                    {
+                        CardDescriptionText.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
+                    }
+                }
+                if (cardList[i].CardEffect == "自身")
+                {
+                    CardDescriptionText.text += "获得:";
+                }
+                if (cardList[i].CardEffect == "状态")
+                {
+                    if (cardList[i].CardEffType == "Grounded")
+                    {
+                        CardDescriptionText.text += "禁足";
+                    }
+                    if (cardList[i].CardEffType == "Disable")
+                    {
+                        CardDescriptionText.text += "缴械";
+                    }
+                    if (cardList[i].CardEffType == "Disarmed")
+                    {
+                        CardDescriptionText.text += "软化";
+                    }
+                    if (cardList[i].CardEffType == "Corrupted")
+                    {
+                        CardDescriptionText.text += "腐蚀";
+                    }
+                    if (cardList[i].CardEffType == "Poisoned")
+                    {
+                        CardDescriptionText.text += "中毒";
+                    }
+                    if (cardList[i].CardEffType == "Immune")
+                    {
+                        CardDescriptionText.text += "免疫";
+                    }
+                    if (cardList[i].CardEffType == "Stealthy")
+                    {
+                        CardDescriptionText.text += "潜行";
+                    }
+                    if (cardList[i].CardEffType == "ArmorPenetration")
+                    {
+                        CardDescriptionText.text += "破防";
+                    }
+                    if (cardList[i].CardEffType == "Invincible")
+                    {
+                        CardDescriptionText.text += "无敌";
+                    }
+                    if (cardList[i].CardEffType == "Stasis")
+                    {
+                        CardDescriptionText.text += "过热";
+                    }
+                    if (cardList[i].CardEffType == "Armor")
+                    {
+                        CardDescriptionText.text += "护甲" + cardList[i].CardEffNum;
+                    }
+                    if (cardList[i].CardEffNum == 99)
+                    {
+                        CardDescriptionText.text += "\n";
+                    }
+                    else
+                    {
+                        CardDescriptionText.text += "，";
+                    }
+                }
         }
         NameTextUP.text = cardList[0].CardName;
         Sequence.text = cardList[0].Sequence.ToString();

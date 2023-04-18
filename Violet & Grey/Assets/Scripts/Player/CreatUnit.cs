@@ -14,7 +14,7 @@ public class CreatUnit : MonoBehaviour
     //在表中第几行
     public int row;
     public  Player player;
-    public Vector3Int playerCellPosition;
+    public Vector3 playerCellPosition;
     void Start()
     {
         creatUnit();

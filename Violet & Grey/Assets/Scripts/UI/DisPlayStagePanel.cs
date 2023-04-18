@@ -24,12 +24,13 @@ public class DisPlayStagePanel : BasePanel
             case "Yes":
                 Debug.Log("Yes");
                 UIManager.GetInstance().HidePanel("DisPlayStagePanel");
-                GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "选牌阶段";
+                GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "选择当前回合行动";
                 break;
         }
     }
     public void Init()
     {
+        gameObject.GetComponentInChildren<RoundManger>().ShowNum();
         //不传入行动数据，只打印敌人行动
         Debug.Log("展示面板初始化数据");
         GameObject ActionsList = GameObject.Find("ActionsList");

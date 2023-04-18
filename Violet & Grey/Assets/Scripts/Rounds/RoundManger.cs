@@ -26,7 +26,7 @@ public class RoundManger : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        // ReadText(roundDateFile);
+        ReadText(roundDateFile);
         // ShowRoundRow();
         // Invoke("Hide",4);
     }
@@ -34,7 +34,7 @@ public class RoundManger : MonoBehaviour
     void OnEnable()
     {
         ReadText(roundDateFile);
-        ShowRoundRow();
+        // ShowRoundRow();
     }
 
     // Update is called once per frame
@@ -72,11 +72,26 @@ public class RoundManger : MonoBehaviour
         }
     }
 
-    private void Hide()
+    public void ShowNum()
+    {
+        roundIndex =  GameObject.Find("RoundNum").GetComponent<TMP_Text>();
+        foreach (var row in roundMsgRows)
+        {
+            string[] cells = row.Split(',');
+            if (cells[0] == "#" && cells[1] == roundIndex.text)
+            {
+                UpdateText(cells[2],cells[3],cells[5],cells[4]);
+                break;
+            }
+            
+        }
+    }
+    
+    public void Hide()
     {
         MyPlayer.Direction = MMFeedbacks.Directions.BottomToTop;
         MyPlayer.PlayFeedbacks();
-        GameObject.Find("RoundMsgPanel").SetActive(false);
+        // GameObject.Find("RoundMsgPanel").SetActive(false);
     }
 
 }

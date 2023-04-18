@@ -23,13 +23,13 @@ public class ClickRound : MonoBehaviour
         if (clickNum == 0)
         { 
             Debug.Log("0");
-            transform.Find("RoundMsgPanel").gameObject.SetActive(true);
+            GameObject.Find("RoundMsgPanel").GetComponent<RoundManger>().ShowRoundRow();
             clickNum = 1;
         }
         else
         {
             Debug.Log("1");
-            transform.Find("RoundMsgPanel").gameObject.SetActive(false);
+            GameObject.Find("RoundMsgPanel").GetComponent<RoundManger>().Hide();
             clickNum = 0;
         }
     }

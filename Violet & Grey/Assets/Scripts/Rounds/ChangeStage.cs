@@ -45,7 +45,6 @@ public class ChangeStage : MonoBehaviour
         }
         else if (stageMessage == "执行双方卡牌效果")
         {
-            
             Destroy(this);
         }
         else if (stageMessage == "选择当前回合行动")

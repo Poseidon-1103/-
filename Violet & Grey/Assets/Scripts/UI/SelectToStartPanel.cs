@@ -23,7 +23,7 @@ public class SelectToStartPanel : BasePanel
             case "StartNewGame":
                 Debug.Log("开始新游戏");
                 UIManager.GetInstance().HidePanel("SelectToStartPanel");
-                MMSceneLoadingManager.LoadScene("Ui Test Sence", "LoadingScene");
+                MMSceneLoadingManager.LoadScene("MapText", "LoadingScene");
                 break;
             case "LoadGame":
                 Debug.Log("读取存档");

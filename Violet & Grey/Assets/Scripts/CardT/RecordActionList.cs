@@ -132,6 +132,7 @@ public class RecordActionList : MonoBehaviour
                 {
                     GameObject newCard = GameObject.Instantiate(HalfCard, EnemyActionGroup.transform);
                     newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
+                    newCard.GetComponent<ActionDisplay>().ShowCard();
                     newCard.name = (recordList[i][0].Id).ToString();
                 }
                 break;

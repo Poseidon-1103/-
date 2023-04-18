@@ -12,7 +12,7 @@ public class MapManage : BaseManager<MapManage>
     // private Grid grid;
     //瓦片资源基类 通过它可以得到瓦片资源
     // private TileBase tileBase;
-
+    public Tilemap rangeMap;
     //地图相关格子对象容器
     public AStarNode[,] nodes;
     //开启列表
@@ -23,7 +23,8 @@ public class MapManage : BaseManager<MapManage>
     private List<Vector3Int> actionList=new List<Vector3Int>(); 
     //地图边界
     public BoundsInt tilemapBounds;
-    
+    public BoundsInt tilemapBounds2;
+
     //     //清空瓦片地图
     //     //map.ClearAllTiles();
     //     //获取指定坐标的格子
@@ -51,7 +52,6 @@ public class MapManage : BaseManager<MapManage>
     //初始化地图
     public void InitMapInfo(Tilemap map)
     {
-        
         //得到tilemap的边界（以格子为单位）
         map.CompressBounds();
         tilemapBounds = map.cellBounds;
@@ -80,8 +80,13 @@ public class MapManage : BaseManager<MapManage>
         // Debug.Log(nodes[0,0].x);
     }
     // 找到路径
-    public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos)
+    public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos,string Type)
     {
+        rangeMap = GameObject.Find("Confirm").GetComponent<EndRound>().CanMoveRange;
+        if (startPos== endPos)
+        {
+            return null;
+        }
         /*Debug.Log($"{tilemapBounds.xMin},{tilemapBounds.xMax},{tilemapBounds.yMin},{tilemapBounds.yMax}");*/
         //判断传入是否合法
         //1.是否在范围内
@@ -138,15 +143,31 @@ public class MapManage : BaseManager<MapManage>
     
         while (true)
         {
-            //寻找周围点
-            //上 x y-1
-            FindNearlyNodeToOpenList(start.x, start.y - 1, startI, startJ-1, 1, start, end);
-            //左 x-1 y 
-            FindNearlyNodeToOpenList(start.x - 1, start.y, startI-1, startJ, 1, start, end);
-            //右 x+1 y
-            FindNearlyNodeToOpenList(start.x + 1, start.y, startI+1, startJ, 1, start, end);
-            //下 x y+1
-            FindNearlyNodeToOpenList(start.x, start.y + 1, startI, startJ+1, 1, start, end);
+            if(Type == "移动")
+            {
+                //寻找周围点
+                //上 x y-1
+                FindNearlyNodeToOpenList(start.x, start.y - 1, startI, startJ - 1, 1, start, end);
+                //左 x-1 y 
+                FindNearlyNodeToOpenList(start.x - 1, start.y, startI - 1, startJ, 1, start, end);
+                //右 x+1 y
+                FindNearlyNodeToOpenList(start.x + 1, start.y, startI + 1, startJ, 1, start, end);
+                //下 x y+1
+                FindNearlyNodeToOpenList(start.x, start.y + 1, startI, startJ + 1, 1, start, end);
+            }
+            else
+            {
+                //寻找周围点
+                //上 x y-1
+                FindNearlyNodeToOpenList2(start.x, start.y - 1, startI, startJ - 1, 1, start, end);
+                //左 x-1 y 
+                FindNearlyNodeToOpenList2(start.x - 1, start.y, startI - 1, startJ, 1, start, end);
+                //右 x+1 y
+                FindNearlyNodeToOpenList2(start.x + 1, start.y, startI + 1, startJ, 1, start, end);
+                //下 x y+1
+                FindNearlyNodeToOpenList2(start.x, start.y + 1, startI, startJ + 1, 1, start, end);
+            }
+            
     
             //死路判断 开启列表为空
             if (openList.Count == 0)
@@ -201,6 +222,8 @@ public class MapManage : BaseManager<MapManage>
 
     public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos, List<Vector3Int> PLList)
     {
+        rangeMap = GameObject.Find("Confirm").GetComponent<EndRound>().CanMoveRange;
+        
         List<Vector3Int> PLList2 = PLList;
         PLList2.Remove(endPos);
         PLList2.Remove(startPos);
@@ -215,6 +238,7 @@ public class MapManage : BaseManager<MapManage>
             /*Debug.Log("开始或结束在地图范围外");*/
             return null;
         }
+       
         //2.是否阻挡
         //获得起点终点格子
         AStarNode start = new AStarNode(0, 0, E_Node_type.Walk);
@@ -247,6 +271,7 @@ public class MapManage : BaseManager<MapManage>
             return null;
         }
 
+
         //清空开启和关闭列表
         closeList.Clear();
         openList.Clear();
@@ -262,13 +287,13 @@ public class MapManage : BaseManager<MapManage>
         {
             //寻找周围点
             //上 x y-1
-            FindNearlyNodeToOpenList(start.x, start.y - 1, startI, startJ - 1, 1, start, end, PLList2);
+            FindNearlyNodeToOpenList2(start.x, start.y - 1, startI, startJ - 1, 1, start, end);
             //左 x-1 y 
-            FindNearlyNodeToOpenList(start.x - 1, start.y, startI - 1, startJ, 1, start, end, PLList2);
+            FindNearlyNodeToOpenList2(start.x - 1, start.y, startI - 1, startJ, 1, start, end);
             //右 x+1 y
-            FindNearlyNodeToOpenList(start.x + 1, start.y, startI + 1, startJ, 1, start, end, PLList2);
+            FindNearlyNodeToOpenList2(start.x + 1, start.y, startI + 1, startJ, 1, start, end);
             //下 x y+1
-            FindNearlyNodeToOpenList(start.x, start.y + 1, startI, startJ + 1, 1, start, end, PLList2);
+            FindNearlyNodeToOpenList2(start.x, start.y + 1, startI, startJ + 1, 1, start, end);
 
             //死路判断 开启列表为空
             if (openList.Count == 0)
@@ -329,69 +354,104 @@ public class MapManage : BaseManager<MapManage>
     }
     private void FindNearlyNodeToOpenList(int x, int y, int startI, int startJ, float g,AStarNode father,AStarNode end) 
     {
-        // BoundsInt tilemapBounds = map.cellBounds;
-        //边界判断
-        if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
-            y < tilemapBounds.yMin || y >= tilemapBounds.yMax)
-            return;
-        //取点
-        AStarNode node = nodes[startI, startJ];
-        //放入开启列表
-        if (node == null || 
-            node.type == E_Node_type.Stop || 
-            closeList.Contains(node) || 
-            openList.Contains(node) )
-            return;
-        // Debug.Log($"取点({node.x},{node.y},{node.type})");
-        //计算f值
-        //f=g+h
-        //记录父对象
-        node.father = father;
-        //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
-        node.g = father.g + g;
-        node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
-        node.f = node.g + node.h;
+        Vector3Int V3 = new(x, y, 0);
+        if (rangeMap.GetTile(V3) != null)
+        {
+            // BoundsInt tilemapBounds = map.cellBounds;
+            //边界判断
+            if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
+                y < tilemapBounds.yMin || y >= tilemapBounds.yMax)
+                return;
+            //取点
+            AStarNode node = nodes[startI, startJ];
+            //放入开启列表
+            if (node == null ||
+                node.type == E_Node_type.Stop ||
+                closeList.Contains(node) ||
+                openList.Contains(node))
+                return;
+            // Debug.Log($"取点({node.x},{node.y},{node.type})");
+            //计算f值
+            //f=g+h
+            //记录父对象
+            node.father = father;
+            //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
+            node.g = father.g + g;
+            node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
+            node.f = node.g + node.h;
 
-        //合法，存到开启列表
-        openList.Add(node);
+            //合法，存到开启列表
+            openList.Add(node);
+        }
     }
 
+    private void FindNearlyNodeToOpenList2(int x, int y, int startI, int startJ, float g, AStarNode father, AStarNode end)
+    {
+            // BoundsInt tilemapBounds = map.cellBounds;
+            //边界判断
+            if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
+                y < tilemapBounds.yMin || y >= tilemapBounds.yMax)
+                return;
+            //取点
+            AStarNode node = nodes[startI, startJ];
+            //放入开启列表
+            if (node == null ||
+                node.type == E_Node_type.Stop ||
+                closeList.Contains(node) ||
+                openList.Contains(node))
+                return;
+            // Debug.Log($"取点({node.x},{node.y},{node.type})");
+            //计算f值
+            //f=g+h
+            //记录父对象
+            node.father = father;
+            //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
+            node.g = father.g + g;
+            node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
+            node.f = node.g + node.h;
+
+            //合法，存到开启列表
+            openList.Add(node);
+    }
     private void FindNearlyNodeToOpenList(int x, int y, int startI, int startJ, float g, AStarNode father, AStarNode end, List<Vector3Int> PLList)
     {
-        // BoundsInt tilemapBounds = map.cellBounds;
-        //边界判断
-        if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
-            y < tilemapBounds.yMin || y >= tilemapBounds.yMax)
-            return;
-        //取点
-        AStarNode node = nodes[startI, startJ];
-        //放入开启列表
-        for (int i =0;i< PLList.Count; i++)
-        {
-            if (x == PLList[i].x && y == PLList[i].y)
-            {
-                return;
-            }
-        }
 
         
-        if (node == null ||
-            node.type == E_Node_type.Stop ||
-            closeList.Contains(node) ||
-            openList.Contains(node) )
-            return;
-        // Debug.Log($"取点({node.x},{node.y},{node.type})");
-        //计算f值
-        //f=g+h
-        //记录父对象
-        node.father = father;
-        //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
-        node.g = father.g + g;
-        node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
-        node.f = node.g + node.h;
 
-        //合法，存到开启列表
-        openList.Add(node);
+            // BoundsInt tilemapBounds = map.cellBounds;
+            //边界判断
+        if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
+                y < tilemapBounds.yMin || y >= tilemapBounds.yMax )
+                return;
+            //取点
+            AStarNode node = nodes[startI, startJ];
+            //放入开启列表
+            for (int i = 0; i < PLList.Count; i++)
+            {
+                if (x == PLList[i].x && y == PLList[i].y)
+                {
+                    return;
+                }
+            }
+
+
+            if (node == null ||
+                node.type == E_Node_type.Stop ||
+                closeList.Contains(node) ||
+                openList.Contains(node))
+                return;
+            // Debug.Log($"取点({node.x},{node.y},{node.type})");
+            //计算f值
+            //f=g+h
+            //记录父对象
+            node.father = father;
+            //计算g,离起点距离=父对象离起点距离+子对象离父对象距离
+            node.g = father.g + g;
+            node.h = Mathf.Abs(end.x - node.x) + Mathf.Abs(end.y - node.y);
+            node.f = node.g + node.h;
+
+            //合法，存到开启列表
+            openList.Add(node);
     }
     //计算可移动范围
     public List<Vector3Int> MoveRange(Vector3Int startPos, int actionValue, List<Vector3Int> PLList)

@@ -97,20 +97,20 @@ public class ShowPLcard : MonoBehaviour
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
                     newCard.name = "冷却中";
                 }
-                else if(cards[i][0].Cd == -1)
-                {
-                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
-                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                    newCard.name = "损坏";
-                }
-                else if (cards[i][0].Cd == -2)
-                {
-                    GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
-                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                    newCard.name = "撕毁";
-                }
+                // else if(cards[i][0].Cd == -1)
+                // {
+                //     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                //     newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                //     newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                //     newCard.name = "损坏";
+                // }
+                // else if (cards[i][0].Cd == -2)
+                // {
+                //     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
+                //     newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                //     newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                //     newCard.name = "撕毁";
+                // }
             }
         } );
         // if (GameObject.Find("CharacterStatebar"))

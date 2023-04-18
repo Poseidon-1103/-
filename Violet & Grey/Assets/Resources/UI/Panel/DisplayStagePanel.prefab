@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba40521417e53d14294b523db666a16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyActionGroup: {fileID: 0}
 --- !u!114 &569938661471173112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +87,7 @@ MonoBehaviour:
   eventText: {fileID: 287727651390811712}
   winingCondision: {fileID: 5288142565524602601}
   backStory: {fileID: 6241393811979399954}
+  MyPlayer: {fileID: 0}
 --- !u!1 &3951770957743719465
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,16 +31,20 @@ public class DialogueManager : MonoBehaviour
     {
         imageDic["弗尔米奥"] = sprites[0];
         imageDic["卡斯"] = sprites[1];
+        imageDic["艾什"] = sprites[2];
+        imageDic["无"] = sprites[3];
         ReadText(dialogueDateFile);
     }
 
     //角色名字文本
-    public TMP_Text nameText;
+    public TMP_Text nameTextLeft;
+    public TMP_Text nameTextRight;
     //对话内容文本
     public TMP_Text dialogueText;
     
     private void Start()
     {
+        // ReadText(dialogueDateFile);
         // ShowDialogueRow();
     }
  
@@ -50,9 +54,24 @@ public class DialogueManager : MonoBehaviour
     }
 
     //更新文本
-    public void UpdateText(string name, string text)
+    public void UpdateText(string name, string text, string position)
     {
-        nameText.text = name;
+        
+        if (position == "左")
+        {
+            nameTextLeft.text = name;
+            nameTextRight.text = null;
+        }
+        else if (position == "右")
+        {
+            nameTextRight.text = name;
+            nameTextLeft.text = null;
+        }
+        if (name == "无")
+        {
+            nameTextLeft.text = null;
+            nameTextRight.text = null;
+        }
         dialogueText.text = text;
     }
 
@@ -63,11 +82,19 @@ public class DialogueManager : MonoBehaviour
         {
             characterLeft.sprite = imageDic[name];
             characterRight.sprite = null;
+            transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 1;
+            transform.GetComponentsInChildren<CanvasGroup>()[1].alpha = 0;
+            if (name == "无")
+            {
+                transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0;
+            }
         }
         else if (position == "右")
         {
             characterRight.sprite = imageDic[name];
             characterLeft.sprite = null;
+            transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0;
+            transform.GetComponentsInChildren<CanvasGroup>()[1].alpha = 1;
         }
     }
 
@@ -83,7 +110,7 @@ public class DialogueManager : MonoBehaviour
             string[] cells = row.Split(',');
             if (cells[0] == "#" && int.Parse(cells[1]) == dialogueIndex)
             {
-                UpdateText(cells[2],cells[4]);
+                UpdateText(cells[2],cells[4],cells[3]);
                 UpdateImage(cells[2],cells[3]);
                 dialogueIndex = int.Parse(cells[5]);
                 break;

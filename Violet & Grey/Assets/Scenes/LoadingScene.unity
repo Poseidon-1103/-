@@ -370,6 +370,16 @@ PrefabInstance:
       propertyPath: m_Type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592035, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592035, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6564246952673731666, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
         type: 3}
       propertyPath: ProgressBarSpeed

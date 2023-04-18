@@ -38,6 +38,10 @@ public class ResMgr : BaseManager<ResMgr>
         ResourceRequest r = Resources.LoadAsync<T>(name);
         yield return r;
 
+        // if (r == null)
+        // {
+        //     callback(null);
+        // }
         if (r.asset is GameObject)
             callback(GameObject.Instantiate(r.asset) as T);
         else
