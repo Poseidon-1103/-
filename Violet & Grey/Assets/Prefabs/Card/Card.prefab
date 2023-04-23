@@ -492,10 +492,9 @@ MonoBehaviour:
   CardCDTextDown: {fileID: 7345195818427824838}
   CardDescriptionTextDown: {fileID: 2495793747887439427}
   Sequence: {fileID: 634748847560482250}
-  IntroducingEffect: {fileID: 3644694242218779076, guid: c0c712ddf02c400408d9d798a412ce88,
+  IntroducingEffect: {fileID: 3644694242218779076, guid: 8be753eb0ebc54e43b033f2d309da798,
     type: 3}
-  IntroducingEffectPanel: {fileID: 3644694242218779076, guid: 8be753eb0ebc54e43b033f2d309da798,
-    type: 3}
+  IntroducingEffectPanel: {fileID: 1351209320669654640}
   cardList: []
 --- !u!1 &634748848501433519
 GameObject:
@@ -3610,69 +3609,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntroducingEffectPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_Spacing.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_Spacing.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_StartAxis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_CellSize.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_CellSize.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_Constraint
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_StartCorner
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_ChildAlignment
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_ConstraintCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8725553132249911671, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8725553132249911671, guid: 423d4c6349284a84480ede7ed807eeec,
-        type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 914996713032462411, guid: 423d4c6349284a84480ede7ed807eeec, type: 3}
-    - {fileID: 3231278216415956071, guid: 423d4c6349284a84480ede7ed807eeec, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423d4c6349284a84480ede7ed807eeec, type: 3}
 --- !u!224 &846365746371575238 stripped
 RectTransform:
@@ -3686,32 +3623,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 589995675058168705}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6542630032535617132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351209320669654640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 8
-  m_Spacing: 1
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!225 &8153610620006462198 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8725553132249911671, guid: 423d4c6349284a84480ede7ed807eeec,
