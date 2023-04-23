@@ -68,9 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
-  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -257,13 +256,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PL: {fileID: 2672350658761891233}
-  Blood: {fileID: 0}
+  Blood: {fileID: 7817992673750846890}
   BloodCube: {fileID: 521517020552738516, guid: de1ec96fbae7d3a438cd0261d646786d,
     type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
   row: 3
-  HPNum: {fileID: 0}
+  HPNum: {fileID: 5435243608492188770}
   State: []
   StateRound: 
   Armor: {fileID: 0}
@@ -411,6 +410,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8350609008618688286, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e01f30e541cf377479be371cd71465fb, type: 3}
 --- !u!1 &4157303328795322371 stripped
@@ -500,6 +504,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 235c6841b29d2c54391a2b961e7fbaa5, type: 3}
+--- !u!1 &7817992673750846890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3082168371621648430, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5096132111324501380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9210148736629212639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4136587447267577947, guid: 235c6841b29d2c54391a2b961e7fbaa5,

@@ -32,22 +32,18 @@ public class CamMove : MonoBehaviour
             {
                 
                 _CinemachineCameraOffset.m_Offset.x += moveAmount * Time.deltaTime;//就向右移动
-                Debug.Log("D");
             }
             if (_CinemachineCameraOffset.m_Offset.x > -board&&(Input.mousePosition.x < edgeSize || Input.GetKey(KeyCode.A)))
             {
                 _CinemachineCameraOffset.m_Offset.x -= moveAmount * Time.deltaTime;
-                Debug.Log("A");
             }
             if (_CinemachineCameraOffset.m_Offset.y < board&&(Input.mousePosition.y > Screen.height - edgeSize || Input.GetKey(KeyCode.W)))
             {
                 _CinemachineCameraOffset.m_Offset.y += moveAmount * Time.deltaTime;
-                Debug.Log("W");
             }
             if (_CinemachineCameraOffset.m_Offset.y > -board&&(Input.mousePosition.y < edgeSize || Input.GetKey(KeyCode.S)))
             {
                 _CinemachineCameraOffset.m_Offset.y -= moveAmount * Time.deltaTime;
-                Debug.Log("S");
             }
             //myCamera.transform.position = camFollowPos;//刷新摄像机位置
         }

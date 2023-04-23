@@ -308,7 +308,7 @@ public class EndRound : MonoBehaviour
                             }
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                NewRoad(playerCellPosition, 20, CanMoveRange);
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
                                 //读取攻击
                                 TagrtPL(recordList[i][j]);
                                 if (M == 1)
@@ -415,17 +415,17 @@ public class EndRound : MonoBehaviour
                             rangeMap.ClearAllTiles();
                             continue;
                         case "移动":
-                            
                             A.Clear();
                             if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Grounded"))
                             {
 
                                 continue;
                             }
+                            playerPosition = obj[PLnum].transform.position;
+                            playerCellPosition = grid.WorldToCell(playerPosition);
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                playerPosition = obj[PLnum].transform.position;
-                                playerCellPosition = grid.WorldToCell(playerPosition);
+                                //重新定位角色
                                 PLList.Clear();
                                 foreach (Transform child in Unit.transform)
                                 {
@@ -440,7 +440,7 @@ public class EndRound : MonoBehaviour
                                     PLList.Add(PLV3INT);
                                 }
                                 //重新打印移动范围
-                                NewRoad(playerCellPosition, 20, CanMoveRange);
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
@@ -454,7 +454,6 @@ public class EndRound : MonoBehaviour
                                     {
 
                                         Vector3Int endCellPos = new Vector3Int(pathlist[k].x, pathlist[k].y, 0);
-
                                         obj[PLnum].transform.position = grid.CellToWorld(endCellPos);
                                         A.Add(obj[PLnum].gameObject);
                                         playerPosition = obj[PLnum].transform.position;
@@ -484,12 +483,27 @@ public class EndRound : MonoBehaviour
                             }
                             while (recordList[i][0].Id / 10000 > 20)
                             {
-                                NewRoad(playerCellPosition, 20, CanMoveRange);
-                                NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
+                                //重新定位角色位置
+                                PLList.Clear();
+                                foreach (Transform child in Unit.transform)
+                                {
+                                    Vector3 PLV3 = child.position;
+                                    Vector3Int PLV3INT = grid.WorldToCell(PLV3);
+                                    PLList.Add(PLV3INT);
+                                }
+                                foreach (Transform child in Unit2.transform)
+                                {
+                                    Vector3 PLV3 = child.position;
+                                    Vector3Int PLV3INT = grid.WorldToCell(PLV3);
+                                    PLList.Add(PLV3INT);
+                                }
                                 for (int NodeRE = 0; NodeRE < 20; NodeRE++)
                                 {
                                     pathlist.Add(start);
                                 }
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
+                                NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
+                                yield return new WaitForSeconds(1);
                                 //找到最近的pl
                                 for (int k = 0;k< PLUnit.Count; k++)
                                 {
@@ -506,26 +520,28 @@ public class EndRound : MonoBehaviour
                                     {
                                         PLList2.Add(PLList[PLListNum]);
                                     }
-                                    List<AStarNode> pathlist2 = MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos, PLList2);//得到路径
+                                    GetPl2();
+                                    List<AStarNode> pathlist2 = MapManage.GetInstance().EnemyFindPath(playerCellPosition, playerendCellPos, "移动");//得到路径
                                     if (pathlist2.Count <= pathlist.Count)
                                         {
                                             EndPoint = playerendCellPos;
                                             pathlist = pathlist2;
                                         }
                                 }
-                                for (int k = 0; k < recordList[i][j].CardEffNum; k++)
+                                Debug.Log(pathlist.Count);
+                                for (int k = 0; k <= recordList[i][j].CardEffNum; k++)
                                 {
-                                    if (EndPoint == new Vector3Int(pathlist[k + 1].x, pathlist[k + 1].y, 0))
+                                    if(pathlist.Count-k<=0)
                                     {
                                         break;
                                     }
-                                    Vector3Int endCellPos = new Vector3Int(pathlist[k + 1].x, pathlist[k + 1].y, 0);
-
+                                    Vector3Int endCellPos = new Vector3Int(pathlist[k].x, pathlist[k].y, 0);
+                                    Debug.Log(endCellPos);
                                     obj[PLnum].transform.position = grid.CellToWorld(endCellPos);
-                                    A.Add(obj[PLnum].gameObject);
                                     //等待1s
                                     yield return new WaitForSeconds(1);
                                 }
+                                A.Add(obj[PLnum].gameObject);
                                 break;
                             }
                             AttackMap.ClearAllTiles();
@@ -576,7 +592,6 @@ public class EndRound : MonoBehaviour
     //角色点击地面
     public bool ClickRoad()
     {
-        
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
@@ -587,7 +602,7 @@ public class EndRound : MonoBehaviour
             {
                 Debug.Log(playerCellPosition+"he"+ endCellPos);
                 GetPl2();
-                NewRoad(playerCellPosition, 20, CanMoveRange);
+                NewRoad(playerCellPosition, 40, CanMoveRange);
                 pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos,"移动");
                 if(pathlist == null)
                 {
