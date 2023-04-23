@@ -79,6 +79,36 @@ public class MapManage : BaseManager<MapManage>
         }
         // Debug.Log(nodes[0,0].x);
     }
+    public List<AStarNode> EnemyFindPath(Vector3Int startPos, Vector3Int endPos, string Type)
+    {
+        List<AStarNode> path = new();
+        AStarNode start = new(0, 0, E_Node_type.Walk);
+        for (int NodeRE = 0; NodeRE < 20; NodeRE++)
+        {
+            path.Add(start);
+        }
+        List<AStarNode> path1 = FindPath(startPos, new(endPos.x + 1, endPos.y, 0), Type);
+        List<AStarNode> path2 = FindPath(startPos, new(endPos.x - 1, endPos.y, 0), Type);
+        List<AStarNode> path3 = FindPath(startPos, new(endPos.x, endPos.y + 1, 0), Type);
+        List<AStarNode> path4 = FindPath(startPos, new(endPos.x, endPos.y - 1, 0), Type);
+        if (path1 != null&&path.Count > path1.Count)
+        {
+            path = path1;
+        }
+        if (path2 != null && path.Count> path2.Count)
+        {
+            path = path2;
+        }
+        if (path3 != null && path.Count > path3.Count)
+        {
+            path = path3;
+        }
+        if (path4 != null && path.Count > path4.Count)
+        {
+            path = path4;
+        }
+        return path;
+    }
     // 找到路径
     public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos,string Type)
     {
@@ -126,7 +156,7 @@ public class MapManage : BaseManager<MapManage>
         if (start.type == E_Node_type.Stop ||
             end.type == E_Node_type.Stop)
         {
-            /*Debug.Log("开始或结束被阻挡");*/
+            Debug.Log("开始或结束被阻挡");
             return null;
         }
     
@@ -143,7 +173,7 @@ public class MapManage : BaseManager<MapManage>
     
         while (true)
         {
-            if(Type == "移动")
+            if (Type == "移动")
             {
                 //寻找周围点
                 //上 x y-1
@@ -197,16 +227,18 @@ public class MapManage : BaseManager<MapManage>
                 }
             }
             openList.RemoveAt(0);
-    
+
             //如果此点已经为终点 得到最终结果返回
             //如果不是终点 继续寻路
-            if (start == end)
+            
+            if (start== end)
             {
                 //是终点
                 List<AStarNode> path = new List<AStarNode>();
                 path.Add(end);
                 while (end.father != null)
                 {
+                   
                     path.Add(end.father);
                     end = end.father;
                 }
@@ -217,7 +249,6 @@ public class MapManage : BaseManager<MapManage>
             }
     
         }
-    
     }
 
     public List<AStarNode> FindPath(Vector3Int startPos, Vector3Int endPos, List<Vector3Int> PLList)
@@ -357,6 +388,7 @@ public class MapManage : BaseManager<MapManage>
         Vector3Int V3 = new(x, y, 0);
         if (rangeMap.GetTile(V3) != null)
         {
+          /*  Debug.Log(V3);*/
             // BoundsInt tilemapBounds = map.cellBounds;
             //边界判断
             if (x < tilemapBounds.xMin || x >= tilemapBounds.xMax ||
@@ -370,7 +402,7 @@ public class MapManage : BaseManager<MapManage>
                 closeList.Contains(node) ||
                 openList.Contains(node))
                 return;
-            // Debug.Log($"取点({node.x},{node.y},{node.type})");
+           /* Debug.Log($"取点({node.x},{node.y},{node.type})");*/
             //计算f值
             //f=g+h
             //记录父对象

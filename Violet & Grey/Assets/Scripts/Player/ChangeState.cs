@@ -215,9 +215,9 @@ public GameObject PL;
             HPNum.text = player.PlHP.ToString();
             float a = (float)player.PlHP;
             float b = (float)player.PlHPmax;
-            float c = Blood.transform.localScale.x - ((a / b) * 2);
-            Blood.transform.localScale = new Vector3((a / b) * 2, 2.0f, 1f);
-            Blood.transform.localPosition = new Vector3(Blood.transform.localPosition.x- c, 5f, -0.1f);
+            float c = (float)(Blood.transform.localScale.x*(1-a/b));
+            Blood.transform.localScale = new Vector3((float)((a / b) * Blood.transform.localScale.x), 8.3f, 0f);
+            Blood.transform.localPosition = new Vector3(Blood.transform.localPosition.x- c, -0.84f, 0f);
             //刷新血量
             //上buff
             //PLtools.GetInstance()
