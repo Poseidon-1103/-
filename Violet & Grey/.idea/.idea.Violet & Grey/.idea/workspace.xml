@@ -2,153 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Template_Character.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Template_Character.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/BarsFillAnimations.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/BarsFillAnimations.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/CharacterStat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/CharacterStat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/ClockSlider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/ClockSlider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/CursorSelector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/CursorSelector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/Gentleland.SteampunkUI.DemoAndExample.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/Gentleland.SteampunkUI.DemoAndExample.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/KeyFieldUnSelect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Scripts/KeyFieldUnSelect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/Arvo Font License.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/Arvo Font License.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/BebasNeue Font License.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/BebasNeue Font License.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/Environment Maps cc0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/Environment Maps cc0.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/RobotoSlab Font License.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/ThirdPartyLicenses/RobotoSlab Font License.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/OpenWindowsOnLoad.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/OpenWindowsOnLoad.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/PackageSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/PackageSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/WelcomeWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Editor/WelcomeWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Gentleland.Utils.SteampunkUI.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gentleland/SteampunkUI/Utils/Gentleland.Utils.SteampunkUI.asmdef.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData2.csv.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData2.csv.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.csv.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.csv.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Armor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Armor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Armor.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Armor.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/ArmorPenetration.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/ArmorPenetration.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/ArmorPenetration.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/ArmorPenetration.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Attackup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Attackup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Attackup.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Attackup.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Camouflage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Camouflage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Camouflage.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Camouflage.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Corrupted.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Corrupted.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Corrupted.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Corrupted.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Disable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Disable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Disable.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Disable.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Grounded.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Grounded.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Grounded.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Grounded.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Immune.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Immune.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Immune.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Immune.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Invincible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Invincible.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Invincible.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Invincible.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Poisoned.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Poisoned.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Poisoned.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Poisoned.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Stasis.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Stasis.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Stasis.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Stasis.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Stealthy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Stealthy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Stealthy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Stealthy.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/免疫.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/免疫.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/护甲.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/护甲.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/拉近.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/拉近.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/推远.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/推远.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/无敌.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/无敌.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/无限.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/无限.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/潜行.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/潜行.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/破防.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/破防.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/禁足.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/禁足.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/缴械.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/缴械.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/腐蚀.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/腐蚀.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/过热.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/过热.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/飞天.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/飞天.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/辑录Head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/辑录Head.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStageTestPanel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Yes.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Yes.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/CharacterStatebar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/CharacterStatebar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/RoundMsgPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/RoundMsgPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectToStartPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectToStartPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectToStartPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectToStartPanel.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/TitleInterfacePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/TitleInterfacePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/10111.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/10111.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/10111.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/10111.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/12.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/12.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/12.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/22.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/22.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/23.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/23.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/23.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/23.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/5格血.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/5格血.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/BloodCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/BloodCube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/BloodCube.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/BloodCube.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/Damage.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/Damage.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/PLBloodFrame.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/PLBloodFrame.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/好人血条.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/好人血条.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/短杠.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/短杠.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/enemy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/enemy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/enemy.csv.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/enemy.csv.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Test1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Test1-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ActionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ActionDisplay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapManage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CreatUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CreatUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Res/ResMgr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Res/ResMgr.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ClickRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ClickRound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +149,9 @@
       <workItem from="1681431788303" duration="14698000" />
       <workItem from="1681454383340" duration="24791000" />
       <workItem from="1681492290746" duration="1557000" />
+      <workItem from="1682144716457" duration="6953000" />
+      <workItem from="1682170163807" duration="1677000" />
+      <workItem from="1682240309626" duration="617000" />
     </task>
     <servers />
   </component>
