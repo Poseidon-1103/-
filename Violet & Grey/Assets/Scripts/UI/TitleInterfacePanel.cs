@@ -24,7 +24,7 @@ public class TitleInterfacePanel : BasePanel
                 UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "btnQuit":
-                Debug.Log("退出游戏");
+                Debug.Log("退出游戏"); 
                 break;
             case "btnArchives":
                 Debug.Log("打开档案馆");

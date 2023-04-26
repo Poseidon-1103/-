@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/CorruptedDescription.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/CorruptedDescription.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PoisonedDescription.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PoisonedDescription.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Grid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/State/Disarmed.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +159,9 @@
       <workItem from="1682144716457" duration="6953000" />
       <workItem from="1682170163807" duration="1677000" />
       <workItem from="1682240309626" duration="617000" />
+      <workItem from="1682263744409" duration="397000" />
+      <workItem from="1682340631082" duration="7290000" />
+      <workItem from="1682382898396" duration="667000" />
     </task>
     <servers />
   </component>

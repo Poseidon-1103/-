@@ -3609,6 +3609,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntroducingEffectPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6542630032535617132, guid: 423d4c6349284a84480ede7ed807eeec,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423d4c6349284a84480ede7ed807eeec, type: 3}
 --- !u!224 &846365746371575238 stripped
