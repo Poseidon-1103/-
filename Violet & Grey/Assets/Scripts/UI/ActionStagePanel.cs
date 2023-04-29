@@ -22,6 +22,9 @@ public class ActionStagePanel : BasePanel
             case "CharacterMessageBtn":
                 UIManager.GetInstance().ShowPanel<CharacterCardGroupPanel>("CharacterCardListPanel");
                 break;
+            case "Button":
+                //Ð´µã»÷ÊÂ¼þ
+                break;
         }
     }
     public void Init()
