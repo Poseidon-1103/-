@@ -929,6 +929,7 @@ MonoBehaviour:
   CanMoveRange: {fileID: 2018210946}
   grid: {fileID: 1553385794}
   tileBase: {fileID: 11400000, guid: 8fa384a5b50f4e54eabb29a640467ccd, type: 2}
+  SkipActionOrder: 0
 --- !u!4 &1087360777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5565642080910791221, guid: 012105e05a9978f478e34b43ce35903c,
@@ -59424,12 +59425,12 @@ PrefabInstance:
     - target: {fileID: 2672350658761891247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.048
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 2672350658761891247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.864
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 2672350658761891247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}

@@ -262,9 +262,8 @@ MonoBehaviour:
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
   row: 3
+  ArmorNum2: {fileID: 403268453127874668}
   HPNum: {fileID: 5435243608492188770}
-  State: []
-  StateRound: 
   Armor: {fileID: 0}
   Armornum: 0
 --- !u!61 &3401260861287144227
@@ -300,6 +299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2672350658761891247}
     m_Modifications:
+    - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7015969630880027053, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
       propertyPath: m_Name
@@ -417,6 +421,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e01f30e541cf377479be371cd71465fb, type: 3}
+--- !u!114 &403268453127874668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 16560126418366755, guid: e01f30e541cf377479be371cd71465fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 406001117002258767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4157303328795322371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4329035133579440460, guid: e01f30e541cf377479be371cd71465fb,

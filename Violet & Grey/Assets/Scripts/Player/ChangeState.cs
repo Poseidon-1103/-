@@ -12,9 +12,11 @@ public GameObject PL;
     public GameObject ArmorList;
     public int row;
     public Player player;
+    public TextMeshProUGUI ArmorNum2;
     public TextMeshProUGUI HPNum;
-    public List<GameObject> State = new();
-    public List<int> StateRound = new();
+    List<GameObject> State = new();
+    List<int> StateRound = new();
+    List<int> ArmorRound = new();
     public GameObject Armor;
     public int Armornum;
    
@@ -23,6 +25,7 @@ public GameObject PL;
     {
         for (int i =0;i<10;i++)
         {
+            ArmorRound.Add(0);
             StateRound.Add(0);
             State.Add(null);
         }
@@ -55,10 +58,14 @@ public GameObject PL;
 
     public void ChangeBlood(int num)
     {
+        Debug.Log("伤害为"+ num);
+        Debug.Log("护甲" + Armornum);
         for (int i = 0; i < State.Count; i++)
         {
+            
             if (State[i]!=null)
             {
+                Debug.Log("状态" + State[i].name);
                 if (State[i].name == "Disarmed")
                 {
                     ChangeBlood(num, 0);
@@ -68,13 +75,15 @@ public GameObject PL;
                 {
                     num++;
                 }
-                if (Armor != null)
-                {
-                    num = num - Armornum;
-                }
+                
             }
             
         }
+        if (Armornum >0)
+        {
+            num = num - Armornum;
+        }
+        Debug.Log("扣血" + num);
         player.PlHP = player.PlHP - num;
         player.Type = 1;
     }
@@ -92,6 +101,7 @@ public GameObject PL;
                 }
             }
         }
+        Debug.Log("扣血" + num);
         player.PlHP = player.PlHP - num;
         player.Type = 1;
     }
@@ -113,14 +123,33 @@ public GameObject PL;
     {
         if (num == 0)
         {
-            GameObject obj = (GameObject)Instantiate(Resources.Load("State/" + Type), ArmorList.transform);
-            obj.name = Type;
-            Armor = obj;
-            Armornum = Armornum2;
+            if (Armornum == 0)
+            {
+                GameObject obj = (GameObject)Instantiate(Resources.Load("State/" + Type), ArmorList.transform);
+                obj.name = Type;
+                Armor = obj;
+            }
+            for (int i=0;i< ArmorRound.Count;i++)
+            {
+                    if (ArmorRound[i] == 0)
+                    {
+                        ArmorRound[i] = Armornum2 * 10 + 2;
+                        break;
+                    } 
+            }
+            Armornum += Armornum2;
+            ArmorNum2.text = Armornum.ToString();
+            Debug.Log("护甲为"+Armornum);
         }
         if (num == 1)
         {
-            Destroy(Armor);
+            Armornum = Armornum- Armornum2;
+            ArmorNum2.text = Armornum.ToString();
+            if (Armornum==0)
+            {
+                Destroy(Armor);
+                ArmorNum2.text = null;
+            }
         }
     }
     public bool ConfirmState(string Type)
@@ -144,18 +173,22 @@ public GameObject PL;
     /// <param name="num"></param>
     public bool ChangeStateList(string Type, int num)
     {
+        GameObject obj;
         if (num == 0 && !ConfirmState("Immune"))
         {
-            GameObject obj = (GameObject)Instantiate(Resources.Load("State/" + Type), StateList.transform);
+            if (!ConfirmState(Type))
+            {
+                obj = (GameObject)Instantiate(Resources.Load("State/" + Type), StateList.transform);
                 Debug.Log("添加" + Type);
                 obj.name = Type;
-            for(int i=0;i< StateRound.Count; i++)
-            {
-                if (StateRound[i]==0)
+                for (int i = 0; i < StateRound.Count; i++)
                 {
-                    StateRound[i] = 2;
-                    State[i] = obj;
-                    break;
+                    if (StateRound[i] == 0)
+                    {
+                        StateRound[i] = 2;
+                        State[i] = obj;
+                        break;
+                    }
                 }
             }
         }
@@ -191,10 +224,12 @@ public GameObject PL;
                     b = 1;
                     ChangeBlood(1);
                 }
+                //持续一回合的状态删除
                 if (StateRound[i] == 1)
                 {
                     ChangeStateList(State[i].name, 1);
                 }
+                //新状态等待一回合
                 if (StateRound[i] == 2)
                 {
                     if (State[i].name== "Poisoned"|| State[i].name == "Corrupted")
@@ -203,8 +238,21 @@ public GameObject PL;
                     }
                     StateRound[i] = 1;
                 }
+            } 
+        }
+        for (int i = 0; i < ArmorRound.Count; i++)
+        {
+            if (State[i] != null)
+            {
+                if (ArmorRound[i] % 10 == 1)
+                {
+                    ChangeArmor("护甲", 1, ArmorRound[i] / 10);
+                }
+                if (ArmorRound[i] % 10 == 2)
+                {
+                    ArmorRound[i] = ArmorRound[i] - 1;
+                }
             }
-           
         }
     }
     // Update is called once per frame

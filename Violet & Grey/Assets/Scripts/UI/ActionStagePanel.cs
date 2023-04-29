@@ -22,12 +22,15 @@ public class ActionStagePanel : BasePanel
             case "CharacterMessageBtn":
                 UIManager.GetInstance().ShowPanel<CharacterCardGroupPanel>("CharacterCardListPanel");
                 break;
+            case "SkipAction":
+                GameObject.Find("Confirm").GetComponent<EndRound>().SkipActionOrder = 1;
+                break;
         }
     }
     public void Init()
     {
-        //²»´«ÈëĞĞ¶¯Êı¾İ£¬Ö»´òÓ¡µĞÈËĞĞ¶¯
-        Debug.Log("Õ¹Ê¾Ãæ°å³õÊ¼»¯Êı¾İ");
+        //ä¸ä¼ å…¥è¡ŒåŠ¨æ•°æ®ï¼Œåªæ‰“å°æ•Œäººè¡ŒåŠ¨
+        Debug.Log("å±•ç¤ºé¢æ¿åˆå§‹åŒ–æ•°æ®");
         GameObject ActionsList = GameObject.Find("ActionsList");
         ActionsList.transform.GetComponent<RecordActionList>().Record(null,"horizontal");
     }
