@@ -107,11 +107,11 @@ public class UIManager : BaseManager<UIManager>
             //设置面板的父对象 设置相对位置和大小
             obj.transform.SetParent(father); 
             
-            obj.transform.localPosition = Vector3.zero;
+            // obj.transform.localPosition = Vector3.zero;
             obj.transform.localScale = Vector3.one;
-            
-            (obj.transform as RectTransform).offsetMax = Vector2.zero;
-            (obj.transform as RectTransform).offsetMin = Vector2.zero;
+            //
+            // (obj.transform as RectTransform).offsetMax = Vector2.zero;
+            // (obj.transform as RectTransform).offsetMin = Vector2.zero;
 
             //得到预制体身上的面板脚本
             T panel = obj.GetComponent<T>();
