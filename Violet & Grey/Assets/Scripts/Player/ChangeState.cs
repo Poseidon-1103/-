@@ -79,7 +79,7 @@ public GameObject PL;
             }
             
         }
-        if (Armornum >0)
+        if (Armornum >0&& num - Armornum>=0)
         {
             num = num - Armornum;
         }
@@ -108,13 +108,22 @@ public GameObject PL;
 
     public void cure(int num)
     {
+        Debug.Log("??");
         if(ConfirmState("Poisoned"))
         {
             ChangeStateList("Poisoned", 1);
         }
         else if(player.PlHPmax>= player.PlHP + num)
         {
-            ChangeStateList("Corrupted",1);
+            Debug.Log("??2");
+            ChangeStateList("Corrupted", 1);
+            player.PlHP = player.PlHPmax;
+            player.Type = 1;
+        }
+        else if (player.PlHPmax < player.PlHP + num)
+        {
+            Debug.Log("?3");
+            ChangeStateList("Corrupted", 1);
             player.PlHP = player.PlHP + num;
             player.Type = 1;
         }
@@ -133,7 +142,7 @@ public GameObject PL;
             {
                     if (ArmorRound[i] == 0)
                     {
-                        ArmorRound[i] = Armornum2 * 10 + 2;
+                        ArmorRound[i] = Armornum2 * 10 + 1;
                         break;
                     } 
             }
@@ -240,21 +249,29 @@ public GameObject PL;
                 }
             } 
         }
+    }
+
+    public void TurnStart2()
+    {
         for (int i = 0; i < ArmorRound.Count; i++)
         {
-            if (State[i] != null)
+            if (ArmorRound[i] > 0)
             {
                 if (ArmorRound[i] % 10 == 1)
                 {
+                    Debug.Log("????");
                     ChangeArmor("护甲", 1, ArmorRound[i] / 10);
+                    ArmorRound[i] = 0;
                 }
                 if (ArmorRound[i] % 10 == 2)
                 {
+                    Debug.Log("????123");
                     ArmorRound[i] = ArmorRound[i] - 1;
                 }
             }
         }
     }
+
     // Update is called once per frame
     void Update()
     {

@@ -90,13 +90,14 @@ public class ShowPLcard : MonoBehaviour
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
                     newCard.name = (cards[i][0].Id).ToString();
                 }
-                else if(cards[i][0].Cd > 0)
+                /*else if(cards[i][0].Cd > 0)
                 {
                     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
                     newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
+
                     newCard.name = "冷却中";
-                }
+                }*/
                 // else if(cards[i][0].Cd == -1)
                 // {
                 //     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
