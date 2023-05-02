@@ -279,11 +279,7 @@ public class EndRound : MonoBehaviour
                                  }
                                  A[Q].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
                              }*/
-                            for (int Q = 0; Q < A.Count; Q++)
-                            {
-                                yield return new WaitForSeconds(1);
-                                A.Clear();
-                            }
+                            
                             while (recordList[i][0].Id / 10000 < 20)
                             {
                                 Debug.Log(GameObject.Find("SkipAction").name);
@@ -311,7 +307,35 @@ public class EndRound : MonoBehaviour
                                 }
                                 break;
                             }
-                            continue;
+                            while (recordList[i][0].Id / 10000 > 20)
+                            {
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
+                                TagrtPL(recordList[i][j]);
+                                for (int k = 0; k < EnemyUnit.Count; k++)
+                                {
+                                    Vector3Int endCellPos = grid.WorldToCell(EnemyUnit[k].gameObject.transform.position);
+                                    if (rangeMap.GetTile(endCellPos) && EnemyUnit[k].GetComponent<ChangeState>().player.PlHP< EnemyUnit[k].GetComponent<ChangeState>().player.PlHPmax)
+                                    {
+                                        Debug.Log(EnemyUnit[k].GetComponent<ChangeState>().player.Plname);
+                                        TTK(endCellPos);
+                                        yield return new WaitForSeconds(2);
+                                        AttackType.Clear();
+                                        break;
+                                    }
+                                }
+
+                                for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
+                                {
+                                    if (AttackMap.GetTile(PLList[PL]) != null && EnemyUnit[PL].transform != null)
+                                    {
+                                        Debug.Log("开始治疗");
+                                        A.Add(EnemyUnit[PL]);
+                                        EnemyUnit[PL].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                                    }
+                                }
+                                break;
+                            }
+                                continue;
                         case "状态":
                             for (int Q = 0; Q < A.Count; Q++)
                             {
@@ -330,6 +354,8 @@ public class EndRound : MonoBehaviour
                                 }
                                
                             }
+                            AttackMap.ClearAllTiles();
+                            rangeMap.ClearAllTiles();
                             break;
                         case "自身":
                             A.Clear();
@@ -513,7 +539,7 @@ public class EndRound : MonoBehaviour
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                              
                                 if (SkipActionOrder == 1)
                                 {
                                     GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
@@ -670,6 +696,7 @@ public class EndRound : MonoBehaviour
     {
         if (SkipActionOrder==1)
         {
+            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
         else if (Input.GetMouseButtonDown(0))
@@ -700,6 +727,7 @@ public class EndRound : MonoBehaviour
     {
         if (SkipActionOrder == 1)
         {
+            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
         else if (Input.GetMouseButtonDown(0))
