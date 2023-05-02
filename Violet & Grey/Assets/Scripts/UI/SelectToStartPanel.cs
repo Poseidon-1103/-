@@ -20,16 +20,18 @@ public class SelectToStartPanel : BasePanel
     {
         switch (btnName)
         {
-            case "StartNewGame":
-                Debug.Log("开始新游戏");
+            case "LoadLevel":
+                // Debug.Log("读取关卡");
                 UIManager.GetInstance().HidePanel("SelectToStartPanel");
                 MMSceneLoadingManager.LoadScene("MapText", "LoadingScene");
                 break;
-            case "LoadGame":
+            case "Archives":
                 Debug.Log("读取存档");
                 break;
-            case "ReturnToHeaderScreen ":
+            case "ReturnToTitle":
                 Debug.Log("返回标题页面");
+                UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
                 break;
         }
     }

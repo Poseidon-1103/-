@@ -322,10 +322,11 @@ public class EndRound : MonoBehaviour
 
                                 //点击攻击格
                                 yield return new WaitUntil(ClickRoad2);
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                                
                                 yield return new WaitForSeconds(2);
                                 if (SkipActionOrder==1)
                                 {
+                                    GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                     SkipActionOrder = 0;
                                     break;
                                 }
@@ -457,7 +458,7 @@ public class EndRound : MonoBehaviour
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                                
                                 if (SkipActionOrder == 1)
                                 {
                                     SkipActionOrder = 0;
@@ -612,8 +613,10 @@ public class EndRound : MonoBehaviour
     {
         if (SkipActionOrder==1)
         {
+            
             return true;
         }
+        
         else if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标

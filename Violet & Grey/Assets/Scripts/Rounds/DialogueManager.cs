@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// 角色立绘
     /// </summary>
-    public SpriteRenderer characterLeft;
-    public SpriteRenderer characterRight;
+    public Image characterLeft;
+    public Image characterRight;
     //角色立绘列表
     public List<Sprite> sprites = new List<Sprite>();
 
@@ -80,19 +81,26 @@ public class DialogueManager : MonoBehaviour
     {
         if (position == "左")
         {
+            characterLeft.color = new Color(1,1,1,1);
             characterLeft.sprite = imageDic[name];
             characterRight.sprite = null;
+            characterRight.color = new Color(1,1,1,0);
+            
             transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 1;
             transform.GetComponentsInChildren<CanvasGroup>()[1].alpha = 0;
             if (name == "无")
             {
                 transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0;
+                characterLeft.color = new Color(1,1,1,0);
+                characterRight.color = new Color(1,1,1,0);
             }
         }
         else if (position == "右")
         {
+            characterRight.color = new Color(1,1,1,1);
             characterRight.sprite = imageDic[name];
             characterLeft.sprite = null;
+            characterLeft.color = new Color(1,1,1,0);
             transform.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0;
             transform.GetComponentsInChildren<CanvasGroup>()[1].alpha = 1;
         }

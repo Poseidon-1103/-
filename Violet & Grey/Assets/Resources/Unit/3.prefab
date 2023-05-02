@@ -163,8 +163,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8843fdb6fb155e2499f17aa399ff4ee1, type: 3}
-  m_Color: {r: 0.49988413, g: 0.3816601, b: 0.7830189, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0c9071bf09e128c499daa2cd61924782, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -187,7 +187,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013515949, y: 2.6678002}
+  m_Offset: {x: 0.15956247, y: 2.6678002}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -198,7 +198,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.490759, y: 4.694546}
+  m_Size: {x: 2.8071806, y: 4.694546}
   m_EdgeRadius: 0
 --- !u!114 &2665715624729788720
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
     type: 3}
   cardPool: {fileID: 0}
   healthBar: {fileID: 0}
-  ResourcesDate: CardData
+  ResourcesDate: CardData1
 --- !u!1 &4486871074406321052
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,8 +392,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
+  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -466,6 +467,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2672350658761891247}
     m_Modifications:
+    - target: {fileID: 16560126418366755, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
+    - target: {fileID: 16560126418366755, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+        type: 2}
     - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
       propertyPath: m_RootOrder
@@ -585,6 +598,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667332126768124481, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667332126768124481, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 8350609008618688286, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}

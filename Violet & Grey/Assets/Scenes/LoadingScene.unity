@@ -360,16 +360,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2743689421800781249, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca2bc4ceb01b70b4783e50dc93dca721,
+        type: 3}
     - target: {fileID: 3429975677503211695, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
         type: 3}
       propertyPath: m_Name
       value: LoadPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592034, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 950.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592034, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592034, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -633.01
       objectReference: {fileID: 0}
     - target: {fileID: 4489790299967592035, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
         type: 3}
       propertyPath: m_Type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4489790299967592035, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6663f847ab8f7d3408c0a984dc24262c,
+        type: 3}
     - target: {fileID: 4489790299967592035, guid: f105ed75e90f3ea49b19d5ad9a7dfca6,
         type: 3}
       propertyPath: m_FillAmount
