@@ -65,10 +65,10 @@ public class EndRound : MonoBehaviour
         {
                 Unit10.Add(child.gameObject);
         }
-        foreach (Transform child in Unit3.transform)
+        /*foreach (Transform child in Unit3.transform)
         {
             Unit10.Add(child.gameObject);
-        }
+        }*/
         for (int i = 0; i < Unit10.Count; i++)  //外循环是循环的次数
         {
             for (int j = Unit10.Count - 1; j > i; j--)  //内循环是 外循环一次比较的次数
@@ -104,10 +104,10 @@ public class EndRound : MonoBehaviour
                     //关闭执行阶段界面
                     UIManager.GetInstance().HidePanel("ActionStagePanel");
                     gameObject.AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
-                    if (int.Parse(turnnumber.text)==5)
+                    /*if (int.Parse(turnnumber.text)==5)
                     {
                         Unit3.GetComponent<CreatUnit>().enabled = true;
-                    }
+                    }*/
                     break;
                 //选卡阶段回合结束
                 case 1:
@@ -342,9 +342,10 @@ public class EndRound : MonoBehaviour
                                 
                                 if (recordList[i][j].CardEffType != "Armor")
                                 {
-                                    Debug.Log(recordList[i][j].CardEffType);
+                                    Debug.Log("123123+"+recordList[i][j].CardEffType);
                                     if (!A[Q].GetComponent<ChangeState>().ConfirmState(recordList[i][j].CardEffType))
                                     {
+                                        
                                         A[Q].GetComponent<ChangeState>().ChangeStateList(recordList[i][j].CardEffType, 0);
                                     }
                                 }
@@ -885,12 +886,12 @@ public class EndRound : MonoBehaviour
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
         }
-        foreach (Transform child in Unit3.transform)
+        /*foreach (Transform child in Unit3.transform)
         {
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
-        }
+        }*/
     }
     public void GetPL()
     {
@@ -920,14 +921,14 @@ public class EndRound : MonoBehaviour
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
         }
-        foreach (Transform child in Unit3.transform)
+        /*foreach (Transform child in Unit3.transform)
         {
             PLUnit.Add(child.gameObject);
             AllUnit.Add(child.gameObject);
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
-        }
+        }*/
     }
 
     

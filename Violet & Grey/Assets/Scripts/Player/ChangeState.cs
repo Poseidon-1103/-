@@ -125,7 +125,7 @@ public GameObject PL;
         else if (player.PlHPmax < player.PlHP + num)
         {
             ChangeStateList("Corrupted", 1);
-            player.PlHP = player.PlHP;
+            player.PlHP = player.PlHPmax;
             player.Type = 1;
         }
         Debug.Log("治疗之后当前血量" + player.PlHP);

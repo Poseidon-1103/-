@@ -261,7 +261,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
-  row: 3
+  row: 10
   ArmorNum2: {fileID: 403268453127874668}
   HPNum: {fileID: 8554411038779064831}
   Armor: {fileID: 0}
@@ -517,6 +517,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8498766464852666675, guid: 235c6841b29d2c54391a2b961e7fbaa5,
         type: 3}

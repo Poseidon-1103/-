@@ -37,6 +37,10 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
                 AddListV3(AttackType, 1, 1, 0);
                 AddListV3(AttackType, 3, 3, 0);
                 break;*/
+            case "自身":
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
             case "直线":
                 for (int i = 0; i < int.Parse(card.CardEffType.Substring(2, 1)); i++)
                 {
