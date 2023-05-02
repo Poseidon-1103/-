@@ -88,10 +88,10 @@ public class EndRound : MonoBehaviour
                 case 0:
                     Debug.Log(RoundType);
                         GetPL();
-                    for (int i = 0; i < AllUnit.Count; i++)
+                    /*for (int i = 0; i < AllUnit.Count; i++)
                     {
                         AllUnit[i].GetComponent<ChangeState>().TurnStart();
-                    }
+                    }*/
                     /*Unit.BroadcastMessage("TurnUpdate4");*/
                     ActionsList.GetComponent<RecordActionList>().TurnUpdate2();
                     RoundType = 1;
@@ -201,9 +201,10 @@ public class EndRound : MonoBehaviour
             //进行行动
             for (int PLnum = 0; PLnum < obj.Count; PLnum++)
             {
+
                 Debug.Log("objcount = "+obj.Count);
                 Debug.Log("plum ="+PLnum);
-                
+                obj[PLnum].GetComponent<ChangeState>().TurnStart2();
                 UIManager.GetInstance().ShowPanel<ActionStagePanel>("ActionStagePanel",E_UI_Layer.Mid, panel =>
                 {
                     panel.Init();
@@ -253,6 +254,10 @@ public class EndRound : MonoBehaviour
                     //     Debug.Log("i="+i);
                     //     GameObject.Find("HalfCard").GetComponent<ActionDisplay>().cardList = recordList[i];
                     // });
+                    if (obj[PLnum].transform.position==null)
+                    {
+                        continue;
+                    }
                     playerPosition = obj[PLnum].transform.position;
                     playerCellPosition = grid.WorldToCell(playerPosition);
                     if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Stasis"))
@@ -263,11 +268,74 @@ public class EndRound : MonoBehaviour
                     switch (recordList[i][j].CardEffect)
                     {
                         case "治疗":
-                            for (int Q = 0; Q < A.Count; Q++)
+                            /* for (int Q = 0; Q < A.Count; Q++)
+                             {
+                                 yield return new WaitForSeconds(1);
+                                 A.Clear();
+                                 //Disable不能攻击
+                                 if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Disable"))
+                                 {
+                                     continue;
+                                 }
+                                 A[Q].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                             }*/
+                            
+                            while (recordList[i][0].Id / 10000 < 20)
                             {
-                                A[Q].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                                Debug.Log(GameObject.Find("SkipAction").name);
+                                GameObject.Find("SkipAction").transform.position = new(17, 15, 0);
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
+                                TagrtPL(recordList[i][j]);
+                                //点击攻击格
+                                yield return new WaitUntil(ClickRoad2);
+
+                                yield return new WaitForSeconds(2);
+                                if (SkipActionOrder == 1)
+                                {
+                                    GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                                    SkipActionOrder = 0;
+                                    break;
+                                }
+                                for (int PL = 0; PL < AllUnit.Count - EnemyUnit.Count; PL++)
+                                {
+                                    if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null && PLUnit[PL].transform != null)
+                                    {
+                                        Debug.Log("开始治疗");
+                                        A.Add(PLUnit[PL]);
+                                        PLUnit[PL].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                                    }
+                                }
+                                break;
                             }
-                            break;
+                            while (recordList[i][0].Id / 10000 > 20)
+                            {
+                                NewRoad(playerCellPosition, 40, CanMoveRange);
+                                TagrtPL(recordList[i][j]);
+                                for (int k = 0; k < EnemyUnit.Count; k++)
+                                {
+                                    Vector3Int endCellPos = grid.WorldToCell(EnemyUnit[k].gameObject.transform.position);
+                                    if (rangeMap.GetTile(endCellPos) && EnemyUnit[k].GetComponent<ChangeState>().player.PlHP< EnemyUnit[k].GetComponent<ChangeState>().player.PlHPmax)
+                                    {
+                                        Debug.Log(EnemyUnit[k].GetComponent<ChangeState>().player.Plname);
+                                        TTK(endCellPos);
+                                        yield return new WaitForSeconds(2);
+                                        AttackType.Clear();
+                                        break;
+                                    }
+                                }
+
+                                for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
+                                {
+                                    if (AttackMap.GetTile(PLList[PL]) != null && EnemyUnit[PL].transform != null)
+                                    {
+                                        Debug.Log("开始治疗");
+                                        A.Add(EnemyUnit[PL]);
+                                        EnemyUnit[PL].GetComponent<ChangeState>().cure(recordList[i][j].CardEffNum);
+                                    }
+                                }
+                                break;
+                            }
+                                continue;
                         case "状态":
                             for (int Q = 0; Q < A.Count; Q++)
                             {
@@ -286,6 +354,8 @@ public class EndRound : MonoBehaviour
                                 }
                                
                             }
+                            AttackMap.ClearAllTiles();
+                            rangeMap.ClearAllTiles();
                             break;
                         case "自身":
                             A.Clear();
@@ -324,6 +394,7 @@ public class EndRound : MonoBehaviour
                                 yield return new WaitUntil(ClickRoad2);
                                 
                                 yield return new WaitForSeconds(2);
+
                                 if (SkipActionOrder==1)
                                 {
                                     GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
@@ -333,14 +404,24 @@ public class EndRound : MonoBehaviour
                                 //结算攻击
                                 for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
                                 {
-                                    if (AttackMap.GetTile(PLList[PL]) != null)
+                                    if (AttackMap.GetTile(PLList[PL]) != null&& EnemyUnit[PL].transform!=null)
                                     {
                                         A.Add(EnemyUnit[PL]);
                                         if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Invincible"))
                                         {
                                             continue;
                                         }
-                                        EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
+                                        string aa = GetLastStr(recordList[i][j].CardEffType, 2);
+                                        if (aa == "穿刺")
+                                        {
+                                            Debug.Log("穿刺");
+                                            EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum, 0);
+                                        }
+                                        else
+                                        {
+                                            EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
+                                        }
+                             
                                     }
                                 }
 
@@ -393,7 +474,7 @@ public class EndRound : MonoBehaviour
                                         {
                                             if (PLGOT == PLUnit[PL])
                                             {
-                                                if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null)
+                                                if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null&& PLUnit[PL].transform != null)
                                                 {
                                                     yield return new WaitForSeconds(1);
                                                     A.Add(PLUnit[PL]);
@@ -458,9 +539,10 @@ public class EndRound : MonoBehaviour
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
-                                
+                              
                                 if (SkipActionOrder == 1)
                                 {
+                                    GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                     SkipActionOrder = 0;
                                     break;
                                 }
@@ -569,7 +651,8 @@ public class EndRound : MonoBehaviour
                     characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.PlHP.ToString();
                     characterStatebar.transform.Find("CharacterHPTotal").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.PlHPmax.ToString();
                 }
-                
+                Debug.Log("改单位回合结束");
+                obj[PLnum].GetComponent<ChangeState>().TurnStart();
             }
         }
         Vector3 EndXY = new(0f, 1000f, 0f);
@@ -613,10 +696,9 @@ public class EndRound : MonoBehaviour
     {
         if (SkipActionOrder==1)
         {
-            
+            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
-        
         else if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
@@ -645,6 +727,7 @@ public class EndRound : MonoBehaviour
     {
         if (SkipActionOrder == 1)
         {
+            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
         else if (Input.GetMouseButtonDown(0))
@@ -730,7 +813,11 @@ public class EndRound : MonoBehaviour
     public void TagrtPL(Card card)
     {
         Debug.Log("aaaaaaa" + card.CardEffType.Substring(0, 2));
-        if (card.CardEffType.Substring(0, 2) == "近战"|| card.CardEffType.Substring(0, 2) == "直线")
+        if (card.CardEffType.Substring(0, 2) == "自身")
+        {
+            NewRoad2(playerCellPosition, 0, rangeMap);
+        }
+        if (card.CardEffType.Substring(0, 2) == "近战"|| card.CardEffType.Substring(0, 2) == "直线" || card.CardEffType.Substring(0, 2) == "穿刺")
         {
             NewRoad2(playerCellPosition, 1, rangeMap);
         }
@@ -745,11 +832,9 @@ public class EndRound : MonoBehaviour
     public void TTK(Vector3Int endCellPos)
     {
         Vector3Int Direction = playerCellPosition - endCellPos;
-        Vector3Int Direction2 = AttackType[AttackType.Count - 1];
         List<Vector3Int> AttackType2 = new();
         for (int i = 0; i < AttackType.Count - 1; i++)
         {
-                
                 if (Direction.x < 0)
                 {
                     AddListV3(AttackType2, AttackType[i].x, AttackType[i].y, 0);
@@ -765,7 +850,10 @@ public class EndRound : MonoBehaviour
                 else if (Direction.y > 0)
                 {
                     AddListV3(AttackType2, AttackType[i].y, -AttackType[i].x, 0);
-                }
+                }else if (Direction.x == 0)
+            {
+                AddListV3(AttackType2, AttackType[i].x, AttackType[i].y, 0);
+            }
         }
         if (rangeMap.GetTile(endCellPos) != null)
         {

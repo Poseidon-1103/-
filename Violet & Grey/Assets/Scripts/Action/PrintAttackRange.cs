@@ -53,15 +53,70 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
                 AddListV3(AttackType, 1, 1, 0);
                 break;*/
             case "远程":
-                string aa = card.CardEffType.Substring(3, 2);
-                if (aa.Substring(0, 2) == "范围")
+                if (card.CardEffType.Length>5)
                 {
-                    AddListV3(AttackType, 0, 0, 0);
-                    AddListV3(AttackType, 1, 0, 0);
-                    AddListV3(AttackType, -1, 0, 0);
-                    AddListV3(AttackType, 0, -1, 0);
-                    AddListV3(AttackType, 0, 1, 0);
-                    AddListV3(AttackType, 3, 3, 0);
+                    string aa = card.CardEffType.Substring(3, 2);
+                    int bb = int.Parse( card.CardEffType.Substring(5, 1));
+                    Debug.Log(bb);
+                    if (aa.Substring(0, 2) == "范围")
+                    {
+                        if (bb == 2)
+                        {
+                            AddListV3(AttackType, 0, 0, 0);
+                            AddListV3(AttackType, 1, 0, 0);
+                            AddListV3(AttackType, -1, 0, 0);
+                            AddListV3(AttackType, 0, -1, 0);
+                            AddListV3(AttackType, 0, 1, 0);
+                            AddListV3(AttackType, 3, 3, 0);
+                        }
+                        if (bb==3)
+                        {
+                            AddListV3(AttackType, 0, 0, 0);
+                            AddListV3(AttackType, 1, 0, 0);
+                            AddListV3(AttackType, -1, 0, 0);
+                            AddListV3(AttackType, 0, -1, 0);
+                            AddListV3(AttackType, 0, 1, 0);
+                            AddListV3(AttackType, 2, 0, 0);
+                            AddListV3(AttackType, 0, 2, 0);
+                            AddListV3(AttackType, -2, 0, 0);
+                            AddListV3(AttackType, 0, -2, 0);
+                            AddListV3(AttackType, 1, 1, 0);
+                            AddListV3(AttackType, 1, -1, 0);
+                            AddListV3(AttackType, -1, 1, 0);
+                            AddListV3(AttackType, -1, -1, 0);
+                            AddListV3(AttackType, 5, 5, 0);
+                        }
+                        if (bb == 4)
+                        {
+                            AddListV3(AttackType, 0, 0, 0);
+                            AddListV3(AttackType, 1, 0, 0);
+                            AddListV3(AttackType, -1, 0, 0);
+                            AddListV3(AttackType, 0, -1, 0);
+                            AddListV3(AttackType, 0, 1, 0);
+                            AddListV3(AttackType, 2, 0, 0);
+                            AddListV3(AttackType, 0, 2, 0);
+                            AddListV3(AttackType, -2, 0, 0);
+                            AddListV3(AttackType, 0, -2, 0);
+                            AddListV3(AttackType, 1, 1, 0);
+                            AddListV3(AttackType, 1, -1, 0);
+                            AddListV3(AttackType, -1, 1, 0);
+                            AddListV3(AttackType, -1, -1, 0);
+                            AddListV3(AttackType, 3, 0, 0);
+                            AddListV3(AttackType, 0, 3, 0);
+                            AddListV3(AttackType, -3, 0, 0);
+                            AddListV3(AttackType, 0, -3, 0);
+                            AddListV3(AttackType, 2, 1, 0);
+                            AddListV3(AttackType, 2, -1, 0);
+                            AddListV3(AttackType, -2, 1, 0);
+                            AddListV3(AttackType, -2, -1, 0);
+                            AddListV3(AttackType, 1, 2, 0);
+                            AddListV3(AttackType, 1, -2, 0);
+                            AddListV3(AttackType, -1, 2, 0);
+                            AddListV3(AttackType, -1, -2, 0);
+                            AddListV3(AttackType, 7, 7, 0);
+                        }
+                    }
+                    
                 }
                 else
                 {

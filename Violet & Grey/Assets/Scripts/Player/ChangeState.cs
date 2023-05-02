@@ -79,7 +79,7 @@ public GameObject PL;
             }
             
         }
-        if (Armornum >0)
+        if (Armornum >0&& num - Armornum>=0)
         {
             num = num - Armornum;
         }
@@ -108,16 +108,27 @@ public GameObject PL;
 
     public void cure(int num)
     {
+        Debug.Log("血量上限" + player.PlHPmax);
+        Debug.Log("当前血量"+ player.PlHP);
+        Debug.Log("治疗量" + num);
+        Debug.Log(player.Plname);
         if(ConfirmState("Poisoned"))
         {
             ChangeStateList("Poisoned", 1);
         }
         else if(player.PlHPmax>= player.PlHP + num)
         {
-            ChangeStateList("Corrupted",1);
+            ChangeStateList("Corrupted", 1);
             player.PlHP = player.PlHP + num;
             player.Type = 1;
         }
+        else if (player.PlHPmax < player.PlHP + num)
+        {
+            ChangeStateList("Corrupted", 1);
+            player.PlHP = player.PlHP;
+            player.Type = 1;
+        }
+        Debug.Log("治疗之后当前血量" + player.PlHP);
     }
     public void ChangeArmor(string Type, int num,int Armornum2)
     {
@@ -133,7 +144,7 @@ public GameObject PL;
             {
                     if (ArmorRound[i] == 0)
                     {
-                        ArmorRound[i] = Armornum2 * 10 + 2;
+                        ArmorRound[i] = Armornum2 * 10 + 1;
                         break;
                     } 
             }
@@ -240,13 +251,18 @@ public GameObject PL;
                 }
             } 
         }
+    }
+
+    public void TurnStart2()
+    {
         for (int i = 0; i < ArmorRound.Count; i++)
         {
-            if (State[i] != null)
+            if (ArmorRound[i] > 0)
             {
                 if (ArmorRound[i] % 10 == 1)
                 {
                     ChangeArmor("护甲", 1, ArmorRound[i] / 10);
+                    ArmorRound[i] = 0;
                 }
                 if (ArmorRound[i] % 10 == 2)
                 {
@@ -255,18 +271,24 @@ public GameObject PL;
             }
         }
     }
+
+    public void bloodupdate()
+    {
+        HPNum.text = player.PlHP.ToString();
+        float a = (float)player.PlHP;
+        float b = (float)player.PlHPmax;
+        float c = 0.25f-8.4f * (1 - a / b);
+        Blood.transform.localScale = new(8.4f*(a/b), 8.3f, 0f);
+        Blood.transform.localPosition = new Vector3(c, -0.84f, 0f);
+    }
     // Update is called once per frame
     void Update()
     {
         if (player.Type == 1)
         {
-            HPNum.text = player.PlHP.ToString();
-            float a = (float)player.PlHP;
-            float b = (float)player.PlHPmax;
-            float c = (float)(Blood.transform.localScale.x*(1-a/b));
-            Blood.transform.localScale = new Vector3((float)((a / b) * Blood.transform.localScale.x), 8.3f, 0f);
-            Blood.transform.localPosition = new Vector3(Blood.transform.localPosition.x- c, -0.84f, 0f);
+
             //刷新血量
+            bloodupdate();
             //上buff
             //PLtools.GetInstance()
             //死亡判断
@@ -277,4 +299,6 @@ public GameObject PL;
             player.Type = 0;
         }
     }
+
+    
 }
