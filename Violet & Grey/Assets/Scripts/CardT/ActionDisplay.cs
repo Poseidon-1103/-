@@ -36,18 +36,38 @@ public class ActionDisplay : MonoBehaviour
                     NameTextUP.text = cardList[i].CardName;
                     // CardCDText.text = cardList[i].CardCd.ToString();
                 }
-                if (cardList[i].CardEffect == "攻击" || cardList[i].CardEffect == "移动")
+            if (cardList[i].CardEffect == "治疗")
+            {
+                CardDescriptionText.text += cardList[i].CardEffect + cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
+
+
+            }
+            if (cardList[i].CardEffect == "攻击")
+            {
+                if (cardList[i].CardEffType.Substring(0, 2) == "远程")
                 {
-                    if (cardList[i].CardEffType.Substring(0, 2) == "远程")
-                    {
-                        CardDescriptionText.text += cardList[i].CardEffType + "伤害" + cardList[i].CardEffNum + "\n";
-                    }
-                    else
-                    {
-                        CardDescriptionText.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
-                    }
+                    CardDescriptionText.text += cardList[i].CardEffType + "伤害" + cardList[i].CardEffNum + "\n";
+
                 }
-                if (cardList[i].CardEffect == "自身")
+                else if (cardList[i].CardEffType.Substring(0, 2) == "拉近" || cardList[i].CardEffType.Substring(0, 2) == "推远")
+                {
+                    CardDescriptionText.text += "距离" + cardList[i].CardEffType.Substring(2, 1) + cardList[i].CardEffType.Substring(0, 2) + cardList[i].CardEffType.Substring(3, 1) + "伤害" + cardList[i].CardEffNum + "\n";
+                }
+                else if (cardList[i].CardEffType.Substring(0, 2) == "直线")
+                {
+                    CardDescriptionText.text += cardList[i].CardEffType.Substring(0, 3) + "伤害" + cardList[i].CardEffNum + "\n"; ;
+                }
+                else
+                {
+                    CardDescriptionText.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
+                }
+
+            }
+            if (cardList[i].CardEffect == "移动")
+            {
+                CardDescriptionText.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
+            }
+            if (cardList[i].CardEffect == "自身")
                 {
                     CardDescriptionText.text += "获得:";
                 }
@@ -97,15 +117,18 @@ public class ActionDisplay : MonoBehaviour
                     {
                         CardDescriptionText.text += "护甲" + cardList[i].CardEffNum;
                     }
-                    if (cardList[i].CardEffNum == 99)
+                if (i + 1 < cardList.Count)
+                {
+                    if (cardList[i + 1].CardEffect == "状态")
                     {
-                        CardDescriptionText.text += "\n";
-                    }
-                    else
-                    {
-                        CardDescriptionText.text += "，";
+                        CardDescriptionText.text += ",";
                     }
                 }
+                else
+                {
+                    CardDescriptionText.text += "\n";
+                }
+            }
         }
         NameTextUP.text = cardList[0].CardName;
         Sequence.text = cardList[0].Sequence.ToString();

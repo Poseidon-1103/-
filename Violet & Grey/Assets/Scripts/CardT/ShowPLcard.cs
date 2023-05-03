@@ -90,14 +90,22 @@ public class ShowPLcard : MonoBehaviour
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
                     newCard.name = (cards[i][0].Id).ToString();
                 }
-                /*else if(cards[i][0].Cd > 0)
+                else if (cards[i][0].Cd > 0)
                 {
                     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
                     newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
-
+                    newCard.GetComponent<CardDisplay>().NameTextUP.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().CardCDTextUP.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().CardDescriptionTextUP.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().NameTextDown.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().CardCDTextDown.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().CardDescriptionTextDown.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().Sequence.color = new(128f, 128f, 128f, 128f);
+                    newCard.GetComponent<CardDisplay>().Image.GetComponent<Image>().color=new(128f,128f,128f,0.5f);
+                    newCard.GetComponent<CardDisplay>().CDNumber.text=  cards[i][0].Cd.ToString();
                     newCard.name = "冷却中";
-                }*/
+                }
                 // else if(cards[i][0].Cd == -1)
                 // {
                 //     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);

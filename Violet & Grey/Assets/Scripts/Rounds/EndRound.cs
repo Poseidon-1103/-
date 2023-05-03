@@ -372,7 +372,9 @@ public class EndRound : MonoBehaviour
                             Debug.Log("自身" + A[0].name);
                             break;
                         case "攻击":
+                            GetPl2();
                             yield return new WaitForSeconds(1);
+
                             A.Clear();
                             //Disable不能攻击
                             if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Disable"))
@@ -381,7 +383,7 @@ public class EndRound : MonoBehaviour
                             }
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                Debug.Log(GameObject.Find("SkipAction").name);
+                                Debug.Log(recordList[i][j].CardEffType);
                                 GameObject.Find("SkipAction").transform.position = new(17, 15, 0);
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 //读取攻击
@@ -406,27 +408,146 @@ public class EndRound : MonoBehaviour
                                 //结算攻击
                                 for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
                                 {
+                                    Debug.Log(EnemyUnit[PL].transform);
                                     if (AttackMap.GetTile(PLList[PL]) != null&& EnemyUnit[PL].transform!=null)
                                     {
+                                        Debug.Log("123");
                                         A.Add(EnemyUnit[PL]);
                                         if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Invincible"))
                                         {
                                             continue;
                                         }
-                                        string aa = GetLastStr(recordList[i][j].CardEffType, 2);
-                                        if (aa == "穿刺")
+                                        if (recordList[i][j].CardEffType.Substring(0, 2)=="拉近")
+                                        {
+                                            Debug.Log(recordList[i][j].CardEffType);
+                                            int ZoomInNum= int.Parse( recordList[i][j].CardEffType.Substring(3, 1));
+                                            int direction = 0;
+                                            Vector3Int PLPosition= grid.WorldToCell(obj[PLnum].transform.position);
+                                            Vector3Int EnPosition = grid.WorldToCell(EnemyUnit[PL].transform.position);
+                                            Vector3Int endCellPos2 = PLPosition - EnPosition;
+                                            Vector3Int endCellPos= EnPosition;
+                                            Debug.Log(endCellPos2);
+                                            if (endCellPos2.x!=0)
+                                            {
+                                                if (endCellPos2.x > 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x+ ZoomInNum, EnPosition.y);
+                                                    if (endCellPos.x- PLPosition.x >= 0)
+                                                    {
+                                                        endCellPos = new(PLPosition.x-1, PLPosition.y);
+                                                        direction = 1;
+                                                    }
+                                                }
+                                                else if (endCellPos2.x < 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x- ZoomInNum, EnPosition.y);
+                                                    if (endCellPos.x - PLPosition.x <= 0)
+                                                    {
+                                                        endCellPos = new(PLPosition.x + 1, PLPosition.y);
+                                                        direction = 2;
+                                                    }
+                                                }
+                                            }
+                                            if (endCellPos2.y != 0)
+                                            {
+                                                if (endCellPos2.y > 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x, EnPosition.y + ZoomInNum);
+                                                    if (endCellPos.y - PLPosition.y >= 0)
+                                                    {
+                                                        endCellPos = new(PLPosition.x, PLPosition.y-1);
+                                                        direction = 3;
+                                                    }
+                                                }
+                                                else if (endCellPos2.y < 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x, EnPosition.y - ZoomInNum);
+                                                    if (endCellPos.y - PLPosition.y <= 0)
+                                                    {
+                                                        endCellPos = new(PLPosition.x, PLPosition.y+1);
+                                                        direction = 4;
+                                                    }
+                                                }
+                                            }
+                                            Debug.Log(EnPosition + "" + endCellPos);
+                                            for (int k = 0; k < ZoomInNum; k++)
+                                            {
+                                                if (EnPosition != endCellPos&&CanMoveRange.GetTile(MovePLOrder(direction, EnPosition)))
+                                                {
+                                                    EnemyUnit[PL].transform.position = grid.CellToWorld(MovePLOrder(direction, EnPosition));
+                                                    EnPosition = MovePLOrder(direction, EnPosition);
+                                                    yield return new WaitForSeconds(1);
+                                                }
+                                            }
+                                            EnemyUnit[PL].transform.position = grid.CellToWorld(endCellPos);
+                                            A.Add(EnemyUnit[PL].gameObject);
+                                        }
+                                        if (recordList[i][j].CardEffType.Substring(0, 2) == "推远")
+                                        {
+                                            Debug.Log(recordList[i][j].CardEffType);
+                                            int ZoomInNum = int.Parse(recordList[i][j].CardEffType.Substring(3, 1));
+                                            int direction = 0;
+                                            Vector3Int PLPosition = grid.WorldToCell(obj[PLnum].transform.position);
+                                            Vector3Int EnPosition = grid.WorldToCell(EnemyUnit[PL].transform.position);
+                                            Vector3Int endCellPos2 = PLPosition - EnPosition;
+                                            Vector3Int endCellPos = EnPosition;
+                                            Debug.Log(endCellPos2);
+                                            if (endCellPos2.x != 0)
+                                            {
+                                                if (endCellPos2.x > 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x - ZoomInNum, EnPosition.y);
+                                                    direction = 2;
+                                                }
+                                                else if (endCellPos2.x < 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x + ZoomInNum, EnPosition.y);
+                                                    direction = 1;
+                                                }
+                                            }
+                                            if (endCellPos2.y != 0)
+                                            {
+                                                if (endCellPos2.y > 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x, EnPosition.y - ZoomInNum);
+                                                    direction = 4;
+                                                }
+                                                else if (endCellPos2.y < 0)
+                                                {
+                                                    endCellPos = new(EnPosition.x, EnPosition.y + ZoomInNum);
+                                                    direction = 3;
+                                                }
+                                            }
+                                            Debug.Log(EnPosition + "" + endCellPos);
+                                            for (int k=0;k< ZoomInNum;k++)
+                                            {
+                                                if (EnPosition != endCellPos&&CanMoveRange.GetTile(MovePLOrder(direction, EnPosition)))
+                                                {
+                                                    EnemyUnit[PL].transform.position = grid.CellToWorld(MovePLOrder(direction, EnPosition));
+                                                    EnPosition = MovePLOrder(direction, EnPosition);
+                                                    yield return new WaitForSeconds(1);
+                                                }
+                                            }
+                                            if (CanMoveRange.GetTile(MovePLOrder(direction, EnPosition)))
+                                            {
+                                                EnemyUnit[PL].transform.position = grid.CellToWorld(endCellPos);
+                                            }
+                                            A.Add(EnemyUnit[PL].gameObject);
+                                        }
+                                        if (GetLastStr(recordList[i][j].CardEffType, 2) == "穿刺")
                                         {
                                             Debug.Log("穿刺");
                                             EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum, 0);
                                         }
                                         else
                                         {
+                                            Debug.Log("ZHEN");
                                             EnemyUnit[PL].GetComponent<ChangeState>().ChangeBlood(recordList[i][j].CardEffNum);
                                         }
-                             
+                                        
                                     }
                                 }
-
+                                
                                 break;
                             }
                             while (recordList[i][0].Id / 10000 > 20)
@@ -505,6 +626,7 @@ public class EndRound : MonoBehaviour
 
                                 break;
                             }
+                            NewRoad(playerCellPosition, 40, CanMoveRange);
                             AttackMap.ClearAllTiles();
                             rangeMap.ClearAllTiles();
                             continue;
@@ -520,6 +642,7 @@ public class EndRound : MonoBehaviour
                             playerCellPosition = grid.WorldToCell(playerPosition);
                             while (recordList[i][0].Id / 10000 < 20)
                             {
+                                GetPl2();
                                 Debug.Log(GameObject.Find("SkipAction").name);
                                 GameObject.Find("SkipAction").transform.position=new(17,15,0);
                                 //重新定位角色
@@ -539,6 +662,7 @@ public class EndRound : MonoBehaviour
                                 //重新打印移动范围
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
+
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
                               
@@ -610,8 +734,8 @@ public class EndRound : MonoBehaviour
                                 //找到最近的pl
                                 for (int k = 0;k< PLUnit.Count; k++)
                                 {
-                                    
-                                        GameObject obj2 = PLUnit[k];
+                                    GameObject obj3 = new();
+                                    GameObject obj2 = PLUnit[k];
                                         Vector3 endCellPos = obj2.transform.position;
                                         Vector3Int playerendCellPos = grid.WorldToCell(endCellPos);
                                     if (playerCellPosition== playerendCellPos)
@@ -625,8 +749,28 @@ public class EndRound : MonoBehaviour
                                     }
                                     GetPl2();
                                     List<AStarNode> pathlist2 = MapManage.GetInstance().EnemyFindPath(playerCellPosition, playerendCellPos, "移动");//得到路径
-                                    if (pathlist2.Count <= pathlist.Count)
+                                    if (pathlist2.Count == pathlist.Count)
+                                    {
+                                        for (int Luck = 0; Luck < recordList.Count; Luck++)
                                         {
+                                            for (int GoodLuck = 0; GoodLuck < obj2.GetComponent<ShowPLcard>().cards.Count; GoodLuck++)
+                                            {
+                                                if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Id == recordList[Luck][0].Id)
+                                                {
+                                                    if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence> obj3.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence)
+                                                    {
+                                                        obj3 = PLUnit[k];
+                                                        EndPoint = playerendCellPos;
+                                                        pathlist = pathlist2;
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                    if (pathlist2.Count < pathlist.Count)
+                                        {
+                                            obj3 = PLUnit[k];
                                             EndPoint = playerendCellPos;
                                             pathlist = pathlist2;
                                         }
@@ -679,6 +823,7 @@ public class EndRound : MonoBehaviour
         }
     }
 
+    //范围
     public void NewRoad2(Vector3Int playerCellPosition, int MoveNum, Tilemap rangeMap)
     {
 
@@ -690,6 +835,45 @@ public class EndRound : MonoBehaviour
             foreach (var a in moveList)
             {
                 rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+            }
+        }
+    }
+    //直线
+    public void NewRoad3(Vector3Int playerCellPosition, int MoveNum, Tilemap rangeMap)
+    {
+        
+        //得到可移动的范围地列表
+        rangeMap.ClearAllTiles();
+        moveList = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 1);
+        if (moveList != null)
+        {
+            foreach (var a in moveList)
+            {
+                rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+            }
+        }
+        List<Vector3Int> moveList2 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 2);
+        if (moveList2 != null)
+        {
+            foreach (var b in moveList2)
+            {
+                rangeMap.SetTile(b, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+            }
+        }
+        List<Vector3Int> moveList3 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 3);
+        if (moveList3 != null)
+        {
+            foreach (var c in moveList3)
+            {
+                rangeMap.SetTile(c, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+            }
+        }
+        List<Vector3Int> moveList4 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 4);
+        if (moveList4 != null)
+        {
+            foreach (var d in moveList4)
+            {
+                rangeMap.SetTile(d, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
@@ -709,7 +893,6 @@ public class EndRound : MonoBehaviour
             Vector3Int endCellPos = grid.WorldToCell(endWorldPosition);//将鼠标坐标转换成格子坐标，也就是终点坐标
             if (rangeMap.GetTile(endCellPos) != null)
             {
-              
                 GetPl2();
                 NewRoad(playerCellPosition, 40, CanMoveRange);
                 pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos,"移动");
@@ -819,13 +1002,17 @@ public class EndRound : MonoBehaviour
         {
             NewRoad2(playerCellPosition, 0, rangeMap);
         }
-        if (card.CardEffType.Substring(0, 2) == "近战"|| card.CardEffType.Substring(0, 2) == "直线" || card.CardEffType.Substring(0, 2) == "穿刺")
+        else if (card.CardEffType.Substring(0, 2) == "近战"|| card.CardEffType.Substring(0, 2) == "直线" || card.CardEffType.Substring(0, 2) == "穿刺")
         {
             NewRoad2(playerCellPosition, 1, rangeMap);
         }
         else if (card.CardEffType.Substring(0, 2) == "远程")
         {
             NewRoad2(playerCellPosition, int.Parse(card.CardEffType.Substring(2, 1)), rangeMap);
+        }
+        else if (card.CardEffType.Substring(0, 2) =="拉近"|| card.CardEffType.Substring(0, 2) == "推远")
+        {
+            NewRoad3(playerCellPosition, int.Parse(card.CardEffType.Substring(2, 1)), rangeMap);
         }
         PrintAttackRange.GetInstance().TagrtPL(card, AttackType);
         List<GameObject> TagrtPL = new();
@@ -875,14 +1062,18 @@ public class EndRound : MonoBehaviour
     public void GetPl2()
     {
         PLList.Clear();
+        EnemyUnit.Clear();
+        PLUnit.Clear();
         foreach (Transform child in Unit.transform)
         {
+            EnemyUnit.Add(child.gameObject);
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
         }
         foreach (Transform child in Unit2.transform)
         {
+            PLUnit.Add(child.gameObject);
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
@@ -932,6 +1123,26 @@ public class EndRound : MonoBehaviour
         }*/
     }
 
+    public Vector3Int MovePLOrder(int direction, Vector3Int Position)
+    {
+        if (direction ==1)
+        {
+            Position = new(Position.x + 1, Position.y);
+        }
+        if (direction == 2)
+        {
+            Position = new(Position.x - 1, Position.y);
+        }
+        if (direction == 3)
+        {
+            Position = new(Position.x, Position.y+1);
+        }
+        if (direction == 4)
+        {
+            Position = new(Position.x, Position.y-1);
+        }
+        return Position;
+    }
     
     public List<Vector3Int> AddListV3(List<Vector3Int> vector3Ints,int i,int j,int k)
     {
