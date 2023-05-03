@@ -239,7 +239,7 @@ MonoBehaviour:
     type: 3}
   cardPool: {fileID: 0}
   healthBar: {fileID: 0}
-  ResourcesDate: CardData
+  ResourcesDate: CardData1
 --- !u!1 &4486871074406321052
 GameObject:
   m_ObjectHideFlags: 0

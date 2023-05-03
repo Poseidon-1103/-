@@ -213,9 +213,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8843fdb6fb155e2499f17aa399ff4ee1, type: 3}
-  m_Color: {r: 0.8039216, g: 0.15686275, b: 0.15686275, a: 1}
-  m_FlipX: 1
+  m_Sprite: {fileID: 21300000, guid: c96b511828b395c4da0b1cc5e51d512f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.12, y: 5.12}
@@ -261,7 +261,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
-  row: 3
+  row: 10
   ArmorNum2: {fileID: 403268453127874668}
   HPNum: {fileID: 8554411038779064831}
   Armor: {fileID: 0}
@@ -279,7 +279,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2801653, y: 2.414314}
+  m_Offset: {x: -0.2757622, y: 2.414314}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -290,7 +290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5424783, y: 4.5148435}
+  m_Size: {x: 2.6031253, y: 4.5148435}
   m_EdgeRadius: 0
 --- !u!1001 &406001117002258767
 PrefabInstance:
@@ -517,6 +517,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316113083529568424, guid: 235c6841b29d2c54391a2b961e7fbaa5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8498766464852666675, guid: 235c6841b29d2c54391a2b961e7fbaa5,
         type: 3}
