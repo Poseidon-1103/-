@@ -298,6 +298,7 @@ public class EndRound : MonoBehaviour
                                 }
                                 for (int PL = 0; PL < AllUnit.Count - EnemyUnit.Count; PL++)
                                 {
+                                    Debug.Log(PLUnit[PL].name);
                                     if (AttackMap.GetTile(PLList[PL + EnemyUnit.Count]) != null && PLUnit[PL].transform != null)
                                     {
                                         Debug.Log("开始治疗");
