@@ -3,19 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Brick_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Brick_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Stone_01_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Stone_01_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Sprite_ISO_Collider.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Sprite_ISO_Collider.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Rule/Autotiles/Fence/Rule Tile/ISO_Autotile_Fence_01_Short 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Rule/Autotiles/Fence/Rule Tile/ISO_Autotile_Fence_01_Short 1.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/enemy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/enemy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Action/PrintAttackRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Action/PrintAttackRange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/GSS_Foliage_Desert_big_cactus_04.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/GSS_Foliage_Desert_big_cactus_04.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Brick_04.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Brick_04.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Stone_01_04.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Stone_01_04.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01_ToStone_02.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01_ToStone_02.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_04.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_04.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/Map Palette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/Map Palette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/New Isometric Rule Tile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapText/New Isometric Rule Tile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/炼金人物状态图.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/炼金人物状态图.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +191,8 @@
       <workItem from="1682841224206" duration="2259000" />
       <workItem from="1682947301480" duration="1982000" />
       <workItem from="1682996742991" duration="593000" />
-      <workItem from="1682998840162" duration="7785000" />
+      <workItem from="1682998840162" duration="8382000" />
+      <workItem from="1683101078814" duration="6605000" />
     </task>
     <servers />
   </component>
