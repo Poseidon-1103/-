@@ -24,7 +24,6 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
 
     public void TagrtPL(Card card,List<Vector3Int> AttackType)
     {
-        Debug.Log("aaaaaaa" + card.CardEffType.Substring(0, 2));
         switch (card.CardEffType.Substring(0, 2))
         {
             /*case "范围":
@@ -49,6 +48,14 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
                 AddListV3(AttackType, int.Parse(card.CardEffType.Substring(2, 1)), 1, 0);
                 break;
             case "近战":
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
+            case "拉近":
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
+            case "推远":
                 AddListV3(AttackType, 0, 0, 0);
                 AddListV3(AttackType, 1, 1, 0);
                 break;
