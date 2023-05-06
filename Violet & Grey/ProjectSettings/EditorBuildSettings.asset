@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Samples/Scenes/LoadingScene.unity
     guid: 9b270d3ce64483e428d7db714c933c08
   - enabled: 1
-    path: Assets/Scenes/MapText.unity
-    guid: 062ba4bab133f09498f5fac4b6322b5d
+    path: Assets/Scenes/Level Scenes/Level 0_0.unity
+    guid: 280491cf7c111544b9b591b6dfb23bb5
   m_configObjects: {}

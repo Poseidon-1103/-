@@ -3,38 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Sprite_ISO_Collider.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Extras/Sprites/Sprite_ISO_Collider.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Rule/Autotiles/Fence/Rule Tile/ISO_Autotile_Fence_01_Short 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Rule/Autotiles/Fence/Rule Tile/ISO_Autotile_Fence_01_Short 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/GSS_Foliage_Desert_big_cactus_04.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/GSS_Foliage_Desert_big_cactus_04.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Brick_04.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Brick_04.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Stone_01_04.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Brick_Stone_01_04.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01_ToStone_02.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_01_ToStone_02.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_04.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Sand_04.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/ISO_Tile_Snow_Brick_02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/Map Palette.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/Map Palette.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/New Isometric Rule Tile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapText/New Isometric Rule Tile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/炼金人物状态图.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/炼金人物状态图.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/SelectCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +71,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Violet &amp; Grey_Demo1.16\Violet &amp; Grey.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\2023JBTgame\Violet &amp; Grey_Demo1.16" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\game\unity\2021.3.15f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Porject\Porject The Porject\胧夜客\Violet &amp; Grey&quot; -debugCodeOptimization" />
@@ -193,6 +186,7 @@
       <workItem from="1682996742991" duration="593000" />
       <workItem from="1682998840162" duration="8382000" />
       <workItem from="1683101078814" duration="6605000" />
+      <workItem from="1683203918297" duration="9942000" />
     </task>
     <servers />
   </component>

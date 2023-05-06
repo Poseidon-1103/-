@@ -80,12 +80,14 @@ public class ShowPLcard : MonoBehaviour
                 cardPool.BroadcastMessage("DestoryMe");
             }
             //将每张卡的数据分开
+            Debug.Log("count="+cards.Count);
             for (int i = 0; i < cards.Count; i++)
             {
+                Debug.Log("卡牌+"+cards[i][0].CardName+"+"+cards[i][0].Cd);
                 if (cards[i][0].Cd==0)
                 {
                     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, 0);
+                    // newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, 0);
                     // newCard.GetComponent<RectTransform>().
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
                     newCard.name = (cards[i][0].Id).ToString();
@@ -93,17 +95,20 @@ public class ShowPLcard : MonoBehaviour
                 else if (cards[i][0].Cd > 0)
                 {
                     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
-                    newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
                     newCard.GetComponent<CardDisplay>().cardList = cards[i];
-                    newCard.GetComponent<CardDisplay>().NameTextUP.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().CardCDTextUP.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().CardDescriptionTextUP.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().NameTextDown.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().CardCDTextDown.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().CardDescriptionTextDown.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().Sequence.color = new(128f, 128f, 128f, 128f);
-                    newCard.GetComponent<CardDisplay>().Image.GetComponent<Image>().color=new(128f,128f,128f,0.5f);
-                    newCard.GetComponent<CardDisplay>().CDNumber.text=  cards[i][0].Cd.ToString();
+                    // newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(480, -70);
+                    newCard.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0.5f;
+                    // newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    // newCard.GetComponent<CardDisplay>().NameTextUP.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().CardCDTextUP.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().CardDescriptionTextUP.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().NameTextDown.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().CardCDTextDown.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().CardDescriptionTextDown.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().Sequence.color = new(128f, 128f, 128f, 128f);
+                    // newCard.GetComponent<CardDisplay>().Image.GetComponent<Image>().color=new(128f,128f,128f,0.5f);
+                    newCard.GetComponentsInChildren<TMP_Text>()[7].text = cards[i][0].Cd.ToString();
+                    // newCard.transform.transform.Find("CDNumber").gameObject.GetComponent<TMP_Text>().text = cards[i][0].Cd.ToString();
                     newCard.name = "冷却中";
                 }
                 // else if(cards[i][0].Cd == -1)
