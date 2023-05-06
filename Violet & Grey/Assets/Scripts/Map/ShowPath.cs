@@ -10,6 +10,7 @@ public class ShowPath : MonoBehaviour
     public List<Vector3Int> moveList;
     public Tilemap moveRange;
     public TileBase tileBase;
+    public Vector3Int startPos;
     
     
     // Start is called before the first frame update
@@ -23,8 +24,8 @@ public class ShowPath : MonoBehaviour
     {
         Vector3 mousePosition = Input.mousePosition; // 获取鼠标的屏幕坐标
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标  
-        Vector3Int mouseCellPosition = moveRange.WorldToCell(mouseWorldPosition);
-        
+        Vector3Int mouseCellPosition = moveRange.WorldToCell(mouseWorldPosition); //将世界坐标转换为格子坐标
+        pathlist = MapManage.GetInstance().FindPath(startPos, mouseCellPosition, "移动");
     }
     
 }
