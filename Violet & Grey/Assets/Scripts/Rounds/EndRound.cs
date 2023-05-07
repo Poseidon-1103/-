@@ -662,7 +662,10 @@ public class EndRound : MonoBehaviour
                                 //重新打印移动范围
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
-
+                                //开启路径显示脚本，传入角色位置
+                                gameObject.GetComponent<ShowPath>().enabled = true;
+                                gameObject.GetComponent<ShowPath>().startPos = playerCellPosition;
+                                
                                 //等待鼠标点击
                                 yield return new WaitUntil(ClickRoad);
                               
@@ -704,6 +707,10 @@ public class EndRound : MonoBehaviour
                                 {
                                     
                                     continue;
+                                }
+                                else
+                                {
+                                    gameObject.GetComponent<ShowPath>().EndImage.ClearAllTiles();
                                 }
                                 break;
 
@@ -887,6 +894,7 @@ public class EndRound : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0))
         {
+            gameObject.GetComponent<ShowPath>().enabled = false;
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
             Vector3 endWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标
             endWorldPosition.z = 0;// 设置z轴值
