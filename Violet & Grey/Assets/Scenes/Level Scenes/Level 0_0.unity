@@ -249,6 +249,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 894256437}
     m_Modifications:
+    - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
+      propertyPath: VerticalEnemyActions
+      value: 
+      objectReference: {fileID: 7694708622950463923, guid: 033d6dafe168c5742bf8be513ef219fd,
+        type: 3}
+    - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
+      propertyPath: VerticalPlayerActions
+      value: 
+      objectReference: {fileID: 1754817744448311261, guid: 3b91ade480b9c3643928ce5176f0ef97,
+        type: 3}
+    - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
+      propertyPath: HorizontalEnemyActions
+      value: 
+      objectReference: {fileID: 7694708622950463923, guid: 1388538c461724245b3d13e1560fd919,
+        type: 3}
+    - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
+      propertyPath: HorizontalPlayerActions
+      value: 
+      objectReference: {fileID: 1754817744448311261, guid: e9610a52aea2a3f4c908c448dbac85cd,
+        type: 3}
     - target: {fileID: 9173111165021579200, guid: 869b805b8a065164d92a3585f43f03c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1368,7 +1388,9 @@ MonoBehaviour:
   AttackMap: {fileID: 7038730747371608796}
   CanMoveRange: {fileID: 1713959099}
   grid: {fileID: 5565642081680123963}
-  tileBase: {fileID: 11400000, guid: 88c7a3a2ef9df7741b4432f15720ae74, type: 2}
+  moveTileBase: {fileID: 11400000, guid: 88c7a3a2ef9df7741b4432f15720ae74, type: 2}
+  aTKTileBase: {fileID: 11400000, guid: 1439f4848a4a9f7458b1592070e8bf22, type: 2}
+  healingTileBase: {fileID: 11400000, guid: 877420c3953b90c48a5c2fdcf2bb7e26, type: 2}
   SkipActionOrder: 0
 --- !u!114 &1483903852
 MonoBehaviour:
