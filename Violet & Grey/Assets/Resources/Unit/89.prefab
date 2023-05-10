@@ -242,7 +242,7 @@ MonoBehaviour:
   cardList: []
   StartTurn: 0
   EndTurn: 100
-  Probability: 320000003200000032000000
+  Probability: 320000000000000000000000
 --- !u!114 &8363638370303272968
 MonoBehaviour:
   m_ObjectHideFlags: 0
