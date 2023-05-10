@@ -36,6 +36,7 @@ public class EndRound : MonoBehaviour
     private int M =0;
     private int N = 0;
     public int SkipActionOrder = 0;
+    public int ConfirmActionOrder = 0;
     private List<GameObject> A =new();
     private List<Vector3Int> moveList;
     private Vector3 playerPosition;
@@ -282,20 +283,18 @@ public class EndRound : MonoBehaviour
                             
                             while (recordList[i][0].Id / 10000 < 20)
                             {
-                                Debug.Log(GameObject.Find("SkipAction").name);
-                                GameObject.Find("SkipAction").transform.position = new(17, 15, 0);
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 TagrtPL(recordList[i][j]);
                                 //点击攻击格
                                 yield return new WaitUntil(ClickRoad2);
 
                                 yield return new WaitForSeconds(2);
-                                if (SkipActionOrder == 1)
+                                /*if (SkipActionOrder == 1)
                                 {
                                     GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                     SkipActionOrder = 0;
                                     break;
-                                }
+                                }*/
                                 for (int PL = 0; PL < AllUnit.Count - EnemyUnit.Count; PL++)
                                 {
                                     Debug.Log(PLUnit[PL].name);
@@ -384,7 +383,7 @@ public class EndRound : MonoBehaviour
                             while (recordList[i][0].Id / 10000 < 20)
                             {
                                 Debug.Log(recordList[i][j].CardEffType);
-                                GameObject.Find("SkipAction").transform.position = new(17, 15, 0);
+                                
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 //读取攻击
                                 TagrtPL(recordList[i][j]);
@@ -394,17 +393,28 @@ public class EndRound : MonoBehaviour
                                     break;
                                 }
 
+                                while (ConfirmActionOrder == 0)
+                                {
+                                    if (SkipActionOrder == 1)
+                                    {
+                                        break;
+                                    }
+                                    yield return new WaitUntil(ClickRoad2);
+                                }
                                 //点击攻击格
-                                yield return new WaitUntil(ClickRoad2);
+                                
                                 
                                 yield return new WaitForSeconds(2);
-
-                                if (SkipActionOrder==1)
+                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                                GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                ConfirmActionOrder = 0;
+                                if (SkipActionOrder == 1)
                                 {
-                                    GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                     SkipActionOrder = 0;
                                     break;
                                 }
+
+
                                 //结算攻击
                                 for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
                                 {
@@ -643,8 +653,6 @@ public class EndRound : MonoBehaviour
                             while (recordList[i][0].Id / 10000 < 20)
                             {
                                 GetPl2();
-                                Debug.Log(GameObject.Find("SkipAction").name);
-                                GameObject.Find("SkipAction").transform.position=new(17,15,0);
                                 //重新定位角色
                                 PLList.Clear();
                                 foreach (Transform child in Unit.transform)
@@ -664,11 +672,22 @@ public class EndRound : MonoBehaviour
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
 
                                 //等待鼠标点击
-                                yield return new WaitUntil(ClickRoad);
-                              
+                                while (ConfirmActionOrder == 0)
+                                {
+                                    if(SkipActionOrder == 1)
+                                    {
+                                        break;
+                                    }
+                                    yield return new WaitUntil(ClickRoad);
+
+                                }
+                                yield return new WaitForSeconds(2);
+                                AttackType.Clear();
+                                ConfirmActionOrder = 0;
+                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
+                                GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
                                 if (SkipActionOrder == 1)
                                 {
-                                    GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                     SkipActionOrder = 0;
                                     break;
                                 }
@@ -880,12 +899,13 @@ public class EndRound : MonoBehaviour
     //角色点击地面
     public bool ClickRoad()
     {
-        if (SkipActionOrder==1)
+        GameObject.Find("SkipAction").transform.position = new(7f, 0f, 0);
+        GameObject.Find("ConfirmAction").transform.position = new(7f, 3f, 0);
+        if (ConfirmActionOrder == 1 || SkipActionOrder == 1)
         {
-            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if(Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
             Vector3 endWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标
@@ -893,6 +913,9 @@ public class EndRound : MonoBehaviour
             Vector3Int endCellPos = grid.WorldToCell(endWorldPosition);//将鼠标坐标转换成格子坐标，也就是终点坐标
             if (rangeMap.GetTile(endCellPos) != null)
             {
+                Card Move = new(1, "近战", 1,1,1, "近战", "近战", 1,1);
+                PrintAttackRange.GetInstance().TagrtPL(Move, AttackType);
+                TTK(endCellPos);
                 GetPl2();
                 NewRoad(playerCellPosition, 40, CanMoveRange);
                 pathlist = MapManage.GetInstance().FindPath(playerCellPosition, endCellPos,"移动");
@@ -910,9 +933,11 @@ public class EndRound : MonoBehaviour
     //加载攻击范围
     public bool ClickRoad2()
     {
-        if (SkipActionOrder == 1)
+        
+        GameObject.Find("SkipAction").transform.position = new(7f, 0f, 0);
+        GameObject.Find("ConfirmAction").transform.position = new(7f, 3f, 0);
+        if (ConfirmActionOrder==1|| SkipActionOrder==1)
         {
-            GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
             return true;
         }
         else if (Input.GetMouseButtonDown(0))
@@ -924,9 +949,10 @@ public class EndRound : MonoBehaviour
             if (rangeMap.GetTile(endCellPos))
             {
                 TTK(endCellPos);
-                AttackType.Clear();
+               /* AttackType.Clear();*/
                 return true;
             }
+            Debug.Log(ConfirmActionOrder);
             Debug.Log("没有点击攻击范围");
             return false;
         }

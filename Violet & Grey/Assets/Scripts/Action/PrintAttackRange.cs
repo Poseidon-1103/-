@@ -24,6 +24,7 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
 
     public void TagrtPL(Card card,List<Vector3Int> AttackType)
     {
+        AttackType.Clear();
         switch (card.CardEffType.Substring(0, 2))
         {
             /*case "范围":
