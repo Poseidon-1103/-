@@ -27,7 +27,10 @@ public class EndRound : MonoBehaviour
     //格子位置相关控制 可以通过它进行坐标转换
     public Grid grid;
     //瓦片资源基类 通过它可以得到瓦片资源
-    public TileBase tileBase;
+    public TileBase moveTileBase;
+    public TileBase aTKTileBase;
+    public TileBase healingTileBase;
+
     //寻路路径
     private List<AStarNode> pathlist =new();
     //角色列表
@@ -418,7 +421,8 @@ public class EndRound : MonoBehaviour
                                 //结算攻击
                                 for (int PL = 0; PL < AllUnit.Count - PLUnit.Count; PL++)
                                 {
-                                    Debug.Log(EnemyUnit[PL].transform);
+                                    // Debug.Log(EnemyUnit[PL].transform);
+                                    GetPl2();
                                     if (AttackMap.GetTile(PLList[PL]) != null&& EnemyUnit[PL].transform!=null)
                                     {
                                         Debug.Log("123");
@@ -670,7 +674,10 @@ public class EndRound : MonoBehaviour
                                 //重新打印移动范围
                                 NewRoad(playerCellPosition, 40, CanMoveRange);
                                 NewRoad(playerCellPosition, recordList[i][j].CardEffNum, rangeMap);
-
+                                //开启路径显示脚本，传入角色位置
+                                gameObject.GetComponent<ShowPath>().enabled = true;
+                                gameObject.GetComponent<ShowPath>().startPos = playerCellPosition;
+                                
                                 //等待鼠标点击
                                 while (ConfirmActionOrder == 0)
                                 {
@@ -723,6 +730,10 @@ public class EndRound : MonoBehaviour
                                 {
                                     
                                     continue;
+                                }
+                                else
+                                {
+                                    gameObject.GetComponent<ShowPath>().EndImage.ClearAllTiles();
                                 }
                                 break;
 
@@ -837,7 +848,7 @@ public class EndRound : MonoBehaviour
             rangeMap.ClearAllTiles();
             foreach (var a in moveList)
             {
-                rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(a, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
@@ -853,7 +864,7 @@ public class EndRound : MonoBehaviour
             rangeMap.ClearAllTiles();
             foreach (var a in moveList)
             {
-                rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(a, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
@@ -868,7 +879,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var a in moveList)
             {
-                rangeMap.SetTile(a, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(a, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList2 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 2);
@@ -876,7 +887,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var b in moveList2)
             {
-                rangeMap.SetTile(b, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(b, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList3 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 3);
@@ -884,7 +895,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var c in moveList3)
             {
-                rangeMap.SetTile(c, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(c, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList4 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 4);
@@ -892,7 +903,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var d in moveList4)
             {
-                rangeMap.SetTile(d, tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(d, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
@@ -907,6 +918,7 @@ public class EndRound : MonoBehaviour
         }
         else if(Input.GetMouseButtonDown(0))
         {
+            gameObject.GetComponent<ShowPath>().enabled = false;
             Vector3 mousePosition = Input.mousePosition; // 获取鼠标点击的屏幕坐标
             Vector3 endWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标
             endWorldPosition.z = 0;// 设置z轴值
@@ -1078,7 +1090,7 @@ public class EndRound : MonoBehaviour
                 AttackMap.ClearAllTiles();
                 foreach (var a in AttackType2)
                 {
-                    AttackMap.SetTile(a + playerCellPosition-(playerCellPosition - endCellPos), tileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                    AttackMap.SetTile(a + playerCellPosition-(playerCellPosition - endCellPos), aTKTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
                 }
             }
         }

@@ -30,10 +30,10 @@ public class DialogueManager : MonoBehaviour
     public string[] dialogueRows;
     private void Awake()
     {
-        imageDic["弗尔米奥"] = sprites[0];
-        imageDic["卡斯"] = sprites[1];
-        imageDic["艾什"] = sprites[2];
-        imageDic["无"] = sprites[3];
+        imageDic["（黑影）"] = sprites[0];
+        imageDic["维奥莱特·紫"] = sprites[1];
+        // imageDic["艾什"] = sprites[2];
+        imageDic["无"] = sprites[2];
         ReadText(dialogueDateFile);
     }
 

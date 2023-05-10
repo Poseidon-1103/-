@@ -467,7 +467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28569da71c5085a49a08c172bb7805a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ac7320f29352a64dad6009eaea15cbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 3476048853036424020}
   - component: {fileID: 751827181066046963}
   m_Layer: 5
-  m_Name: EnemyAction
+  m_Name: VerticalEnemyAction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,6 +822,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -858,12 +873,12 @@ PrefabInstance:
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 430
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}

@@ -3,18 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Brick_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Brick_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Stone_01_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/2D/Sprites/Brick/ISO_Tile_Brick_Stone_01_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/enemy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/enemy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapText.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Action/PrintAttackRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Action/PrintAttackRange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +66,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Violet &amp; Grey_Demo1.16\Violet &amp; Grey.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\2023JBTgame\Violet &amp; Grey_Demo1.16" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\game\unity\2021.3.15f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Porject\Porject The Porject\胧夜客\Violet &amp; Grey&quot; -debugCodeOptimization" />
@@ -172,7 +179,13 @@
       <workItem from="1682841224206" duration="2259000" />
       <workItem from="1682947301480" duration="1982000" />
       <workItem from="1682996742991" duration="593000" />
-      <workItem from="1682998840162" duration="7785000" />
+      <workItem from="1682998840162" duration="8382000" />
+      <workItem from="1683101078814" duration="6605000" />
+      <workItem from="1683203918297" duration="9942000" />
+      <workItem from="1683376761776" duration="8091000" />
+      <workItem from="1683438467747" duration="8336000" />
+      <workItem from="1683466543281" duration="4426000" />
+      <workItem from="1683547919656" duration="5857000" />
     </task>
     <servers />
   </component>

@@ -69,11 +69,11 @@ public class CardDisplay : MonoBehaviour
                     NameTextUP.text = cardList[i].CardName;
                     if (cardList[i].CardCd < 0)
                     {
-                        CardCDTextDown.text = "损";
+                        CardCDTextUP.text = "损";
                     }
                     else
                     {
-                        CardCDTextDown.text = cardList[i].CardCd.ToString();
+                        CardCDTextUP.text = cardList[i].CardCd.ToString();
                     }
                 }
                 if (cardList[i].CardEffect == "治疗")

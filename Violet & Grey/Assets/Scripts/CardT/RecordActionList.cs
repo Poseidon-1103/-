@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class RecordActionList : MonoBehaviour
 {
     //角色行动条
-    public GameObject Actions;
+    public GameObject VerticalPlayerActions;
+    public GameObject HorizontalPlayerActions;
     //敌人行动条
-    public GameObject EnemyActions;
+    public GameObject VerticalEnemyActions;
+    public GameObject HorizontalEnemyActions;
+    //半张卡面
     public GameObject HalfCard;
+    
     public GameObject ActionsList;
     public Card card;
     public List<List<Card>> recordList=new();
@@ -65,25 +69,29 @@ public class RecordActionList : MonoBehaviour
                 //打印左边的行动列表 
                 for (int i = 0; i < recordList.Count; i++)
                 {
+                    GameObject newCard = new GameObject();
                     //区分敌人和角色，用不同的预制体打印
                     if (recordList[i][0].Id / 10000 > 20)
                     {
-                        GameObject newCard = GameObject.Instantiate(EnemyActions, allActionList.transform);
+                        newCard = GameObject.Instantiate(VerticalEnemyActions, allActionList.transform);
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
-                        newCard.name = (recordList[i][0].Id).ToString();
+                        newCard.name = recordList[i][0].CardName;
+                        // newCard.name = (recordList[i][0].Id).ToString();
+                        
                     }
                     else
                     {
-                        GameObject newCard = GameObject.Instantiate(Actions, allActionList.transform);
+                        newCard = GameObject.Instantiate(VerticalPlayerActions, allActionList.transform);
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
-                        newCard.name = (recordList[i][0].Id).ToString();
+                        newCard.name = recordList[i][0].CardName;
+                        // newCard.name = (recordList[i][0].Id).ToString();
                     }
-                    // if (i==0)
-                    // {
-                    //     newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
-                    // }
+                    if (i==0)
+                    {
+                        newCard.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
+                    }
                    
                 }
                 break;
@@ -98,24 +106,27 @@ public class RecordActionList : MonoBehaviour
                 //打印顶部的行动列表 
                 for (int i = 0; i < recordList.Count; i++)
                 {
+                    GameObject newCard = new GameObject();
                     //区分敌人和角色，用不同的预制体打印
                     if (recordList[i][0].Id / 10000 > 20)
                     {
-                        GameObject newCard = GameObject.Instantiate(EnemyActions, actionListTop.transform);
+                        newCard = GameObject.Instantiate(HorizontalEnemyActions, actionListTop.transform);
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
-                        newCard.name = (recordList[i][0].Id).ToString();
+                        newCard.name = recordList[i][0].CardName;
+                        // newCard.name = (recordList[i][0].Id).ToString();
                     }
                     else
                     {
-                        GameObject newCard = GameObject.Instantiate(Actions, actionListTop.transform);
+                        newCard = GameObject.Instantiate(HorizontalPlayerActions, actionListTop.transform);
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
-                        newCard.name = (recordList[i][0].Id).ToString();
+                        newCard.name = recordList[i][0].CardName;
+                        // newCard.name = (recordList[i][0].Id).ToString();
                     }
                     // if (i==0)
                     // {
-                    //     newCard.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(2f, 2f);
+                    //     newCard.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
                     // }
                    
                 }
@@ -133,7 +144,8 @@ public class RecordActionList : MonoBehaviour
                     GameObject newCard = GameObject.Instantiate(HalfCard, EnemyActionGroup.transform);
                     newCard.GetComponent<ActionDisplay>().cardList = recordList[i];
                     newCard.GetComponent<ActionDisplay>().ShowCard();
-                    newCard.name = (recordList[i][0].Id).ToString();
+                    newCard.name = recordList[i][0].CardName;
+                    // newCard.name = (recordList[i][0].Id).ToString();
                 }
                 break;
             //只传不打印
