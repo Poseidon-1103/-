@@ -237,6 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 634748848429340228, guid: 85a6ea6f629b7224ba59035163279263,
     type: 3}
+  cardPrefab2: {fileID: 634748848429340228, guid: 2fc9cd4e6a7d7364a8771963a5d7ee33,
+    type: 3}
   cardPool: {fileID: 0}
   healthBar: {fileID: 0}
   ResourcesDate: CardData1

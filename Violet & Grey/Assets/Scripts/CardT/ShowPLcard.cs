@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class ShowPLcard : MonoBehaviour
 {
     public GameObject cardPrefab;
+    public GameObject cardPrefab2;
     public GameObject cardPool;
     public Image healthBar;
     public Card card;
@@ -43,6 +44,16 @@ public class ShowPLcard : MonoBehaviour
         
     }
 
+    public void CDcard0(List<Card> cardList)
+    {
+        for (int i = 0; i < cards.Count; i++)
+        {
+            if (cards[i][0].Id == cardList[0].Id)
+            {
+                cards[i][0].Cd = 0;
+            }
+        }
+    }
     public void TurnUpdate3()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
@@ -141,6 +152,55 @@ public class ShowPLcard : MonoBehaviour
         // }
         
         
+    }
+
+    public void CDCardPrintn()
+    {
+        
+            //显示卡牌
+            cardPool = GameObject.Find("cardPool2");
+            //先删除卡池里的所有卡
+            if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
+            {
+                cardPool.BroadcastMessage("DestoryMe");
+            }
+            //将每张卡的数据分开
+            Debug.Log("count=" + cards.Count);
+            for (int i = 0; i < cards.Count; i++)
+            {
+                if (cards[i][0].Cd > 0)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab2, cardPool.transform);
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0.5f;
+                    newCard.GetComponentsInChildren<TMP_Text>()[7].text = cards[i][0].Cd.ToString();
+                    newCard.name = "冷却中";
+                }
+                
+            }
+    }
+
+    public void DestoryCardPrintn()
+    {
+
+        //显示卡牌
+        cardPool = GameObject.Find("cardPool2");
+        //先删除卡池里的所有卡
+        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
+        {
+            cardPool.BroadcastMessage("DestoryMe");
+        }
+        //将每张卡的数据分开
+        Debug.Log("count=" + cards.Count);
+        for (int i = 0; i < cards.Count; i++)
+        {
+            if (cards[i][0].Cd == -1)
+            {
+                GameObject newCard = GameObject.Instantiate(cardPrefab2, cardPool.transform);
+                newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                newCard.name = (cards[i][0].Id).ToString();
+            }
+        }
     }
 }
 

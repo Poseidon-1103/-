@@ -39,8 +39,6 @@ public class ActionDisplay : MonoBehaviour
             if (cardList[i].CardEffect == "治疗")
             {
                 CardDescriptionText.text += cardList[i].CardEffect + cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
-
-
             }
             if (cardList[i].CardEffect == "攻击")
             {

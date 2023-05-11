@@ -37,6 +37,14 @@ public class PrintAttackRange : BaseManager<PrintAttackRange>
                 AddListV3(AttackType, 1, 1, 0);
                 AddListV3(AttackType, 3, 3, 0);
                 break;*/
+            case "回复":
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
+            case "加速":
+                AddListV3(AttackType, 0, 0, 0);
+                AddListV3(AttackType, 1, 1, 0);
+                break;
             case "自身":
                 AddListV3(AttackType, 0, 0, 0);
                 AddListV3(AttackType, 1, 1, 0);
