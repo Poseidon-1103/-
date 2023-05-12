@@ -8,7 +8,7 @@ public class CardGroupPull : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     public MMF_Player MyPlayer1;
     public MMF_Player MyPlayer2;
     public MMF_Player MyPlayer3;
-    // public MMF_Player MyPlayer4;
+    public MMF_Player MyPlayer4;
 
     // private int index;
     public void OnPointerEnter(PointerEventData eventData)
@@ -16,23 +16,25 @@ public class CardGroupPull : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         CardDisplay[] cards = GameObject.Find("cardPool").GetComponentsInChildren<CardDisplay>();
         for (int i = 0; i < cards.Length; i++)
         {
-            if (gameObject.GetComponent<CardDisplay>().effectDic.Count==0)
-            {
+            // if (gameObject.GetComponent<CardDisplay>().effectDic.Count==0)
+            // {
                 cards[i].transform.GetComponent<CardGroupPull>().MyPlayer1.Direction = MMFeedbacks.Directions.TopToBottom;
                 cards[i].transform.GetComponent<CardGroupPull>().MyPlayer1.PlayFeedbacks();
-            }
-            else if (gameObject.GetComponent<CardDisplay>().effectDic.Count<=3)
+            // }
+            // else if (gameObject.GetComponent<CardDisplay>().effectDic.Count<=3)
+            // {
+                // cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.Direction = MMFeedbacks.Directions.TopToBottom;
+                // cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.PlayFeedbacks();
+            // }
+            // else if (gameObject.GetComponent<CardDisplay>().effectDic.Count>3)
+            // {
+            //     cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.Direction = MMFeedbacks.Directions.TopToBottom;
+            //     cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.PlayFeedbacks();
+            // }
+            if (cards[i].gameObject.name == name)
             {
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.Direction = MMFeedbacks.Directions.TopToBottom;
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.PlayFeedbacks();
-            }
-            else if (gameObject.GetComponent<CardDisplay>().effectDic.Count>3)
-            {
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.Direction = MMFeedbacks.Directions.TopToBottom;
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.PlayFeedbacks();
-            }
-            if (cards[i].gameObject.name == gameObject.name)
-            {
+                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer4.Direction = MMFeedbacks.Directions.TopToBottom;
+                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer4.PlayFeedbacks();
                 break;
             }
 
@@ -48,25 +50,30 @@ public class CardGroupPull : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         CardDisplay[] cards = GameObject.Find("cardPool").GetComponentsInChildren<CardDisplay>();
         for (int i = 0; i < cards.Length; i++)
         {
-            if (gameObject.GetComponent<CardDisplay>().effectDic.Count == 0)
-            {
+            
+                // if (gameObject.GetComponent<CardDisplay>().effectDic.Count==0)
+                // {
                 cards[i].transform.GetComponent<CardGroupPull>().MyPlayer1.Direction = MMFeedbacks.Directions.BottomToTop;
                 cards[i].transform.GetComponent<CardGroupPull>().MyPlayer1.PlayFeedbacks();
-            }
-            else if (gameObject.GetComponent<CardDisplay>().effectDic.Count <= 3)
-            {
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.Direction = MMFeedbacks.Directions.BottomToTop;
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.PlayFeedbacks();
-            }
-            else if (gameObject.GetComponent<CardDisplay>().effectDic.Count > 3)
-            {
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.Direction = MMFeedbacks.Directions.BottomToTop;
-                cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.PlayFeedbacks();
-            }
-            if (cards[i].gameObject.name == gameObject.name)
-            {
-                break;
-            }
+                // }
+                // else if (gameObject.GetComponent<CardDisplay>().effectDic.Count<=3)
+                // {
+                // cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.Direction = MMFeedbacks.Directions.TopToBottom;
+                // cards[i].transform.GetComponent<CardGroupPull>().MyPlayer2.PlayFeedbacks();
+                // }
+                // else if (gameObject.GetComponent<CardDisplay>().effectDic.Count>3)
+                // {
+                //     cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.Direction = MMFeedbacks.Directions.TopToBottom;
+                //     cards[i].transform.GetComponent<CardGroupPull>().MyPlayer3.PlayFeedbacks();
+                // }
+                if (cards[i].gameObject.name == name)
+                {
+                    cards[i].transform.GetComponent<CardGroupPull>().MyPlayer4.Direction = MMFeedbacks.Directions.BottomToTop;
+                    cards[i].transform.GetComponent<CardGroupPull>().MyPlayer4.PlayFeedbacks();
+                    break;
+                }
+
+            
         }
         // MyPlayer.Direction = MMFeedbacks.Directions.BottomToTop;
         // MyPlayer.PlayFeedbacks();
