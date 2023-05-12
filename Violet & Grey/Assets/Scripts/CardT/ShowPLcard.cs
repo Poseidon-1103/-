@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class ShowPLcard : MonoBehaviour
 {
     public GameObject cardPrefab;
+    public GameObject cardPrefab2;
     public GameObject cardPool;
     public Image healthBar;
     public Card card;
@@ -43,6 +44,16 @@ public class ShowPLcard : MonoBehaviour
         
     }
 
+    public void CDcard0(List<Card> cardList)
+    {
+        for (int i = 0; i < cards.Count; i++)
+        {
+            if (cards[i][0].Id == cardList[0].Id)
+            {
+                cards[i][0].Cd = 0;
+            }
+        }
+    }
     public void TurnUpdate3()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
@@ -57,6 +68,22 @@ public class ShowPLcard : MonoBehaviour
     //绑定角色点击
     public void OnMouseDown()
     {
+        //将所有角色的精灵素材改成常态素材
+        ShowPLcard[] unit2 = GameObject.Find("Unit2").GetComponentsInChildren<ShowPLcard>();
+        for (int i = 0; i < unit2.Length; i++)
+        {
+            int j = i;
+            Debug.Log("unit2[i].gameObject.name="+unit2[i].gameObject.name);
+            ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+unit2[i].gameObject.name+"Normal",(img =>
+            {
+                unit2[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
+            }));
+        }
+        //改变点击的角色的精灵素材
+        ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+gameObject.name+"HighLight",(img =>
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = img;
+        }));
         //得到角色的信息，初始化选择卡牌的面板
         UIManager.GetInstance().ShowPanel<SelectCardPanel>("SelectCardPanel",E_UI_Layer.Mid, panel =>
         {
@@ -65,7 +92,7 @@ public class ShowPLcard : MonoBehaviour
             //更新角色状态栏
             GameObject characterStatebar = GameObject.Find("CharacterStatebar");
             // characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = ResMgr.GetInstance().Load<Sprite>(player.Plname);
-            ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+player.Plname+"Head",(img =>
+            ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+player.Plid.ToString()+"Head",(img =>
             {
                 characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = img;
             }));
@@ -80,10 +107,10 @@ public class ShowPLcard : MonoBehaviour
                 cardPool.BroadcastMessage("DestoryMe");
             }
             //将每张卡的数据分开
-            Debug.Log("count="+cards.Count);
+            // Debug.Log("count="+cards.Count);
             for (int i = 0; i < cards.Count; i++)
             {
-                Debug.Log("卡牌+"+cards[i][0].CardName+"+"+cards[i][0].Cd);
+                // Debug.Log("卡牌+"+cards[i][0].CardName+"+"+cards[i][0].Cd);
                 if (cards[i][0].Cd==0)
                 {
                     GameObject newCard = GameObject.Instantiate(cardPrefab, cardPool.transform);
@@ -141,6 +168,55 @@ public class ShowPLcard : MonoBehaviour
         // }
         
         
+    }
+
+    public void CDCardPrintn()
+    {
+        
+            //显示卡牌
+            cardPool = GameObject.Find("cardPool2");
+            //先删除卡池里的所有卡
+            if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
+            {
+                cardPool.BroadcastMessage("DestoryMe");
+            }
+            //将每张卡的数据分开
+            Debug.Log("count=" + cards.Count);
+            for (int i = 0; i < cards.Count; i++)
+            {
+                if (cards[i][0].Cd > 0)
+                {
+                    GameObject newCard = GameObject.Instantiate(cardPrefab2, cardPool.transform);
+                    newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                    newCard.GetComponentsInChildren<CanvasGroup>()[0].alpha = 0.5f;
+                    newCard.GetComponentsInChildren<TMP_Text>()[7].text = cards[i][0].Cd.ToString();
+                    newCard.name = "冷却中";
+                }
+                
+            }
+    }
+
+    public void DestoryCardPrintn()
+    {
+
+        //显示卡牌
+        cardPool = GameObject.Find("cardPool2");
+        //先删除卡池里的所有卡
+        if (cardPool.GetComponentsInChildren<Transform>(true).Length > 1)
+        {
+            cardPool.BroadcastMessage("DestoryMe");
+        }
+        //将每张卡的数据分开
+        Debug.Log("count=" + cards.Count);
+        for (int i = 0; i < cards.Count; i++)
+        {
+            if (cards[i][0].Cd == -1)
+            {
+                GameObject newCard = GameObject.Instantiate(cardPrefab2, cardPool.transform);
+                newCard.GetComponent<CardDisplay>().cardList = cards[i];
+                newCard.name = (cards[i][0].Id).ToString();
+            }
+        }
     }
 }
 

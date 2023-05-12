@@ -18,7 +18,8 @@ public class CardDisplay : MonoBehaviour
     public TextMeshProUGUI Sequence;
     public TextMeshProUGUI CDNumber;
     public GameObject IntroducingEffect;
-    public GameObject IntroducingEffectPanel;
+    public GameObject IntroducingEffectPanel1;
+    public GameObject IntroducingEffectPanel2;
     public GameObject Image;
     public Dictionary<string, int> effectDic = new Dictionary<string, int>();
     // public Dictionary<string, string> effectTextDic = new Dictionary<string, string>();
@@ -40,12 +41,23 @@ public class CardDisplay : MonoBehaviour
 
     public void ShowDescription(string stateName)
     {
-        if (!effectDic.ContainsKey(stateName))
+        if (!effectDic.ContainsKey(stateName) && effectDic.Count < 3)
         {
             ResMgr.GetInstance().LoadAsync<GameObject>("UI/StateDescription/"+stateName+"Description", obj =>
             {
                 //找到父对象
-                Transform father = IntroducingEffectPanel.transform;
+                Transform father = IntroducingEffectPanel1.transform;
+                obj.transform.SetParent(father);
+                obj.transform.localScale = Vector3.one;
+            } );
+            effectDic.Add(stateName,1);
+        }
+        else if (!effectDic.ContainsKey(stateName) && effectDic.Count >= 3)
+        {
+            ResMgr.GetInstance().LoadAsync<GameObject>("UI/StateDescription/"+stateName+"Description", obj =>
+            {
+                //找到父对象
+                Transform father = IntroducingEffectPanel2.transform;
                 obj.transform.SetParent(father);
                 obj.transform.localScale = Vector3.one;
             } );

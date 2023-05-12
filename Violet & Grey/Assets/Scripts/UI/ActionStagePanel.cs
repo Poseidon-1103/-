@@ -25,6 +25,10 @@ public class ActionStagePanel : BasePanel
             case "SkipAction":
                 GameObject.Find("Confirm").GetComponent<EndRound>().SkipActionOrder = 1;
                 break;
+            case "ConfirmAction":
+                Debug.Log("123");
+                GameObject.Find("Confirm").GetComponent<EndRound>().ConfirmActionOrder = 1;
+                break;
         }
     }
     public void Init()

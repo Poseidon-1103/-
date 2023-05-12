@@ -9051,6 +9051,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1204445867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677558017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204445872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204445867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 1
+  EndTurn: 100
+  Probability: 0000000032000000
 --- !u!1001 &1285996324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9135,7 +9160,7 @@ PrefabInstance:
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[0]
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
@@ -9145,7 +9170,7 @@ PrefabInstance:
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[2]
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7418191494105216480, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
@@ -67316,18 +67341,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
+      propertyPath: EndTurn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
       propertyPath: Probability.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[0]
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[1]
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
