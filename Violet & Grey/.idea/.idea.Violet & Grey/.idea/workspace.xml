@@ -4,16 +4,72 @@
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/EnemyAction.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HalfCard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/PlayerAction.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HorizontalEnemyAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HorizontalEnemyAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/HorizontalPlayerAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/HorizontalPlayerAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/IntroducingEffectPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/IntroducingEffectPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/VerticalEnemyAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/VerticalEnemyAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/VerticalPlayerAction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/VerticalPlayerAction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map/0-0_Grid.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map/0-0_Grid.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map/1-1Grid.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map/Level 1_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1/Level map/Level 1_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/卡斯Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/卡斯Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/妮莫可Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/妮莫可Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/尼莫可Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/尼莫可Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键剑士Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键剑士Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键牧师Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键牧师Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键重甲Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/帝国黑键重甲Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/弗尔米奥Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/弗尔米奥Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/艾什Head.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/SelectCardPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/战士1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/战士1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/战士2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/战士2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军战士1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军战士1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军战士2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军战士2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军重甲1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军重甲1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军重甲2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌军重甲2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌牧师1(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌牧师1(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌牧师2(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/敌牧师2(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/炼金术士1 (1)(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/炼金术士1 (1)(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/炼金术士2 (1)(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/炼金术士2 (1)(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/盗贼1(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/盗贼1(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/盗贼2(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/盗贼2(1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/重甲1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/重甲1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/重甲2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/重甲2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/ArmorDescription.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/ArmorDescription.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/ArmorPenetrationDescription.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/ArmorPenetrationDescription.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/Attack-upDescription.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/Attack-upDescription.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/CorruptedDescription.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/StateDescription/CorruptedDescription.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/CardDisplay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/RecordActionList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/ShowPLcard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/ShowPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/ShowPath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,6 +242,10 @@
       <workItem from="1683438467747" duration="8336000" />
       <workItem from="1683466543281" duration="4426000" />
       <workItem from="1683547919656" duration="5857000" />
+      <workItem from="1683726940252" duration="1780000" />
+      <workItem from="1683814649597" duration="10218000" />
+      <workItem from="1683856245565" duration="5809000" />
+      <workItem from="1683875342787" duration="8770000" />
     </task>
     <servers />
   </component>

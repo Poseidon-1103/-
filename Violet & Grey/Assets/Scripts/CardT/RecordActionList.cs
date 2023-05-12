@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,8 +78,19 @@ public class RecordActionList : MonoBehaviour
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
                         newCard.name = recordList[i][0].CardName;
+                        string id = (recordList[i][0].Id / 10000).ToString();
+                        Transform actionBar = newCard.transform.Find("ActionBar");
+                        Transform sequentialActionTopBackground = actionBar.transform.Find("SequentialActionTopBackground");
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+id+"Head",(img =>
+                        {
+                            if (!img)
+                            {
+                                sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = null;
+                            }
+                            sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = img;
+                        }));
                         // newCard.name = (recordList[i][0].Id).ToString();
-                        
+
                     }
                     else
                     {
@@ -86,6 +98,17 @@ public class RecordActionList : MonoBehaviour
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
                         newCard.name = recordList[i][0].CardName;
+                        string id = (recordList[i][0].Id / 10000).ToString();
+                        Transform actionBar = newCard.transform.Find("ActionBar");
+                        Transform sequentialActionTopBackground = actionBar.transform.Find("SequentialActionTopBackground");
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+id+"Head",(img =>
+                        {
+                            if (!img)
+                            {
+                                sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = null;
+                            }
+                            sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = img;
+                        }));
                         // newCard.name = (recordList[i][0].Id).ToString();
                     }
                     if (i==0)
@@ -114,6 +137,17 @@ public class RecordActionList : MonoBehaviour
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
                         newCard.name = recordList[i][0].CardName;
+                        string id = (recordList[i][0].Id / 10000).ToString();
+                        Transform actionBar = newCard.transform.Find("ActionBar");
+                        Transform sequentialActionTopBackground = actionBar.transform.Find("SequentialActionTopBackground");
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+id+"Head",(img =>
+                        {
+                            if (!img)
+                            {
+                                sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = null;
+                            }
+                            sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = img;
+                        }));
                         // newCard.name = (recordList[i][0].Id).ToString();
                     }
                     else
@@ -122,6 +156,17 @@ public class RecordActionList : MonoBehaviour
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[0].cardList = recordList[i];
                         newCard.transform.GetComponentsInChildren<ActionDisplay>()[1].cardList = recordList[i];
                         newCard.name = recordList[i][0].CardName;
+                        string id = (recordList[i][0].Id / 10000).ToString();
+                        Transform actionBar = newCard.transform.Find("ActionBar");
+                        Transform sequentialActionTopBackground = actionBar.transform.Find("SequentialActionTopBackground");
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+id+"Head",(img =>
+                        {
+                            if (!img)
+                            {
+                                sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = null;
+                            }
+                            sequentialActionTopBackground.transform.Find("ActionHeadImage").GetComponent<Image>().sprite = img;
+                        }));
                         // newCard.name = (recordList[i][0].Id).ToString();
                     }
                     // if (i==0)

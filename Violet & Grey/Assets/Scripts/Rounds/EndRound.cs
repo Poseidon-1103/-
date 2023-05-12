@@ -107,6 +107,17 @@ public class EndRound : MonoBehaviour
                     turnnumber.text = (int.Parse(turnnumber.text) + 1).ToString();
                     //关闭执行阶段界面
                     UIManager.GetInstance().HidePanel("ActionStagePanel");
+                    //将角色高亮都取消
+                    // ShowPLcard[] unit2 = GameObject.Find("Unit2").GetComponentsInChildren<ShowPLcard>();
+                    for (int i = 0; i < AllUnit.Count; i++)
+                    {
+                        int j = i;
+                        Debug.Log("obj[i].gameObject.name="+AllUnit[i].gameObject.name);
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+AllUnit[i].gameObject.name+"Normal",(img =>
+                        {
+                            AllUnit[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
+                        }));
+                    }
                     gameObject.AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
                     /*if (int.Parse(turnnumber.text)==5)
                     {
@@ -127,7 +138,17 @@ public class EndRound : MonoBehaviour
                     RoundType = 0;
                     //关闭选卡界面
                     UIManager.GetInstance().HidePanel("SelectCardPanel");
-                    
+                    //将角色高亮都取消
+                    ShowPLcard[] unit2 = GameObject.Find("Unit2").GetComponentsInChildren<ShowPLcard>();
+                    for (int i = 0; i < unit2.Length; i++)
+                    {
+                        int j = i;
+                        Debug.Log("unit2[i].gameObject.name="+unit2[i].gameObject.name);
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+unit2[i].gameObject.name+"Normal",(img =>
+                        {
+                            unit2[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
+                        }));
+                    }
                     GetPL();
                     // turnname.text = ("结算执行阶段");
                     gameObject.AddComponent<ChangeStage>().stageMessage = "执行双方卡牌效果";
@@ -211,17 +232,34 @@ public class EndRound : MonoBehaviour
                 obj[PLnum].GetComponent<ChangeState>().TurnStart2();
                 UIManager.GetInstance().ShowPanel<ActionStagePanel>("ActionStagePanel",E_UI_Layer.Mid, panel =>
                 {
+                    int plNum = PLnum;
                     panel.Init();
                     //更新角色状态栏
                     GameObject characterStatebar = GameObject.Find("CharacterStatebar");
                     // characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = ResMgr.GetInstance().Load<Sprite>("UI/HeadImg/"+obj[PLnum].GetComponent<ChangeState>().player.Plname+"Head");
-                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+obj[PLnum].GetComponent<ChangeState>().player.Plname+"Head",(img =>
+                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+obj[PLnum].GetComponent<ChangeState>().player.Plid.ToString()+"Head",(img =>
                     {
                         if (!img)
                         {
                             characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = null;
                         }
                         characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = img;
+                    }));
+                    //将角色高亮都取消
+                    // ShowPLcard[] unit2 = GameObject.Find("Unit2").GetComponentsInChildren<ShowPLcard>();
+                    for (int j = 0; j < AllUnit.Count; j++)
+                    {
+                        int count = j;
+                        Debug.Log("obj[j].gameObject.name="+AllUnit[j].gameObject.name);
+                        ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+AllUnit[j].gameObject.name+"Normal",(img =>
+                        {
+                            AllUnit[count].gameObject.GetComponent<SpriteRenderer>().sprite = img;
+                        }));
+                    }
+                    //改变当前行动的角色的精灵素材
+                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+obj[PLnum].gameObject.name+"HighLight",(img =>
+                    {
+                        obj[plNum].GetComponent<SpriteRenderer>().sprite = img;
                     }));
                     characterStatebar.transform.Find("CharacterName").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.Plname;
                     characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.PlHP.ToString();
@@ -779,26 +817,26 @@ public class EndRound : MonoBehaviour
                                     }
                                     GetPl2();
                                     List<AStarNode> pathlist2 = MapManage.GetInstance().EnemyFindPath(playerCellPosition, playerendCellPos, "移动");//得到路径
-                                    if (pathlist2.Count == pathlist.Count)
-                                    {
-                                        for (int Luck = 0; Luck < recordList.Count; Luck++)
-                                        {
-                                            for (int GoodLuck = 0; GoodLuck < obj2.GetComponent<ShowPLcard>().cards.Count; GoodLuck++)
-                                            {
-                                                if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Id == recordList[Luck][0].Id)
-                                                {
-                                                    if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence> obj3.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence)
-                                                    {
-                                                        obj3 = PLUnit[k];
-                                                        EndPoint = playerendCellPos;
-                                                        pathlist = pathlist2;
-                                                    }
-                                                }
-                                            }
-                                            
-                                        }
-                                    }
-                                    if (pathlist2.Count < pathlist.Count)
+                                    // if (pathlist2.Count == pathlist.Count)
+                                    // {
+                                    //     for (int Luck = 0; Luck < recordList.Count; Luck++)
+                                    //     {
+                                    //         for (int GoodLuck = 0; GoodLuck < obj2.GetComponent<ShowPLcard>().cards.Count; GoodLuck++)
+                                    //         {
+                                    //             if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Id == recordList[Luck][0].Id)
+                                    //             {
+                                    //                 if (obj2.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence> obj3.GetComponent<ShowPLcard>().cards[GoodLuck][0].Sequence)
+                                    //                 {
+                                    //                     obj3 = PLUnit[k];
+                                    //                     EndPoint = playerendCellPos;
+                                    //                     pathlist = pathlist2;
+                                    //                 }
+                                    //             }
+                                    //         }
+                                    //         
+                                    //     }
+                                    // }
+                                    if (pathlist2.Count <= pathlist.Count)
                                         {
                                             obj3 = PLUnit[k];
                                             EndPoint = playerendCellPos;

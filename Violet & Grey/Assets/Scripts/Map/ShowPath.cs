@@ -34,11 +34,9 @@ public class ShowPath : MonoBehaviour
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // 将屏幕坐标转换为世界坐标  
         mouseWorldPosition.z = 0;
         Vector3Int mouseCellPosition = moveRange.WorldToCell(mouseWorldPosition); //将世界坐标转换为格子坐标
-        Debug.Log(mouseCellPosition);
         if (moveRange.GetTile(mouseCellPosition) != null)
         {
             pathlist = MapManage.GetInstance().FindPath(startPos, mouseCellPosition, "移动");
-            Debug.Log("count+"+pathlist.Count);
             foreach (var a in pathlist)
             {
                 // if (pathlist.IndexOf(a) < pathlist.Count-1)

@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 1754817743574843245}
   - component: {fileID: 2392761986163023468}
   m_Layer: 5
-  m_Name: Sequential Action Top Background
+  m_Name: SequentialActionTopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 1754817744614251763}
   - component: {fileID: 1754817744614251764}
   m_Layer: 5
-  m_Name: Sequential Action Head Image
+  m_Name: ActionHeadImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6c8eca4f8c4ea694fb48b95a829dea6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6891145f358fccf49897b0aaf29ab321, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9122316614423251193}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: ActionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,12 +852,12 @@ PrefabInstance:
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -175
+      value: -174
       objectReference: {fileID: 0}
     - target: {fileID: 3605643615036700455, guid: e322c1f5803166b4e819b89512f9fcaa,
         type: 3}
