@@ -8,7 +8,7 @@ public class ShowPath : MonoBehaviour
     // public Vector3Int mousePosition;
     public List<AStarNode> pathlist;
     // public List<Vector3Int> moveList;
-    //³¡¾°ÖĞĞÂÔöµÄÒ»²ãtilemap£¬ÓÃÀ´¸²¸ÇÖÕµãµÄÍßÆ¬
+    //åœºæ™¯ä¸­æ–°å¢çš„ä¸€å±‚tilemapï¼Œç”¨æ¥è¦†ç›–ç»ˆç‚¹çš„ç“¦ç‰‡
     public Tilemap EndImage;
     
     public Tilemap moveRange;
@@ -27,24 +27,25 @@ public class ShowPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //½«Â·¾¶ÍßÆ¬Ìæ»»³ÉÒÆ¶¯·¶Î§ÍßÆ¬£¬Çå³ıÉÏÒ»´ÎÉú³ÉµÄÂ·¾¶
+        //å°†è·¯å¾„ç“¦ç‰‡æ›¿æ¢æˆç§»åŠ¨èŒƒå›´ç“¦ç‰‡ï¼Œæ¸…é™¤ä¸Šä¸€æ¬¡ç”Ÿæˆçš„è·¯å¾„
         moveRange.SwapTile(tileBasePath, tileBase);
         EndImage.ClearAllTiles();
-        Vector3 mousePosition = Input.mousePosition; // »ñÈ¡Êó±êµÄÆÁÄ»×ø±ê
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // ½«ÆÁÄ»×ø±ê×ª»»ÎªÊÀ½ç×ø±ê  
+        Vector3 mousePosition = Input.mousePosition; // è·å–é¼ æ ‡çš„å±å¹•åæ ‡
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition); // å°†å±å¹•åæ ‡è½¬æ¢ä¸ºä¸–ç•Œåæ ‡  
         mouseWorldPosition.z = 0;
-        Vector3Int mouseCellPosition = moveRange.WorldToCell(mouseWorldPosition); //½«ÊÀ½ç×ø±ê×ª»»Îª¸ñ×Ó×ø±ê
+        Vector3Int mouseCellPosition = moveRange.WorldToCell(mouseWorldPosition); //å°†ä¸–ç•Œåæ ‡è½¬æ¢ä¸ºæ ¼å­åæ ‡
+        /*Debug.Log(mouseCellPosition);*/
         if (moveRange.GetTile(mouseCellPosition) != null)
         {
-            pathlist = MapManage.GetInstance().FindPath(startPos, mouseCellPosition, "ÒÆ¶¯");
+            pathlist = MapManage.GetInstance().FindPath(startPos, mouseCellPosition, "ç§»åŠ¨");
             foreach (var a in pathlist)
             {
                 // if (pathlist.IndexOf(a) < pathlist.Count-1)
                 // {
-                //Â·¾¶ÍßÆ¬£¬Ìæ»»moverange²ãµÄÍßÆ¬
+                //è·¯å¾„ç“¦ç‰‡ï¼Œæ›¿æ¢moverangeå±‚çš„ç“¦ç‰‡
                 moveRange.SetTile(new Vector3Int(a.x,a.y,0), tileBasePath);
                 // }
-                //ÖÕµãÍßÆ¬£¬¸²¸ÇÔÚµ¥¶ÀµÄtilemapÉÏ
+                //ç»ˆç‚¹ç“¦ç‰‡ï¼Œè¦†ç›–åœ¨å•ç‹¬çš„tilemapä¸Š
                 if (pathlist.IndexOf(a) == pathlist.Count-1)
                 {
                     EndImage.SetTile(new Vector3Int(a.x,a.y,0), tileBaseEnd);

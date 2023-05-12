@@ -16,9 +16,7 @@ public class SelectCard : MonoBehaviour
     public int SEQ;
     
     public List<Card> ActionList;
-    private void Update()
-    {
-    }
+    
     public void GetCard()
     {
         //获取卡牌的列表
