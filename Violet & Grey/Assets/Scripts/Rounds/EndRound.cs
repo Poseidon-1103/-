@@ -119,7 +119,7 @@ public class EndRound : MonoBehaviour
                             AllUnit[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
                         }));
                     }
-                    gameObject.AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
+                    gameObject.AddComponent<ChangeStage>().stageMessage = "选择阶段";
                     /*if (int.Parse(turnnumber.text)==5)
                     {
                         Unit3.GetComponent<CreatUnit>().enabled = true;
@@ -152,7 +152,7 @@ public class EndRound : MonoBehaviour
                     }
                     GetPL();
                     // turnname.text = ("结算执行阶段");
-                    gameObject.AddComponent<ChangeStage>().stageMessage = "执行双方卡牌效果";
+                    gameObject.AddComponent<ChangeStage>().stageMessage = "执行阶段";
                     recordList = ActionsList.GetComponent<RecordActionList>().recordList;
                     //卡池更新（包括冷却-1,后续还有状态更新）
                     Unit2.BroadcastMessage("TurnUpdate");
@@ -846,7 +846,7 @@ public class EndRound : MonoBehaviour
                                 ConfirmActionOrder = 0;
                                 GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
                                 GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
-                                if (SkipActionOrder == 1)
+                                if (SkipActionOrder == 1 || pathlist.Count == 20)
                                 {
                                     SkipActionOrder = 0;
                                     break;

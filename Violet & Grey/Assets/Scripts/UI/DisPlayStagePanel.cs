@@ -24,7 +24,7 @@ public class DisPlayStagePanel : BasePanel
             case "Yes":
                 Debug.Log("Yes");
                 UIManager.GetInstance().HidePanel("DisPlayStagePanel");
-                GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "选择当前回合行动";
+                GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "选择阶段";
                 break;
         }
     }

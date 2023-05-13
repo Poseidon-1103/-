@@ -37,17 +37,17 @@ public class ChangeStage : MonoBehaviour
     private void DelayHide()
     {
         UIManager.GetInstance().HidePanel("StagePanel");
-        if (stageMessage == "敌人当前回合行动")
+        if (stageMessage == "展示阶段")
         {
             //显示敌人行动界面
             UIManager.GetInstance().ShowPanel<DisPlayStagePanel>("DisPlayStagePanel",E_UI_Layer.Mid,ShowEnemyAction);
             Destroy(this);
         }
-        else if (stageMessage == "执行双方卡牌效果")
+        else if (stageMessage == "执行阶段")
         {
             Destroy(this);
         }
-        else if (stageMessage == "选择当前回合行动")
+        else if (stageMessage == "选择阶段")
         {
             Destroy(this);
         }

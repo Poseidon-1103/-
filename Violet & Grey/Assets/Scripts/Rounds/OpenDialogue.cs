@@ -31,7 +31,7 @@ public class OpenDialogue : MonoBehaviour
         if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition)
         {
             //找到场景右上角的回合数对象，切换阶段过场
-            GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "敌人当前回合行动";
+            GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
             condition = false;
             Destroy(this);
         }
