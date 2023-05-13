@@ -1572,7 +1572,6 @@ GameObject:
   - component: {fileID: 6967324112664733815}
   - component: {fileID: 6967324112664733813}
   - component: {fileID: 6967324112664733814}
-  - component: {fileID: 2138578470731600527}
   m_Layer: 0
   m_Name: MoveRange
   m_TagString: Untagged
@@ -1738,24 +1737,6 @@ TilemapRenderer:
   m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &2138578470731600527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6967324112664733808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451d5043c9d26ca459bfc104f56d5bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EndImage: {fileID: 0}
-  moveRange: {fileID: 6967324112664733813}
-  tileBase: {fileID: 11400000, guid: 88c7a3a2ef9df7741b4432f15720ae74, type: 2}
-  tileBaseEnd: {fileID: 11400000, guid: ca25c8e47d91a014eb843096e876bb0d, type: 2}
-  tileBasePath: {fileID: 11400000, guid: 1afeaf324500dc34aba962a51c0dc301, type: 2}
-  startPos: {x: -12, y: -13, z: 0}
 --- !u!1 &6967324112860228141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,25 +1969,25 @@ Tilemap:
       e33: 0
   - m_RefCount: 0
     m_Data:
-      e00: -1.2100333e-33
+      e00: -1.4918174e-37
       e01: 0
       e02: -2.0401127e+10
       e03: -2.0401127e+10
-      e10: 7.6e-43
+      e10: 8.83e-43
       e11: 0
-      e12: 7.6e-43
-      e13: 7.6e-43
-      e20: 1.6798712e-28
+      e12: 8.83e-43
+      e13: 8.83e-43
+      e20: -6.454007e+20
       e21: 1e-45
-      e22: 1.3914276e-28
-      e23: 1.5924696e+29
-      e30: 4.5905e-41
+      e22: 9.607964e-28
+      e23: -7.989086e+15
+      e30: 4.5904e-41
       e31: 0
-      e32: 7.61e-43
-      e33: 7.64e-43
+      e32: 8.84e-43
+      e33: 8.84e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 3.8836e-41, g: 3.8836e-41, b: 3.8836e-41, a: 3.8836e-41}
+    m_Data: {r: 3.7451e-41, g: 3.7451e-41, b: 3.7451e-41, a: 3.7451e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
