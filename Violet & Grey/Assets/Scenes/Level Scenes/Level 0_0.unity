@@ -311,6 +311,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 894256437}
     m_Modifications:
     - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
+      propertyPath: HalfCard
+      value: 
+      objectReference: {fileID: 8047229540910054925, guid: de7cb8ade3478a749a8db9f9a1207b7f,
+        type: 3}
+    - target: {fileID: 1815863105, guid: 869b805b8a065164d92a3585f43f03c2, type: 3}
       propertyPath: VerticalEnemyActions
       value: 
       objectReference: {fileID: 7694708622950463923, guid: 033d6dafe168c5742bf8be513ef219fd,
@@ -1140,6 +1145,298 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1338304855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338304857}
+  - component: {fileID: 1338304856}
+  m_Layer: 0
+  m_Name: AudioManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1338304856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338304855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks: []
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+  FeedbacksList:
+  - rid: 3892744255789596672
+  KeepPlayModeChanges: 0
+  PerformanceMode: 0
+  ForceStopFeedbacksOnDisable: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 3892744255789596672
+      type: {class: MMF_MMSoundManagerSound, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks.MMTools}
+      data:
+        Active: 1
+        UniqueID: -1254684870
+        Label: MMSoundManager Sound
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        Owner: {fileID: 1338304856}
+        DebugActive: 0
+        Sfx: {fileID: 8300000, guid: b1d03100b4df7a241b321d171de0c8ee, type: 3}
+        RandomSfx: []
+        SequentialOrder: 0
+        SequentialOrderHoldLast: 0
+        SequentialOrderHoldCooldownDuration: 2
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        PlaybackTime: {x: 0, y: 0}
+        MmSoundManagerTrack: 0
+        ID: 0
+        AudioGroup: {fileID: 0}
+        RecycleAudioSource: {fileID: 0}
+        Loop: 0
+        Persistent: 0
+        DoNotPlayIfClipAlreadyPlaying: 0
+        StopSoundOnFeedbackStop: 0
+        Fade: 0
+        FadeInitialVolume: 0
+        FadeDuration: 1
+        FadeTween:
+          MMTweenDefinitionType: 0
+          MMTweenCurve: 9
+          Curve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          Initialized: 0
+        SoloSingleTrack: 0
+        SoloAllTracks: 0
+        AutoUnSoloOnEnd: 0
+        PanStereo: 0
+        SpatialBlend: 0
+        AttachToTransform: {fileID: 0}
+        BypassEffects: 0
+        BypassListenerEffects: 0
+        BypassReverbZones: 0
+        Priority: 128
+        ReverbZoneMix: 1
+        DopplerLevel: 1
+        Spread: 0
+        RolloffMode: 0
+        MinDistance: 1
+        MaxDistance: 500
+        UseCustomRolloffCurve: 0
+        CustomRolloffCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        UseSpatialBlendCurve: 0
+        SpatialBlendCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        UseReverbZoneMixCurve: 0
+        ReverbZoneMixCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        UseSpreadCurve: 0
+        SpreadCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        DrawGizmos: 0
+        GizmosCenter: {fileID: 0}
+        MinDistanceColor: {r: 0.37254903, g: 0.61960787, b: 0.627451, a: 1}
+        MaxDistanceColor: {r: 1, g: 0.27058825, b: 0, a: 1}
+        TestPlayButton:
+          ButtonText: Debug Play Sound
+        TestStopButton:
+          ButtonText: Debug Stop Sound
+        ResetSequentialIndexButton:
+          ButtonText: Reset Sequential Index
+--- !u!4 &1338304857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338304855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1410625158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1298,6 +1595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2406819832060268534, guid: 83c81a0299bd98442a1ab8e22f69a9fd,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4884651
+      objectReference: {fileID: 0}
+    - target: {fileID: 2406819832060268534, guid: 83c81a0299bd98442a1ab8e22f69a9fd,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1334,12 +1636,12 @@ PrefabInstance:
     - target: {fileID: 2406819832060268534, guid: 83c81a0299bd98442a1ab8e22f69a9fd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 762
+      value: 811
       objectReference: {fileID: 0}
     - target: {fileID: 2406819832060268534, guid: 83c81a0299bd98442a1ab8e22f69a9fd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -21
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 2406819832060268534, guid: 83c81a0299bd98442a1ab8e22f69a9fd,
         type: 3}
@@ -1452,6 +1754,7 @@ MonoBehaviour:
   moveTileBase: {fileID: 11400000, guid: 88c7a3a2ef9df7741b4432f15720ae74, type: 2}
   aTKTileBase: {fileID: 11400000, guid: 1439f4848a4a9f7458b1592070e8bf22, type: 2}
   healingTileBase: {fileID: 11400000, guid: 877420c3953b90c48a5c2fdcf2bb7e26, type: 2}
+  CardCDSp: 0
   SkipActionOrder: 0
   ConfirmActionOrder: 0
 --- !u!114 &1483903852
@@ -1753,176 +2056,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1760808336688632283, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1760808336688632283, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138578470731600527, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: EndImage
-      value: 
-      objectReference: {fileID: 1002319302}
-    - target: {fileID: 2138578470731600527, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: moveRange
-      value: 
-      objectReference: {fileID: 5565642081168710421}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_Tiles.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileAssetArray.Array.data[1].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[5].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[6].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileColorArray.Array.data[0].m_Data.a
-      value: 3.7451e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileColorArray.Array.data[0].m_Data.b
-      value: 3.7451e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileColorArray.Array.data[0].m_Data.g
-      value: 3.7451e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileColorArray.Array.data[0].m_Data.r
-      value: 3.7451e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileAssetArray.Array.data[1].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileColorArray.Array.data[0].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e00
-      value: -1.4918174e-37
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e02
-      value: -2.0401127e+10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e03
-      value: -2.0401127e+10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e10
-      value: 8.83e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e11
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e12
-      value: 8.83e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e13
-      value: 8.83e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e20
-      value: -6.454007e+20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e21
-      value: 1e-45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e22
-      value: 9.607964e-28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e23
-      value: -7.989086e+15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e30
-      value: 4.5904e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e32
-      value: 8.84e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e33
-      value: 8.84e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileMatrixArray.Array.data[1].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[5].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[6].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946736631890358651, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_Tiles.Array.data[2].second.m_TileSpriteIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3282501400227677147, guid: 037d702f4a053224489c1050900aec2f,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6967324112102464340, guid: 037d702f4a053224489c1050900aec2f,
         type: 3}
       propertyPath: m_Name
@@ -1983,8 +2116,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2138578470731600527, guid: 037d702f4a053224489c1050900aec2f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 037d702f4a053224489c1050900aec2f, type: 3}
 --- !u!1839735485 &5565642081168710421 stripped
 Tilemap:
