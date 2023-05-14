@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using TMPro;
 using UnityEngine;
 
@@ -82,7 +83,9 @@ public GameObject PL;
         if (Armornum >0&& num - Armornum>=0)
         {
             num = num - Armornum;
+            
         }
+        transform.GetComponentInChildren<MMF_Player>().PlayFeedbacks();
         Debug.Log("扣血" + num);
         player.PlHP = player.PlHP - num;
         player.Type = 1;
@@ -102,6 +105,7 @@ public GameObject PL;
             }
         }
         Debug.Log("扣血" + num);
+        transform.GetComponentInChildren<MMF_Player>().PlayFeedbacks();
         player.PlHP = player.PlHP - num;
         player.Type = 1;
     }

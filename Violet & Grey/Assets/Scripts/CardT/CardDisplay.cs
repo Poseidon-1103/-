@@ -88,6 +88,18 @@ public class CardDisplay : MonoBehaviour
                         CardCDTextUP.text = cardList[i].CardCd.ToString();
                     }
                 }
+                if (cardList[i].CardEffect == "特殊")
+                {
+                    if (cardList[i].CardEffType=="加速冷却")
+                    {
+                        CardDescriptionTextUP.text += "冷却一张右方卡牌" + "\n";
+                    }
+                    if (cardList[i].CardEffType == "回复损坏")
+                    {
+                        CardDescriptionTextUP.text += "恢复一张友方损坏卡牌" + "\n";
+                    }
+
+                }
                 if (cardList[i].CardEffect == "治疗")
                 {
                         CardDescriptionTextUP.text += cardList[i].CardEffect+cardList[i].CardEffType+ cardList[i].CardEffNum + "\n";
@@ -268,6 +280,18 @@ public class CardDisplay : MonoBehaviour
                     {
                         CardDescriptionTextDown.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
                     }
+                }
+                if (cardList[i].CardEffect == "特殊")
+                {
+                    if (cardList[i].CardEffType == "加速冷却")
+                    {
+                        CardDescriptionTextDown.text += "冷却一张右方卡牌" + "\n";
+                    }
+                    if (cardList[i].CardEffType == "回复损坏")
+                    {
+                        CardDescriptionTextDown.text += "恢复一张友方损坏卡牌" + "\n";
+                    }
+
                 }
                 if (cardList[i].CardEffect == "移动")
                 {

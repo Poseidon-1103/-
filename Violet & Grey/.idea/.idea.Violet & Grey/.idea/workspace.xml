@@ -3,25 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/0-0_Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/0-0_Grid.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/1-1_Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/1-1_Grid.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/1-2_Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/1-2_Grid.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/NewUIPNG/重甲2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/NewUIPNG/重甲2.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/SelectStage/MeticulousClassification/Round.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/StagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/StagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0_0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/ChangeStage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeelTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StagePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MouseImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MouseImage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +40,49 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/ReflectionHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/c5/65ce18c6/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ActionDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/GameWin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/34/c1fe27be/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/ReflectionHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ActionDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -198,7 +230,8 @@
       <workItem from="1683856245565" duration="5809000" />
       <workItem from="1683875342787" duration="12285000" />
       <workItem from="1683963872596" duration="1593000" />
-      <workItem from="1683990028708" duration="5253000" />
+      <workItem from="1683990028708" duration="6438000" />
+      <workItem from="1684044938034" duration="36425000" />
     </task>
     <servers />
   </component>

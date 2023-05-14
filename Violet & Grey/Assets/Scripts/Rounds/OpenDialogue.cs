@@ -6,11 +6,11 @@ using UnityEngine.Events;
 
 public class OpenDialogue : MonoBehaviour
 {
-    public string stageMessage;
+    public string dialogueName;
     // Start is called before the first frame update
     void Start()
     {
-        UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
+        UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top);
     }
 
     // public void Show()
@@ -28,7 +28,7 @@ public class OpenDialogue : MonoBehaviour
     //对话结束后切换到展示敌人行动阶段
     private void ChangeStage()
     {
-        if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition)
+        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
         {
             //找到场景右上角的回合数对象，切换阶段过场
             GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
