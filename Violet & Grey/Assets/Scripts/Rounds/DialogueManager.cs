@@ -54,15 +54,7 @@ public class DialogueManager : MonoBehaviour
     {
         
     }
-
-    public void UpdateMessage()
-    {
-        for (int i = 0; i < playerNames.Count; i++)
-        {
-            imageDic[playerNames[i]] = sprites[i];
-        }
-        ReadText(dialogueDateFile);
-    }
+    
     
     //更新文本
     public void UpdateText(string name, string text, string position)

@@ -31,6 +31,7 @@ public class EndRound : MonoBehaviour
     //瓦片资源基类 通过它可以得到瓦片资源
     public TileBase moveTileBase;
     public TileBase aTKTileBase;
+    public TileBase aTKRangeTileBase;
     public TileBase healingTileBase;
 
     //寻路路径
@@ -1054,7 +1055,7 @@ public class EndRound : MonoBehaviour
             rangeMap.ClearAllTiles();
             foreach (var a in moveList)
             {
-                rangeMap.SetTile(a, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(a, aTKRangeTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }
@@ -1069,7 +1070,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var a in moveList)
             {
-                rangeMap.SetTile(a, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(a, aTKRangeTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList2 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 2);
@@ -1077,7 +1078,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var b in moveList2)
             {
-                rangeMap.SetTile(b, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(b, aTKRangeTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList3 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 3);
@@ -1085,7 +1086,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var c in moveList3)
             {
-                rangeMap.SetTile(c, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(c, aTKRangeTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
         List<Vector3Int> moveList4 = MapManage.GetInstance().MoveRange2(playerCellPosition, MoveNum, 4);
@@ -1093,7 +1094,7 @@ public class EndRound : MonoBehaviour
         {
             foreach (var d in moveList4)
             {
-                rangeMap.SetTile(d, moveTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
+                rangeMap.SetTile(d, aTKRangeTileBase);//将可移动地位置高亮（设置显示的瓦片资源）
             }
         }
     }

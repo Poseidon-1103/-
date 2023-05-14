@@ -6,11 +6,6 @@ public class Dialogue : MonoBehaviour
 {
     public string dialogueName;
     public int SpecialRound = -1;
-    //角色立绘列表
-    public List<Sprite> sprites = new List<Sprite>();
-    //角色名称列表
-    public List<string> playerNames = new List<string>();
-    public TextAsset dialogueDateFile;
     //回合数
     int Round = 1;
     // Start is called before the first frame update
@@ -29,7 +24,7 @@ public class Dialogue : MonoBehaviour
     //对话结束后切换到展示敌人行动阶段
     private void ChangeStage()
     {
-        if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition)
+        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
         {
             //找到场景右上角的回合数对象，切换阶段过场
             GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
@@ -47,12 +42,11 @@ public class Dialogue : MonoBehaviour
         }
         else if (SpecialRound == Round)
         {
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = true;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = true;
+            } );
+            
         }
     }
 }

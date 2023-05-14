@@ -21,10 +21,10 @@ public class MouseImage : MonoBehaviour
             Cursor.SetCursor(left, Vector2.zero, CursorMode.Auto);
         }
 
-        /*if (Input.GetMouseButton(1))  //鼠标右键
-        {
-
-        }*/
+         if (Input.GetMouseButton(1))  //鼠标右键
+         {
+             Cursor.SetCursor(right, Vector2.zero, CursorMode.Auto);
+         }
 
         /*if (Input.GetMouseButton(2))  //鼠标中键
         {

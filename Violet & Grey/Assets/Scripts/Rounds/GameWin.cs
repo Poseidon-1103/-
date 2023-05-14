@@ -26,11 +26,6 @@ public class GameWin : MonoBehaviour
     private List<GameObject> PLUnit = new();
     private List<Vector3Int> PLList = new();
     public int condition = 0;
-    //角色立绘列表
-    public List<Sprite> sprites = new List<Sprite>();
-    //角色名称列表
-    public List<string> playerNames = new List<string>();
-    public TextAsset dialogueDateFile;
     public void Start()
     {
         
@@ -42,12 +37,11 @@ public class GameWin : MonoBehaviour
             Debug.Log("所有敌人消灭");
             UIManager.GetInstance().HidePanel("ActionStagePanel");
             UIManager.GetInstance().HidePanel("DisplayStagePanel");
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = 1;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = 1;
+            });
+            
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 1)
             // {
             //     //打开胜利面板
@@ -65,12 +59,10 @@ public class GameWin : MonoBehaviour
             Debug.Log("游戏失败");
             UIManager.GetInstance().HidePanel("ActionStagePanel");
             UIManager.GetInstance().HidePanel("DisplayStagePanel");
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = 2;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = 2;
+            });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
             //     //打开失败面板
@@ -88,12 +80,10 @@ public class GameWin : MonoBehaviour
             Debug.Log("到达特定格子");
             UIManager.GetInstance().HidePanel("DisplayStagePanel");
             UIManager.GetInstance().HidePanel("ActionStagePanel");
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = 1;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = 2;
+            });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
             //     //打开胜利面板
@@ -111,12 +101,10 @@ public class GameWin : MonoBehaviour
             Debug.Log("回合上限");
             UIManager.GetInstance().HidePanel("DisplayStagePanel");
             UIManager.GetInstance().HidePanel("ActionStagePanel");
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = 2;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = 2;
+            });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
             //     //打开失败面板
@@ -134,12 +122,10 @@ public class GameWin : MonoBehaviour
             Debug.Log("回合获胜");
             UIManager.GetInstance().HidePanel("DisplayStagePanel");
             UIManager.GetInstance().HidePanel("ActionStagePanel");
-            UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
-            GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
-            condition = 1;
+            UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
+            {
+                condition = 2;
+            });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
             //     //打开胜利面板
@@ -158,7 +144,7 @@ public class GameWin : MonoBehaviour
 
     public void OpenPanel()
     {
-        if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition == 1)
+        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 1)
         {
             //打开胜利面板
             UIManager.GetInstance().ShowPanel<GameWinPanel>("GameWinPanel");
@@ -166,7 +152,7 @@ public class GameWin : MonoBehaviour
             condition = 3;
             // Destroy(this);
         }
-        if (!UIManager.GetInstance().panelDic.ContainsKey("CharacterSpeakPanel") && condition == 2)
+        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 2)
         {
             //打开失败面板
             UIManager.GetInstance().ShowPanel<GameOverPanel>("GameOverPanel");
