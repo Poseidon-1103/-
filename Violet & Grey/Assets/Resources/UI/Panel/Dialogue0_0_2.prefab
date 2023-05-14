@@ -160,7 +160,9 @@ MonoBehaviour:
   characterRight: {fileID: 2690822256335290756}
   sprites:
   - {fileID: 0}
+  - {fileID: 0}
   playerNames:
+  - "\u65E0"
   - "\u65E0"
   dialogueIndex: 0
   dialogueRows: []
@@ -461,7 +463,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8503284052031186115, guid: a848b758927a1474cbe4788d3ab19d2e,
         type: 3}
@@ -983,7 +985,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8918821528793835086, guid: 392132f1d3f189a489c225d1d457a366,
         type: 3}
@@ -1095,7 +1097,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8503284052031186115, guid: a848b758927a1474cbe4788d3ab19d2e,
         type: 3}
@@ -1554,7 +1556,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 7029046899730337215, guid: 62684f6621b305f438204e4e9400aa10,
         type: 3}
