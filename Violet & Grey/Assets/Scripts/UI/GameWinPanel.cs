@@ -17,13 +17,13 @@ public class GameWinPanel : BasePanel
         {
             case "btnREStart":
                 Debug.Log("btnStart被点击");
-                UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().HidePanel("GameWinPanel");
                 
                 MMSceneLoadingManager.LoadScene(SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name, "LoadingScene");
                 break;
             case "btnQuit":
                 Debug.Log("btnQuit被点击");
-                UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().HidePanel("GameWinPanel");
                 MMSceneLoadingManager.LoadScene("UIText", "LoadingScene");
                 break;
         }

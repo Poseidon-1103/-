@@ -196,6 +196,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416893}
   m_CullTransparentMesh: 1
+--- !u!1 &101998424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+    type: 3}
+  m_PrefabInstance: {fileID: 965123298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1839735485 &126048802 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 126048802, guid: 037d702f4a053224489c1050900aec2f,
@@ -267,7 +273,6 @@ GameObject:
   - component: {fileID: 610553511}
   - component: {fileID: 610553510}
   - component: {fileID: 610553508}
-  - component: {fileID: 610553513}
   - component: {fileID: 610553512}
   - component: {fileID: 610553514}
   m_Layer: 0
@@ -298,7 +303,7 @@ MonoBehaviour:
   grid: {fileID: 5565642081680123963}
   Panel: {fileID: 869666295}
   WinTile: {fileID: 126048802}
-  RoundWIN: 3
+  RoundWIN: 4
   dialogueName: Dialogue0_0_2
   condition: 0
 --- !u!4 &610553507
@@ -329,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 1757984524}
-  SpecialRound: 2
+  SpecialRound: -1
   Blood: -3
 --- !u!114 &610553510
 MonoBehaviour:
@@ -344,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 2069261717}
-  SpecialRound: 2
+  SpecialRound: -1
   PLNUM: 1
 --- !u!114 &610553511
 MonoBehaviour:
@@ -361,7 +366,7 @@ MonoBehaviour:
   GameOver: {fileID: 610553505}
   PL: 1
   State: 1
-  Blood: 2
+  Blood: 1
   Dialogue: 1
 --- !u!114 &610553512
 MonoBehaviour:
@@ -376,23 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 2069261717}
-  SpecialRound: 2
+  SpecialRound: -1
   State: Grounded
---- !u!114 &610553513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610553505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d288a8843e3fc4dab71067aad71b42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: {fileID: 2069261717}
-  SpecialRound: 2
-  Blood: -3
 --- !u!114 &610553514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: Dialogue0_0_2
-  SpecialRound: 2
+  SpecialRound: -1
 --- !u!1001 &690528082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -896,23 +886,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
+      propertyPath: EndTurn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
       propertyPath: Probability.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[0]
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[1]
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: Probability.Array.data[2]
-      value: 50
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7418191494105216480, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
@@ -932,6 +937,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 965123298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &965123304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101998424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 100
+  EndTurn: 100
+  Probability: 0000000000000000640000000000000000000000
 --- !u!1001 &974887298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,6 +1158,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 894256439}
     m_Modifications:
+    - target: {fileID: 1565160387, guid: 4976cd167f8ecc94b8e401ee20e6208d, type: 3}
+      propertyPath: roundDateFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 94ef906e14e26bf4b8ffc7273c103805, type: 3}
     - target: {fileID: 2839686631278760861, guid: 4976cd167f8ecc94b8e401ee20e6208d,
         type: 3}
       propertyPath: m_Name

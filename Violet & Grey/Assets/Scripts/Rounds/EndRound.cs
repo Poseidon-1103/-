@@ -347,8 +347,8 @@ public class EndRound : MonoBehaviour
 
 
                                         yield return new WaitForSeconds(2);
-                                        GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
-                                        GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                        GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(175, -680,0);
+                                        GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -680,0);
                                         ConfirmActionOrder = 0;
                                         if (SkipActionOrder == 1)
                                         {
@@ -391,8 +391,8 @@ public class EndRound : MonoBehaviour
 
 
                                         yield return new WaitForSeconds(2);
-                                        GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
-                                        GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                        GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(175, -680,0);
+                                        GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -680,0);
                                         ConfirmActionOrder = 0;
                                         if (SkipActionOrder == 1)
                                         {
@@ -459,8 +459,8 @@ public class EndRound : MonoBehaviour
 
 
                                 yield return new WaitForSeconds(2);
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
-                                GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(175, -680,0);
+                                GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -680,0);
                                 ConfirmActionOrder = 0;
                                 if (SkipActionOrder == 1)
                                 {
@@ -589,8 +589,8 @@ public class EndRound : MonoBehaviour
                                 
                                 
                                 yield return new WaitForSeconds(2);
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
-                                GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(175, -680,0);
+                                GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -680,0);
                                 ConfirmActionOrder = 0;
                                 if (SkipActionOrder == 1)
                                 {
@@ -881,8 +881,8 @@ public class EndRound : MonoBehaviour
                                 yield return new WaitForSeconds(1);
                                 AttackType.Clear();
                                 ConfirmActionOrder = 0;
-                                GameObject.Find("SkipAction").transform.position = new(1000, 1000, 1000);
-                                GameObject.Find("ConfirmAction").transform.position = new(1000, 1000, 1000);
+                                GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(175, -680,0);
+                                GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -680,0);
                                 if (SkipActionOrder == 1 || pathlist.Count == 20)
                                 {
                                     SkipActionOrder = 0;
@@ -1101,8 +1101,8 @@ public class EndRound : MonoBehaviour
     //角色点击地面
     public bool ClickRoad()
     {
-        GameObject.Find("SkipAction").transform.position = new(7f, 0f, 0);
-        GameObject.Find("ConfirmAction").transform.position = new(7f, 3f, 0);
+        GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(160, -400,0);
+        GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -400,0);
         if (ConfirmActionOrder == 1 || SkipActionOrder == 1)
         {
             return true;
@@ -1142,8 +1142,8 @@ public class EndRound : MonoBehaviour
     public bool ClickRoad2()
     {
         
-        GameObject.Find("SkipAction").transform.position = new(7f, 0f, 0);
-        GameObject.Find("ConfirmAction").transform.position = new(7f, 3f, 0);
+        GameObject.Find("SkipAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(160, -400,0);
+        GameObject.Find("ConfirmAction").GetComponent<RectTransform>().anchoredPosition = new Vector3(-250, -400,0);
         if (ConfirmActionOrder==1|| SkipActionOrder==1)
         {
             return true;

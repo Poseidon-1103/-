@@ -17,12 +17,12 @@ public class GameOverPanel : BasePanel
         {
             case "btnREStart":
                 Debug.Log("btnStart被点击");
-                UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().HidePanel("GameOverPanel");
                 MMSceneLoadingManager.LoadScene(LevelName, "LoadingScene");
                 break;
             case "btnQuit":
                 Debug.Log("btnQuit被点击");
-                UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().HidePanel("GameOverPanel");
                 MMSceneLoadingManager.LoadScene("UIText", "LoadingScene");
                 break;
         }

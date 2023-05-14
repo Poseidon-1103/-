@@ -23,6 +23,7 @@ public class ChooseGKPanel : BasePanel
                 break;
             case "Plot1":
                 MMSceneLoadingManager.LoadScene("Level 0-0", "LoadingScene");
+                UIManager.GetInstance().HidePanel("ChooseGKPanel");
                 break;
             case "Plot2":
                 MMSceneLoadingManager.LoadScene("Level 1-1", "LoadingScene");

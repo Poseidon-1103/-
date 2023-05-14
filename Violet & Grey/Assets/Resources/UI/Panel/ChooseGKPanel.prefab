@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 6016772217317615410}
   - component: {fileID: 8011836351694975930}
   m_Layer: 5
-  m_Name: ChooseGK
+  m_Name: ChooseGKPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,6 +26,17 @@
     <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/β/βDialogue3.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/μ/μDialogue1.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/μ/μDialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/0-0_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/1-1_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/1-2_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/2-1_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/2-2_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/3-1_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/3-2_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/Ω_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/α_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/β_RoundDate.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/RoundEvent/μ_RoundDate.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Mono/MonoController.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Res/ResMgr.cs" charset="UTF-8" />

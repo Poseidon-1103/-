@@ -36,7 +36,7 @@ void Start()
     {
         StartTurn--;
         EndTurn --;
-        if (StartTurn<=0)
+        if (StartTurn>=0)
         {
         if (EndTurn>=0)
         {
