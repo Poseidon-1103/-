@@ -18,7 +18,8 @@ public class DialogueManager : MonoBehaviour
     public Image characterRight;
     //角色立绘列表
     public List<Sprite> sprites = new List<Sprite>();
-
+    //角色名称列表
+    public List<string> playerNames = new List<string>();
     /// <summary>
     /// 角色名字对应立绘的字典
     /// </summary>
@@ -30,10 +31,10 @@ public class DialogueManager : MonoBehaviour
     public string[] dialogueRows;
     private void Awake()
     {
-        imageDic["（黑影）"] = sprites[0];
-        imageDic["维奥莱特·紫"] = sprites[1];
-        // imageDic["艾什"] = sprites[2];
-        imageDic["无"] = sprites[2];
+        for (int i = 0; i < playerNames.Count; i++)
+        {
+            imageDic[playerNames[i]] = sprites[i];
+        }
         ReadText(dialogueDateFile);
     }
 
@@ -54,6 +55,15 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    public void UpdateMessage()
+    {
+        for (int i = 0; i < playerNames.Count; i++)
+        {
+            imageDic[playerNames[i]] = sprites[i];
+        }
+        ReadText(dialogueDateFile);
+    }
+    
     //更新文本
     public void UpdateText(string name, string text, string position)
     {

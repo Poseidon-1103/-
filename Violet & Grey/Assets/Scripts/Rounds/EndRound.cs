@@ -14,6 +14,8 @@ public class EndRound : MonoBehaviour
     public GameObject Unit2;
     public GameObject Unit3;
     public GameObject EndMove;
+    public GameObject GameOver;
+    public GameObject Dialogue;
     public List<List<Card>> recordList = new();
     public TextMeshProUGUI turnname;
     public TextMeshProUGUI turnnumber;
@@ -91,6 +93,8 @@ public class EndRound : MonoBehaviour
             {
                 //战棋阶段回合结束
                 case 0:
+                    GameOver.GetComponent<GameWin>().WINJudge();
+                    // GameOver.GetComponent<GameWin>().Win();
                     Debug.Log(RoundType);
                         GetPL();
                     /*for (int i = 0; i < AllUnit.Count; i++)
@@ -108,6 +112,11 @@ public class EndRound : MonoBehaviour
                     turnnumber.text = (int.Parse(turnnumber.text) + 1).ToString();
                     //关闭执行阶段界面
                     UIManager.GetInstance().HidePanel("ActionStagePanel");
+                    //特殊事件
+                    if (GameOver.GetComponent<GameWin>().condition == 0)
+                    {
+                        GameOver.GetComponent<EventNum>().Special();
+                    }
                     //将角色高亮都取消
                     // ShowPLcard[] unit2 = GameObject.Find("Unit2").GetComponentsInChildren<ShowPLcard>();
                     for (int i = 0; i < AllUnit.Count; i++)
@@ -119,11 +128,12 @@ public class EndRound : MonoBehaviour
                             AllUnit[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
                         }));
                     }
-                    gameObject.AddComponent<ChangeStage>().stageMessage = "选择阶段";
+                    // gameObject.AddComponent<ChangeStage>().stageMessage = "展示阶段";
                     /*if (int.Parse(turnnumber.text)==5)
                     {
                         Unit3.GetComponent<CreatUnit>().enabled = true;
                     }*/
+                    // GameOver.GetComponent<GameWin>().WINJudge();
                     break;
                 //选卡阶段回合结束
                 case 1:
@@ -312,6 +322,10 @@ public class EndRound : MonoBehaviour
                     {
                         case "特殊":
                             yield return new WaitForSeconds(1);
+                            if (obj[PLnum].gameObject == null)
+                            {
+                                continue;
+                            }
                             while (recordList[i][0].Id / 10000 < 20)
                             {
                                 switch (recordList[i][j].CardEffType)
@@ -411,6 +425,10 @@ public class EndRound : MonoBehaviour
                             rangeMap.ClearAllTiles();
                             continue;
                         case "治疗":
+                            if (obj[PLnum].gameObject == null)
+                            {
+                                continue;
+                            }
                             /* for (int Q = 0; Q < A.Count; Q++)
                              {
                                  yield return new WaitForSeconds(1);
@@ -490,6 +508,10 @@ public class EndRound : MonoBehaviour
                             }
                                 continue;
                         case "状态":
+                            if (obj[PLnum].gameObject == null)
+                            {
+                                continue;
+                            }
                             for (int Q = 0; Q < A.Count; Q++)
                             {
                                 
@@ -512,6 +534,10 @@ public class EndRound : MonoBehaviour
                             rangeMap.ClearAllTiles();
                             break;
                         case "自身":
+                            if (obj[PLnum].gameObject == null)
+                            {
+                                continue;
+                            }
                             A.Clear();
                             playerPosition = obj[PLnum].transform.position;
                             playerCellPosition = grid.WorldToCell(playerPosition);
@@ -528,6 +554,10 @@ public class EndRound : MonoBehaviour
                             yield return new WaitForSeconds(1);
 
                             A.Clear();
+                            if (obj[PLnum].gameObject == null)
+                            {
+                                continue;
+                            }
                             //Disable不能攻击
                             if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Disable"))
                             {
@@ -716,6 +746,7 @@ public class EndRound : MonoBehaviour
                             }
                             while (recordList[i][0].Id / 10000 > 20)
                             {
+                                GetPl2();
                                 //读取攻击
                                 TagrtPL(recordList[i][j]);
                                 if (M==1)
@@ -755,6 +786,7 @@ public class EndRound : MonoBehaviour
                                     if (rangeMap.GetTile(moveList[P]))
                                     {
                                         TTK(moveList[P]);
+                                       
                                       /*  yield return new WaitForSeconds(1);*/
                                         //结算攻击
                                         for (int PL = 0; PL < AllUnit.Count - EnemyUnit.Count; PL++)
@@ -797,6 +829,10 @@ public class EndRound : MonoBehaviour
                         case "移动":
                             yield return new WaitForSeconds(1);
                             A.Clear();
+                            if (obj[PLnum].gameObject==null)
+                            {
+                                continue;
+                            }
                             if (obj[PLnum].gameObject.GetComponent<ChangeState>().ConfirmState("Grounded"))
                             {
 
@@ -1268,12 +1304,14 @@ public class EndRound : MonoBehaviour
         PLList.Clear();
         EnemyUnit.Clear();
         PLUnit.Clear();
+        AllUnit.Clear();
         foreach (Transform child in Unit.transform)
         {
             EnemyUnit.Add(child.gameObject);
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
+            AllUnit.Add(child.gameObject);
         }
         foreach (Transform child in Unit2.transform)
         {
@@ -1281,6 +1319,7 @@ public class EndRound : MonoBehaviour
             Vector3 PLV3 = child.position;
             Vector3Int PLV3INT = grid.WorldToCell(PLV3);
             PLList.Add(PLV3INT);
+            AllUnit.Add(child.gameObject);
         }
         /*foreach (Transform child in Unit3.transform)
         {

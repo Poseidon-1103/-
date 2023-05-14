@@ -6,11 +6,20 @@ using UnityEngine.Events;
 
 public class OpenDialogue : MonoBehaviour
 {
-    public string stageMessage;
+    public string dialogueName;
+    //角色立绘列表
+    public List<Sprite> sprites = new List<Sprite>();
+    //角色名称列表
+    public List<string> playerNames = new List<string>();
+    public TextAsset dialogueDateFile;
     // Start is called before the first frame update
     void Start()
     {
         UIManager.GetInstance().ShowPanel<CharacterSpeakPanel>("CharacterSpeakPanel",E_UI_Layer.Top);
+        GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().sprites = sprites;
+        GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().playerNames = playerNames;
+        GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().dialogueDateFile = dialogueDateFile;
+        GameObject.Find("CharacterSpeakPanel").GetComponent<DialogueManager>().UpdateMessage();
     }
 
     // public void Show()

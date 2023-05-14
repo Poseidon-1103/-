@@ -18,6 +18,12 @@ public class BasePanel : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Awake()
     {
+        Find();
+        // Debug.Log(controlDic.Count);
+    }
+
+    public void Find()
+    {
         FindChildrenControl<Button>();
         FindChildrenControl<Image>();
         FindChildrenControl<Text>();
@@ -26,9 +32,7 @@ public class BasePanel : MonoBehaviour
         FindChildrenControl<ScrollRect>();
         FindChildrenControl<InputField>();
         FindChildrenControl<TMP_Text>();
-        // Debug.Log(controlDic.Count);
     }
-
     /// <summary>
     /// 显示自己
     /// </summary>

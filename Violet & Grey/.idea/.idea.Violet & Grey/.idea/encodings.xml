@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/0-0/0-0Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/0-0/0-0Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/1-1/1-1Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/1-1/1-1Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/1-1/1-1Dialogue3.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/1-2/1-2Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/1-2/1-2Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/2-1/2-1Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/2-1/2-1Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/2-2/2-2Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/2-2/2-2Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/3-1/3-1Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/3-1/3-1Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/3-2/3-2Dialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/3-2/3-2Dialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/3-2/3-2Dialogue3.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/Ω/ΩDialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/Ω/ΩDialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/α/αDialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/α/αDialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/β/βDialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/β/βDialogue2.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/β/βDialogue3.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/μ/μDialogue1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Resources/Dialogue/对白/μ/μDialogue2.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Map/MapText.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Mono/MonoController.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Res/ResMgr.cs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Rounds/RoundManger.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/BasePanel.cs" charset="UTF-8" />

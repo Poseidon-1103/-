@@ -61,6 +61,18 @@ public class ActionDisplay : MonoBehaviour
                 }
 
             }
+            if (cardList[i].CardEffect == "特殊")
+            {
+                if (cardList[i].CardEffType == "加速冷却")
+                {
+                    CardDescriptionText.text += "冷却一张右方卡牌" + "\n";
+                }
+                if (cardList[i].CardEffType == "回复损坏")
+                {
+                    CardDescriptionText.text += "恢复一张友方损坏卡牌" + "\n";
+                }
+
+            }
             if (cardList[i].CardEffect == "移动")
             {
                 CardDescriptionText.text += cardList[i].CardEffType + cardList[i].CardEffNum + "\n";
