@@ -3,28 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artistic assets/Tilemap/Starter_Pack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/0-0_Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card/LevelMap/0-0_Grid.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeelTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ChangeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/Dialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MouseImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MouseImage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ArchiveImage/PLimage/04.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ArchiveImage/PLimage/04.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CardData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/enemy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/enemy.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +213,7 @@
       <workItem from="1683875342787" duration="12285000" />
       <workItem from="1683963872596" duration="1593000" />
       <workItem from="1683990028708" duration="6438000" />
-      <workItem from="1684044938034" duration="36425000" />
+      <workItem from="1684044938034" duration="37739000" />
     </task>
     <servers />
   </component>

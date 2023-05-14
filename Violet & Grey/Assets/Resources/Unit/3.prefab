@@ -634,7 +634,7 @@ MonoBehaviour:
     type: 3}
   cardPool: {fileID: 0}
   healthBar: {fileID: 0}
-  ResourcesDate: CardData1
+  ResourcesDate: CardData
 --- !u!114 &267575256
 MonoBehaviour:
   m_ObjectHideFlags: 0
