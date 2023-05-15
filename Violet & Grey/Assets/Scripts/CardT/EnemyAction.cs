@@ -41,7 +41,7 @@ void Start()
         if (EndTurn>=0)
         {
         ActionsList = GameObject.Find("ActionsList");
-        //不打印
+                Debug.Log("6");
         ActionsList.transform.GetComponent<RecordActionList>().Record(cards[RandomNumber()]);
         }
         }

@@ -94,9 +94,9 @@ public class EndRound : MonoBehaviour
             {
                 //战棋阶段回合结束
                 case 0:
-                    GameOver.GetComponent<GameWin>().WINJudge();
-                    // GameOver.GetComponent<GameWin>().Win();
-                    Debug.Log(RoundType);
+                GameOver.GetComponent<GameWin>().WINJudge();
+                // GameOver.GetComponent<GameWin>().Win();
+                Debug.Log(RoundType);
                         GetPL();
                     /*for (int i = 0; i < AllUnit.Count; i++)
                     {
@@ -129,13 +129,13 @@ public class EndRound : MonoBehaviour
                             AllUnit[j].gameObject.GetComponent<SpriteRenderer>().sprite = img;
                         }));
                     }
-                    // gameObject.AddComponent<ChangeStage>().stageMessage = "展示阶段";
-                    /*if (int.Parse(turnnumber.text)==5)
-                    {
-                        Unit3.GetComponent<CreatUnit>().enabled = true;
-                    }*/
-                    // GameOver.GetComponent<GameWin>().WINJudge();
-                    break;
+               /*  gameObject.AddComponent<ChangeStage>().stageMessage = "展示阶段";*/
+                /*if (int.Parse(turnnumber.text)==5)
+                {
+                    Unit3.GetComponent<CreatUnit>().enabled = true;
+                }*/
+                // GameOver.GetComponent<GameWin>().WINJudge();
+                break;
                 //选卡阶段回合结束
                 case 1:
                     int ActionsListLength=0;
@@ -772,8 +772,20 @@ public class EndRound : MonoBehaviour
                                     {
                                         continue;
                                     }
+                                    List<AStarNode> pathlist2=new();
+                                    if (MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos, "攻击")!=null)
+                                    {
+                                       pathlist2 = MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos, "攻击");//得到路径
+                                    }
+                                    else
+                                    {
+                                        for (int I=0;I<20;I++)
+                                        {
+                                            pathlist2.Add(start);
+                                        }
+                                        
+                                    }
                                    
-                                    List<AStarNode> pathlist2 = MapManage.GetInstance().FindPath(playerCellPosition, playerendCellPos,"攻击");//得到路径
 
                                     if (pathlist2.Count <= pathlist.Count)
                                     {
@@ -969,6 +981,7 @@ public class EndRound : MonoBehaviour
                                         PLList2.Add(PLList[PLListNum]);
                                     }
                                     GetPl2();
+
                                     List<AStarNode> pathlist2 = MapManage.GetInstance().EnemyFindPath(playerCellPosition, playerendCellPos, "移动");//得到路径
                                     // if (pathlist2.Count == pathlist.Count)
                                     // {
@@ -999,7 +1012,7 @@ public class EndRound : MonoBehaviour
                                 Debug.Log(pathlist.Count);
                                 for (int k = 0; k <= recordList[i][j].CardEffNum; k++)
                                 {
-                                    if(pathlist.Count-k<=0)
+                                    if(pathlist.Count-k<=0|| pathlist.Count==20)
                                     {
                                         break;
                                     }
