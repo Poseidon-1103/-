@@ -2,40 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/牧师黑 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/牧师黑 (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Dialogue0_0_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Dialogue0_0_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/gelei剪影 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/gelei剪影 (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Archive.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/新建文件夹/SpecialEvent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/新建文件夹/SpecialEvent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EventNum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EventNum.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +183,7 @@
       <workItem from="1683963872596" duration="1593000" />
       <workItem from="1683990028708" duration="6438000" />
       <workItem from="1684044938034" duration="44783000" />
-      <workItem from="1684125470034" duration="6020000" />
+      <workItem from="1684125470034" duration="6614000" />
     </task>
     <servers />
   </component>

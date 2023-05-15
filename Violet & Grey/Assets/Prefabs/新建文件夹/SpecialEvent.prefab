@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6827865117225937926}
   - component: {fileID: 6827865117225937930}
   - component: {fileID: 6827865117225937928}
+  - component: {fileID: 610553513}
+  - component: {fileID: 610553514}
   m_Layer: 0
   m_Name: SpecialEvent
   m_TagString: Untagged
@@ -59,6 +61,8 @@ MonoBehaviour:
   Panel: {fileID: 0}
   WinTile: {fileID: 0}
   RoundWIN: 4
+  PlayAudio: {fileID: 0}
+  PauseAudio: {fileID: 0}
   dialogueName: Dialogue0_0_2
   condition: 0
 --- !u!114 &6827865117225937925
@@ -78,6 +82,7 @@ MonoBehaviour:
   State: 1
   Blood: 1
   Dialogue: 1
+  Audio: 2
 --- !u!114 &6827865117225937924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +142,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Dialogue0_0_2
   SpecialRound: -1
+--- !u!114 &610553513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6827865117225937923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f01ea34fc9e4b94b902316af9aed6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Play: 1
+  Pause: 2
+  PlayAudio: {fileID: 0}
+  PauseAudio: {fileID: 0}
+--- !u!114 &610553514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6827865117225937923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f01ea34fc9e4b94b902316af9aed6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Play: 2
+  Pause: 4
+  PlayAudio: {fileID: 0}
+  PauseAudio: {fileID: 0}

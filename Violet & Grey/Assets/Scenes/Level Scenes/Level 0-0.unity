@@ -402,38 +402,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6827865117702234786}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &610553513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610553505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f01ea34fc9e4b94b902316af9aed6df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Play: 1
-  Pause: 2
-  PlayAudio: {fileID: 1338304856}
-  PauseAudio: {fileID: 1497469734}
---- !u!114 &610553514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610553505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f01ea34fc9e4b94b902316af9aed6df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Play: 2
-  Pause: 4
-  PlayAudio: {fileID: 880695834}
-  PauseAudio: {fileID: 1566528948}
 --- !u!1001 &690528082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68407,6 +68375,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 610553513, guid: 8bb7717c9fd984248b3d05082c9d51fc, type: 3}
+      propertyPath: PlayAudio
+      value: 
+      objectReference: {fileID: 1338304856}
+    - target: {fileID: 610553513, guid: 8bb7717c9fd984248b3d05082c9d51fc, type: 3}
+      propertyPath: PauseAudio
+      value: 
+      objectReference: {fileID: 1497469734}
+    - target: {fileID: 610553514, guid: 8bb7717c9fd984248b3d05082c9d51fc, type: 3}
+      propertyPath: PlayAudio
+      value: 
+      objectReference: {fileID: 880695834}
+    - target: {fileID: 610553514, guid: 8bb7717c9fd984248b3d05082c9d51fc, type: 3}
+      propertyPath: PauseAudio
+      value: 
+      objectReference: {fileID: 1566528948}
     - target: {fileID: 6827865117225937920, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: grid
@@ -68507,21 +68491,11 @@ PrefabInstance:
       propertyPath: unit
       value: 
       objectReference: {fileID: 2069261717}
-    - target: {fileID: 6827865117225937925, guid: 8bb7717c9fd984248b3d05082c9d51fc,
-        type: 3}
-      propertyPath: Audio
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6827865117225937926, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: unit
       value: 
       objectReference: {fileID: 1757984524}
-    - target: {fileID: 6827865117225937928, guid: 8bb7717c9fd984248b3d05082c9d51fc,
-        type: 3}
-      propertyPath: SpecialRound
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 6827865117225937930, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: unit
