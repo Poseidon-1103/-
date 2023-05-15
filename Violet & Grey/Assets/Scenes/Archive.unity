@@ -352,21 +352,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 543886356844455564, guid: 95e035b8a6f011c44bf71bfa32a443ad,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 543886356844455564, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 543886356844455564, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 543886356844455564, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -425,36 +410,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3593936884229950578, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: PLImage
-      value: 
-      objectReference: {fileID: 6609281120158135278, guid: 81d986629c405b54d99371f205cd29ae,
-        type: 3}
-    - target: {fileID: 3593936884229950578, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: PLimage
-      value: 
-      objectReference: {fileID: 6609281120158135278, guid: 81d986629c405b54d99371f205cd29ae,
-        type: 3}
-    - target: {fileID: 3593936884229950578, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: DateText23
-      value: 
-      objectReference: {fileID: 4057541573387204843, guid: 404b74e12b973d14ba66f7f5ba095e71,
-        type: 3}
-    - target: {fileID: 3593936884229950578, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: ArchiveImage
-      value: 
-      objectReference: {fileID: 6609281120158135278, guid: 69de2a1c615996f4b8f4420a6c57fc08,
-        type: 3}
-    - target: {fileID: 3593936884229950578, guid: 95e035b8a6f011c44bf71bfa32a443ad,
-        type: 3}
-      propertyPath: ArchiveImage2
-      value: 
-      objectReference: {fileID: 6609281120158135278, guid: c0facd18815601240b62963830cc39ae,
-        type: 3}
     - target: {fileID: 3624998362804759775, guid: 95e035b8a6f011c44bf71bfa32a443ad,
         type: 3}
       propertyPath: m_Name

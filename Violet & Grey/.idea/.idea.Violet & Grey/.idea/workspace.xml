@@ -2,46 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/UI/Font/DinkieBitmap-v1002/TTF/DinkieBitmap-7px SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CardData.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ActionStagePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ChooseGK.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ChooseGK.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/GameOverPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/GameOverPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/GameWINPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/GameWINPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/2HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/2HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/2Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/2Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/3HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/3HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/3Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/3Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/4HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/4HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/4Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/4Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/6HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/6HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/6Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/6Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/7HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/7HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/7Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/7Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/87HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/87HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/87Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/87Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/88HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/88HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/88Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/88Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/89HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/89HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/89Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/89Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/90HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/90HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/90Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/90Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/92HighLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/92HighLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/92Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/92Normal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/87Head.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/88Head.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/89Head.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/牧师黑 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/HeadImg/牧师黑 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/CharacterSpeakPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Dialogue0_0_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/Dialogue0_0_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/LoadPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/gelei剪影 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Sprite/gelei剪影 (1).png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/89.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/87.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/88.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/90.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Unit/92.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Archive.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardT/EnemyAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardT/EnemyAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EndRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/EventNum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/EventNum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/GameWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameWinPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameWinPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,51 +51,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/c5/65ce18c6/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ActionDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/GameWin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/34/c1fe27be/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/5a/6ccc6ffd/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/ReflectionHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/c5/65ce18c6/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/91/c8ec2228/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/ActionDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/CardT/CardDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/OpenDialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/EndRound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/2023JBTgame/NightShroud/Violet &amp; Grey/Assets/Scripts/Rounds/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c14a5e060e4245458c8c179991802656159000/34/c1fe27be/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -250,7 +213,8 @@
       <workItem from="1683875342787" duration="12285000" />
       <workItem from="1683963872596" duration="1593000" />
       <workItem from="1683990028708" duration="6438000" />
-      <workItem from="1684044938034" duration="44679000" />
+      <workItem from="1684044938034" duration="44783000" />
+      <workItem from="1684125470034" duration="6020000" />
     </task>
     <servers />
   </component>

@@ -459,8 +459,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3f16ef4c94a175548ab6a2b83e3db294, type: 2}
+  m_sharedMaterial: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -653,7 +654,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
-  row: 3
+  row: 15
   ArmorNum2: {fileID: 403268453127874668}
   HPNum: {fileID: 5435243608492188770}
   Armor: {fileID: 0}

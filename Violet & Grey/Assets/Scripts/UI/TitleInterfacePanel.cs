@@ -28,12 +28,14 @@ public class TitleInterfacePanel : BasePanel
                 break;
             case "btnArchives":
                 Debug.Log("打开档案馆");
+                UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
                 break;
             case "btnSet":
                 Debug.Log("打开设置界面");
                 break;
             case "btnTeamMember":
                 Debug.Log("打开制作人员名单");
+                UIManager.GetInstance().ShowPanel<MemberPanel>("MemberPanel");
                 break;
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using MoreMountains.Tools;
@@ -15,6 +16,9 @@ public class GameWin : MonoBehaviour
     public GameObject Panel;
     public Tilemap WinTile;
     public int RoundWIN = -1;
+    
+    public MMF_Player PlayAudio;
+    public MMF_Player PauseAudio;
 
     public string dialogueName;
     //角色死亡
@@ -40,6 +44,8 @@ public class GameWin : MonoBehaviour
             UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
             {
                 condition = 1;
+                PauseAudio.PlayFeedbacks();
+                PlayAudio.PlayFeedbacks();
             });
             
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 1)
@@ -62,6 +68,7 @@ public class GameWin : MonoBehaviour
             UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
             {
                 condition = 2;
+                PauseAudio.PlayFeedbacks();
             });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
@@ -82,7 +89,9 @@ public class GameWin : MonoBehaviour
             UIManager.GetInstance().HidePanel("ActionStagePanel");
             UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
             {
-                condition = 2;
+                condition = 1;
+                PauseAudio.PlayFeedbacks();
+                PlayAudio.PlayFeedbacks();
             });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
@@ -104,6 +113,7 @@ public class GameWin : MonoBehaviour
             UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
             {
                 condition = 2;
+                PauseAudio.PlayFeedbacks();
             });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {
@@ -124,7 +134,9 @@ public class GameWin : MonoBehaviour
             UIManager.GetInstance().HidePanel("ActionStagePanel");
             UIManager.GetInstance().ShowPanel<BasePanel>(dialogueName,E_UI_Layer.Top, arg0 =>
             {
-                condition = 2;
+                condition = 1;
+                PauseAudio.PlayFeedbacks();
+                PlayAudio.PlayFeedbacks();
             });
             // if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
             // {

@@ -242,14 +242,15 @@ public class EndRound : MonoBehaviour
                 Debug.Log("objcount = "+obj.Count);
                 Debug.Log("plum ="+PLnum);
                 obj[PLnum].GetComponent<ChangeState>().TurnStart2();
+                int plNum = PLnum;
                 UIManager.GetInstance().ShowPanel<ActionStagePanel>("ActionStagePanel",E_UI_Layer.Mid, panel =>
                 {
-                    int plNum = PLnum;
+                    
                     panel.Init();
                     //更新角色状态栏
                     GameObject characterStatebar = GameObject.Find("CharacterStatebar");
                     // characterStatebar.transform.Find("CharacterHeadImage").GetComponent<Image>().sprite = ResMgr.GetInstance().Load<Sprite>("UI/HeadImg/"+obj[PLnum].GetComponent<ChangeState>().player.Plname+"Head");
-                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+obj[PLnum].GetComponent<ChangeState>().player.Plid.ToString()+"Head",(img =>
+                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/HeadImg/"+obj[plNum].name+"Head",(img =>
                     {
                         if (!img)
                         {
@@ -269,13 +270,13 @@ public class EndRound : MonoBehaviour
                         }));
                     }
                     //改变当前行动的角色的精灵素材
-                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+obj[PLnum].gameObject.name+"HighLight",(img =>
+                    ResMgr.GetInstance().LoadAsync<Sprite>("UI/Sprite/"+obj[plNum].gameObject.name+"HighLight",(img =>
                     {
                         obj[plNum].GetComponent<SpriteRenderer>().sprite = img;
                     }));
-                    characterStatebar.transform.Find("CharacterName").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.Plname;
-                    characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.PlHP.ToString();
-                    characterStatebar.transform.Find("CharacterHPTotal").GetComponent<TMP_Text>().text = obj[PLnum].GetComponent<ChangeState>().player.PlHPmax.ToString();
+                    characterStatebar.transform.Find("CharacterName").GetComponent<TMP_Text>().text = obj[plNum].GetComponent<ChangeState>().player.Plname;
+                    characterStatebar.transform.Find("CharacterHPSurplus").GetComponent<TMP_Text>().text = obj[plNum].GetComponent<ChangeState>().player.PlHP.ToString();
+                    characterStatebar.transform.Find("CharacterHPTotal").GetComponent<TMP_Text>().text = obj[plNum].GetComponent<ChangeState>().player.PlHPmax.ToString();
                     //右侧显示当前执行的卡
                     Debug.Log("i="+i);
                     Debug.Log(recordList[i][0].CardName);

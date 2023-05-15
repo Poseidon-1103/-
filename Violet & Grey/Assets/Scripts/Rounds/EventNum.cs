@@ -9,23 +9,48 @@ public class EventNum : MonoBehaviour
     public int State = 0;
     public int Blood = 0;
     public int Dialogue = 0;
+    public int Audio = 0;
     public void Special()
     {
-        for (int i = 0; i < PL; i++)
+        if (PL>0)
         {
-            GameOver.GetComponents<SPAddNewPl>()[i].Special();
+            for (int i = 0; i < PL; i++)
+            {
+                GameOver.GetComponents<SPAddNewPl>()[i].Special();
+            } 
         }
-        for (int j = 0; j < State; j++)
+
+        if (State>0)
         {
-            GameOver.GetComponents<SPChangeState>()[j].Special();
+            for (int j = 0; j < State; j++)
+            {
+                GameOver.GetComponents<SPChangeState>()[j].Special();
+            }
         }
-        for (int k = 0; k < Blood; k++)
+
+        if (Blood>0)
         {
-            GameOver.GetComponents<SPChangeBlood>()[k].Special();
+            for (int k = 0; k < Blood; k++)
+            {
+                GameOver.GetComponents<SPChangeBlood>()[k].Special();
+            }
         }
-        for (int l = 0; l < Dialogue; l++)
+
+        if (Dialogue>0)
         {
-            GameOver.GetComponents<Dialogue>()[l].Special();
+            for (int l = 0; l < Dialogue; l++)
+            {
+                GameOver.GetComponents<Dialogue>()[l].Special();
+            }
         }
+
+        if (Audio>0)
+        {
+            for (int m = 0; m < Audio; m++)
+            {
+                GameOver.GetComponents<AudioControl>()[m].Special();
+            }
+        }
+        
     }
 }

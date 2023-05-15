@@ -219,7 +219,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 3099179100090663175}
   ArmorList: {fileID: 5610081003446554297}
-  row: 0
+  row: 4
   ArmorNum2: {fileID: 8210630768229306070}
   HPNum: {fileID: 8438243364362828012}
   Armor: {fileID: 0}
@@ -876,6 +876,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 6599706816805598943, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -994,12 +1004,12 @@ PrefabInstance:
     - target: {fileID: 7667332126768124481, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.11
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 7667332126768124481, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.47
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8350609008618688286, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}

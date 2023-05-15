@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c4690f0f45d7cc41b968fa57cd9c0b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d52c26a4542ee740a99b796b0aa333e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
   characterLeft: {fileID: 8641223283756558847}
   characterRight: {fileID: 2690822256335290756}
   sprites:
-  - {fileID: 21300000, guid: 10dc8f2a25e6a9740a67ee3aee8a1070, type: 3}
+  - {fileID: 21300000, guid: 3d52c26a4542ee740a99b796b0aa333e, type: 3}
   - {fileID: 21300000, guid: 6a8035b95093fe144a393c889271cf02, type: 3}
   - {fileID: 0}
   playerNames:
@@ -230,14 +230,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10dc8f2a25e6a9740a67ee3aee8a1070, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d52c26a4542ee740a99b796b0aa333e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -472,8 +472,8 @@ public class ArchivePanel : BasePanel
 
                 break;
             case "Return":
-
-                MMSceneLoadingManager.LoadScene("UItext", "LoadingScene");
+                UIManager.GetInstance().HidePanel("ArchivePanel");
+                UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
                 break;
         }
 

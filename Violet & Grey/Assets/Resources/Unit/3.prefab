@@ -611,7 +611,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 3099179100090663175}
   ArmorList: {fileID: 5610081003446554297}
-  row: 0
+  row: 3
   ArmorNum2: {fileID: 8210630768229306070}
   HPNum: {fileID: 8438243364362828012}
   Armor: {fileID: 0}

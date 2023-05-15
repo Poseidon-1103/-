@@ -472,7 +472,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0b81418aee6055243ba12d14fa31ab97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.12, y: 5.12}
@@ -518,7 +518,7 @@ MonoBehaviour:
     type: 3}
   StateList: {fileID: 6874966192717932477}
   ArmorList: {fileID: 4157303328795322371}
-  row: 3
+  row: 19
   ArmorNum2: {fileID: 403268453127874668}
   HPNum: {fileID: 4357432621560337539}
   Armor: {fileID: 0}
@@ -794,6 +794,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635107927949721820, guid: e01f30e541cf377479be371cd71465fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 7015969630880027053, guid: e01f30e541cf377479be371cd71465fb,
         type: 3}
