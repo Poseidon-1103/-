@@ -196,6 +196,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: EndTurn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc59ae033b3b304cb0768511615bdd9, type: 3}
 --- !u!4 &174243111 stripped
@@ -204,6 +239,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 174243110}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &174243112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: abc59ae033b3b304cb0768511615bdd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 174243110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &174243113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174243112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 88
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 000000000000000000000000460000001e000000
 --- !u!1001 &278275289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +521,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: EndTurn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2149fb1c2334c4abdc550215977256, type: 3}
 --- !u!4 &298455687 stripped
@@ -469,6 +564,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 298455686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &298455688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: bd2149fb1c2334c4abdc550215977256,
+    type: 3}
+  m_PrefabInstance: {fileID: 298455686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &298455689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298455688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 87
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 0000000014000000140000003c00000000000000
 --- !u!1 &459489650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6827865117225937923, guid: 8bb7717c9fd984248b3d05082c9d51fc,
@@ -554,6 +674,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: EndTurn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2149fb1c2334c4abdc550215977256, type: 3}
 --- !u!4 &671177958 stripped
@@ -562,6 +717,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 671177957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &671177959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: bd2149fb1c2334c4abdc550215977256,
+    type: 3}
+  m_PrefabInstance: {fileID: 671177957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &671177960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671177959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 87
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 0000000014000000140000003c000000
 --- !u!1 &728031037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1343,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: EndTurn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: bd2149fb1c2334c4abdc550215977256,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2149fb1c2334c4abdc550215977256, type: 3}
 --- !u!4 &1377189151 stripped
@@ -1171,6 +1386,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1377189150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377189152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: bd2149fb1c2334c4abdc550215977256,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377189150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1377189153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377189152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 87
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 0000000014000000140000003c00000000000000
 --- !u!1 &1438382097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,6 +1966,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: EndTurn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc59ae033b3b304cb0768511615bdd9, type: 3}
 --- !u!4 &2041254237 stripped
@@ -1734,6 +2009,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2041254236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2041254238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: abc59ae033b3b304cb0768511615bdd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2041254236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2041254239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041254238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 88
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 000000000000000000000000460000001e000000
 --- !u!1001 &2097317182
 PrefabInstance:
   m_ObjectHideFlags: 0

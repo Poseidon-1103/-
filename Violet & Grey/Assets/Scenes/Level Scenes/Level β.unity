@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: EndTurn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
 --- !u!4 &715818878 stripped
@@ -422,6 +427,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 715818877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &715818879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+    type: 3}
+  m_PrefabInstance: {fileID: 715818877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &715818880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715818879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 320000003200000032000000
+--- !u!114 &715818881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715818879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 1
+  EndTurn: 2
+  Probability: 0000000032000000
 --- !u!4 &797594043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5861496923660955045, guid: d16bab08ae9d4eb4b8684632a9369829,
@@ -1580,6 +1629,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+        type: 3}
+      propertyPath: EndTurn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
 --- !u!4 &1904290823 stripped
@@ -1588,6 +1642,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1904290822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1904290824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+    type: 3}
+  m_PrefabInstance: {fileID: 1904290822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904290825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904290824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 320000003200000032000000
+--- !u!114 &1904290826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904290824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 1
+  EndTurn: 2
+  Probability: 0000000032000000
 --- !u!1001 &1979693645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,3 +1866,47 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2132321075}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132321077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2672350658761891233, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132321075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132321078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132321077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 2
+  EndTurn: 100
+  Probability: 320000003200000032000000
+--- !u!114 &2132321079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132321077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855f8177b01aa64ab114e8b72e1428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionsList: {fileID: 0}
+  ID: 89
+  ResourcesDate: enemy
+  cardList: []
+  StartTurn: 1
+  EndTurn: 2
+  Probability: 0000000032000000

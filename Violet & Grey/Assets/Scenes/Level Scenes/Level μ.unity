@@ -190,6 +190,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[3]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571891935306273247, guid: abc59ae033b3b304cb0768511615bdd9,
+        type: 3}
+      propertyPath: Probability.Array.data[4]
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc59ae033b3b304cb0768511615bdd9, type: 3}
 --- !u!4 &142905958 stripped
