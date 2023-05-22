@@ -24,24 +24,24 @@ public class TitleInterfacePanel : BasePanel
                 UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "btnQuit":
-                Debug.Log("退出游戏"); 
+                // Debug.Log("退出游戏"); 
                 break;
             case "btnArchives":
-                Debug.Log("打开档案馆");
+                // Debug.Log("打开档案馆");
                 UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
                 break;
             case "btnSet":
-                Debug.Log("打开设置界面");
+                // Debug.Log("打开设置界面");
                 break;
             case "btnTeamMember":
-                Debug.Log("打开制作人员名单");
+                // Debug.Log("打开制作人员名单");
                 UIManager.GetInstance().ShowPanel<MemberPanel>("MemberPanel");
                 break;
         }
     }
     public void Init()
     {
-        Debug.Log("开始游戏界面");
+        // Debug.Log("开始游戏界面");
     }
     public override void ShowMe()
     {

@@ -473,7 +473,7 @@ public class ArchivePanel : BasePanel
                 break;
             case "Return":
                 UIManager.GetInstance().HidePanel("ArchivePanel");
-                UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
+                // UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
                 break;
         }
 

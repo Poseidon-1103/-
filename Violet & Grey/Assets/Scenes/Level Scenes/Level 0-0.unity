@@ -568,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &762479414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,7 +1095,7 @@ PrefabInstance:
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
       propertyPath: EndTurn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124,
         type: 3}
@@ -1137,7 +1137,8 @@ PrefabInstance:
       propertyPath: row
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4571891935306273247, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbfecd4e89d9ae34a87fe08cb3fe1124, type: 3}
 --- !u!4 &965123299 stripped
 Transform:
@@ -1162,9 +1163,9 @@ MonoBehaviour:
   ResourcesDate: enemy
   cardList: []
   StartTurn: 1
-  EndTurn: 3
+  EndTurn: 20
   Probability: 0000000000000000640000000000000000000000
---- !u!114 &965123309
+--- !u!114 &965123305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,9 +1181,9 @@ MonoBehaviour:
   ID: 89
   ResourcesDate: enemy
   cardList: []
-  StartTurn: 3
-  EndTurn: 100
-  Probability: 32000000320000003200000032000000
+  StartTurn: 0
+  EndTurn: 0
+  Probability: 0000000000000000000000006400000000000000
 --- !u!1001 &974887298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1956,31 +1957,6 @@ Transform:
   m_Father: {fileID: 1190037599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1435102280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8126890299432483351, guid: bf449c896f6be81418ff49ee445e0e70,
-    type: 3}
-  m_PrefabInstance: {fileID: 1501071559}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1435102282 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-    type: 3}
-  m_PrefabInstance: {fileID: 1501071559}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1435102284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435102280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d0a87739c4651449188f6c6319232f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCamera: {fileID: 1435102282}
 --- !u!1 &1473304431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,41 +2582,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: orthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: field of view
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: m_FOVAxisMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: far clip plane
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483349, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: orthographic size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8126890299432483351, guid: bf449c896f6be81418ff49ee445e0e70,
         type: 3}
       propertyPath: m_Name
@@ -2701,13 +2642,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8126890299432483355, guid: bf449c896f6be81418ff49ee445e0e70,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8126890299432483355, guid: bf449c896f6be81418ff49ee445e0e70, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf449c896f6be81418ff49ee445e0e70, type: 3}
 --- !u!1 &1502280857
 GameObject:

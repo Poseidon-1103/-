@@ -321,8 +321,8 @@ MonoBehaviour:
   PL: 1
   State: 0
   Blood: 0
-  Dialogue: 0
-  Audio: 0
+  Dialogue: 1
+  Audio: 3
 --- !u!114 &128736626
 MonoBehaviour:
   m_ObjectHideFlags: 0
