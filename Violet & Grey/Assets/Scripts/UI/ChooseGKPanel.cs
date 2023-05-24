@@ -60,6 +60,7 @@ public class ChooseGKPanel : BasePanel
             case "Return":
                 // MMSceneLoadingManager.LoadScene("UIText","LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().ShowPanel<SelectToStartPanel>("SelectToStartPanel");
                 break;
         }
     }

@@ -30,7 +30,8 @@ public class DisPlayStagePanel : BasePanel
     }
     public void Init()
     {
-        gameObject.GetComponentInChildren<RoundManger>().ShowNum();
+        // gameObject.GetComponentInChildren<RoundManger>().ShowNum();
+        GetControl<TMP_Text>("SpecialNumber").text = GameObject.Find("SpecialNum").GetComponent<TMP_Text>().text;
         //不传入行动数据，只打印敌人行动
         Debug.Log("展示面板初始化数据");
         GameObject ActionsList = GameObject.Find("ActionsList");

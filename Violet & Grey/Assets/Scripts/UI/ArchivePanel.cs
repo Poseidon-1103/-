@@ -40,6 +40,7 @@ public class ArchivePanel : BasePanel
     }
     public void DateLoad(string ResourcesDate)
     {
+        DateList.Clear();
         cardData = Resources.Load(ResourcesDate) as TextAsset;
         string[] dataRow = cardData.text.Split('\n');
         foreach (var row in dataRow)
@@ -74,13 +75,14 @@ public class ArchivePanel : BasePanel
                     GameObject Button = Instantiate(ButtonAT, gameObject.transform);
                     if (i < 7)
                     {
-                        Button.transform.position = new(227.00f, StartPosition - A * i, 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 300-100*i,0); //= new(227.00f, StartPosition - A * i, 0f);
+                        
                         Button.name = "Character" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = CharacterName[i];
                     }
                     if (i >= 7)
                     {
-                        Button.transform.position = new(537.00f, StartPosition - A * (i - 7), 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 300-100*(i-7),0); //position = new(537.00f, StartPosition - A * (i - 7), 0f);
                         Button.name = "Character" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = CharacterName[i];
                     }
@@ -95,13 +97,13 @@ public class ArchivePanel : BasePanel
                     GameObject Button = Instantiate(ButtonAT, gameObject.transform);
                     if (i < 7)
                     {
-                        Button.transform.position = new(227.70f, StartPosition - A * i, 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 300-100*i,0); //position = new(227.70f, StartPosition - A * i, 0f);
                         Button.name = "Level" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LevelrName[i];
                     }
                     if (i >= 7)
                     {
-                        Button.transform.position = new(537.00f, StartPosition - A * (i - 7), 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 300-100*(i-7),0); //position = new(537.00f, StartPosition - A * (i - 7), 0f);
                         Button.name = "Level" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LevelrName[i];
                     }
@@ -115,13 +117,13 @@ public class ArchivePanel : BasePanel
                     GameObject Button = Instantiate(ButtonAT, gameObject.transform);
                     if (i < 7)
                     {
-                        Button.transform.position = new(227.70f, StartPosition - A * i, 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 300-100*i,0); //position = new(227.70f, StartPosition - A * i, 0f);
                         Button.name = "Teach" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = TeachName[i];
                     }
                     if (i >= 7)
                     {
-                        Button.transform.position = new(537.00f, StartPosition - A * (i - 7), 0f);
+                        Button.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 300-100*(i-7),0); //position = new(537.00f, StartPosition - A * (i - 7), 0f);
                         Button.name = "Teach" + i;
                         Button.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = TeachName[i];
                     }
@@ -132,15 +134,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(232.00f, 342.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0); //position = new(232.00f, 342.50f, 0f);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivename;
                 Debug.Log(DateList[0].ArchiveimageID);
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(224.00f, 177.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0); //position = new(224.00f, 177.00f, 0f);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/11", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0); //position = new(487.00f, 342.00f, 0f);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivetext.ToString();
 
                 break;
@@ -148,104 +150,104 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/22", typeof(Sprite)) as Sprite;
 
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivetext.ToString();
                 break;
             case "Character2":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/33", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivetext.ToString();
                 break;
             case "Character3":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/44", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivetext.ToString();
                 break;
             case "Character4":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/55", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivetext.ToString();
                 break;
             case "Character5":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/66", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivetext.ToString();
                 break;
             case "Character6":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("PlayerBackGround");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-400, 300,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[6].Archivename;
 
                 Image2 = Instantiate(PLimage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, -55,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/77", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText23, gameObject.transform);
-                DateText22.transform.position = new(487.00f, 342.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(325, 325,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[6].Archivetext.ToString();
                 break;
             case "Level0":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0); //.position = new(399.00f, 336.50f, 0f);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivename;
 
                 
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0); //.position = new(399.00f, 260.00f, 0f);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivetext.ToString();
 
                 break;
@@ -253,13 +255,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivename;
 
               
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivetext.ToString();
 
                 break;
@@ -267,13 +269,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivename;
 
                
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivetext.ToString();
 
                 break;
@@ -281,13 +283,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivename;
 
               
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivetext.ToString();
 
                 break;
@@ -295,19 +297,19 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivename;
 
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivetext.ToString();
                 break;
             case "Level5":
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("TimeLine");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivename;
 
                 Image2 = Instantiate(ArchiveImage, gameObject.transform);
@@ -315,7 +317,7 @@ public class ArchivePanel : BasePanel
                 Image2.GetComponent<Image>().sprite = Resources.Load("ResourcesDate/ArchiveImage/HIstoryimage/06", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivetext.ToString();
 
                 break;
@@ -323,15 +325,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivename;
 
                 Image2 = Instantiate(ArchiveImage2, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/001", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[0].Archivetext.ToString();
 
                 break;
@@ -339,15 +341,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivename;
 
                 Image2 = Instantiate(ArchiveImage2, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/002", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[1].Archivetext.ToString();
 
                 break;
@@ -355,15 +357,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivename;
 
-                Image2 = Instantiate(ArchiveImage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2 = Instantiate(ArchiveImage2, gameObject.transform);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/003", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[2].Archivetext.ToString();
 
                 break;
@@ -371,15 +373,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivename;
 
-                Image2 = Instantiate(ArchiveImage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2 = Instantiate(ArchiveImage2, gameObject.transform);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/004", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[3].Archivetext.ToString();
 
                 break;
@@ -387,15 +389,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivename;
 
-                Image2 = Instantiate(ArchiveImage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2 = Instantiate(ArchiveImage2, gameObject.transform);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/005", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[4].Archivetext.ToString();
 
                 break;
@@ -403,13 +405,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivename;
 
                
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[5].Archivetext.ToString();
 
                 break;
@@ -417,13 +419,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[6].Archivename;
 
                 
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[6].Archivetext.ToString();
 
                 break;
@@ -431,13 +433,13 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[7].Archivename;
 
                 
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[7].Archivetext.ToString();
 
                 break;
@@ -445,15 +447,15 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[8].Archivename;
 
-                Image2 = Instantiate(ArchiveImage, gameObject.transform);
-                Image2.transform.position = new(399.00f, 260.00f, 0f);
+                Image2 = Instantiate(ArchiveImage2, gameObject.transform);
+                Image2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 145,0);
                 Image2.GetComponent<Image>().sprite = Resources.Load("Image/009", typeof(Sprite)) as Sprite;
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 190.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -60,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[8].Archivetext.ToString();
 
                 break;
@@ -461,19 +463,23 @@ public class ArchivePanel : BasePanel
                 archivePanel.BroadcastMessage("DestoryThis");
                 DateLoad("Teach");
                 Title2 = Instantiate(TitleText, gameObject.transform);
-                Title2.transform.position = new(399.00f, 336.50f, 0f);
+                Title2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 420,0);
                 Title2.GetComponent<TextMeshProUGUI>().text = DateList[9].Archivename;
 
                 
 
                 DateText22 = Instantiate(DateText, gameObject.transform);
-                DateText22.transform.position = new(399.00f, 260.00f, 0f);
+                DateText22.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 200,0);
                 DateText22.GetComponent<TextMeshProUGUI>().text = DateList[9].Archivetext.ToString();
 
                 break;
             case "Return":
                 UIManager.GetInstance().HidePanel("ArchivePanel");
+                UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
                 // UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
+                break;
+            case "Close":
+                UIManager.GetInstance().HidePanel("ArchivePanel");
                 break;
         }
 

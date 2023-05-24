@@ -22,7 +22,7 @@ public class SelectToStartPanel : BasePanel
         {
             case "LoadLevel":
                 // Debug.Log("¶ÁÈ¡¹Ø¿¨");
-                // UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                UIManager.GetInstance().HidePanel("SelectToStartPanel");
                 UIManager.GetInstance().ShowPanel<ChooseGKPanel>("ChooseGKPanel");
                 // MMSceneLoadingManager.LoadScene("Level 0_0", "LoadingScene");
                 break;

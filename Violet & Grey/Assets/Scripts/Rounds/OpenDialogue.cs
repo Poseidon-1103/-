@@ -21,19 +21,37 @@ public class OpenDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("ChangeStage",1);
+        if (condition==2)
+        {
+            Invoke("ChangeCondition",1);
+        }
+        Invoke("ChangeStage",2);
     }
 
-    private bool condition = true;
+    private int condition = 1;
     //对话结束后切换到展示敌人行动阶段
     private void ChangeStage()
     {
-        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition)
+        if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition==1)
+        {
+            //找到场景右上角的回合数对象，切换阶段过场
+            // GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
+            //打开档案馆
+            UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
+            condition = 2;
+            // Destroy(this);
+        }
+        if (!UIManager.GetInstance().panelDic.ContainsKey("ArchivePanel") && condition==3)
         {
             //找到场景右上角的回合数对象，切换阶段过场
             GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
-            condition = false;
+            condition = 4;
             Destroy(this);
         }
+    }
+
+    private void ChangeCondition()
+    {
+        condition = 3;
     }
 }

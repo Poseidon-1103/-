@@ -3,23 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="de1398c1-2a07-47a0-b527-3591e8df99d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Violet &amp; Grey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/档案馆和设置/档案馆/蓝线框.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/档案馆和设置/档案馆/蓝线框.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Main Camera 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Main Camera 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ArchivePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ChooseGKPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/ChooseGKPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 0-0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/01 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/01 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/DateText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Prefab/DateText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/DisplayStagePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Panel/RoundFightTest/Backpack/MeticulousClassification/Confirm.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 1-2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 2-2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-2(1).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-2(1).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-2(2).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level 3-2(2).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level Ω.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level Ω.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level α.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level α.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIText.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level β.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level β.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level μ.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Scenes/Level μ.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rounds/OpenDialogue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ArchivePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChooseGKPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisPlayStagePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectToStartPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleInterfacePanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +202,8 @@
       <workItem from="1684044938034" duration="44783000" />
       <workItem from="1684125470034" duration="7878000" />
       <workItem from="1684756086671" duration="2354000" />
+      <workItem from="1684838542302" duration="7818000" />
+      <workItem from="1684928317962" duration="3262000" />
     </task>
     <servers />
   </component>
