@@ -149,7 +149,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 0}
   - {fileID: 21300000, guid: ad88bd99f84e2e246a49d9209ee8ff02, type: 3}
-  - {fileID: 21300000, guid: 59526beaed75f4a45b127ec087b930a9, type: 3}
+  - {fileID: 21300000, guid: e89e6c27d62038a4095f69df4dd23e26, type: 3}
   playerNames:
   - "\u65E0"
   - "\u5F17\u5C14\u7C73\u5965"

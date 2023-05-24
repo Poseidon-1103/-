@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15ad1beb377e5a4bbc20b0251543603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  row: 6
+  row: 3
   playerCellPosition: {x: 0, y: -5.46, z: 0}
 --- !u!114 &1376020295
 MonoBehaviour:
