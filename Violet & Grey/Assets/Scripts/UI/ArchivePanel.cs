@@ -474,12 +474,28 @@ public class ArchivePanel : BasePanel
 
                 break;
             case "Return":
+                // archivePanel.BroadcastMessage("DestoryThis");
+                // GameObject btn1 = Instantiate(ButtonAT, gameObject.transform);
+                // btn1.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 300,0); 
+                // btn1.name = "Character";
+                // btn1.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "角色";
+                // GameObject btn2 = Instantiate(ButtonAT, gameObject.transform);
+                // btn2.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 200,0); 
+                // btn2.name = "Level";
+                // btn2.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "时间线";
+                // GameObject btn3 = Instantiate(ButtonAT, gameObject.transform);
+                // btn3.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-425, 100,0); 
+                // btn3.name = "Teach";
+                // btn3.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "教学";
+                // Find();
                 UIManager.GetInstance().HidePanel("ArchivePanel");
-                UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
+                // UIManager.GetInstance().ShowPanel<ArchivePanel>("ArchivePanel");
                 // UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
                 break;
-            case "Close":
-                UIManager.GetInstance().HidePanel("ArchivePanel");
+            case "Close1":
+                // Debug.Log("aaaaaaa");
+                // UIManager.GetInstance().HidePanel("ArchivePanel");
+                // UIManager.GetInstance().HidePanel("ArchivePanel");
                 break;
         }
 

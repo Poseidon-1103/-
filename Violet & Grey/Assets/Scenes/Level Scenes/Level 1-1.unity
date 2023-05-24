@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d35647ef004964ab2d16b13b16bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: Dialogue0_0_2
+  dialogueName: Dialogue1_1_2
   SpecialRound: 4
 --- !u!114 &128736624
 MonoBehaviour:
@@ -347,7 +347,8 @@ MonoBehaviour:
   RoundWIN: -1
   PlayAudio: {fileID: 1635560211}
   PauseAudio: {fileID: 1809603017}
-  dialogueName: Dialogue0_0_2
+  PauseAudio1: {fileID: 1066125926}
+  dialogueName: Dialogue1_1_3
   condition: 0
 --- !u!4 &128736627
 Transform:
@@ -2936,7 +2937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08325c79393bfe4da9486e37aaf9851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: Dialogue0_0_2
+  dialogueName: Dialogue1_1_1
 --- !u!4 &1438382100
 Transform:
   m_ObjectHideFlags: 0

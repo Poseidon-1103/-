@@ -3152,6 +3152,16 @@ PrefabInstance:
       propertyPath: PauseAudio
       value: 
       objectReference: {fileID: 74294048}
+    - target: {fileID: 6827865117225937920, guid: 8bb7717c9fd984248b3d05082c9d51fc,
+        type: 3}
+      propertyPath: PauseAudio1
+      value: 
+      objectReference: {fileID: 1841548996}
+    - target: {fileID: 6827865117225937920, guid: 8bb7717c9fd984248b3d05082c9d51fc,
+        type: 3}
+      propertyPath: dialogueName
+      value: Dialogue2_1_2
+      objectReference: {fileID: 0}
     - target: {fileID: 6827865117225937921, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: m_RootOrder
@@ -3255,7 +3265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1812981390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4323,7 +4333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08325c79393bfe4da9486e37aaf9851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: Dialogue0_0_2
+  dialogueName: Dialogue2_1_1
 --- !u!114 &2115910319
 MonoBehaviour:
   m_ObjectHideFlags: 0

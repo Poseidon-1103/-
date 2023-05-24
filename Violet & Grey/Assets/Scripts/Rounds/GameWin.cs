@@ -19,6 +19,7 @@ public class GameWin : MonoBehaviour
     
     public MMF_Player PlayAudio;
     public MMF_Player PauseAudio;
+    public MMF_Player PauseAudio1;
 
     public string dialogueName;
     //角色死亡
@@ -158,6 +159,7 @@ public class GameWin : MonoBehaviour
     {
         if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 1)
         {
+            PauseAudio1.PlayFeedbacks();
             //打开胜利面板
             UIManager.GetInstance().ShowPanel<GameWinPanel>("GameWinPanel");
             // GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";
@@ -166,6 +168,7 @@ public class GameWin : MonoBehaviour
         }
         if (!UIManager.GetInstance().panelDic.ContainsKey(dialogueName) && condition == 2)
         {
+            PauseAudio1.PlayFeedbacks();
             //打开失败面板
             UIManager.GetInstance().ShowPanel<GameOverPanel>("GameOverPanel");
             // GameObject.Find("Round").AddComponent<ChangeStage>().stageMessage = "展示阶段";

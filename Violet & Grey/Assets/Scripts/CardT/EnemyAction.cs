@@ -36,15 +36,15 @@ void Start()
     {
         StartTurn--;
         EndTurn --;
-        if (StartTurn>=0)
-        {
+        // if (StartTurn)
+        // {
         if (EndTurn>=0)
         {
         ActionsList = GameObject.Find("ActionsList");
                 Debug.Log("6");
         ActionsList.transform.GetComponent<RecordActionList>().Record(cards[RandomNumber()]);
         }
-        }
+        // }
     }
 
     public int RandomNumber()
