@@ -143,17 +143,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58306a09c52f61745a56e3bdca6bda2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueDateFile: {fileID: 4900000, guid: 607fddcb819fd4b448d823890f249685, type: 3}
+  dialogueDateFile: {fileID: 4900000, guid: c16e71876ef9866488e40a7c23ec079f, type: 3}
   characterLeft: {fileID: 8641223283756558847}
   characterRight: {fileID: 2690822256335290756}
   sprites:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 6a8035b95093fe144a393c889271cf02, type: 3}
   - {fileID: 21300000, guid: a4254530c3aa7444799d49516a4925e9, type: 3}
   - {fileID: 21300000, guid: 32ce43f46fa31a346901f1a3e81fb309, type: 3}
+  - {fileID: 21300000, guid: ad88bd99f84e2e246a49d9209ee8ff02, type: 3}
+  - {fileID: 21300000, guid: 59526beaed75f4a45b127ec087b930a9, type: 3}
+  - {fileID: 21300000, guid: e89e6c27d62038a4095f69df4dd23e26, type: 3}
   playerNames:
-  - "\u65E0"
+  - "\u7EF4\u5965\u83B1\u7279"
   - "\u59AE\u83AB\u53EF"
   - "\u5361\u65AF"
+  - "\u5F17\u5C14\u7C73\u5965"
+  - "\u827E\u4EC0"
+  - "\u827E\u4E1D"
   dialogueIndex: 0
   dialogueRows: []
   nameTextLeft: {fileID: 1449331278686523156}
