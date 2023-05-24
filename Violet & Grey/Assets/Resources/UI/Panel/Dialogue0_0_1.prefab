@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6469051697517251783}
   - component: {fileID: 6786121316370939326}
+  - component: {fileID: 5451288979571879601}
   - component: {fileID: 889818602738520971}
   m_Layer: 5
   m_Name: Dialogue0_0_1
@@ -130,6 +131,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3223538426338829895}
   m_CullTransparentMesh: 1
+--- !u!114 &5451288979571879601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3223538426338829895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1463001dfd93814db0e375962cf2bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &889818602738520971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +461,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8503284052031186115, guid: a848b758927a1474cbe4788d3ab19d2e,
         type: 3}
@@ -970,7 +983,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8918821528793835086, guid: 392132f1d3f189a489c225d1d457a366,
         type: 3}
@@ -1082,7 +1095,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 8503284052031186115, guid: a848b758927a1474cbe4788d3ab19d2e,
         type: 3}
@@ -1541,7 +1554,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3053725468160885958, guid: 3f16ef4c94a175548ab6a2b83e3db294,
+      objectReference: {fileID: -2156166589916409539, guid: 3f16ef4c94a175548ab6a2b83e3db294,
         type: 2}
     - target: {fileID: 7029046899730337215, guid: 62684f6621b305f438204e4e9400aa10,
         type: 3}

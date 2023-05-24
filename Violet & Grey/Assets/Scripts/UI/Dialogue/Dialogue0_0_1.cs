@@ -8,7 +8,7 @@ public class Dialogue0_0_1 : BasePanel
     {
         //一定不能少 因为需要执行父类的awake来初始化一些信息 比如找控件 加事件监听
         base.Awake();
-
+        
         //在下面处理自己的一些初始化逻辑
     }
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class Dialogue0_0_1 : BasePanel
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     protected override void OnClick(string btnName)
     {

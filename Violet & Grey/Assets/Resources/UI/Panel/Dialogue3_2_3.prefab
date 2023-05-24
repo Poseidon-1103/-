@@ -87,9 +87,9 @@ GameObject:
   - component: {fileID: 6469051697517251783}
   - component: {fileID: 6786121316370939326}
   - component: {fileID: 889818602738520971}
-  - component: {fileID: 8362962381485149055}
+  - component: {fileID: 2573837792670479650}
   m_Layer: 5
-  m_Name: Dialogue3_1_1
+  m_Name: Dialogue3_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58306a09c52f61745a56e3bdca6bda2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueDateFile: {fileID: 4900000, guid: 607fddcb819fd4b448d823890f249685, type: 3}
+  dialogueDateFile: {fileID: 4900000, guid: e2c5f7e04fb2ca14a89427559874d500, type: 3}
   characterLeft: {fileID: 8641223283756558847}
   characterRight: {fileID: 2690822256335290756}
   sprites:
@@ -159,7 +159,7 @@ MonoBehaviour:
   nameTextLeft: {fileID: 1449331278686523156}
   nameTextRight: {fileID: 1831305704096137023}
   dialogueText: {fileID: 1449331278340993059}
---- !u!114 &8362962381485149055
+--- !u!114 &2573837792670479650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3223538426338829895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 872b7431587267443ac4735a550cdb2e, type: 3}
+  m_Script: {fileID: 11500000, guid: e9c417c8f3803994fb0d18805d1fd4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &9113389814349708051
