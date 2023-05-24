@@ -12,50 +12,62 @@ public class ChooseGKPanel : BasePanel
             case "Person1":
                 MMSceneLoadingManager.LoadScene("Level α", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Person2":
                 MMSceneLoadingManager.LoadScene("Level β", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Person3":
                 MMSceneLoadingManager.LoadScene("Level μ", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Person4":
                 MMSceneLoadingManager.LoadScene("Level Ω", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot1":
                 MMSceneLoadingManager.LoadScene("Level 0-0", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot2":
                 MMSceneLoadingManager.LoadScene("Level 1-1", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot3":
                 MMSceneLoadingManager.LoadScene("Level 1-2", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot4":
                 MMSceneLoadingManager.LoadScene("Level 2-1", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot5":
                 MMSceneLoadingManager.LoadScene("Level 2_2", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot6":
                 MMSceneLoadingManager.LoadScene("Level 3_1", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot7":
                 MMSceneLoadingManager.LoadScene("Level 3-2(2)", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Plot8":
                 MMSceneLoadingManager.LoadScene("Level 3-2(1)", "LoadingScene");
                 UIManager.GetInstance().HidePanel("ChooseGKPanel");
+                UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 break;
             case "Return":
                 // MMSceneLoadingManager.LoadScene("UIText","LoadingScene");

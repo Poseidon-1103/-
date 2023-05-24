@@ -23,6 +23,7 @@ public class SelectToStartPanel : BasePanel
             case "LoadLevel":
                 // Debug.Log("读取关卡");
                 UIManager.GetInstance().HidePanel("SelectToStartPanel");
+                // UIManager.GetInstance().HidePanel("TitleInterfacePanel");
                 UIManager.GetInstance().ShowPanel<ChooseGKPanel>("ChooseGKPanel");
                 // MMSceneLoadingManager.LoadScene("Level 0_0", "LoadingScene");
                 break;
@@ -32,7 +33,7 @@ public class SelectToStartPanel : BasePanel
             case "ReturnToTitle":
                 Debug.Log("返回标题页面");
                 UIManager.GetInstance().HidePanel("SelectToStartPanel");
-                UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
+                // UIManager.GetInstance().ShowPanel<TitleInterfacePanel>("TitleInterfacePanel");
                 break;
         }
     }

@@ -2333,7 +2333,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 457515761}
     - target: {fileID: 6827865117225937920, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: PauseAudio
@@ -2343,7 +2343,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PauseAudio1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 354472996}
     - target: {fileID: 6827865117225937920, guid: 8bb7717c9fd984248b3d05082c9d51fc,
         type: 3}
       propertyPath: dialogueName
